@@ -47,11 +47,50 @@ async function fetchText(url) {
   return res.text();
 }
 
-// "var json = [ ... ];" 形式のJSファイルから配列部分だけ取り出してparseする
+// "var json = [ ... ];" 形式のJSファイルから配列部分だけ取り出してparseする。
+// 「ファイル内最後の ] まで」ではなく、[ と ] の対応を1文字ずつ数えて
+// 本当に配列が終わる位置を特定する（文字列リテラル内の [ ] は無視する）。
+function extractJsonArrayText(text) {
+  const anchor = text.indexOf("var json");
+  if (anchor === -1) throw new Error("var json が見つかりませんでした");
+
+  const start = text.indexOf("[", anchor);
+  if (start === -1) throw new Error("配列の開始 [ が見つかりませんでした");
+
+  let depth = 0;
+  let inString = false;
+  let quoteChar = null;
+  let escaped = false;
+
+  for (let i = start; i < text.length; i++) {
+    const ch = text[i];
+
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (ch === "\\") escaped = true;
+      else if (ch === quoteChar) inString = false;
+      continue;
+    }
+
+    if (ch === '"' || ch === "'") {
+      inString = true;
+      quoteChar = ch;
+      continue;
+    }
+    if (ch === "[") depth++;
+    else if (ch === "]") {
+      depth--;
+      if (depth === 0) return text.slice(start, i + 1);
+    }
+  }
+  throw new Error("配列の閉じ ] が見つかりませんでした（対応が取れていません）");
+}
+
 function parseSearchJs(text) {
-  const match = text.match(/var\s+json\s*=\s*(\[[\s\S]*\]);?/);
-  if (!match) throw new Error("var json = [...] の形が見つかりませんでした");
-  return JSON.parse(match[1]);
+  const arrayText = extractJsonArrayText(text)
+    // JSでは許容される「配列・オブジェクト末尾の余計なカンマ」はJSON.parseがエラーになるので除去する
+    .replace(/,(\s*[\]}])/g, "$1");
+  return JSON.parse(arrayText);
 }
 
 // "○(120TB)" のような文字列から対応/実効容量を読み取る
