@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T08:00:52.421Z",
+  "updatedAt": "2026-09-09T08:32:12.318Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -8,88 +8,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "6ベイ",
-      "officeSize": "中規模：51～100台",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 5",
-        "RAID 6"
-      ],
-      "warrantyYears": 5,
-      "status": "生産終了",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "データ復旧サービス",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "ワンタッチセキュア",
-        "多要素認証",
-        "ログインロックアウト",
-        "Time Machine"
-      ],
-      "variants": [
-        {
-          "sku": "HDL6-HB144",
-          "capacityTB": 144,
-          "priceIncTax": 1980000,
-          "jan": "4957180181370"
-        },
-        {
-          "sku": "HDL6-HB120",
-          "capacityTB": 120,
-          "priceIncTax": 1782000,
-          "jan": "4957180181363"
-        },
-        {
-          "sku": "HDL6-HB96",
-          "capacityTB": 96,
-          "priceIncTax": 1430000,
-          "jan": "4957180174297"
-        },
-        {
-          "sku": "HDL6-HB48",
-          "capacityTB": 48,
-          "priceIncTax": 822800,
-          "jan": "4957180174280"
-        },
-        {
-          "sku": "HDL6-HB36",
-          "capacityTB": 36,
-          "priceIncTax": 685300,
-          "jan": "4957180174273"
-        },
-        {
-          "sku": "HDL6-HB24",
-          "capacityTB": 24,
-          "priceIncTax": 503800,
-          "jan": "4957180174266"
-        },
-        {
-          "sku": "HDL6-HB12",
-          "capacityTB": 12,
-          "priceIncTax": 328900,
-          "jan": "4957180174259"
-        },
-        {
-          "sku": "HDL6-HB06",
-          "capacityTB": 6,
-          "priceIncTax": 254100,
-          "jan": "4957180174242"
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-09-09T08:00:05.767Z"
-    },
-    {
-      "id": "hdl4-hb32ex",
-      "name": "LAN DISK H（HDL4-HB32EXシリーズ）",
-      "series": "LAN DISK H",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "4ベイ",
-      "officeSize": "中規模：51～100台",
+      "officeSize": "大規模：～128人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -102,7 +21,100 @@
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
+        "ログインロックアウト",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL6-HB144",
+          "capacityTB": 144,
+          "priceIncTax": 1980000,
+          "jan": "4957180181370",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL6-HB120",
+          "capacityTB": 120,
+          "priceIncTax": 1782000,
+          "jan": "4957180181363",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL6-HB96",
+          "capacityTB": 96,
+          "priceIncTax": 1430000,
+          "jan": "4957180174297",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL6-HB48",
+          "capacityTB": 48,
+          "priceIncTax": 822800,
+          "jan": "4957180174280",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL6-HB36",
+          "capacityTB": 36,
+          "priceIncTax": 685300,
+          "jan": "4957180174273",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL6-HB24",
+          "capacityTB": 24,
+          "priceIncTax": 503800,
+          "jan": "4957180174266",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL6-HB12",
+          "capacityTB": 12,
+          "priceIncTax": 328900,
+          "jan": "4957180174259",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL6-HB06",
+          "capacityTB": 6,
+          "priceIncTax": 254100,
+          "jan": "4957180174242",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
+      "lastCheckedAt": "2026-09-09T08:30:38.052Z"
+    },
+    {
+      "id": "hdl4-hb32ex",
+      "name": "LAN DISK H（HDL4-HB32EXシリーズ）",
+      "series": "LAN DISK H",
+      "os": "Linux OS",
+      "install": "BOXタイプ",
+      "bay": "4ベイ",
+      "officeSize": "大規模：～128人",
+      "raidSupport": [
+        "RAIDeX",
+        "RAID 0",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "RAIDeX",
+        "10GbE",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "NarSuSクラウドバックアップ",
         "ワンタッチセキュア",
@@ -115,35 +127,40 @@
           "sku": "HDL4-HB32EX",
           "capacityTB": 32,
           "priceIncTax": 610500,
-          "jan": "4957180174341"
+          "jan": "4957180174341",
+          "status": "現行"
         },
         {
           "sku": "HDL4-HB24EX",
           "capacityTB": 24,
           "priceIncTax": 492800,
-          "jan": "4957180174334"
+          "jan": "4957180174334",
+          "status": "現行"
         },
         {
           "sku": "HDL4-HB16EX",
           "capacityTB": 16,
           "priceIncTax": 377300,
-          "jan": "4957180174327"
+          "jan": "4957180174327",
+          "status": "現行"
         },
         {
           "sku": "HDL4-HB08EX",
           "capacityTB": 8,
           "priceIncTax": 293700,
-          "jan": "4957180174310"
+          "jan": "4957180174310",
+          "status": "現行"
         },
         {
           "sku": "HDL4-HB04EX",
           "capacityTB": 4,
           "priceIncTax": 242000,
-          "jan": "4957180174303"
+          "jan": "4957180174303",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-09-09T08:00:07.996Z"
+      "lastCheckedAt": "2026-09-09T08:30:42.719Z"
     },
     {
       "id": "hdl2-hb08/",
@@ -152,7 +169,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
-      "officeSize": "中規模：51～100台",
+      "officeSize": "大規模：～128人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -164,7 +181,9 @@
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "NarSuSクラウドバックアップ",
         "ワンタッチセキュア",
@@ -177,53 +196,61 @@
           "sku": "HDL2-HB08/08",
           "capacityTB": 8,
           "priceIncTax": 368280,
-          "jan": "4957180184180"
+          "jan": "4957180184180",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HB04/04",
           "capacityTB": 4,
           "priceIncTax": 272800,
-          "jan": "4957180184173"
+          "jan": "4957180184173",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HB02/02",
           "capacityTB": 2,
           "priceIncTax": 206800,
-          "jan": "4957180184166"
+          "jan": "4957180184166",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HB16",
           "capacityTB": 16,
           "priceIncTax": 388300,
-          "jan": "4957180174389"
+          "jan": "4957180174389",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HB12",
           "capacityTB": 12,
           "priceIncTax": 317900,
-          "jan": "4957180174372"
+          "jan": "4957180174372",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HB08",
           "capacityTB": 8,
           "priceIncTax": 258500,
-          "jan": "4957180174365"
+          "jan": "4957180174365",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HB04",
           "capacityTB": 4,
           "priceIncTax": 217800,
-          "jan": "4957180174358"
+          "jan": "4957180174358",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HB02",
           "capacityTB": 2,
           "priceIncTax": 176000,
-          "jan": "4957180174396"
+          "jan": "4957180174396",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-09-09T08:00:10.355Z"
+      "lastCheckedAt": "2026-09-09T08:30:47.339Z"
     },
     {
       "id": "hdl6-ha96b",
@@ -232,7 +259,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "6ベイ",
-      "officeSize": "中規模：51～100台",
+      "officeSize": "大規模：～128人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -245,6 +272,7 @@
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
@@ -258,41 +286,47 @@
           "sku": "HDL6-HA96B",
           "capacityTB": 96,
           "priceIncTax": 1430000,
-          "jan": "4957180161112"
+          "jan": "4957180161112",
+          "status": "生産終了"
         },
         {
           "sku": "HDL6-HA48B",
           "capacityTB": 48,
           "priceIncTax": 731500,
-          "jan": "4957180159966"
+          "jan": "4957180159966",
+          "status": "生産終了"
         },
         {
           "sku": "HDL6-HA36B",
           "capacityTB": 36,
           "priceIncTax": 580800,
-          "jan": "4957180159959"
+          "jan": "4957180159959",
+          "status": "生産終了"
         },
         {
           "sku": "HDL6-HA24B",
           "capacityTB": 24,
           "priceIncTax": 374000,
-          "jan": "4957180159942"
+          "jan": "4957180159942",
+          "status": "生産終了"
         },
         {
           "sku": "HDL6-HA12B",
           "capacityTB": 12,
           "priceIncTax": 247500,
-          "jan": "4957180159935"
+          "jan": "4957180159935",
+          "status": "生産終了"
         },
         {
           "sku": "HDL6-HA6B",
           "capacityTB": 6,
           "priceIncTax": 209000,
-          "jan": "4957180159928"
+          "jan": "4957180159928",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-09-09T08:00:12.819Z"
+      "lastCheckedAt": "2026-09-09T08:30:52.170Z"
     },
     {
       "id": "hdl4-ha64-ub",
@@ -301,7 +335,7 @@
       "os": "Linux OS",
       "install": "ラック",
       "bay": "4ベイ",
-      "officeSize": "中規模：51～100台",
+      "officeSize": "大規模：～128人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -314,6 +348,7 @@
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
@@ -327,41 +362,47 @@
           "sku": "HDL4-HA64-UB",
           "capacityTB": 64,
           "priceIncTax": 990000,
-          "jan": "4957180161020"
+          "jan": "4957180161020",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-HA32-UB",
           "capacityTB": 32,
           "priceIncTax": 577500,
-          "jan": "4957180160115"
+          "jan": "4957180160115",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-HA24-UB",
           "capacityTB": 24,
           "priceIncTax": 458700,
-          "jan": "4957180160108"
+          "jan": "4957180160108",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-HA16-UB",
           "capacityTB": 16,
           "priceIncTax": 339900,
-          "jan": "4957180160092"
+          "jan": "4957180160092",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-HA8-UB",
           "capacityTB": 8,
           "priceIncTax": 256300,
-          "jan": "4957180160085"
+          "jan": "4957180160085",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-HA4-UB",
           "capacityTB": 4,
           "priceIncTax": 227700,
-          "jan": "4957180160078"
+          "jan": "4957180160078",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-09-09T08:00:15.407Z"
+      "lastCheckedAt": "2026-09-09T08:30:57.011Z"
     },
     {
       "id": "hdl4-ha32exb",
@@ -370,7 +411,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "4ベイ",
-      "officeSize": "中規模：51～100台",
+      "officeSize": "大規模：～128人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -383,6 +424,7 @@
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
@@ -396,35 +438,40 @@
           "sku": "HDL4-HA32EXB",
           "capacityTB": 32,
           "priceIncTax": 553300,
-          "jan": "4957180160016"
+          "jan": "4957180160016",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-HA24EXB",
           "capacityTB": 24,
           "priceIncTax": 434500,
-          "jan": "4957180160009"
+          "jan": "4957180160009",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-HA16EXB",
           "capacityTB": 16,
           "priceIncTax": 315700,
-          "jan": "4957180159997"
+          "jan": "4957180159997",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-HA8EXB",
           "capacityTB": 8,
           "priceIncTax": 232100,
-          "jan": "4957180159980"
+          "jan": "4957180159980",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-HA4EXB",
           "capacityTB": 4,
           "priceIncTax": 190300,
-          "jan": "4957180159973"
+          "jan": "4957180159973",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-09-09T08:00:17.859Z"
+      "lastCheckedAt": "2026-09-09T08:31:01.745Z"
     },
     {
       "id": "hdl2-ha8b/tm",
@@ -433,7 +480,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
-      "officeSize": "中規模：51～100台",
+      "officeSize": "大規模：～128人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -445,6 +492,7 @@
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
@@ -458,23 +506,26 @@
           "sku": "HDL2-HA8B/TM5",
           "capacityTB": 8,
           "priceIncTax": 231000,
-          "jan": "4957180160146"
+          "jan": "4957180160146",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HA4B/TM5",
           "capacityTB": 4,
           "priceIncTax": 184800,
-          "jan": "4957180160139"
+          "jan": "4957180160139",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HA2B/TM5",
           "capacityTB": 2,
           "priceIncTax": 176000,
-          "jan": "4957180160122"
+          "jan": "4957180160122",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-09-09T08:00:20.257Z"
+      "lastCheckedAt": "2026-09-09T08:31:06.723Z"
     },
     {
       "id": "hdl2-ha16b",
@@ -483,7 +534,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
-      "officeSize": "中規模：51～100台",
+      "officeSize": "大規模：～128人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -495,6 +546,7 @@
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
@@ -508,35 +560,40 @@
           "sku": "HDL2-HA16B",
           "capacityTB": 16,
           "priceIncTax": 388300,
-          "jan": "4957180160061"
+          "jan": "4957180160061",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HA12B",
           "capacityTB": 12,
           "priceIncTax": 269500,
-          "jan": "4957180160054"
+          "jan": "4957180160054",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HA8B",
           "capacityTB": 8,
           "priceIncTax": 198000,
-          "jan": "4957180160047"
+          "jan": "4957180160047",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HA4B",
           "capacityTB": 4,
           "priceIncTax": 151800,
-          "jan": "4957180160030"
+          "jan": "4957180160030",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-HA2B",
           "capacityTB": 2,
           "priceIncTax": 143000,
-          "jan": "4957180160023"
+          "jan": "4957180160023",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-09-09T08:00:22.505Z"
+      "lastCheckedAt": "2026-09-09T08:31:11.518Z"
     },
     {
       "id": "hdl4-xa96-ub",
@@ -545,7 +602,7 @@
       "os": "Linux OS",
       "install": "ラック",
       "bay": "4ベイ",
-      "officeSize": "中規模：16～50台",
+      "officeSize": "中規模：～64人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -553,11 +610,12 @@
         "RAID 6"
       ],
       "warrantyYears": 5,
-      "status": "生産終了",
+      "status": "現行",
       "features": [
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
         "クラウドストレージ連携",
         "NarSuS",
@@ -570,47 +628,54 @@
           "sku": "HDL4-XA96-UB",
           "capacityTB": 96,
           "priceIncTax": 1342000,
-          "jan": "4957180183657"
+          "jan": "4957180183657",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-XA80-UB",
           "capacityTB": 80,
           "priceIncTax": 1111000,
-          "jan": "4957180183640"
+          "jan": "4957180183640",
+          "status": "現行"
         },
         {
           "sku": "HDL4-XA64-UB",
           "capacityTB": 64,
           "priceIncTax": 880000,
-          "jan": "4957180183633"
+          "jan": "4957180183633",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-XA32-UB",
           "capacityTB": 32,
           "priceIncTax": 542300,
-          "jan": "4957180158037"
+          "jan": "4957180158037",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-XA16-UB",
           "capacityTB": 16,
           "priceIncTax": 302500,
-          "jan": "4957180158020"
+          "jan": "4957180158020",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-XA8-UB",
           "capacityTB": 8,
           "priceIncTax": 218900,
-          "jan": "4957180158013"
+          "jan": "4957180158013",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-XA4-UB",
           "capacityTB": 4,
           "priceIncTax": 198000,
-          "jan": "4957180158006"
+          "jan": "4957180158006",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-09-09T08:00:25.125Z"
+      "lastCheckedAt": "2026-09-09T08:31:16.277Z"
     },
     {
       "id": "hdl4-xa32b",
@@ -619,7 +684,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "4ベイ",
-      "officeSize": "中規模：16～50台",
+      "officeSize": "中規模：～64人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -627,11 +692,12 @@
         "RAID 6"
       ],
       "warrantyYears": 5,
-      "status": "生産終了",
+      "status": "現行",
       "features": [
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
         "クラウドストレージ連携",
         "NarSuS",
@@ -644,29 +710,33 @@
           "sku": "HDL4-XA32B",
           "capacityTB": 32,
           "priceIncTax": 495000,
-          "jan": "4957180157955"
+          "jan": "4957180157955",
+          "status": "現行"
         },
         {
           "sku": "HDL4-XA16B",
           "capacityTB": 16,
           "priceIncTax": 267300,
-          "jan": "4957180157948"
+          "jan": "4957180157948",
+          "status": "現行"
         },
         {
           "sku": "HDL4-XA8B",
           "capacityTB": 8,
           "priceIncTax": 178200,
-          "jan": "4957180157931"
+          "jan": "4957180157931",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-XA4B",
           "capacityTB": 4,
           "priceIncTax": 161700,
-          "jan": "4957180157924"
+          "jan": "4957180157924",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-09-09T08:00:27.473Z"
+      "lastCheckedAt": "2026-09-09T08:31:21.043Z"
     },
     {
       "id": "hdl2-xa16b",
@@ -675,7 +745,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
-      "officeSize": "中規模：16～50台",
+      "officeSize": "中規模：～64人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -687,6 +757,7 @@
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
         "クラウドストレージ連携",
         "NarSuS",
@@ -699,29 +770,33 @@
           "sku": "HDL2-XA16B",
           "capacityTB": 16,
           "priceIncTax": 265100,
-          "jan": "4957180157993"
+          "jan": "4957180157993",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-XA8B",
           "capacityTB": 8,
           "priceIncTax": 173800,
-          "jan": "4957180157986"
+          "jan": "4957180157986",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-XA4B",
           "capacityTB": 4,
           "priceIncTax": 136400,
-          "jan": "4957180157979"
+          "jan": "4957180157979",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-XA2B",
           "capacityTB": 2,
           "priceIncTax": 100100,
-          "jan": "4957180157962"
+          "jan": "4957180157962",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-09-09T08:00:29.868Z"
+      "lastCheckedAt": "2026-09-09T08:31:25.791Z"
     },
     {
       "id": "hdl2-xa8b/tm",
@@ -730,7 +805,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
-      "officeSize": "中規模：16～50台",
+      "officeSize": "中規模：～64人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -742,6 +817,7 @@
         "RAIDeX",
         "10GbE",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
         "クラウドストレージ連携",
         "NarSuS",
@@ -754,23 +830,26 @@
           "sku": "HDL2-XA8B/TM5",
           "capacityTB": 8,
           "priceIncTax": 206800,
-          "jan": "4957180169378"
+          "jan": "4957180169378",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-XA4B/TM5",
           "capacityTB": 4,
           "priceIncTax": 169400,
-          "jan": "4957180169361"
+          "jan": "4957180169361",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-XA2B/TM5",
           "capacityTB": 2,
           "priceIncTax": 133100,
-          "jan": "4957180169354"
+          "jan": "4957180169354",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-09-09T08:00:32.196Z"
+      "lastCheckedAt": "2026-09-09T08:31:30.675Z"
     },
     {
       "id": "hdl4-lv32u",
@@ -779,7 +858,7 @@
       "os": "Linux OS",
       "install": "ラック",
       "bay": "4ベイ",
-      "officeSize": "中規模：16～50台",
+      "officeSize": "中規模：～50人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -787,11 +866,13 @@
         "RAID 6"
       ],
       "warrantyYears": 5,
-      "status": "生産終了",
+      "status": "現行",
       "features": [
         "RAIDeX",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "Time Machine"
       ],
@@ -800,29 +881,33 @@
           "sku": "HDL4-LV32U",
           "capacityTB": 32,
           "priceIncTax": 536800,
-          "jan": "4957180173276"
+          "jan": "4957180173276",
+          "status": "現行"
         },
         {
           "sku": "HDL4-LV16U",
           "capacityTB": 16,
           "priceIncTax": 297000,
-          "jan": "4957180173269"
+          "jan": "4957180173269",
+          "status": "現行"
         },
         {
           "sku": "HDL4-LV08U",
           "capacityTB": 8,
           "priceIncTax": 213400,
-          "jan": "4957180173252"
+          "jan": "4957180173252",
+          "status": "現行"
         },
         {
           "sku": "HDL4-LV04U",
           "capacityTB": 4,
           "priceIncTax": 192500,
-          "jan": "4957180173245"
+          "jan": "4957180173245",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-09-09T08:00:34.545Z"
+      "lastCheckedAt": "2026-09-09T08:31:35.348Z"
     },
     {
       "id": "hdl4-lv",
@@ -831,7 +916,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "4ベイ",
-      "officeSize": "中規模：16～50台",
+      "officeSize": "中規模：～50人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -839,11 +924,14 @@
         "RAID 6"
       ],
       "warrantyYears": 5,
-      "status": "生産終了",
+      "status": "現行",
       "features": [
         "RAIDeX",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
+        "NarSuS",
         "Time Machine"
       ],
       "variants": [
@@ -851,29 +939,33 @@
           "sku": "HDL4-LV32",
           "capacityTB": 32,
           "priceIncTax": 489500,
-          "jan": "4957180173214"
+          "jan": "4957180173214",
+          "status": "現行"
         },
         {
           "sku": "HDL4-LV16",
           "capacityTB": 16,
           "priceIncTax": 261800,
-          "jan": "4957180173191"
+          "jan": "4957180173191",
+          "status": "現行"
         },
         {
           "sku": "HDL4-LV08",
           "capacityTB": 8,
           "priceIncTax": 172700,
-          "jan": "4957180173177"
+          "jan": "4957180173177",
+          "status": "現行"
         },
         {
           "sku": "HDL4-LV04",
           "capacityTB": 4,
           "priceIncTax": 156200,
-          "jan": "4957180173160"
+          "jan": "4957180173160",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-09-09T08:00:36.745Z"
+      "lastCheckedAt": "2026-09-09T08:31:40.346Z"
     },
     {
       "id": "hdl2-lv",
@@ -882,18 +974,21 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
-      "officeSize": "中規模：16～50台",
+      "officeSize": "中規模：～50人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
         "RAID 1"
       ],
       "warrantyYears": 5,
-      "status": "生産終了",
+      "status": "現行",
       "features": [
         "RAIDeX",
         "データ復旧サービス",
+        "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
+        "NarSuS",
         "Time Machine"
       ],
       "variants": [
@@ -901,29 +996,33 @@
           "sku": "HDL2-LV16",
           "capacityTB": 16,
           "priceIncTax": 259600,
-          "jan": "4957180173146"
+          "jan": "4957180173146",
+          "status": "現行"
         },
         {
           "sku": "HDL2-LV08",
           "capacityTB": 8,
           "priceIncTax": 168300,
-          "jan": "4957180173139"
+          "jan": "4957180173139",
+          "status": "現行"
         },
         {
           "sku": "HDL2-LV04",
           "capacityTB": 4,
           "priceIncTax": 130900,
-          "jan": "4957180173122"
+          "jan": "4957180173122",
+          "status": "現行"
         },
         {
           "sku": "HDL2-LV02",
           "capacityTB": 2,
           "priceIncTax": 94600,
-          "jan": "4957180173115"
+          "jan": "4957180173115",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-09-09T08:00:39.009Z"
+      "lastCheckedAt": "2026-09-09T08:31:44.971Z"
     },
     {
       "id": "hdl2-le16n",
@@ -932,19 +1031,20 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
-      "officeSize": "小規模：1～15台",
+      "officeSize": "小規模：～25人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
         "RAID 1"
       ],
       "warrantyYears": 5,
-      "status": "生産終了",
+      "status": "現行",
       "features": [
         "RAIDeX",
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "Time Machine"
       ],
@@ -953,35 +1053,40 @@
           "sku": "HDL2-LE16N",
           "capacityTB": 16,
           "priceIncTax": 152460,
-          "jan": "4957180173474"
+          "jan": "4957180173474",
+          "status": "現行"
         },
         {
           "sku": "HDL2-LE12N",
           "capacityTB": 12,
           "priceIncTax": 127050,
-          "jan": "4957180173467"
+          "jan": "4957180173467",
+          "status": "現行"
         },
         {
           "sku": "HDL2-LE08N",
           "capacityTB": 8,
           "priceIncTax": 86680,
-          "jan": "4957180173450"
+          "jan": "4957180173450",
+          "status": "現行"
         },
         {
           "sku": "HDL2-LE04N",
           "capacityTB": 4,
           "priceIncTax": 68200,
-          "jan": "4957180173443"
+          "jan": "4957180173443",
+          "status": "現行"
         },
         {
           "sku": "HDL2-LE02N",
           "capacityTB": 2,
           "priceIncTax": 58960,
-          "jan": "4957180173436"
+          "jan": "4957180173436",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-09-09T08:00:41.206Z"
+      "lastCheckedAt": "2026-09-09T08:31:49.568Z"
     },
     {
       "id": "hdl2-aax16wb",
@@ -990,7 +1095,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
-      "officeSize": "小規模：1～15台",
+      "officeSize": "小規模：～16人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -1012,41 +1117,47 @@
           "sku": "HDL2-AAX16WB",
           "capacityTB": 16,
           "priceIncTax": 152460,
-          "jan": "4957180157849"
+          "jan": "4957180157849",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-AAX12WB",
           "capacityTB": 12,
           "priceIncTax": 127050,
-          "jan": "4957180157832"
+          "jan": "4957180157832",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-AAX8WB",
           "capacityTB": 8,
           "priceIncTax": 86680,
-          "jan": "4957180157825"
+          "jan": "4957180157825",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-AAX6WB",
           "capacityTB": 6,
           "priceIncTax": 76230,
-          "jan": "4957180157818"
+          "jan": "4957180157818",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-AAX4WB",
           "capacityTB": 4,
           "priceIncTax": 68200,
-          "jan": "4957180157801"
+          "jan": "4957180157801",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-AAX2WB",
           "capacityTB": 2,
           "priceIncTax": 58960,
-          "jan": "4957180157795"
+          "jan": "4957180157795",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-09-09T08:00:43.569Z"
+      "lastCheckedAt": "2026-09-09T08:31:54.208Z"
     },
     {
       "id": "hdl1-le08n",
@@ -1055,13 +1166,14 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "1ベイ",
-      "officeSize": "小規模：1～15台",
+      "officeSize": "小規模：～25人",
       "raidSupport": [],
       "warrantyYears": 5,
-      "status": "生産終了",
+      "status": "現行",
       "features": [
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "Time Machine"
       ],
@@ -1070,35 +1182,40 @@
           "sku": "HDL1-LE08N",
           "capacityTB": 8,
           "priceIncTax": 83050,
-          "jan": "4957180173320"
+          "jan": "4957180173320",
+          "status": "現行"
         },
         {
           "sku": "HDL1-LE06N",
           "capacityTB": 6,
           "priceIncTax": 65780,
-          "jan": "4957180173313"
+          "jan": "4957180173313",
+          "status": "現行"
         },
         {
           "sku": "HDL1-LE04N",
           "capacityTB": 4,
           "priceIncTax": 50820,
-          "jan": "4957180173306"
+          "jan": "4957180173306",
+          "status": "現行"
         },
         {
           "sku": "HDL1-LE02N",
           "capacityTB": 2,
           "priceIncTax": 37950,
-          "jan": "4957180173290"
+          "jan": "4957180173290",
+          "status": "現行"
         },
         {
           "sku": "HDL1-LE01N",
           "capacityTB": 1,
           "priceIncTax": 35090,
-          "jan": "4957180173283"
+          "jan": "4957180173283",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-09-09T08:00:45.779Z"
+      "lastCheckedAt": "2026-09-09T08:31:58.787Z"
     },
     {
       "id": "hdl-aax8w",
@@ -1107,7 +1224,7 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "1ベイ",
-      "officeSize": "小規模：1～15台",
+      "officeSize": "SOHO向け／小規模：～16人",
       "raidSupport": [],
       "warrantyYears": 3,
       "status": "生産終了",
@@ -1123,41 +1240,47 @@
           "sku": "HDL-AAX8W",
           "capacityTB": 8,
           "priceIncTax": 79750,
-          "jan": "4957180143682"
+          "jan": "4957180143682",
+          "status": "生産終了"
         },
         {
           "sku": "HDL-AAX6W",
           "capacityTB": 6,
           "priceIncTax": 62480,
-          "jan": "4957180143675"
+          "jan": "4957180143675",
+          "status": "生産終了"
         },
         {
           "sku": "HDL-AAX4W",
           "capacityTB": 4,
           "priceIncTax": 47520,
-          "jan": "4957180143668"
+          "jan": "4957180143668",
+          "status": "生産終了"
         },
         {
           "sku": "HDL-AAX3W",
           "capacityTB": 3,
           "priceIncTax": 39930,
-          "jan": "4957180143651"
+          "jan": "4957180143651",
+          "status": "生産終了"
         },
         {
           "sku": "HDL-AAX2W",
           "capacityTB": 2,
           "priceIncTax": 34650,
-          "jan": "4957180143644"
+          "jan": "4957180143644",
+          "status": "生産終了"
         },
         {
           "sku": "HDL-AAX1W",
           "capacityTB": 1,
           "priceIncTax": 31790,
-          "jan": "4957180143637"
+          "jan": "4957180143637",
+          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-09-09T08:00:47.984Z"
+      "lastCheckedAt": "2026-09-09T08:32:03.488Z"
     },
     {
       "id": "hdl2-ta8soho",
@@ -1166,17 +1289,19 @@
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
-      "officeSize": "小規模：1～15台",
+      "officeSize": "SOHO向け～8人",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
         "RAID 1"
       ],
-      "warrantyYears": null,
+      "warrantyYears": 3,
       "status": "現行",
       "features": [
         "RAIDeX",
+        "UPS対応",
         "リモートアクセス",
+        "NarSuS",
         "Time Machine"
       ],
       "variants": [
@@ -1184,29 +1309,33 @@
           "sku": "HDL2-TA8SOHO",
           "capacityTB": 8,
           "priceIncTax": 81180,
-          "jan": "4957180174983"
+          "jan": "4957180174983",
+          "status": "現行"
         },
         {
           "sku": "HDL2-TA6SOHO",
           "capacityTB": 6,
           "priceIncTax": 70730,
-          "jan": "4957180175157"
+          "jan": "4957180175157",
+          "status": "現行"
         },
         {
           "sku": "HDL2-TA4SOHO",
           "capacityTB": 4,
           "priceIncTax": 62700,
-          "jan": "4957180174976"
+          "jan": "4957180174976",
+          "status": "現行"
         },
         {
           "sku": "HDL2-TA2SOHO",
           "capacityTB": 2,
           "priceIncTax": 53460,
-          "jan": "4957180174969"
+          "jan": "4957180174969",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-09-09T08:00:50.322Z"
+      "lastCheckedAt": "2026-09-09T08:32:08.088Z"
     },
     {
       "id": "hdl1-la08soho",
@@ -1218,42 +1347,47 @@
       "officeSize": "小規模：1～15台",
       "raidSupport": [],
       "warrantyYears": null,
-      "status": "生産終了",
+      "status": "現行",
       "features": [],
       "variants": [
         {
           "sku": "HDL1-LA08SOHO",
           "capacityTB": 8,
           "priceIncTax": 85800,
-          "jan": "4957180173689"
+          "jan": "4957180173689",
+          "status": "現行"
         },
         {
           "sku": "HDL1-LA06SOHO",
           "capacityTB": 6,
           "priceIncTax": 66330,
-          "jan": "4957180173672"
+          "jan": "4957180173672",
+          "status": "現行"
         },
         {
           "sku": "HDL1-LA04SOHO",
           "capacityTB": 4,
           "priceIncTax": 44220,
-          "jan": "4957180173665"
+          "jan": "4957180173665",
+          "status": "現行"
         },
         {
           "sku": "HDL1-LA02SOHO",
           "capacityTB": 2,
           "priceIncTax": 31350,
-          "jan": "4957180173658"
+          "jan": "4957180173658",
+          "status": "現行"
         },
         {
           "sku": "HDL1-LA01SOHO",
           "capacityTB": 1,
           "priceIncTax": 28490,
-          "jan": "4957180173641"
+          "jan": "4957180173641",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-tasoho/",
-      "lastCheckedAt": "2026-09-09T08:00:52.421Z"
+      "lastCheckedAt": "2026-09-09T08:32:12.318Z"
     }
   ]
 }
