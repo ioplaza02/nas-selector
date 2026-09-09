@@ -13,6 +13,13 @@
 // 2. 絞り込み条件を1つ変えてみて、そのタイミングでJSON/APIリクエストが飛んでいないか確認
 //    → もし専用のJSON APIが見つかれば、DOM解析よりそちらを叩く方が圧倒的に安定します
 // 3. 見つからなければ、レンダリング後のテーブル行（<tr>など）をDOM解析する
+//
+// サイトへの配慮について：
+// - リクエストは並列にせず、1件ずつ順番に取得する（このファイルは元からfor文で直列処理）
+// - 各リクエストの間に REQUEST_INTERVAL_MS の待機を入れる
+// - 専用のUser-Agentを名乗り、何のための巡回か分かるようにする
+// - 本番投入前に一度 https://www.iodata.jp/robots.txt を確認し、
+//   Disallow や Crawl-delay の指定があれば従う
 
 import { chromium } from "playwright";
 import fs from "node:fs/promises";
@@ -23,6 +30,20 @@ const TARGET_URLS = [
 ];
 
 const OUTPUT_PATH = new URL("../data/products.json", import.meta.url);
+
+// リクエスト間隔（ミリ秒）。月1回・数十ページ程度の取得なので、
+// 急ぐ必要はない。2秒程度空けておけば十分マナーとして丁寧。
+const REQUEST_INTERVAL_MS = 2000;
+
+// 何のためのアクセスか分かるUser-Agent。
+// 会社名やお問い合わせ先を含めておくと、相手側が見た時に安心材料になる。
+const USER_AGENT =
+  "NasSelectorBot/1.0 (+https://github.com/ioplaza02/nas-selector; " +
+  "monthly price/spec check for internal comparison tool)";
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 async function scrapeListPage(page, url) {
   await page.goto(url, { waitUntil: "networkidle" });
@@ -60,13 +81,24 @@ async function scrapeProductPage(page, url) {
 
 async function main() {
   const browser = await chromium.launch();
-  const page = await browser.newPage();
+  const context = await browser.newContext({ userAgent: USER_AGENT });
+  const page = await context.newPage();
 
   const collected = [];
   for (const url of TARGET_URLS) {
     const rows = await scrapeListPage(page, url);
     collected.push(...rows);
+    await sleep(REQUEST_INTERVAL_MS);
   }
+
+  // TODO: 個別の商品ページ（保証年数・在庫状況の確認）を巡回する場合も、
+  // 同じように1件ずつ処理してsleep()を挟むこと。
+  // 例）
+  // for (const p of collected) {
+  //   const detail = await scrapeProductPage(page, p.sourceUrl);
+  //   Object.assign(p, detail);
+  //   await sleep(REQUEST_INTERVAL_MS);
+  // }
 
   await browser.close();
 
