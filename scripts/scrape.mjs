@@ -1,123 +1,165 @@
-// NASセレクターのデータを取得するスクレイパーの雛形。
+// NASセレクターのデータを取得するスクレイパー。
 //
 // 使い方：
-//   npm install
-//   npx playwright install chromium
 //   node scripts/scrape.mjs
 //
-// このファイルは「型」だけ用意した雛形です。実際のDOM構造・APIエンドポイントは
-// ブラウザのDevTools（Networkタブ）で確認してから、TODO の箇所を埋めてください。
+// Playwrightは使わない。理由：
+// linux.htm / windows.htm の絞り込み結果は、ページ読み込み時に一度だけ
+// search_linux.js / search_windows.js という静的JSファイルを読み込み、
+// あとはブラウザ内のJavaScriptだけで絞り込み処理をしている
+// （絞り込み操作をしてもサーバーへの追加リクエストが発生しない）。
+// そのため、このJSファイルを直接fetchするだけで全件のスペックデータが手に入る。
 //
-// 優先して調べるべきこと：
-// 1. linux.htm / windows.htm を開き、DevTools > Network で「Fetch/XHR」だけに絞る
-// 2. 絞り込み条件を1つ変えてみて、そのタイミングでJSON/APIリクエストが飛んでいないか確認
-//    → もし専用のJSON APIが見つかれば、DOM解析よりそちらを叩く方が圧倒的に安定します
-// 3. 見つからなければ、レンダリング後のテーブル行（<tr>など）をDOM解析する
-//
-// サイトへの配慮について：
-// - リクエストは並列にせず、1件ずつ順番に取得する（このファイルは元からfor文で直列処理）
-// - 各リクエストの間に REQUEST_INTERVAL_MS の待機を入れる
-// - 専用のUser-Agentを名乗り、何のための巡回か分かるようにする
-// - 本番投入前に一度 https://www.iodata.jp/robots.txt を確認し、
-//   Disallow や Crawl-delay の指定があれば従う
+// 商品ページ（link_url）側は通常のサーバーレンダリングされたHTMLなので、
+// これもfetchだけで読める。保証年数・在庫状況・対応機能は、
+// ページ本文のテキストを正規表現で走査して拾う。
 
-import { chromium } from "playwright";
 import fs from "node:fs/promises";
 
-const TARGET_URLS = [
-  "https://www.iodata.jp/ssp/nas/biznas/selector/linux.htm",
-  "https://www.iodata.jp/ssp/nas/biznas/selector/windows.htm"
+const LIST_URLS = [
+  "https://www.iodata.jp/ssp/nas/biznas/selector/search_linux.js",
+  // TODO: Windows版が同じ命名規則か確認する
+  // "https://www.iodata.jp/ssp/nas/biznas/selector/search_windows.js"
 ];
 
 const OUTPUT_PATH = new URL("../data/products.json", import.meta.url);
-
-// リクエスト間隔（ミリ秒）。月1回・数十ページ程度の取得なので、
-// 急ぐ必要はない。2秒程度空けておけば十分マナーとして丁寧。
 const REQUEST_INTERVAL_MS = 2000;
 
-// 何のためのアクセスか分かるUser-Agent。
-// 会社名やお問い合わせ先を含めておくと、相手側が見た時に安心材料になる。
 const USER_AGENT =
   "NasSelectorBot/1.0 (+https://github.com/ioplaza02/nas-selector; " +
   "monthly price/spec check for internal comparison tool)";
+
+// 商品ページ本文から拾いたい機能キーワード。
+// 見出しバッジの文言と完全一致していなくても、テキスト中に含まれていればヒットとする。
+const FEATURE_KEYWORDS = [
+  "RAIDeX", "10GbE", "NAS専用HDD", "データ復旧サービス", "UPS対応",
+  "リモートアクセス", "クラウドストレージ連携", "NarSuS", "NarSuSクラウドバックアップ",
+  "ワンタッチセキュア", "多要素認証", "ログインロックアウト", "Time Machine", "暗号ボリューム"
+];
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function scrapeListPage(page, url) {
-  await page.goto(url, { waitUntil: "networkidle" });
-
-  // TODO: 実際の結果テーブルが描画されるまで待つ。
-  // 例）await page.waitForSelector(".result-table tbody tr");
-
-  // TODO: 行ごとに機種名・型番・価格などを取り出す。
-  // 例）
-  // const rows = await page.$$eval(".result-table tbody tr", trs =>
-  //   trs.map(tr => ({
-  //     name: tr.querySelector(".product-name")?.textContent?.trim(),
-  //     sku: tr.querySelector(".sku")?.textContent?.trim(),
-  //     priceIncTax: tr.querySelector(".price")?.textContent?.trim()
-  //   }))
-  // );
-
-  // ここでは雛形として空配列を返す
-  return [];
+async function fetchText(url) {
+  const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
+  if (!res.ok) throw new Error(url + " -> " + res.status);
+  return res.text();
 }
 
-async function scrapeProductPage(page, url) {
-  await page.goto(url, { waitUntil: "networkidle" });
+// "var json = [ ... ];" 形式のJSファイルから配列部分だけ取り出してparseする
+function parseSearchJs(text) {
+  const match = text.match(/var\s+json\s*=\s*(\[[\s\S]*\]);?/);
+  if (!match) throw new Error("var json = [...] の形が見つかりませんでした");
+  return JSON.parse(match[1]);
+}
 
-  // TODO: 保証年数（3年保証／5年保証）の記載箇所を特定して取得する
-  // TODO: 「店頭在庫限り」「生産終了品」のバッジ／テキストの有無を判定する
-  //       例）const bodyText = await page.locator("body").innerText();
-  //           const isDiscontinued = /在庫限り|生産終了/.test(bodyText);
+// "○(120TB)" のような文字列から対応/実効容量を読み取る
+function parseRaidCell(cell) {
+  if (!cell || cell === "-") return null;
+  const m = cell.match(/\(([\d.]+TB)\)/);
+  return { supported: true, effectiveCapacity: m ? m[1] : null };
+}
+
+function officeSizeCode(code) {
+  // TODO: 実際の値のバリエーション（小/中/大 以外があるか）を確認する
+  return { "小": "小規模", "中": "中規模", "大": "大規模" }[code] || code;
+}
+
+function installType(code) {
+  // TODO: ラックマウント型の実際のコード値を確認する（"RACK"などを想定）
+  return code === "BOX" ? "BOXタイプ" : code === "RACK" ? "ラックマウントタイプ" : code;
+}
+
+function raidSupportList(entry) {
+  const list = [];
+  if (parseRaidCell(entry.expand)) list.push("RAIDeX");
+  if (parseRaidCell(entry.raid0)) list.push("RAID 0");
+  if (parseRaidCell(entry.raid1)) list.push("RAID 1");
+  if (parseRaidCell(entry.raid5)) list.push("RAID 5");
+  if (parseRaidCell(entry.raid6)) list.push("RAID 6");
+  return list;
+}
+
+async function fetchProductDetail(url) {
+  const html = await fetchText(url);
+  // ざっくりテキスト化（正確なDOM解析はせず、本文全体を対象に正規表現で拾う）
+  const text = html.replace(/<[^>]+>/g, " ");
+
+  let warrantyYears = null;
+  if (/5\s*年保証/.test(text)) warrantyYears = 5;
+  else if (/3\s*年保証/.test(text)) warrantyYears = 3;
+  // TODO: 1年保証のパターンが実際に存在するか確認する
+
+  // TODO: 実際のページで「生産終了」「店頭在庫限り」がどう表示されるか
+  // （本文テキストか、alt属性付きの画像バッジか）を確認して精度を上げる
+  const isDiscontinued = /生産終了|店頭在庫限り|在庫限り/.test(text);
+
+  // 【大規模オフィス～128人】のような見出しラベルをそのまま拾う
+  const officeLabelMatch = text.match(/【([^】]+オフィス[^】]*)】/);
+
+  const features = FEATURE_KEYWORDS.filter(kw => text.includes(kw));
 
   return {
-    warrantyYears: null,
-    status: "現行" // 判定できたら "生産終了" に上書きする
+    warrantyYears,
+    status: isDiscontinued ? "生産終了" : "現行",
+    officeSizeLabel: officeLabelMatch ? officeLabelMatch[1] : null,
+    features
   };
 }
 
 async function main() {
-  const browser = await chromium.launch();
-  const context = await browser.newContext({ userAgent: USER_AGENT });
-  const page = await context.newPage();
-
-  const collected = [];
-  for (const url of TARGET_URLS) {
-    const rows = await scrapeListPage(page, url);
-    collected.push(...rows);
+  const rawEntries = [];
+  for (const url of LIST_URLS) {
+    const text = await fetchText(url);
+    rawEntries.push(...parseSearchJs(text));
     await sleep(REQUEST_INTERVAL_MS);
   }
 
-  // TODO: 個別の商品ページ（保証年数・在庫状況の確認）を巡回する場合も、
-  // 同じように1件ずつ処理してsleep()を挟むこと。
-  // 例）
-  // for (const p of collected) {
-  //   const detail = await scrapeProductPage(page, p.sourceUrl);
-  //   Object.assign(p, detail);
-  //   await sleep(REQUEST_INTERVAL_MS);
-  // }
+  // link_url が同じもの＝同一機種の容量バリエーションとしてグループ化
+  const groups = new Map();
+  for (const e of rawEntries) {
+    if (!groups.has(e.link_url)) groups.set(e.link_url, []);
+    groups.get(e.link_url).push(e);
+  }
 
-  await browser.close();
+  const products = [];
+  for (const [linkUrl, entries] of groups) {
+    const base = entries[0];
 
-  // TODO: collected を data/products.json のスキーマ
-  //       （id / name / officeSize / install / bay / raidSupport / warrantyYears /
-  //         status / features / variants[] / sourceUrl / lastCheckedAt）に整形する。
-  //
-  // 既存の products.json を読み込んでマージし、
-  // 「価格が変わった商品」「新しく生産終了になった商品」を検出して
-  // ログに出しておくと、PRのレビュー時に差分の意味が分かりやすくなります。
+    const detail = await fetchProductDetail(linkUrl);
+    await sleep(REQUEST_INTERVAL_MS);
 
-  const existing = JSON.parse(await fs.readFile(OUTPUT_PATH, "utf-8"));
+    products.push({
+      id: base.name.replace(/\d+$/, "").toLowerCase(),
+      name: base.series + "（" + base.name.replace(/\d+$/, "") + "シリーズ）",
+      series: base.series,
+      os: "Linux OS", // TODO: Windows版を追加する時はここを出し分ける
+      install: installType(base.type),
+      bay: base.drive + "ベイ",
+      officeSize: detail.officeSizeLabel || officeSizeCode(base.office),
+      raidSupport: raidSupportList(base),
+      warrantyYears: detail.warrantyYears,
+      status: detail.status,
+      features: detail.features,
+      variants: entries.map(e => ({
+        sku: e.name,
+        capacityTB: Number(String(e.capacity).replace("TB", "")),
+        priceIncTax: e.price,
+        jan: String(e.jan)
+      })),
+      sourceUrl: linkUrl,
+      lastCheckedAt: new Date().toISOString()
+    });
+  }
+
   const output = {
     updatedAt: new Date().toISOString(),
-    products: existing.products // TODO: collected の内容で置き換える
+    products
   };
 
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(output, null, 2) + "\n");
-  console.log("done. products:", output.products.length);
+  console.log("done. products:", products.length, "/ raw entries:", rawEntries.length);
 }
 
 main().catch(err => {
