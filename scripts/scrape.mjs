@@ -121,7 +121,20 @@ function raidSupportList(entry) {
 }
 
 async function fetchProductDetail(url) {
-  const html = await fetchText(url);
+  let html;
+  try {
+    html = await fetchText(url);
+  } catch (err) {
+    // 商品ページが404などで取得できない場合、生産終了で
+    // ページ自体が削除されたケースが多いため、生産終了として扱い処理は続行する
+    console.warn("  -> 取得失敗のため生産終了扱いにします:", url, "(" + err.message + ")");
+    return {
+      warrantyYears: null,
+      status: "生産終了",
+      features: []
+    };
+  }
+
   // ざっくりテキスト化（正確なDOM解析はせず、本文全体を対象に正規表現で拾う）
   const text = html.replace(/<[^>]+>/g, " ");
 
@@ -130,19 +143,14 @@ async function fetchProductDetail(url) {
   else if (/3\s*年保証/.test(text)) warrantyYears = 3;
   // TODO: 1年保証のパターンが実際に存在するか確認する
 
-  // TODO: 実際のページで「生産終了」「店頭在庫限り」がどう表示されるか
-  // （本文テキストか、alt属性付きの画像バッジか）を確認して精度を上げる
+  // TODO: 生産終了品の実際の判定パターンをもう少し集めて精度を確認する
   const isDiscontinued = /生産終了|店頭在庫限り|在庫限り/.test(text);
-
-  // 【大規模オフィス～128人】のような見出しラベルをそのまま拾う
-  const officeLabelMatch = text.match(/【([^】]+オフィス[^】]*)】/);
 
   const features = FEATURE_KEYWORDS.filter(kw => text.includes(kw));
 
   return {
     warrantyYears,
     status: isDiscontinued ? "生産終了" : "現行",
-    officeSizeLabel: officeLabelMatch ? officeLabelMatch[1] : null,
     features
   };
 }
@@ -176,7 +184,7 @@ async function main() {
       os: "Linux OS", // TODO: Windows版を追加する時はここを出し分ける
       install: installType(base.type),
       bay: base.drive + "ベイ",
-      officeSize: detail.officeSizeLabel || officeSizeCode(base.office),
+      officeSize: officeSizeCode(base.office) + "：" + base.concurrent,
       raidSupport: raidSupportList(base),
       warrantyYears: detail.warrantyYears,
       status: detail.status,
