@@ -1,0 +1,11 @@
+{
+  "name": "nas-selector",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}

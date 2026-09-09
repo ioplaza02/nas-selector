@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAS選定ツール（試作）</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1>NAS選定ツール</h1>
+  <p class="site-header__sub">条件を絞り込んで、比較したい機種を選んでください</p>
+</header>
+
+<div class="status-toggle">
+  <div>
+    <p class="status-toggle__title">生産終了品（在庫限り）を含める</p>
+    <p class="status-toggle__note">オフの場合、現行商品のみを表示します</p>
+  </div>
+  <label class="switch">
+    <input type="checkbox" id="show-discontinued">
+    <span class="switch__track"><span class="switch__thumb"></span></span>
+  </label>
+</div>
+
+<main class="layout">
+  <aside class="filter-panel" id="filter-panel" aria-label="絞り込み条件"></aside>
+
+  <section class="result-area">
+    <p class="result-count" id="result-count"></p>
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+</main>
+
+<div class="compare-tray" id="compare-tray">
+  <div>
+    <p class="compare-tray__title">商品比較（<span id="tray-count">0</span>/3）</p>
+    <p class="compare-tray__note">最大3商品まで選択できます</p>
+  </div>
+  <button id="tray-btn" disabled>比較する</button>
+</div>
+
+<div class="compare-modal" id="compare-modal" hidden>
+  <div class="compare-modal__inner">
+    <button class="compare-modal__close" id="compare-close" aria-label="閉じる">×</button>
+    <h2>商品比較</h2>
+    <div id="compare-table-wrap"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

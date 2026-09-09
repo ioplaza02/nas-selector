@@ -1,0 +1,44 @@
+{
+  "updatedAt": "2026-09-01T00:00:00+09:00",
+  "products": [
+    {
+      "id": "hdl6-hb",
+      "name": "LAN DISK（HDL6-HBシリーズ）",
+      "series": "LAN DISK H",
+      "os": "Linux OS",
+      "install": "BOXタイプ",
+      "bay": "6ベイ",
+      "officeSize": "大規模：〜128名",
+      "raidSupport": ["RAID 0", "RAID 1", "RAID 5", "RAID 6", "RAIDeX"],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "RAIDeX",
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "クラウドストレージ連携",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
+        "ログインロックアウト",
+        "Time Machine"
+      ],
+      "variants": [
+        { "sku": "HDL6-HB06", "capacityTB": 6, "priceIncTax": 254100, "priceExTax": 231000, "jan": "" },
+        { "sku": "HDL6-HB12", "capacityTB": 12, "priceIncTax": 389400, "priceExTax": 354000, "jan": "" },
+        { "sku": "HDL6-HB24", "capacityTB": 24, "priceIncTax": 564300, "priceExTax": 513000, "jan": "" },
+        { "sku": "HDL6-HB36", "capacityTB": 36, "priceIncTax": 748000, "priceExTax": 680000, "jan": "" },
+        { "sku": "HDL6-HB48", "capacityTB": 48, "priceIncTax": 886600, "priceExTax": 806000, "jan": "" },
+        { "sku": "HDL6-HB96", "capacityTB": 96, "priceIncTax": 1430000, "priceExTax": 1300000, "jan": "" },
+        { "sku": "HDL6-HB120", "capacityTB": 120, "priceIncTax": 1782000, "priceExTax": 1620000, "jan": "" },
+        { "sku": "HDL6-HB144", "capacityTB": 144, "priceIncTax": 1980000, "priceExTax": 1800000, "jan": "" }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
+      "lastCheckedAt": "2026-09-01T00:00:00+09:00"
+    }
+  ]
+}

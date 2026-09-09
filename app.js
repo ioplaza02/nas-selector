@@ -1,0 +1,300 @@
+const FACET_DEFS = [
+  { key: "officeSize", label: "オフィス規模", type: "single" },
+  { key: "install", label: "設置方法", type: "single" },
+  { key: "os", label: "OS", type: "single" },
+  { key: "bay", label: "ドライブ数", type: "single" },
+  { key: "raidSupport", label: "対応RAID", type: "array" },
+  { key: "warrantyYears", label: "保証", type: "single", format: v => v + "年保証" },
+  { key: "features", label: "対応機能", type: "array" }
+];
+
+let allProducts = [];
+const activeFilters = {};
+const uiState = {};
+let budgetMax = null;
+let capacityRange = null;
+
+async function init() {
+  const res = await fetch("data/products.json");
+  const data = await res.json();
+  allProducts = data.products;
+  allProducts.forEach(p => {
+    uiState[p.id] = { checked: false, variantIdx: 0 };
+  });
+  buildFilterPanel();
+  render();
+
+  document.getElementById("show-discontinued").addEventListener("change", render);
+  document.getElementById("compare-close").addEventListener("click", () => {
+    document.getElementById("compare-modal").hidden = true;
+  });
+  document.getElementById("tray-btn").addEventListener("click", openCompare);
+}
+
+function facetValues(key, type) {
+  const set = new Set();
+  allProducts.forEach(p => {
+    if (type === "array") {
+      (p[key] || []).forEach(v => set.add(v));
+    } else {
+      if (p[key] !== undefined) set.add(p[key]);
+    }
+  });
+  return Array.from(set);
+}
+
+function buildFilterPanel() {
+  const panel = document.getElementById("filter-panel");
+  panel.innerHTML = "";
+
+  FACET_DEFS.forEach(def => {
+    activeFilters[def.key] = new Set();
+    const values = facetValues(def.key, def.type);
+    const group = document.createElement("div");
+    group.className = "filter-group";
+    const label = document.createElement("p");
+    label.className = "filter-group__label";
+    label.textContent = def.label;
+    group.appendChild(label);
+
+    values.forEach(v => {
+      const wrapper = document.createElement("label");
+      const cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.addEventListener("change", () => {
+        if (cb.checked) activeFilters[def.key].add(v);
+        else activeFilters[def.key].delete(v);
+        render();
+      });
+      wrapper.appendChild(cb);
+      wrapper.appendChild(document.createTextNode(def.format ? def.format(v) : v));
+      group.appendChild(wrapper);
+    });
+    panel.appendChild(group);
+  });
+
+  // 予算・容量（レンジ）
+  const priceValues = allProducts.flatMap(p => p.variants.map(v => v.priceIncTax));
+  const capValues = allProducts.flatMap(p => p.variants.map(v => v.capacityTB));
+  const maxPrice = Math.max(...priceValues, 100000);
+  const maxCap = Math.max(...capValues, 8);
+
+  const details = document.createElement("details");
+  const summary = document.createElement("summary");
+  summary.textContent = "予算・容量で絞り込む";
+  summary.style.cursor = "pointer";
+  summary.style.fontSize = "13px";
+  summary.style.fontWeight = "600";
+  summary.style.color = "var(--text-secondary)";
+  details.appendChild(summary);
+
+  const priceLabel = document.createElement("p");
+  priceLabel.className = "range-value";
+  priceLabel.textContent = "予算上限：指定なし";
+  const priceInput = document.createElement("input");
+  priceInput.type = "range";
+  priceInput.min = "0";
+  priceInput.max = String(maxPrice);
+  priceInput.step = "10000";
+  priceInput.value = String(maxPrice);
+  priceInput.addEventListener("input", () => {
+    budgetMax = Number(priceInput.value);
+    priceLabel.textContent = "予算上限：¥" + budgetMax.toLocaleString();
+    render();
+  });
+
+  const capLabel = document.createElement("p");
+  capLabel.className = "range-value";
+  capLabel.textContent = "総容量下限：指定なし";
+  const capInput = document.createElement("input");
+  capInput.type = "range";
+  capInput.min = "0";
+  capInput.max = String(maxCap);
+  capInput.step = "4";
+  capInput.value = "0";
+  capInput.addEventListener("input", () => {
+    capacityRange = Number(capInput.value);
+    capLabel.textContent = "総容量下限：" + capacityRange + "TB";
+    render();
+  });
+
+  details.appendChild(priceLabel);
+  details.appendChild(priceInput);
+  details.appendChild(capLabel);
+  details.appendChild(capInput);
+  panel.appendChild(details);
+
+  const resetBtn = document.createElement("button");
+  resetBtn.className = "filter-reset";
+  resetBtn.textContent = "絞り込みを解除する";
+  resetBtn.addEventListener("click", () => {
+    FACET_DEFS.forEach(def => activeFilters[def.key].clear());
+    budgetMax = null;
+    capacityRange = null;
+    buildFilterPanel();
+    render();
+  });
+  panel.appendChild(resetBtn);
+}
+
+function matchesFilters(p) {
+  for (const def of FACET_DEFS) {
+    const chosen = activeFilters[def.key];
+    if (chosen.size === 0) continue;
+    if (def.type === "array") {
+      const values = p[def.key] || [];
+      const hit = values.some(v => chosen.has(v));
+      if (!hit) return false;
+    } else {
+      if (!chosen.has(p[def.key])) return false;
+    }
+  }
+  if (budgetMax !== null) {
+    const anyWithinBudget = p.variants.some(v => v.priceIncTax <= budgetMax);
+    if (!anyWithinBudget) return false;
+  }
+  if (capacityRange !== null && capacityRange > 0) {
+    const anyWithinCapacity = p.variants.some(v => v.capacityTB >= capacityRange);
+    if (!anyWithinCapacity) return false;
+  }
+  return true;
+}
+
+function visibleProducts() {
+  const showDiscontinued = document.getElementById("show-discontinued").checked;
+  return allProducts.filter(p => {
+    if (p.status !== "現行" && !showDiscontinued) return false;
+    return matchesFilters(p);
+  });
+}
+
+function fmtPrice(n) {
+  return "\u00a5" + n.toLocaleString();
+}
+
+function render() {
+  const visible = visibleProducts();
+  const hiddenDiscontinued = allProducts.filter(p => p.status !== "現行").length;
+  const showDiscontinued = document.getElementById("show-discontinued").checked;
+
+  document.getElementById("result-count").textContent =
+    "該当 " + visible.length + " 件" +
+    (!showDiscontinued && hiddenDiscontinued > 0 ? "（生産終了品 " + hiddenDiscontinued + " 件を非表示）" : "");
+
+  const grid = document.getElementById("product-grid");
+  grid.innerHTML = "";
+
+  visible.forEach(p => {
+    const s = uiState[p.id];
+    const variant = p.variants[s.variantIdx];
+
+    const card = document.createElement("div");
+    card.className = "product-card" + (s.checked ? " product-card--selected" : "");
+
+    const top = document.createElement("div");
+    top.className = "product-card__top";
+    const icon = document.createElement("span");
+    icon.textContent = "\u25A3";
+    const compareLabel = document.createElement("label");
+    compareLabel.className = "product-card__compare";
+    const compareCb = document.createElement("input");
+    compareCb.type = "checkbox";
+    compareCb.checked = s.checked;
+    compareCb.addEventListener("change", () => {
+      s.checked = compareCb.checked;
+      updateTray();
+      render();
+    });
+    compareLabel.appendChild(compareCb);
+    compareLabel.appendChild(document.createTextNode("比較"));
+    top.appendChild(icon);
+    top.appendChild(compareLabel);
+    card.appendChild(top);
+
+    const name = document.createElement("p");
+    name.className = "product-card__name";
+    name.textContent = p.name;
+    card.appendChild(name);
+
+    const badgeRow = document.createElement("div");
+    badgeRow.className = "badge-row";
+    [p.officeSize, p.install, p.bay, p.warrantyYears + "年保証"].forEach(t => {
+      const b = document.createElement("span");
+      b.className = "badge";
+      b.textContent = t;
+      badgeRow.appendChild(b);
+    });
+    card.appendChild(badgeRow);
+
+    const raidLine = document.createElement("p");
+    raidLine.className = "raid-line";
+    raidLine.textContent = "[" + p.raidSupport.join("/") + "]";
+    card.appendChild(raidLine);
+
+    const variantLabel = document.createElement("p");
+    variantLabel.className = "variant-label";
+    variantLabel.textContent = "容量を選択";
+    card.appendChild(variantLabel);
+
+    const variantRow = document.createElement("div");
+    variantRow.className = "variant-row";
+    p.variants.forEach((v, vi) => {
+      const btn = document.createElement("button");
+      btn.className = "variant-btn" + (vi === s.variantIdx ? " variant-btn--selected" : "");
+      btn.textContent = v.capacityTB + "TB";
+      btn.addEventListener("click", () => {
+        s.variantIdx = vi;
+        render();
+      });
+      variantRow.appendChild(btn);
+    });
+    card.appendChild(variantRow);
+
+    const price = document.createElement("p");
+    price.className = "price";
+    price.textContent = fmtPrice(variant.priceIncTax);
+    card.appendChild(price);
+
+    grid.appendChild(card);
+  });
+
+  updateTray();
+}
+
+function updateTray() {
+  const selected = allProducts.filter(p => uiState[p.id].checked);
+  document.getElementById("tray-count").textContent = selected.length;
+  document.getElementById("tray-btn").disabled = selected.length < 2;
+}
+
+function openCompare() {
+  const selected = allProducts.filter(p => uiState[p.id].checked);
+  const rows = [
+    ["容量／価格", p => {
+      const v = p.variants[uiState[p.id].variantIdx];
+      return v.capacityTB + "TB / " + fmtPrice(v.priceIncTax);
+    }],
+    ["オフィス規模", p => p.officeSize],
+    ["設置方法", p => p.install],
+    ["OS", p => p.os],
+    ["ドライブ数", p => p.bay],
+    ["対応RAID", p => p.raidSupport.join(" / ")],
+    ["保証", p => p.warrantyYears + "年保証"],
+    ["対応機能", p => p.features.join(" / ")]
+  ];
+
+  let html = '<table class="compare-table"><tr><th></th>';
+  selected.forEach(p => { html += "<th>" + p.name + "</th>"; });
+  html += "</tr>";
+  rows.forEach(([label, getter]) => {
+    html += "<tr><th>" + label + "</th>";
+    selected.forEach(p => { html += "<td>" + getter(p) + "</td>"; });
+    html += "</tr>";
+  });
+  html += "</table>";
+
+  document.getElementById("compare-table-wrap").innerHTML = html;
+  document.getElementById("compare-modal").hidden = false;
+}
+
+init();
