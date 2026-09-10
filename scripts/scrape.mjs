@@ -3,23 +3,29 @@
 // 使い方：
 //   node scripts/scrape.mjs
 //
-// Playwrightは使わない。理由：
-// linux.htm / windows.htm の絞り込み結果は、ページ読み込み時に一度だけ
-// search_linux.js / search_windows.js という静的JSファイルを読み込み、
-// あとはブラウザ内のJavaScriptだけで絞り込み処理をしている
-// （絞り込み操作をしてもサーバーへの追加リクエストが発生しない）。
-// そのため、このJSファイルを直接fetchするだけで全件のスペックデータが手に入る。
+// データソースは2つ：
+// 1. search_linux.js … 容量・価格・JAN・RAID対応・推奨接続台数など、
+//    商品ごとの詳細スペック（107レコード、link_url単位でグループ化）
+// 2. https://www.iodata.jp/product/nas/general/（と wss-nas / appliance）
+//    … 商品カテゴリー一覧ページ。型番ごとに「店頭在庫限り」「生産終了」の
+//    アイコンが付いており、在庫状況の判定はこちらの方が正確。
+//    「【中規模オフィス～64人】」のような人数付きラベルもここにある。
 //
-// 商品ページ（link_url）側は通常のサーバーレンダリングされたHTMLなので、
-// これもfetchだけで読める。保証年数・在庫状況・対応機能は、
-// ページ本文のテキストを正規表現で走査して拾う。
+// 保証年数・対応機能は、各商品ページ本文＋spec.htmのテキストを
+// 正規表現で走査して拾う（DOM構造への依存を避けるため）。
 
 import fs from "node:fs/promises";
 
 const LIST_URLS = [
-  "https://www.iodata.jp/ssp/nas/biznas/selector/search_linux.js",
-  // TODO: Windows版が同じ命名規則か確認する
-  // "https://www.iodata.jp/ssp/nas/biznas/selector/search_windows.js"
+  "https://www.iodata.jp/ssp/nas/biznas/selector/search_linux.js"
+  // TODO: Windows版の同等ファイル（search_windows.js的なもの）を調査して追加する
+];
+
+// 在庫状況・人数ラベルの参照元。複数カテゴリーにまたがっているため全部見る。
+const CATALOG_PAGE_URLS = [
+  "https://www.iodata.jp/product/nas/general/",
+  "https://www.iodata.jp/product/nas/wss-nas/",
+  "https://www.iodata.jp/product/nas/appliance/"
 ];
 
 const OUTPUT_PATH = new URL("../data/products.json", import.meta.url);
@@ -29,8 +35,6 @@ const USER_AGENT =
   "NasSelectorBot/1.0 (+https://github.com/ioplaza02/nas-selector; " +
   "monthly price/spec check for internal comparison tool)";
 
-// 商品ページ本文から拾いたい機能キーワード。
-// 見出しバッジの文言と完全一致していなくても、テキスト中に含まれていればヒットとする。
 const FEATURE_KEYWORDS = [
   "RAIDeX", "10GbE", "NAS専用HDD", "データ復旧サービス", "UPS対応",
   "リモートアクセス", "クラウドストレージ連携", "NarSuS", "NarSuSクラウドバックアップ",
@@ -48,8 +52,8 @@ async function fetchText(url) {
 }
 
 // "var json = [ ... ];" 形式のJSファイルから配列部分だけ取り出してparseする。
-// 「ファイル内最後の ] まで」ではなく、[ と ] の対応を1文字ずつ数えて
-// 本当に配列が終わる位置を特定する（文字列リテラル内の [ ] は無視する）。
+// [ と ] の対応を1文字ずつ数えて、本当に配列が終わる位置を特定する
+// （文字列リテラル内の [ ] は無視する）。
 function extractJsonArrayText(text) {
   const anchor = text.indexOf("var json");
   if (anchor === -1) throw new Error("var json が見つかりませんでした");
@@ -64,14 +68,12 @@ function extractJsonArrayText(text) {
 
   for (let i = start; i < text.length; i++) {
     const ch = text[i];
-
     if (inString) {
       if (escaped) escaped = false;
       else if (ch === "\\") escaped = true;
       else if (ch === quoteChar) inString = false;
       continue;
     }
-
     if (ch === '"' || ch === "'") {
       inString = true;
       quoteChar = ch;
@@ -87,13 +89,10 @@ function extractJsonArrayText(text) {
 }
 
 function parseSearchJs(text) {
-  const arrayText = extractJsonArrayText(text)
-    // JSでは許容される「配列・オブジェクト末尾の余計なカンマ」はJSON.parseがエラーになるので除去する
-    .replace(/,(\s*[\]}])/g, "$1");
+  const arrayText = extractJsonArrayText(text).replace(/,(\s*[\]}])/g, "$1");
   return JSON.parse(arrayText);
 }
 
-// "○(120TB)" のような文字列から対応/実効容量を読み取る
 function parseRaidCell(cell) {
   if (!cell || cell === "-") return null;
   const m = cell.match(/\(([\d.]+TB)\)/);
@@ -120,46 +119,218 @@ function raidSupportList(entry) {
   return list;
 }
 
-async function fetchProductDetail(url) {
-  let html;
-  try {
-    html = await fetchText(url);
-  } catch (err) {
-    // 商品ページが404などで取得できない場合、生産終了で
-    // ページ自体が削除されたケースが多いため、生産終了として扱い処理は続行する
-    console.warn("  -> 取得失敗のため生産終了扱いにします:", url, "(" + err.message + ")");
-    return {
-      warrantyYears: null,
-      status: "生産終了",
-      features: []
-    };
-  }
+// link_url からディレクトリ名（例: "hdl6-hb"）を取り出す
+function slugFromLinkUrl(linkUrl) {
+  const m = linkUrl.match(/\/general\/([a-z0-9\-]+)\/?/i) || linkUrl.match(/\/([a-z0-9\-]+)\/?$/i);
+  return m ? m[1] : null;
+}
 
-  // ざっくりテキスト化（正確なDOM解析はせず、本文全体を対象に正規表現で拾う）
-  const text = html.replace(/<[^>]+>/g, " ");
+// カテゴリー一覧ページの生HTMLから、型番の直後にある状態アイコンを調べる。
+// 完全なDOM解析はせず、「型番の文字列が出てくる位置の少し後ろ」を見るだけの
+// シンプルな方式（型番はユニークな文字列なので誤検出しにくい）。
+function lookupSkuStatus(catalogHtml, sku) {
+  const idx = catalogHtml.indexOf(sku);
+  if (idx === -1) return null; // このカタログページには載っていない
+  const window = catalogHtml.slice(idx, idx + 250);
+  if (/icon_close/.test(window)) return "生産終了";
+  if (/icon_limit/.test(window)) return "生産終了"; // 店頭在庫限りも「現行」からは外す
+  return "現行";
+}
 
-  let warrantyYears = null;
-  if (/5\s*年保証/.test(text)) warrantyYears = 5;
-  else if (/3\s*年保証/.test(text)) warrantyYears = 3;
-  // TODO: 1年保証のパターンが実際に存在するか確認する
+// シリーズのディレクトリ名から、直前にある【...】ラベルを探す
+function lookupOfficeLabel(catalogHtml, slug) {
+  if (!slug) return null;
+  const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const m = re.exec(catalogHtml);
+  if (!m) return null;
+  const before = catalogHtml.slice(Math.max(0, m.index - 400), m.index);
+  const matches = [...before.matchAll(/【([^】]+)】/g)];
+  if (matches.length === 0) return null;
+  return matches[matches.length - 1][1]; // 直前に一番近いもの
+}
 
-  // TODO: 生産終了品の実際の判定パターンをもう少し集めて精度を確認する
-  const isDiscontinued = /生産終了|店頭在庫限り|在庫限り/.test(text);
+function formatOfficeLabel(label) {
+  if (!label) return null;
+  // 「大規模オフィス～128人」→「大規模：～128人」
+  const m = label.match(/^(.+?)オフィス(.*)$/);
+  if (!m) return label;
+  return m[1] + "：" + m[2];
+}
 
-  const features = FEATURE_KEYWORDS.filter(kw => text.includes(kw));
+// カタログページの見出しリンクから、正式なシリーズ名をそのまま拾う
+// （型番の末尾が数字+アルファベット混在の場合、SKU名からの推測に頼らない）
+// シリーズによっては見出しがリンクになっておらず黒文字のままのケースがあるため、
+// リンクが見つからない場合は直前のテキストから「シリーズ」を含む一文を拾うフォールバックを用意。
+function lookupSeriesName(catalogHtml, slug) {
+  if (!slug) return null;
+  const linkRe = new RegExp('href="[^"]*/general/' + slug + '/(?:index\\.htm)?"[^>]*>([^<]+)</a>', "i");
+  const m = linkRe.exec(catalogHtml);
+  if (m) return m[1].trim();
 
+  const anchorRe = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const anchorMatch = anchorRe.exec(catalogHtml);
+  if (!anchorMatch) return null;
+  const before = catalogHtml.slice(Math.max(0, anchorMatch.index - 400), anchorMatch.index);
+  const plainMatches = [...before.matchAll(/>([^<]*シリーズ[^<]*)</g)];
+  return plainMatches.length > 0 ? plainMatches[plainMatches.length - 1][1].trim() : null;
+}
+
+// 設置方法・ドライブ数は、【...】ラベルの直後にある説明文
+// （例:「10GbE対応 4ドライブ BOXタイプ」）から拾う
+function lookupInstallAndBay(catalogHtml, slug) {
+  if (!slug) return { install: null, bay: null };
+  const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const m = re.exec(catalogHtml);
+  if (!m) return { install: null, bay: null };
+  const before = catalogHtml.slice(Math.max(0, m.index - 400), m.index).replace(/<[^>]+>/g, " ");
+  const bayMatch = before.match(/(\d+)\s*ドライブ/);
+  const installMatch = before.match(/(BOX|ラック)/);
   return {
-    warrantyYears,
-    status: isDiscontinued ? "生産終了" : "現行",
-    features
+    bay: bayMatch ? bayMatch[1] + "ベイ" : null,
+    install: installMatch ? (installMatch[1] === "BOX" ? "BOXタイプ" : "ラックマウントタイプ") : null
   };
 }
 
+// シリーズ見出し付近にある商品画像を拾う
+function lookupSeriesImage(catalogHtml, slug) {
+  if (!slug) return null;
+  const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const m = re.exec(catalogHtml);
+  if (!m) return null;
+  const windowHtml = catalogHtml.slice(m.index, m.index + 1500);
+  const imgMatch = windowHtml.match(/<img[^>]+src="([^"]+\.(?:jpg|jpeg|png|gif))"/i);
+  if (!imgMatch) return null;
+  let src = imgMatch[1];
+  if (src.startsWith("//")) src = "https:" + src;
+  else if (src.startsWith("/")) src = "https://www.iodata.jp" + src;
+  return src;
+}
+
+// 機能バッジ探索と同じ範囲を使って、説明文に直接書かれた保証年数も拾う
+function lookupCatalogWarranty(catalogHtml, slug) {
+  if (!slug) return null;
+  const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const m = re.exec(catalogHtml);
+  if (!m) return null;
+  const rest = catalogHtml.slice(m.index);
+  const nextLabelIdx = rest.indexOf("【", 50);
+  const windowHtml = nextLabelIdx === -1 ? rest.slice(0, 6000) : rest.slice(0, nextLabelIdx);
+  const windowText = windowHtml.replace(/<[^>]+>/g, " ");
+  const heroMatch = windowText.match(/(\d)\s*年保証/);
+  return heroMatch ? Number(heroMatch[1]) : null;
+}
+
+// 機能バッジの補完用（既出）
+function lookupCatalogFeatures(catalogHtml, slug) {
+  if (!slug) return [];
+  const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const m = re.exec(catalogHtml);
+  if (!m) return [];
+  const rest = catalogHtml.slice(m.index);
+  const nextLabelIdx = rest.indexOf("【", 50);
+  const windowHtml = nextLabelIdx === -1 ? rest.slice(0, 6000) : rest.slice(0, nextLabelIdx);
+  const windowText = windowHtml.replace(/<[^>]+>/g, " ");
+  return FEATURE_KEYWORDS.filter(kw => windowText.includes(kw));
+}
+
+async function fetchWarrantyAndFeatures(productUrl) {
+  const specUrl = productUrl.replace(/\/?$/, "/") + "spec.htm";
+
+  let mainText = "";
+  let specText = "";
+  try {
+    mainText = (await fetchText(productUrl)).replace(/<[^>]+>/g, " ");
+  } catch (err) {
+    console.warn("  -> 商品ページ取得失敗:", productUrl, "(" + err.message + ")");
+  }
+  await sleep(REQUEST_INTERVAL_MS);
+  try {
+    specText = (await fetchText(specUrl)).replace(/<[^>]+>/g, " ");
+  } catch (err) {
+    console.warn("  -> spec.htm取得失敗:", specUrl, "(" + err.message + ")");
+  }
+  await sleep(REQUEST_INTERVAL_MS);
+
+  const combined = mainText + " " + specText;
+
+  let warrantyYears = null;
+  const heroMatch = combined.match(/(\d)\s*年保証/);
+  if (heroMatch) {
+    warrantyYears = Number(heroMatch[1]);
+  } else {
+    const idx = combined.indexOf("保証期間");
+    if (idx !== -1) {
+      const after = combined.slice(idx, idx + 60);
+      const m = after.match(/(\d)\s*年/);
+      if (m) warrantyYears = Number(m[1]);
+    }
+  }
+
+  const features = FEATURE_KEYWORDS.filter(kw => combined.includes(kw));
+
+  return { warrantyYears, features };
+}
+
+// カタログページ全体から、全シリーズの見出しリンク（slug・シリーズ名・出現位置）を洗い出す。
+// 「シリーズ」という文字を含むリンクだけを対象にすることで、価格表内の型番リンク
+// （見出しと同じhrefを指すがテキストは型番）を誤って拾わないようにしている。
+function extractAllCatalogSeries(catalogHtml) {
+  const re = /href="([^"]*\/general\/([a-z0-9\-]+)\/(?:index\.htm)?)"[^>]*>([^<]*シリーズ[^<]*)<\/a>/gi;
+  const seen = new Set();
+  const list = [];
+  let m;
+  while ((m = re.exec(catalogHtml)) !== null) {
+    const slug = m[2].toLowerCase();
+    if (seen.has(slug)) continue;
+    seen.add(slug);
+    list.push({ slug, name: m[3].trim(), index: m.index });
+  }
+  return list.sort((a, b) => a.index - b.index);
+}
+
+// 指定シリーズの価格表ブロック（そのシリーズの見出し〜次のシリーズの見出し直前まで）から、
+// 型番・容量・価格・在庫状況を抜き出す。JANコード・RAID対応はこのページには無いため空にする。
+function extractCatalogVariants(catalogHtml, series, allSeries) {
+  const startIdx = series.index;
+  const nextIdx = allSeries
+    .map(s => s.index)
+    .filter(i => i > startIdx)
+    .sort((a, b) => a - b)[0];
+  const block = catalogHtml.slice(startIdx, nextIdx === undefined ? startIdx + 8000 : nextIdx);
+
+  const rowRe = /href="[^"]*\/general\/[a-z0-9\-]+\/(?:index\.htm)?"[^>]*>\s*([A-Z][A-Z0-9\-\/]+)\s*<\/a>([\s\S]{0,80}?)(\d+(?:\.\d+)?)\s*TB[\s\S]{0,150}?￥([\d,]+)/gi;
+
+  const variants = [];
+  let m;
+  while ((m = rowRe.exec(block)) !== null) {
+    const sku = m[1].trim();
+    const statusWindow = m[2];
+    const status = /icon_close|icon_limit/.test(statusWindow) ? "生産終了" : "現行";
+    variants.push({
+      sku,
+      capacityTB: Number(m[3]),
+      priceIncTax: Number(m[4].replace(/,/g, "")),
+      jan: "",
+      status
+    });
+  }
+  return variants;
+}
 async function main() {
   const rawEntries = [];
   for (const url of LIST_URLS) {
     const text = await fetchText(url);
     rawEntries.push(...parseSearchJs(text));
+    await sleep(REQUEST_INTERVAL_MS);
+  }
+
+  let catalogHtml = "";
+  for (const url of CATALOG_PAGE_URLS) {
+    try {
+      catalogHtml += await fetchText(url) + "\n";
+    } catch (err) {
+      console.warn("  -> カタログページ取得失敗:", url, "(" + err.message + ")");
+    }
     await sleep(REQUEST_INTERVAL_MS);
   }
 
@@ -171,34 +342,88 @@ async function main() {
   }
 
   const products = [];
+  const coveredSlugs = new Set();
+
   for (const [linkUrl, entries] of groups) {
     const base = entries[0];
+    const slug = slugFromLinkUrl(linkUrl);
+    if (slug) coveredSlugs.add(slug);
 
-    const detail = await fetchProductDetail(linkUrl);
-    await sleep(REQUEST_INTERVAL_MS);
+    const variants = entries.map(e => ({
+      sku: e.name,
+      capacityTB: Number(String(e.capacity).replace("TB", "")),
+      priceIncTax: e.price,
+      jan: String(e.jan),
+      status: lookupSkuStatus(catalogHtml, e.name) || "現行"
+    }));
+
+    const anyCurrent = variants.some(v => v.status === "現行");
+    const officeLabel = formatOfficeLabel(lookupOfficeLabel(catalogHtml, slug));
+
+    const { warrantyYears: detailWarrantyYears, features: detailFeatures } = await fetchWarrantyAndFeatures(linkUrl);
+    const warrantyYears = detailWarrantyYears ?? lookupCatalogWarranty(catalogHtml, slug);
+    const features = detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, slug);
+
+    const catalogSeriesName = lookupSeriesName(catalogHtml, slug);
+    const fallbackShortName = base.name.replace(/\d+$/, "");
+    const displayName = catalogSeriesName || (base.series + "（" + fallbackShortName + "シリーズ）");
 
     products.push({
-      id: base.name.replace(/\d+$/, "").toLowerCase(),
-      name: base.series + "（" + base.name.replace(/\d+$/, "") + "シリーズ）",
+      id: (slug || fallbackShortName).toLowerCase(),
+      name: displayName,
       series: base.series,
       os: "Linux OS", // TODO: Windows版を追加する時はここを出し分ける
       install: installType(base.type),
       bay: base.drive + "ベイ",
-      officeSize: officeSizeCode(base.office) + "：" + base.concurrent,
+      officeSize: officeLabel || (officeSizeCode(base.office) + "：" + base.concurrent),
+      imageUrl: lookupSeriesImage(catalogHtml, slug),
       raidSupport: raidSupportList(base),
-      warrantyYears: detail.warrantyYears,
-      status: detail.status,
-      features: detail.features,
-      variants: entries.map(e => ({
-        sku: e.name,
-        capacityTB: Number(String(e.capacity).replace("TB", "")),
-        priceIncTax: e.price,
-        jan: String(e.jan)
-      })),
+      warrantyYears,
+      status: anyCurrent ? "現行" : "生産終了",
+      features,
+      variants,
       sourceUrl: linkUrl,
       lastCheckedAt: new Date().toISOString()
     });
   }
+
+  // search_linux.js に無いシリーズ（LXシリーズなど）をカタログページから補完する。
+  // JANコード・RAID対応・推奨接続台数はこのページに無いため空/不明のままになる。
+  const allCatalogSeries = extractAllCatalogSeries(catalogHtml);
+  for (const series of allCatalogSeries) {
+    if (coveredSlugs.has(series.slug)) continue;
+
+    const variants = extractCatalogVariants(catalogHtml, series, allCatalogSeries);
+    if (variants.length === 0) continue; // 価格表が見つからなければスキップ（バナー等の誤検出防止）
+
+    const productUrl = "https://www.iodata.jp/product/nas/general/" + series.slug + "/";
+    const anyCurrent = variants.some(v => v.status === "現行");
+    const officeLabel = formatOfficeLabel(lookupOfficeLabel(catalogHtml, series.slug));
+    const { install, bay } = lookupInstallAndBay(catalogHtml, series.slug);
+
+    const { warrantyYears: detailWarrantyYears, features: detailFeatures } = await fetchWarrantyAndFeatures(productUrl);
+    const warrantyYears = detailWarrantyYears ?? lookupCatalogWarranty(catalogHtml, series.slug);
+    const features = detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, series.slug);
+
+    products.push({
+      id: series.slug,
+      name: series.name,
+      series: null, // TODO: カタログ補完分はシリーズ大分類（LAN DISK H/X/A等）を未取得
+      os: "Linux OS",
+      install,
+      bay,
+      officeSize: officeLabel,
+      imageUrl: lookupSeriesImage(catalogHtml, series.slug),
+      raidSupport: [], // このページには無い情報
+      warrantyYears,
+      status: anyCurrent ? "現行" : "生産終了",
+      features,
+      variants,
+      sourceUrl: productUrl,
+      lastCheckedAt: new Date().toISOString()
+    });
+  }
+
 
   const output = {
     updatedAt: new Date().toISOString(),
