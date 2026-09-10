@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T08:43:18.436Z",
+  "updatedAt": "2026-09-10T03:42:46.092Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -9,6 +9,7 @@
       "install": "BOXタイプ",
       "bay": "6ベイ",
       "officeSize": "大規模：～128人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -90,7 +91,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-09-09T08:40:51.978Z"
+      "lastCheckedAt": "2026-09-10T03:40:23.461Z"
     },
     {
       "id": "hdl4-hbex",
@@ -100,6 +101,7 @@
       "install": "BOXタイプ",
       "bay": "4ベイ",
       "officeSize": "大規模：～128人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -160,7 +162,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-09-09T08:40:56.771Z"
+      "lastCheckedAt": "2026-09-10T03:40:28.361Z"
     },
     {
       "id": "hdl2-hb",
@@ -170,6 +172,7 @@
       "install": "BOXタイプ",
       "bay": "2ベイ",
       "officeSize": "大規模：～128人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -250,7 +253,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-09-09T08:41:01.469Z"
+      "lastCheckedAt": "2026-09-10T03:40:33.495Z"
     },
     {
       "id": "hdl6-hab",
@@ -260,6 +263,7 @@
       "install": "BOXタイプ",
       "bay": "6ベイ",
       "officeSize": "大規模：～128人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -326,7 +330,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-09-09T08:41:06.111Z"
+      "lastCheckedAt": "2026-09-10T03:40:38.410Z"
     },
     {
       "id": "hdl4-hab-u",
@@ -336,6 +340,7 @@
       "install": "ラック",
       "bay": "4ベイ",
       "officeSize": "大規模：～128人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -402,7 +407,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-09-09T08:41:10.857Z"
+      "lastCheckedAt": "2026-09-10T03:40:43.345Z"
     },
     {
       "id": "hdl4-haexb",
@@ -412,6 +417,7 @@
       "install": "BOXタイプ",
       "bay": "4ベイ",
       "officeSize": "大規模：～128人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -471,7 +477,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-09-09T08:41:15.535Z"
+      "lastCheckedAt": "2026-09-10T03:40:48.140Z"
     },
     {
       "id": "hdl2-habtm5",
@@ -481,6 +487,7 @@
       "install": "BOXタイプ",
       "bay": "2ベイ",
       "officeSize": "大規模：～128人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_close.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -525,7 +532,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-09-09T08:41:20.437Z"
+      "lastCheckedAt": "2026-09-10T03:40:52.854Z"
     },
     {
       "id": "hdl2-hab",
@@ -535,6 +542,7 @@
       "install": "BOXタイプ",
       "bay": "2ベイ",
       "officeSize": "大規模：～128人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -593,7 +601,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-09-09T08:41:25.168Z"
+      "lastCheckedAt": "2026-09-10T03:40:57.676Z"
     },
     {
       "id": "hdl4-xab-u",
@@ -603,6 +611,7 @@
       "install": "ラック",
       "bay": "4ベイ",
       "officeSize": "中規模：～64人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -675,7 +684,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-09-09T08:41:29.998Z"
+      "lastCheckedAt": "2026-09-10T03:41:02.527Z"
     },
     {
       "id": "hdl4-xab",
@@ -685,6 +694,7 @@
       "install": "BOXタイプ",
       "bay": "4ベイ",
       "officeSize": "中規模：～64人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -736,7 +746,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-09-09T08:41:34.707Z"
+      "lastCheckedAt": "2026-09-10T03:41:07.202Z"
     },
     {
       "id": "hdl2-xab",
@@ -746,6 +756,7 @@
       "install": "BOXタイプ",
       "bay": "2ベイ",
       "officeSize": "中規模：～64人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -796,7 +807,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-09-09T08:41:39.296Z"
+      "lastCheckedAt": "2026-09-10T03:41:11.924Z"
     },
     {
       "id": "hdl2-xabtm5",
@@ -806,6 +817,7 @@
       "install": "BOXタイプ",
       "bay": "2ベイ",
       "officeSize": "中規模：～64人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -849,7 +861,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-09-09T08:41:44.213Z"
+      "lastCheckedAt": "2026-09-10T03:41:16.680Z"
     },
     {
       "id": "hdl4-lvu",
@@ -859,6 +871,7 @@
       "install": "ラック",
       "bay": "4ベイ",
       "officeSize": "中規模：～50人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -907,7 +920,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-09-09T08:41:49.011Z"
+      "lastCheckedAt": "2026-09-10T03:41:21.410Z"
     },
     {
       "id": "hdl4-lv",
@@ -917,6 +930,7 @@
       "install": "BOXタイプ",
       "bay": "4ベイ",
       "officeSize": "中規模：～50人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -965,7 +979,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-09-09T08:41:53.781Z"
+      "lastCheckedAt": "2026-09-10T03:41:26.282Z"
     },
     {
       "id": "hdl2-lv",
@@ -975,6 +989,7 @@
       "install": "BOXタイプ",
       "bay": "2ベイ",
       "officeSize": "中規模：～50人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -1022,7 +1037,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-09-09T08:41:58.657Z"
+      "lastCheckedAt": "2026-09-10T03:41:31.043Z"
     },
     {
       "id": "hdl2-len",
@@ -1032,6 +1047,7 @@
       "install": "BOXタイプ",
       "bay": "2ベイ",
       "officeSize": "小規模：～25人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -1086,7 +1102,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-09-09T08:42:03.486Z"
+      "lastCheckedAt": "2026-09-10T03:41:35.695Z"
     },
     {
       "id": "hdl2-aaxwb",
@@ -1096,6 +1112,7 @@
       "install": "BOXタイプ",
       "bay": "2ベイ",
       "officeSize": "小規模：～16人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -1157,7 +1174,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-09-09T08:42:08.212Z"
+      "lastCheckedAt": "2026-09-10T03:41:40.459Z"
     },
     {
       "id": "hdl1-len",
@@ -1167,6 +1184,7 @@
       "install": "BOXタイプ",
       "bay": "1ベイ",
       "officeSize": "小規模：～25人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/icon_limit.gif",
       "raidSupport": [],
       "warrantyYears": 5,
       "status": "現行",
@@ -1215,7 +1233,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-09-09T08:42:13.104Z"
+      "lastCheckedAt": "2026-09-10T03:41:45.229Z"
     },
     {
       "id": "hdl-aaxw",
@@ -1225,6 +1243,7 @@
       "install": "BOXタイプ",
       "bay": "1ベイ",
       "officeSize": "SOHO向け／小規模：～16人",
+      "imageUrl": "https://www.iodata.jp/image/hdl-aaxw_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
       "status": "生産終了",
@@ -1280,7 +1299,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-09-09T08:42:17.858Z"
+      "lastCheckedAt": "2026-09-10T03:41:50.229Z"
     },
     {
       "id": "hdl2-tasoho",
@@ -1290,6 +1309,7 @@
       "install": "BOXタイプ",
       "bay": "2ベイ",
       "officeSize": "SOHO向け～8人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
@@ -1335,7 +1355,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-09-09T08:42:22.671Z"
+      "lastCheckedAt": "2026-09-10T03:41:54.863Z"
     },
     {
       "id": "hdl1-tasoho",
@@ -1345,6 +1365,7 @@
       "install": "BOXタイプ",
       "bay": "1ベイ",
       "officeSize": "小規模：1～15台",
+      "imageUrl": null,
       "raidSupport": [],
       "warrantyYears": null,
       "status": "現行",
@@ -1387,16 +1408,17 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-tasoho/",
-      "lastCheckedAt": "2026-09-09T08:42:27.763Z"
+      "lastCheckedAt": "2026-09-10T03:41:59.064Z"
     },
     {
       "id": "hdl4-lx",
       "name": "LAN DISK（HDL4-LXシリーズ）",
       "series": null,
       "os": "Linux OS",
-      "install": null,
-      "bay": null,
+      "install": "BOXタイプ",
+      "bay": "4ベイ",
       "officeSize": "中規模：～64人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [],
       "warrantyYears": null,
       "status": "現行",
@@ -1464,16 +1486,17 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
-      "lastCheckedAt": "2026-09-09T08:42:33.022Z"
+      "lastCheckedAt": "2026-09-10T03:42:03.851Z"
     },
     {
       "id": "hdl4-lvb",
       "name": "LAN DISK（HDL4-LVBシリーズ）",
       "series": null,
       "os": "Linux OS",
-      "install": null,
-      "bay": null,
+      "install": "BOXタイプ",
+      "bay": "4ベイ",
       "officeSize": "中規模：～50人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [],
       "warrantyYears": 3,
       "status": "現行",
@@ -1519,16 +1542,17 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
-      "lastCheckedAt": "2026-09-09T08:42:37.852Z"
+      "lastCheckedAt": "2026-09-10T03:42:08.576Z"
     },
     {
       "id": "hdl2-lx",
       "name": "LAN DISK（HDL2-LXシリーズ）",
       "series": null,
       "os": "Linux OS",
-      "install": null,
-      "bay": null,
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
       "officeSize": "中規模：～64人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [],
       "warrantyYears": null,
       "status": "現行",
@@ -1575,16 +1599,17 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
-      "lastCheckedAt": "2026-09-09T08:42:42.609Z"
+      "lastCheckedAt": "2026-09-10T03:42:13.260Z"
     },
     {
       "id": "hdl2-lvb",
       "name": "LAN DISK（HDL2-LVBシリーズ）",
       "series": null,
       "os": "Linux OS",
-      "install": null,
-      "bay": null,
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
       "officeSize": "中規模：～50人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [],
       "warrantyYears": 3,
       "status": "現行",
@@ -1630,16 +1655,17 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
-      "lastCheckedAt": "2026-09-09T08:42:47.351Z"
+      "lastCheckedAt": "2026-09-10T03:42:17.851Z"
     },
     {
       "id": "hdl2-lenb",
       "name": "LAN DISK（HDL2-LENBシリーズ）",
       "series": null,
       "os": "Linux OS",
-      "install": null,
-      "bay": null,
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
       "officeSize": "小規模：～25人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [],
       "warrantyYears": 3,
       "status": "現行",
@@ -1691,16 +1717,17 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
-      "lastCheckedAt": "2026-09-09T08:42:52.642Z"
+      "lastCheckedAt": "2026-09-10T03:42:22.612Z"
     },
     {
       "id": "hdl1-lenb",
       "name": "LAN DISK（HDL1-LENBシリーズ）",
       "series": null,
       "os": "Linux OS",
-      "install": null,
-      "bay": null,
+      "install": "BOXタイプ",
+      "bay": "1ベイ",
       "officeSize": "小規模：～25人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [],
       "warrantyYears": 3,
       "status": "現行",
@@ -1751,16 +1778,17 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
-      "lastCheckedAt": "2026-09-09T08:42:57.736Z"
+      "lastCheckedAt": "2026-09-10T03:42:27.359Z"
     },
     {
       "id": "hdl1-lasoho",
       "name": "HDL1-LASOHOシリーズ",
       "series": null,
       "os": "Linux OS",
-      "install": null,
-      "bay": null,
+      "install": "BOXタイプ",
+      "bay": "1ベイ",
       "officeSize": "SOHO向け／小規模：～10名",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [],
       "warrantyYears": 3,
       "status": "現行",
@@ -1809,16 +1837,17 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
-      "lastCheckedAt": "2026-09-09T08:43:02.689Z"
+      "lastCheckedAt": "2026-09-10T03:42:32.105Z"
     },
     {
       "id": "hdl4-lxu",
       "name": "LAN DISK（HDL4-LXUシリーズ）",
       "series": null,
       "os": "Linux OS",
-      "install": null,
-      "bay": null,
+      "install": "ラックマウントタイプ",
+      "bay": "4ベイ",
       "officeSize": "中規模：～64人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [],
       "warrantyYears": null,
       "status": "現行",
@@ -1886,16 +1915,17 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
-      "lastCheckedAt": "2026-09-09T08:43:07.616Z"
+      "lastCheckedAt": "2026-09-10T03:42:36.740Z"
     },
     {
       "id": "hdl4-lvub",
       "name": "LAN DISK（HDL4-LVUBシリーズ）",
       "series": null,
       "os": "Linux OS",
-      "install": null,
-      "bay": null,
+      "install": "ラックマウントタイプ",
+      "bay": "4ベイ",
       "officeSize": "中規模：～50人",
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [],
       "warrantyYears": 3,
       "status": "現行",
@@ -1941,7 +1971,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
-      "lastCheckedAt": "2026-09-09T08:43:13.424Z"
+      "lastCheckedAt": "2026-09-10T03:42:41.445Z"
     },
     {
       "id": "bcsp-lvreut",
@@ -1951,6 +1981,7 @@
       "install": null,
       "bay": null,
       "officeSize": null,
+      "imageUrl": "https://www.iodata.jp/common/img_v2/btn_buynow.gif",
       "raidSupport": [],
       "warrantyYears": 5,
       "status": "現行",
@@ -1988,7 +2019,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/bcsp-lvreut/",
-      "lastCheckedAt": "2026-09-09T08:43:18.436Z"
+      "lastCheckedAt": "2026-09-10T03:42:46.092Z"
     }
   ]
 }
