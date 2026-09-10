@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T07:05:30.819Z",
+  "updatedAt": "2026-09-10T07:47:05.773Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -91,7 +91,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-09-10T07:03:12.700Z"
+      "lastCheckedAt": "2026-09-10T07:43:20.656Z"
     },
     {
       "id": "hdl4-hbex",
@@ -162,7 +162,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-09-10T07:03:17.575Z"
+      "lastCheckedAt": "2026-09-10T07:43:25.423Z"
     },
     {
       "id": "hdl2-hb",
@@ -253,7 +253,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-09-10T07:03:22.406Z"
+      "lastCheckedAt": "2026-09-10T07:43:30.389Z"
     },
     {
       "id": "hdl6-hab",
@@ -330,7 +330,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-09-10T07:03:27.165Z"
+      "lastCheckedAt": "2026-09-10T07:43:35.024Z"
     },
     {
       "id": "hdl4-hab-u",
@@ -407,7 +407,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-09-10T07:03:32.028Z"
+      "lastCheckedAt": "2026-09-10T07:43:39.621Z"
     },
     {
       "id": "hdl4-haexb",
@@ -477,7 +477,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-09-10T07:03:36.836Z"
+      "lastCheckedAt": "2026-09-10T07:43:44.551Z"
     },
     {
       "id": "hdl2-habtm5",
@@ -532,7 +532,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-09-10T07:03:41.882Z"
+      "lastCheckedAt": "2026-09-10T07:43:49.522Z"
     },
     {
       "id": "hdl2-hab",
@@ -601,7 +601,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-09-10T07:03:46.578Z"
+      "lastCheckedAt": "2026-09-10T07:43:54.471Z"
     },
     {
       "id": "hdl4-xab-u",
@@ -684,7 +684,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-09-10T07:03:51.473Z"
+      "lastCheckedAt": "2026-09-10T07:43:59.273Z"
     },
     {
       "id": "hdl4-xab",
@@ -746,7 +746,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-09-10T07:03:56.201Z"
+      "lastCheckedAt": "2026-09-10T07:44:04.109Z"
     },
     {
       "id": "hdl2-xab",
@@ -807,7 +807,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-09-10T07:04:01.027Z"
+      "lastCheckedAt": "2026-09-10T07:44:08.703Z"
     },
     {
       "id": "hdl2-xabtm5",
@@ -861,7 +861,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-09-10T07:04:05.968Z"
+      "lastCheckedAt": "2026-09-10T07:44:13.470Z"
     },
     {
       "id": "hdl4-lvu",
@@ -920,7 +920,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-09-10T07:04:10.845Z"
+      "lastCheckedAt": "2026-09-10T07:44:18.234Z"
     },
     {
       "id": "hdl4-lv",
@@ -979,7 +979,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-09-10T07:04:15.453Z"
+      "lastCheckedAt": "2026-09-10T07:44:22.943Z"
     },
     {
       "id": "hdl2-lv",
@@ -1037,7 +1037,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-09-10T07:04:20.199Z"
+      "lastCheckedAt": "2026-09-10T07:44:27.699Z"
     },
     {
       "id": "hdl2-len",
@@ -1102,7 +1102,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-09-10T07:04:24.804Z"
+      "lastCheckedAt": "2026-09-10T07:44:32.732Z"
     },
     {
       "id": "hdl2-aaxwb",
@@ -1174,7 +1174,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-09-10T07:04:29.728Z"
+      "lastCheckedAt": "2026-09-10T07:44:37.341Z"
     },
     {
       "id": "hdl1-len",
@@ -1233,7 +1233,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-09-10T07:04:34.355Z"
+      "lastCheckedAt": "2026-09-10T07:44:42.177Z"
     },
     {
       "id": "hdl-aaxw",
@@ -1299,7 +1299,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-09-10T07:04:38.933Z"
+      "lastCheckedAt": "2026-09-10T07:44:47.088Z"
     },
     {
       "id": "hdl2-tasoho",
@@ -1355,7 +1355,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-09-10T07:04:43.922Z"
+      "lastCheckedAt": "2026-09-10T07:44:51.886Z"
     },
     {
       "id": "hdl1-lasoho",
@@ -1414,7 +1414,1142 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
-      "lastCheckedAt": "2026-09-10T07:04:48.859Z"
+      "lastCheckedAt": "2026-09-10T07:44:56.635Z"
+    },
+    {
+      "id": "hdl4-z25si3b",
+      "name": "LAN DISK Z（HDL4-Z25SI3Bシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "4ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z25SI3B80",
+          "capacityTB": 80,
+          "priceIncTax": 1485000,
+          "jan": "4957180182261",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B64",
+          "capacityTB": 64,
+          "priceIncTax": 1265000,
+          "jan": "4957180182254",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B48",
+          "capacityTB": 48,
+          "priceIncTax": 957000,
+          "jan": "4957180182247",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B32",
+          "capacityTB": 32,
+          "priceIncTax": 729300,
+          "jan": "4957180182230",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B16",
+          "capacityTB": 16,
+          "priceIncTax": 542300,
+          "jan": "4957180182223",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B08",
+          "capacityTB": 8,
+          "priceIncTax": 465300,
+          "jan": "4957180182216",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SI3B04",
+          "capacityTB": 4,
+          "priceIncTax": 434500,
+          "jan": "4957180182209",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3b/",
+      "lastCheckedAt": "2026-09-10T07:45:01.621Z"
+    },
+    {
+      "id": "hdl4-z25si3bu",
+      "name": "LAN DISK Z（HDL4-Z25SI3B80Uシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "ラック",
+      "bay": "4ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z25SI3B80U",
+          "capacityTB": 80,
+          "priceIncTax": 1573000,
+          "jan": "4957180182339",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B64U",
+          "capacityTB": 64,
+          "priceIncTax": 1361800,
+          "jan": "4957180182322",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B48U",
+          "capacityTB": 48,
+          "priceIncTax": 1062600,
+          "jan": "4957180182315",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B32U",
+          "capacityTB": 32,
+          "priceIncTax": 775500,
+          "jan": "4957180182308",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B16U",
+          "capacityTB": 16,
+          "priceIncTax": 636900,
+          "jan": "4957180182292",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B08U",
+          "capacityTB": 8,
+          "priceIncTax": 548900,
+          "jan": "4957180182285",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SI3B04U",
+          "capacityTB": 4,
+          "priceIncTax": 526900,
+          "jan": "4957180182278",
+          "status": "現行"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bu/",
+      "lastCheckedAt": "2026-09-10T07:45:06.545Z"
+    },
+    {
+      "id": "hdl4-z25satb",
+      "name": "LAN DISK Z（HDL4-Z25SATBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "4ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z25SATB32",
+          "capacityTB": 32,
+          "priceIncTax": 630300,
+          "jan": "4957180181943",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SATB16",
+          "capacityTB": 16,
+          "priceIncTax": 443300,
+          "jan": "4957180181936",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB08",
+          "capacityTB": 8,
+          "priceIncTax": 366300,
+          "jan": "4957180181929",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB04",
+          "capacityTB": 4,
+          "priceIncTax": 335500,
+          "jan": "4957180181912",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satb/",
+      "lastCheckedAt": "2026-09-10T07:45:11.306Z"
+    },
+    {
+      "id": "hdl2-z25satb",
+      "name": "LAN DISK Z（HDL2-Z25SATBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL2-Z25SATB16",
+          "capacityTB": 16,
+          "priceIncTax": 412500,
+          "jan": "4957180181868",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z25SATB08",
+          "capacityTB": 8,
+          "priceIncTax": 335500,
+          "jan": "4957180181851",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-Z25SATB04",
+          "capacityTB": 4,
+          "priceIncTax": 298100,
+          "jan": "4957180181844",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z25SATB02",
+          "capacityTB": 2,
+          "priceIncTax": 272800,
+          "jan": "4957180181837",
+          "status": "現行"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25satb/",
+      "lastCheckedAt": "2026-09-10T07:45:16.248Z"
+    },
+    {
+      "id": "hdl4-z25satbu",
+      "name": "LAN DISK Z（HDL4-Z25SATB80Uシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "ラック",
+      "bay": "4ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z25SATB80U",
+          "capacityTB": 80,
+          "priceIncTax": 1474000,
+          "jan": "4957180182117",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB64U",
+          "capacityTB": 64,
+          "priceIncTax": 1262800,
+          "jan": "4957180182100",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB48U",
+          "capacityTB": 48,
+          "priceIncTax": 963600,
+          "jan": "4957180182094",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB32U",
+          "capacityTB": 32,
+          "priceIncTax": 676500,
+          "jan": "4957180182087",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB16U",
+          "capacityTB": 16,
+          "priceIncTax": 537900,
+          "jan": "4957180182070",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB08U",
+          "capacityTB": 8,
+          "priceIncTax": 449900,
+          "jan": "4957180182063",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SATB04U",
+          "capacityTB": 4,
+          "priceIncTax": 427900,
+          "jan": "4957180182056",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satbu/",
+      "lastCheckedAt": "2026-09-10T07:45:21.067Z"
+    },
+    {
+      "id": "hdl4-z25watb",
+      "name": "LAN DISK Z（HDL4-Z25WATBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "4ベイ",
+      "officeSize": "大規模：21～50台",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z25WATB32",
+          "capacityTB": 32,
+          "priceIncTax": 531300,
+          "jan": "4957180182018",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB16",
+          "capacityTB": 16,
+          "priceIncTax": 344300,
+          "jan": "4957180182001",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB08",
+          "capacityTB": 8,
+          "priceIncTax": 267300,
+          "jan": "4957180181998",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB04",
+          "capacityTB": 4,
+          "priceIncTax": 236500,
+          "jan": "4957180181981",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watb/",
+      "lastCheckedAt": "2026-09-10T07:45:25.709Z"
+    },
+    {
+      "id": "hdl2-z25watb",
+      "name": "LAN DISK Z（HDL2-Z25WATBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
+      "officeSize": "大規模：21～50台",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL2-Z25WATB16",
+          "capacityTB": 16,
+          "priceIncTax": 313500,
+          "jan": "4957180181905",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z25WATB08",
+          "capacityTB": 8,
+          "priceIncTax": 236500,
+          "jan": "4957180181882",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z25WATB04",
+          "capacityTB": 4,
+          "priceIncTax": 199100,
+          "jan": "4957180181899",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z25WATB02",
+          "capacityTB": 2,
+          "priceIncTax": 173800,
+          "jan": "4957180181875",
+          "status": "現行"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25watb/",
+      "lastCheckedAt": "2026-09-10T07:45:30.270Z"
+    },
+    {
+      "id": "hdl4-z25watbu",
+      "name": "LAN DISK Z（HDL4-Z25WATB80Uシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "ラック",
+      "bay": "4ベイ",
+      "officeSize": "大規模：21～50台",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z25WATB80U",
+          "capacityTB": 80,
+          "priceIncTax": 1411300,
+          "jan": "4957180182186",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB64U",
+          "capacityTB": 64,
+          "priceIncTax": 1200100,
+          "jan": "4957180182179",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB48U",
+          "capacityTB": 48,
+          "priceIncTax": 900900,
+          "jan": "4957180182162",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB32U",
+          "capacityTB": 32,
+          "priceIncTax": 613800,
+          "jan": "4957180182155",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB16U",
+          "capacityTB": 16,
+          "priceIncTax": 438900,
+          "jan": "4957180182148",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB08U",
+          "capacityTB": 8,
+          "priceIncTax": 345400,
+          "jan": "4957180182131",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB04U",
+          "capacityTB": 4,
+          "priceIncTax": 322300,
+          "jan": "4957180182124",
+          "status": "現行"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watbu/",
+      "lastCheckedAt": "2026-09-10T07:45:35.019Z"
+    },
+    {
+      "id": "hdl4-z22si3b",
+      "name": "LAN DISK Z（HDL4-Z22SI3Bシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "4ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z22SI3B80",
+          "capacityTB": 80,
+          "priceIncTax": 1452000,
+          "jan": "4957180177267",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SI3B64",
+          "capacityTB": 64,
+          "priceIncTax": 1232000,
+          "jan": "4957180177250",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22SI3B48",
+          "capacityTB": 48,
+          "priceIncTax": 924000,
+          "jan": "4957180177243",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22SI3B32",
+          "capacityTB": 32,
+          "priceIncTax": 696300,
+          "jan": "4957180160757",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SI3B16",
+          "capacityTB": 16,
+          "priceIncTax": 509300,
+          "jan": "4957180160740",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SI3B08",
+          "capacityTB": 8,
+          "priceIncTax": 432300,
+          "jan": "4957180160733",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22SI3B04",
+          "capacityTB": 4,
+          "priceIncTax": 401500,
+          "jan": "4957180160726",
+          "status": "現行"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3b/",
+      "lastCheckedAt": "2026-09-10T07:45:39.935Z"
+    },
+    {
+      "id": "hdl2-z22si3b",
+      "name": "LAN DISK Z（HDL2-Z22SI3Bシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL2-Z22SI3B16",
+          "capacityTB": 16,
+          "priceIncTax": 478500,
+          "jan": "4957180160702",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z22SI3B08",
+          "capacityTB": 8,
+          "priceIncTax": 401500,
+          "jan": "4957180160696",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z22SI3B04",
+          "capacityTB": 4,
+          "priceIncTax": 364100,
+          "jan": "4957180160689",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z22SI3B02",
+          "capacityTB": 2,
+          "priceIncTax": 338800,
+          "jan": "4957180160672",
+          "status": "現行"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3b/",
+      "lastCheckedAt": "2026-09-10T07:45:44.609Z"
+    },
+    {
+      "id": "hdl4-z22si3bu",
+      "name": "LAN DISK Z（HDL4-Z22SI3B32Uシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "ラック",
+      "bay": "4ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z22SI3B32U",
+          "capacityTB": 32,
+          "priceIncTax": 742500,
+          "jan": "4957180160801",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SI3B16U",
+          "capacityTB": 16,
+          "priceIncTax": 603900,
+          "jan": "4957180160795",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SI3B08U",
+          "capacityTB": 8,
+          "priceIncTax": 515900,
+          "jan": "4957180160788",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SI3B04U",
+          "capacityTB": 4,
+          "priceIncTax": 493900,
+          "jan": "4957180160771",
+          "status": "現行"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3bu/",
+      "lastCheckedAt": "2026-09-10T07:45:49.376Z"
+    },
+    {
+      "id": "hdl4-z22satb",
+      "name": "LAN DISK Z（HDL4-Z22SATBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "4ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z22SATB32",
+          "capacityTB": 32,
+          "priceIncTax": 597300,
+          "jan": "4957180163277",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SATB16",
+          "capacityTB": 16,
+          "priceIncTax": 410300,
+          "jan": "4957180163260",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SATB08",
+          "capacityTB": 8,
+          "priceIncTax": 333300,
+          "jan": "4957180163253",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SATB04",
+          "capacityTB": 4,
+          "priceIncTax": 302500,
+          "jan": "4957180163246",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satb/",
+      "lastCheckedAt": "2026-09-10T07:45:54.031Z"
+    },
+    {
+      "id": "hdl2-z22satb",
+      "name": "LAN DISK Z（HDL2-Z22SATBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL2-Z22SATB16",
+          "capacityTB": 16,
+          "priceIncTax": 379500,
+          "jan": "4957180163222",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z22SATB08",
+          "capacityTB": 8,
+          "priceIncTax": 302500,
+          "jan": "4957180163215",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z22SATB04",
+          "capacityTB": 4,
+          "priceIncTax": 265100,
+          "jan": "4957180163208",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-Z22SATB02",
+          "capacityTB": 2,
+          "priceIncTax": 239800,
+          "jan": "4957180163185",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satb/",
+      "lastCheckedAt": "2026-09-10T07:45:58.770Z"
+    },
+    {
+      "id": "hdl4-z22satbu",
+      "name": "LAN DISK Z（HDL4-Z22SATB32Uシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "ラック",
+      "bay": "4ベイ",
+      "officeSize": "大規模：51台～",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z22SATB32U",
+          "capacityTB": 32,
+          "priceIncTax": 643500,
+          "jan": "4957180163321",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SATB16U",
+          "capacityTB": 16,
+          "priceIncTax": 504900,
+          "jan": "4957180163314",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SATB08U",
+          "capacityTB": 8,
+          "priceIncTax": 416900,
+          "jan": "4957180163307",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SATB04U",
+          "capacityTB": 4,
+          "priceIncTax": 394900,
+          "jan": "4957180163291",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satbu/",
+      "lastCheckedAt": "2026-09-10T07:46:03.480Z"
+    },
+    {
+      "id": "hdl4-z22watb",
+      "name": "LAN DISK Z（HDL4-Z22WATBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "4ベイ",
+      "officeSize": "大規模：21～50台",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z22WATB32",
+          "capacityTB": 32,
+          "priceIncTax": 509300,
+          "jan": "4957180163413",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22WATB16",
+          "capacityTB": 16,
+          "priceIncTax": 322300,
+          "jan": "4957180163406",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22WATB08",
+          "capacityTB": 8,
+          "priceIncTax": 245300,
+          "jan": "4957180163390",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22WATB04",
+          "capacityTB": 4,
+          "priceIncTax": 214500,
+          "jan": "4957180163383",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watb/",
+      "lastCheckedAt": "2026-09-10T07:46:08.211Z"
+    },
+    {
+      "id": "hdl2-z22watb",
+      "name": "LAN DISK Z（HDL2-Z22WATBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
+      "officeSize": "大規模：21～50台",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
+      "warrantyYears": 5,
+      "status": "生産終了",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL2-Z22WATB16",
+          "capacityTB": 16,
+          "priceIncTax": 291500,
+          "jan": "4957180163376",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-Z22WATB08",
+          "capacityTB": 8,
+          "priceIncTax": 214500,
+          "jan": "4957180163369",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-Z22WATB04",
+          "capacityTB": 4,
+          "priceIncTax": 177100,
+          "jan": "4957180163352",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-Z22WATB02",
+          "capacityTB": 2,
+          "priceIncTax": 151800,
+          "jan": "4957180163345",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watb/",
+      "lastCheckedAt": "2026-09-10T07:46:13.177Z"
+    },
+    {
+      "id": "hdl4-z22watbu",
+      "name": "LAN DISK Z（HDL4-Z22WATB32Uシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "ラック",
+      "bay": "4ベイ",
+      "officeSize": "大規模：21～50台",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL4-Z22WATB32U",
+          "capacityTB": 32,
+          "priceIncTax": 591800,
+          "jan": "4957180163451",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22WATB16U",
+          "capacityTB": 16,
+          "priceIncTax": 416900,
+          "jan": "4957180163444",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22WATB08U",
+          "capacityTB": 8,
+          "priceIncTax": 323400,
+          "jan": "4957180163437",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22WATB04U",
+          "capacityTB": 4,
+          "priceIncTax": 300300,
+          "jan": "4957180163420",
+          "status": "生産終了"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watbu/",
+      "lastCheckedAt": "2026-09-10T07:46:17.921Z"
+    },
+    {
+      "id": "hdl2-z10atb",
+      "name": "LAN DISK Z（HDL2-Z10ATBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
+      "officeSize": "小規模：1～20台",
+      "imageUrl": null,
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
+      "warrantyYears": 5,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "variants": [
+        {
+          "sku": "HDL2-Z10ATB04",
+          "capacityTB": 4,
+          "priceIncTax": 173800,
+          "jan": "4957180172101",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z10ATB02",
+          "capacityTB": 2,
+          "priceIncTax": 143000,
+          "jan": "4957180172095",
+          "status": "現行"
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z10atb/",
+      "lastCheckedAt": "2026-09-10T07:46:22.728Z"
     },
     {
       "id": "hdl4-lx",
@@ -1492,7 +2627,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
-      "lastCheckedAt": "2026-09-10T07:04:53.468Z"
+      "lastCheckedAt": "2026-09-10T07:46:27.620Z"
     },
     {
       "id": "hdl4-lvb",
@@ -1548,7 +2683,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
-      "lastCheckedAt": "2026-09-10T07:04:58.014Z"
+      "lastCheckedAt": "2026-09-10T07:46:32.404Z"
     },
     {
       "id": "hdl2-lx",
@@ -1605,7 +2740,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
-      "lastCheckedAt": "2026-09-10T07:05:02.619Z"
+      "lastCheckedAt": "2026-09-10T07:46:37.261Z"
     },
     {
       "id": "hdl2-lvb",
@@ -1661,7 +2796,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
-      "lastCheckedAt": "2026-09-10T07:05:07.370Z"
+      "lastCheckedAt": "2026-09-10T07:46:42.013Z"
     },
     {
       "id": "hdl2-lenb",
@@ -1723,7 +2858,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
-      "lastCheckedAt": "2026-09-10T07:05:12.069Z"
+      "lastCheckedAt": "2026-09-10T07:46:46.657Z"
     },
     {
       "id": "hdl1-lenb",
@@ -1784,7 +2919,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
-      "lastCheckedAt": "2026-09-10T07:05:16.649Z"
+      "lastCheckedAt": "2026-09-10T07:46:51.463Z"
     },
     {
       "id": "hdl4-lxu",
@@ -1862,7 +2997,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
-      "lastCheckedAt": "2026-09-10T07:05:21.289Z"
+      "lastCheckedAt": "2026-09-10T07:46:56.370Z"
     },
     {
       "id": "hdl4-lvub",
@@ -1918,7 +3053,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
-      "lastCheckedAt": "2026-09-10T07:05:26.076Z"
+      "lastCheckedAt": "2026-09-10T07:47:01.182Z"
     },
     {
       "id": "bcsp-lvreut",
@@ -1966,7 +3101,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/bcsp-lvreut/",
-      "lastCheckedAt": "2026-09-10T07:05:30.819Z"
+      "lastCheckedAt": "2026-09-10T07:47:05.773Z"
     }
   ]
 }
