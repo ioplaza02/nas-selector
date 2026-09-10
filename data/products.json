@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T07:47:05.773Z",
+  "updatedAt": "2026-09-10T08:04:04.359Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -91,7 +91,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-09-10T07:43:20.656Z"
+      "lastCheckedAt": "2026-09-10T08:00:20.600Z"
     },
     {
       "id": "hdl4-hbex",
@@ -162,7 +162,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-09-10T07:43:25.423Z"
+      "lastCheckedAt": "2026-09-10T08:00:25.427Z"
     },
     {
       "id": "hdl2-hb",
@@ -253,7 +253,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-09-10T07:43:30.389Z"
+      "lastCheckedAt": "2026-09-10T08:00:30.110Z"
     },
     {
       "id": "hdl6-hab",
@@ -330,14 +330,14 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-09-10T07:43:35.024Z"
+      "lastCheckedAt": "2026-09-10T08:00:34.953Z"
     },
     {
       "id": "hdl4-hab-u",
       "name": "LAN DISK（HDL4-HAB-Uシリーズ）",
       "series": "LAN DISK H",
       "os": "Linux OS",
-      "install": "ラック",
+      "install": "ラックマウントタイプ",
       "bay": "4ベイ",
       "officeSize": "大規模：～128人",
       "imageUrl": "https://www.iodata.jp/image/hdl4-hab-u_l.jpg",
@@ -407,7 +407,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-09-10T07:43:39.621Z"
+      "lastCheckedAt": "2026-09-10T08:00:39.815Z"
     },
     {
       "id": "hdl4-haexb",
@@ -477,7 +477,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-09-10T07:43:44.551Z"
+      "lastCheckedAt": "2026-09-10T08:00:44.604Z"
     },
     {
       "id": "hdl2-habtm5",
@@ -532,7 +532,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-09-10T07:43:49.522Z"
+      "lastCheckedAt": "2026-09-10T08:00:49.371Z"
     },
     {
       "id": "hdl2-hab",
@@ -601,14 +601,14 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-09-10T07:43:54.471Z"
+      "lastCheckedAt": "2026-09-10T08:00:54.001Z"
     },
     {
       "id": "hdl4-xab-u",
       "name": "LAN DISK（HDL4-XAB-Uシリーズ）",
       "series": "LAN DISK X",
       "os": "Linux OS",
-      "install": "ラック",
+      "install": "ラックマウントタイプ",
       "bay": "4ベイ",
       "officeSize": "中規模：～64人",
       "imageUrl": "https://www.iodata.jp/image/hdl4-xab-u_l.jpg",
@@ -684,7 +684,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-09-10T07:43:59.273Z"
+      "lastCheckedAt": "2026-09-10T08:00:59.003Z"
     },
     {
       "id": "hdl4-xab",
@@ -746,7 +746,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-09-10T07:44:04.109Z"
+      "lastCheckedAt": "2026-09-10T08:01:03.906Z"
     },
     {
       "id": "hdl2-xab",
@@ -807,7 +807,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-09-10T07:44:08.703Z"
+      "lastCheckedAt": "2026-09-10T08:01:08.673Z"
     },
     {
       "id": "hdl2-xabtm5",
@@ -861,14 +861,14 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-09-10T07:44:13.470Z"
+      "lastCheckedAt": "2026-09-10T08:01:13.432Z"
     },
     {
       "id": "hdl4-lvu",
       "name": "LAN DISK（HDL4-LVUシリーズ）",
       "series": "LAN DISK LV",
       "os": "Linux OS",
-      "install": "ラック",
+      "install": "ラックマウントタイプ",
       "bay": "4ベイ",
       "officeSize": "中規模：～50人",
       "imageUrl": "https://www.iodata.jp/image/hdl4-lvu_l.jpg",
@@ -920,7 +920,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-09-10T07:44:18.234Z"
+      "lastCheckedAt": "2026-09-10T08:01:18.623Z"
     },
     {
       "id": "hdl4-lv",
@@ -979,7 +979,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-09-10T07:44:22.943Z"
+      "lastCheckedAt": "2026-09-10T08:01:23.249Z"
     },
     {
       "id": "hdl2-lv",
@@ -1037,7 +1037,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-09-10T07:44:27.699Z"
+      "lastCheckedAt": "2026-09-10T08:01:28.003Z"
     },
     {
       "id": "hdl2-len",
@@ -1102,7 +1102,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-09-10T07:44:32.732Z"
+      "lastCheckedAt": "2026-09-10T08:01:32.869Z"
     },
     {
       "id": "hdl2-aaxwb",
@@ -1174,7 +1174,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-09-10T07:44:37.341Z"
+      "lastCheckedAt": "2026-09-10T08:01:37.591Z"
     },
     {
       "id": "hdl1-len",
@@ -1233,7 +1233,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-09-10T07:44:42.177Z"
+      "lastCheckedAt": "2026-09-10T08:01:42.582Z"
     },
     {
       "id": "hdl-aaxw",
@@ -1299,7 +1299,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-09-10T07:44:47.088Z"
+      "lastCheckedAt": "2026-09-10T08:01:47.379Z"
     },
     {
       "id": "hdl2-tasoho",
@@ -1355,7 +1355,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-09-10T07:44:51.886Z"
+      "lastCheckedAt": "2026-09-10T08:01:52.079Z"
     },
     {
       "id": "hdl1-lasoho",
@@ -1414,7 +1414,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
-      "lastCheckedAt": "2026-09-10T07:44:56.635Z"
+      "lastCheckedAt": "2026-09-10T08:01:56.636Z"
     },
     {
       "id": "hdl4-z25si3b",
@@ -1493,14 +1493,14 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3b/",
-      "lastCheckedAt": "2026-09-10T07:45:01.621Z"
+      "lastCheckedAt": "2026-09-10T08:02:01.847Z"
     },
     {
       "id": "hdl4-z25si3bu",
       "name": "LAN DISK Z（HDL4-Z25SI3B80Uシリーズ）",
       "series": "LAN DISK Z",
       "os": "Windows OS",
-      "install": "ラック",
+      "install": "ラックマウントタイプ",
       "bay": "4ベイ",
       "officeSize": "大規模：51台～",
       "imageUrl": null,
@@ -1572,7 +1572,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bu/",
-      "lastCheckedAt": "2026-09-10T07:45:06.545Z"
+      "lastCheckedAt": "2026-09-10T08:02:06.889Z"
     },
     {
       "id": "hdl4-z25satb",
@@ -1630,7 +1630,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satb/",
-      "lastCheckedAt": "2026-09-10T07:45:11.306Z"
+      "lastCheckedAt": "2026-09-10T08:02:11.562Z"
     },
     {
       "id": "hdl2-z25satb",
@@ -1688,14 +1688,14 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25satb/",
-      "lastCheckedAt": "2026-09-10T07:45:16.248Z"
+      "lastCheckedAt": "2026-09-10T08:02:16.423Z"
     },
     {
       "id": "hdl4-z25satbu",
       "name": "LAN DISK Z（HDL4-Z25SATB80Uシリーズ）",
       "series": "LAN DISK Z",
       "os": "Windows OS",
-      "install": "ラック",
+      "install": "ラックマウントタイプ",
       "bay": "4ベイ",
       "officeSize": "大規模：51台～",
       "imageUrl": null,
@@ -1767,7 +1767,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satbu/",
-      "lastCheckedAt": "2026-09-10T07:45:21.067Z"
+      "lastCheckedAt": "2026-09-10T08:02:21.267Z"
     },
     {
       "id": "hdl4-z25watb",
@@ -1825,7 +1825,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watb/",
-      "lastCheckedAt": "2026-09-10T07:45:25.709Z"
+      "lastCheckedAt": "2026-09-10T08:02:25.829Z"
     },
     {
       "id": "hdl2-z25watb",
@@ -1883,14 +1883,14 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25watb/",
-      "lastCheckedAt": "2026-09-10T07:45:30.270Z"
+      "lastCheckedAt": "2026-09-10T08:02:30.437Z"
     },
     {
       "id": "hdl4-z25watbu",
       "name": "LAN DISK Z（HDL4-Z25WATB80Uシリーズ）",
       "series": "LAN DISK Z",
       "os": "Windows OS",
-      "install": "ラック",
+      "install": "ラックマウントタイプ",
       "bay": "4ベイ",
       "officeSize": "大規模：21～50台",
       "imageUrl": null,
@@ -1962,7 +1962,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watbu/",
-      "lastCheckedAt": "2026-09-10T07:45:35.019Z"
+      "lastCheckedAt": "2026-09-10T08:02:35.014Z"
     },
     {
       "id": "hdl4-z22si3b",
@@ -2041,7 +2041,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3b/",
-      "lastCheckedAt": "2026-09-10T07:45:39.935Z"
+      "lastCheckedAt": "2026-09-10T08:02:39.820Z"
     },
     {
       "id": "hdl2-z22si3b",
@@ -2099,14 +2099,14 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3b/",
-      "lastCheckedAt": "2026-09-10T07:45:44.609Z"
+      "lastCheckedAt": "2026-09-10T08:02:44.590Z"
     },
     {
       "id": "hdl4-z22si3bu",
       "name": "LAN DISK Z（HDL4-Z22SI3B32Uシリーズ）",
       "series": "LAN DISK Z",
       "os": "Windows OS",
-      "install": "ラック",
+      "install": "ラックマウントタイプ",
       "bay": "4ベイ",
       "officeSize": "大規模：51台～",
       "imageUrl": null,
@@ -2157,7 +2157,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3bu/",
-      "lastCheckedAt": "2026-09-10T07:45:49.376Z"
+      "lastCheckedAt": "2026-09-10T08:02:49.280Z"
     },
     {
       "id": "hdl4-z22satb",
@@ -2215,7 +2215,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satb/",
-      "lastCheckedAt": "2026-09-10T07:45:54.031Z"
+      "lastCheckedAt": "2026-09-10T08:02:54.093Z"
     },
     {
       "id": "hdl2-z22satb",
@@ -2273,14 +2273,14 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satb/",
-      "lastCheckedAt": "2026-09-10T07:45:58.770Z"
+      "lastCheckedAt": "2026-09-10T08:02:58.858Z"
     },
     {
       "id": "hdl4-z22satbu",
       "name": "LAN DISK Z（HDL4-Z22SATB32Uシリーズ）",
       "series": "LAN DISK Z",
       "os": "Windows OS",
-      "install": "ラック",
+      "install": "ラックマウントタイプ",
       "bay": "4ベイ",
       "officeSize": "大規模：51台～",
       "imageUrl": null,
@@ -2331,7 +2331,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satbu/",
-      "lastCheckedAt": "2026-09-10T07:46:03.480Z"
+      "lastCheckedAt": "2026-09-10T08:03:03.443Z"
     },
     {
       "id": "hdl4-z22watb",
@@ -2389,7 +2389,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watb/",
-      "lastCheckedAt": "2026-09-10T07:46:08.211Z"
+      "lastCheckedAt": "2026-09-10T08:03:08.257Z"
     },
     {
       "id": "hdl2-z22watb",
@@ -2447,14 +2447,14 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watb/",
-      "lastCheckedAt": "2026-09-10T07:46:13.177Z"
+      "lastCheckedAt": "2026-09-10T08:03:12.970Z"
     },
     {
       "id": "hdl4-z22watbu",
       "name": "LAN DISK Z（HDL4-Z22WATB32Uシリーズ）",
       "series": "LAN DISK Z",
       "os": "Windows OS",
-      "install": "ラック",
+      "install": "ラックマウントタイプ",
       "bay": "4ベイ",
       "officeSize": "大規模：21～50台",
       "imageUrl": null,
@@ -2505,7 +2505,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watbu/",
-      "lastCheckedAt": "2026-09-10T07:46:17.921Z"
+      "lastCheckedAt": "2026-09-10T08:03:17.659Z"
     },
     {
       "id": "hdl2-z10atb",
@@ -2549,7 +2549,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z10atb/",
-      "lastCheckedAt": "2026-09-10T07:46:22.728Z"
+      "lastCheckedAt": "2026-09-10T08:03:22.390Z"
     },
     {
       "id": "hdl4-lx",
@@ -2627,7 +2627,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
-      "lastCheckedAt": "2026-09-10T07:46:27.620Z"
+      "lastCheckedAt": "2026-09-10T08:03:26.971Z"
     },
     {
       "id": "hdl4-lvb",
@@ -2683,7 +2683,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
-      "lastCheckedAt": "2026-09-10T07:46:32.404Z"
+      "lastCheckedAt": "2026-09-10T08:03:31.643Z"
     },
     {
       "id": "hdl2-lx",
@@ -2740,7 +2740,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
-      "lastCheckedAt": "2026-09-10T07:46:37.261Z"
+      "lastCheckedAt": "2026-09-10T08:03:36.330Z"
     },
     {
       "id": "hdl2-lvb",
@@ -2796,7 +2796,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
-      "lastCheckedAt": "2026-09-10T07:46:42.013Z"
+      "lastCheckedAt": "2026-09-10T08:03:40.944Z"
     },
     {
       "id": "hdl2-lenb",
@@ -2858,7 +2858,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
-      "lastCheckedAt": "2026-09-10T07:46:46.657Z"
+      "lastCheckedAt": "2026-09-10T08:03:45.594Z"
     },
     {
       "id": "hdl1-lenb",
@@ -2919,7 +2919,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
-      "lastCheckedAt": "2026-09-10T07:46:51.463Z"
+      "lastCheckedAt": "2026-09-10T08:03:50.127Z"
     },
     {
       "id": "hdl4-lxu",
@@ -2997,7 +2997,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
-      "lastCheckedAt": "2026-09-10T07:46:56.370Z"
+      "lastCheckedAt": "2026-09-10T08:03:55.025Z"
     },
     {
       "id": "hdl4-lvub",
@@ -3053,7 +3053,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
-      "lastCheckedAt": "2026-09-10T07:47:01.182Z"
+      "lastCheckedAt": "2026-09-10T08:03:59.686Z"
     },
     {
       "id": "bcsp-lvreut",
@@ -3101,7 +3101,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/bcsp-lvreut/",
-      "lastCheckedAt": "2026-09-10T07:47:05.773Z"
+      "lastCheckedAt": "2026-09-10T08:04:04.359Z"
     }
   ]
 }
