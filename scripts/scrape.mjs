@@ -296,7 +296,7 @@ async function fetchWarrantyAndFeatures(productUrl) {
       const nearby = combined.slice(sm.index, sm.index + 400);
       const periodMatch = nearby.match(/期\s*間/);
       if (!periodMatch) continue;
-      const afterPeriod = nearby.slice(periodMatch.index, periodMatch.index + 30);
+      const afterPeriod = nearby.slice(periodMatch.index, periodMatch.index + 200);
       const m = afterPeriod.match(/(\d+)\s*年/);
       if (m) {
         warrantyYears = Number(m[1]);
