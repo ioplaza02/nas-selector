@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T05:25:34.136Z",
+  "updatedAt": "2026-09-10T05:41:37.046Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -91,7 +91,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-09-10T05:23:12.973Z"
+      "lastCheckedAt": "2026-09-10T05:39:19.772Z"
     },
     {
       "id": "hdl4-hbex",
@@ -162,7 +162,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-09-10T05:23:17.529Z"
+      "lastCheckedAt": "2026-09-10T05:39:24.779Z"
     },
     {
       "id": "hdl2-hb",
@@ -253,7 +253,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-09-10T05:23:22.125Z"
+      "lastCheckedAt": "2026-09-10T05:39:29.928Z"
     },
     {
       "id": "hdl6-hab",
@@ -330,7 +330,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-09-10T05:23:27.048Z"
+      "lastCheckedAt": "2026-09-10T05:39:34.860Z"
     },
     {
       "id": "hdl4-hab-u",
@@ -407,7 +407,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-09-10T05:23:31.846Z"
+      "lastCheckedAt": "2026-09-10T05:39:39.473Z"
     },
     {
       "id": "hdl4-haexb",
@@ -477,7 +477,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-09-10T05:23:36.766Z"
+      "lastCheckedAt": "2026-09-10T05:39:44.289Z"
     },
     {
       "id": "hdl2-habtm5",
@@ -532,7 +532,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-09-10T05:23:41.472Z"
+      "lastCheckedAt": "2026-09-10T05:39:49.078Z"
     },
     {
       "id": "hdl2-hab",
@@ -601,7 +601,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-09-10T05:23:46.140Z"
+      "lastCheckedAt": "2026-09-10T05:39:53.941Z"
     },
     {
       "id": "hdl4-xab-u",
@@ -684,7 +684,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-09-10T05:23:50.947Z"
+      "lastCheckedAt": "2026-09-10T05:39:58.590Z"
     },
     {
       "id": "hdl4-xab",
@@ -746,7 +746,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-09-10T05:23:55.541Z"
+      "lastCheckedAt": "2026-09-10T05:40:03.297Z"
     },
     {
       "id": "hdl2-xab",
@@ -807,7 +807,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-09-10T05:24:00.300Z"
+      "lastCheckedAt": "2026-09-10T05:40:07.985Z"
     },
     {
       "id": "hdl2-xabtm5",
@@ -861,7 +861,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-09-10T05:24:04.999Z"
+      "lastCheckedAt": "2026-09-10T05:40:12.702Z"
     },
     {
       "id": "hdl4-lvu",
@@ -920,7 +920,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-09-10T05:24:09.791Z"
+      "lastCheckedAt": "2026-09-10T05:40:17.393Z"
     },
     {
       "id": "hdl4-lv",
@@ -979,7 +979,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-09-10T05:24:14.464Z"
+      "lastCheckedAt": "2026-09-10T05:40:22.202Z"
     },
     {
       "id": "hdl2-lv",
@@ -1037,7 +1037,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-09-10T05:24:19.192Z"
+      "lastCheckedAt": "2026-09-10T05:40:27.013Z"
     },
     {
       "id": "hdl2-len",
@@ -1102,7 +1102,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-09-10T05:24:24.170Z"
+      "lastCheckedAt": "2026-09-10T05:40:31.674Z"
     },
     {
       "id": "hdl2-aaxwb",
@@ -1174,7 +1174,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-09-10T05:24:28.859Z"
+      "lastCheckedAt": "2026-09-10T05:40:36.245Z"
     },
     {
       "id": "hdl1-len",
@@ -1233,7 +1233,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-09-10T05:24:33.640Z"
+      "lastCheckedAt": "2026-09-10T05:40:41.031Z"
     },
     {
       "id": "hdl-aaxw",
@@ -1299,7 +1299,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-09-10T05:24:38.253Z"
+      "lastCheckedAt": "2026-09-10T05:40:45.623Z"
     },
     {
       "id": "hdl2-tasoho",
@@ -1355,21 +1355,27 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-09-10T05:24:42.852Z"
+      "lastCheckedAt": "2026-09-10T05:40:50.299Z"
     },
     {
-      "id": "hdl1-tasoho",
-      "name": "LAN DISK for SOHO（HDL1-LA08SOHOシリーズ）",
+      "id": "hdl1-lasoho",
+      "name": "HDL1-LASOHOシリーズ",
       "series": "LAN DISK for SOHO",
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "1ベイ",
-      "officeSize": "小規模：1～15台",
-      "imageUrl": null,
+      "officeSize": "SOHO向け／小規模：～10名",
+      "imageUrl": "https://www.iodata.jp/image/hdl1-lasoho_l.jpg ",
       "raidSupport": [],
-      "warrantyYears": null,
+      "warrantyYears": 3,
       "status": "現行",
-      "features": [],
+      "features": [
+        "UPS対応",
+        "リモートアクセス",
+        "クラウドストレージ連携",
+        "NarSuS",
+        "Time Machine"
+      ],
       "variants": [
         {
           "sku": "HDL1-LA08SOHO",
@@ -1407,8 +1413,8 @@
           "status": "現行"
         }
       ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-tasoho/",
-      "lastCheckedAt": "2026-09-10T05:24:47.038Z"
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
+      "lastCheckedAt": "2026-09-10T05:40:54.819Z"
     },
     {
       "id": "hdl4-lx",
@@ -1486,7 +1492,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
-      "lastCheckedAt": "2026-09-10T05:24:51.789Z"
+      "lastCheckedAt": "2026-09-10T05:40:59.383Z"
     },
     {
       "id": "hdl4-lvb",
@@ -1542,7 +1548,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
-      "lastCheckedAt": "2026-09-10T05:24:56.413Z"
+      "lastCheckedAt": "2026-09-10T05:41:04.093Z"
     },
     {
       "id": "hdl2-lx",
@@ -1599,7 +1605,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
-      "lastCheckedAt": "2026-09-10T05:25:00.966Z"
+      "lastCheckedAt": "2026-09-10T05:41:08.717Z"
     },
     {
       "id": "hdl2-lvb",
@@ -1655,7 +1661,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
-      "lastCheckedAt": "2026-09-10T05:25:05.517Z"
+      "lastCheckedAt": "2026-09-10T05:41:13.405Z"
     },
     {
       "id": "hdl2-lenb",
@@ -1717,7 +1723,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
-      "lastCheckedAt": "2026-09-10T05:25:10.186Z"
+      "lastCheckedAt": "2026-09-10T05:41:18.177Z"
     },
     {
       "id": "hdl1-lenb",
@@ -1778,66 +1784,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
-      "lastCheckedAt": "2026-09-10T05:25:14.975Z"
-    },
-    {
-      "id": "hdl1-lasoho",
-      "name": "HDL1-LASOHOシリーズ",
-      "series": null,
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "1ベイ",
-      "officeSize": "SOHO向け／小規模：～10名",
-      "imageUrl": "https://www.iodata.jp/image/hdl1-lasoho_l.jpg ",
-      "raidSupport": [],
-      "warrantyYears": 3,
-      "status": "現行",
-      "features": [
-        "UPS対応",
-        "リモートアクセス",
-        "クラウドストレージ連携",
-        "NarSuS",
-        "Time Machine"
-      ],
-      "variants": [
-        {
-          "sku": "HDL1-LA01SOHO",
-          "capacityTB": 1,
-          "priceIncTax": 49500,
-          "jan": "",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL1-LA02SOHO",
-          "capacityTB": 2,
-          "priceIncTax": 55000,
-          "jan": "",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL1-LA04SOHO",
-          "capacityTB": 4,
-          "priceIncTax": 60500,
-          "jan": "",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL1-LA06SOHO",
-          "capacityTB": 6,
-          "priceIncTax": 77000,
-          "jan": "",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL1-LA08SOHO",
-          "capacityTB": 8,
-          "priceIncTax": 88000,
-          "jan": "",
-          "status": "現行"
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
-      "lastCheckedAt": "2026-09-10T05:25:19.630Z"
+      "lastCheckedAt": "2026-09-10T05:41:22.890Z"
     },
     {
       "id": "hdl4-lxu",
@@ -1915,7 +1862,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
-      "lastCheckedAt": "2026-09-10T05:25:24.416Z"
+      "lastCheckedAt": "2026-09-10T05:41:27.630Z"
     },
     {
       "id": "hdl4-lvub",
@@ -1971,7 +1918,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
-      "lastCheckedAt": "2026-09-10T05:25:29.348Z"
+      "lastCheckedAt": "2026-09-10T05:41:32.409Z"
     },
     {
       "id": "bcsp-lvreut",
@@ -2019,7 +1966,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/bcsp-lvreut/",
-      "lastCheckedAt": "2026-09-10T05:25:34.136Z"
+      "lastCheckedAt": "2026-09-10T05:41:37.046Z"
     }
   ]
 }
