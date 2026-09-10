@@ -128,6 +128,13 @@ function slugFromLinkUrl(linkUrl) {
   return m ? m[1] : null;
 }
 
+// /general/ 配下だけでなく /wss-nas/ /appliance/ 配下も対象にするための共通パターン。
+// Linux版商品ページでのみ動いていたのを、Windows版・アプライアンス版でも
+// 同じロジックが使えるように一般化したもの。
+function slugAnchorRegex(slug) {
+  return new RegExp("/nas/(?:general|wss-nas|appliance)/" + slug + "/(?:index\\.htm)?", "i");
+}
+
 // カテゴリー一覧ページの生HTMLから、型番の直後にある状態アイコンを調べる。
 // 完全なDOM解析はせず、「型番の文字列が出てくる位置の少し後ろ」を見るだけの
 // シンプルな方式（型番はユニークな文字列なので誤検出しにくい）。
@@ -148,14 +155,16 @@ function findSlugBySku(catalogHtml, sku) {
   const idx = catalogHtml.indexOf(sku);
   if (idx === -1) return null;
   const before = catalogHtml.slice(Math.max(0, idx - 3000), idx);
-  const matches = [...before.matchAll(/\/general\/([a-z0-9\-]+)\/(?:index\.htm)?"[^>]*>([^<]*シリーズ[^<]*)</gi)];
-  return matches.length > 0 ? matches[matches.length - 1][1].toLowerCase() : null;
+  const matches = [...before.matchAll(/\/nas\/(general|wss-nas|appliance)\/([a-z0-9\-]+)\/(?:index\.htm)?"[^>]*>([^<]*シリーズ[^<]*)</gi)];
+  if (matches.length === 0) return null;
+  const last = matches[matches.length - 1];
+  return { category: last[1].toLowerCase(), slug: last[2].toLowerCase() };
 }
 
 // シリーズのディレクトリ名から、直前にある【...】ラベルを探す
 function lookupOfficeLabel(catalogHtml, slug) {
   if (!slug) return null;
-  const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const re = slugAnchorRegex(slug);
   const m = re.exec(catalogHtml);
   if (!m) return null;
   const before = catalogHtml.slice(Math.max(0, m.index - 800), m.index);
@@ -178,11 +187,11 @@ function formatOfficeLabel(label) {
 // リンクが見つからない場合は直前のテキストから「シリーズ」を含む一文を拾うフォールバックを用意。
 function lookupSeriesName(catalogHtml, slug) {
   if (!slug) return null;
-  const linkRe = new RegExp('href="[^"]*/general/' + slug + '/(?:index\\.htm)?"[^>]*>([^<]+)</a>', "i");
+  const linkRe = new RegExp('href="[^"]*/nas/(?:general|wss-nas|appliance)/' + slug + '/(?:index\\.htm)?"[^>]*>([^<]+)</a>', "i");
   const m = linkRe.exec(catalogHtml);
   if (m) return m[1].trim();
 
-  const anchorRe = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const anchorRe = slugAnchorRegex(slug);
   const anchorMatch = anchorRe.exec(catalogHtml);
   if (!anchorMatch) return null;
   const before = catalogHtml.slice(Math.max(0, anchorMatch.index - 800), anchorMatch.index);
@@ -194,7 +203,7 @@ function lookupSeriesName(catalogHtml, slug) {
 // （例:「10GbE対応 4ドライブ BOXタイプ」）から拾う
 function lookupInstallAndBay(catalogHtml, slug) {
   if (!slug) return { install: null, bay: null };
-  const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const re = slugAnchorRegex(slug);
   const m = re.exec(catalogHtml);
   if (!m) return { install: null, bay: null };
   const before = catalogHtml.slice(Math.max(0, m.index - 800), m.index).replace(/<[^>]+>/g, " ");
@@ -211,7 +220,7 @@ function lookupInstallAndBay(catalogHtml, slug) {
 // 商品写真として拾わないよう明示的に除外する。webp形式にも対応。
 function lookupSeriesImage(catalogHtml, slug) {
   if (!slug) return null;
-  const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const re = slugAnchorRegex(slug);
   const m = re.exec(catalogHtml);
   if (!m) return null;
   const windowHtml = catalogHtml.slice(m.index, m.index + 2000);
@@ -230,7 +239,7 @@ function lookupSeriesImage(catalogHtml, slug) {
 // 機能バッジ探索と同じ範囲を使って、説明文に直接書かれた保証年数も拾う
 function lookupCatalogWarranty(catalogHtml, slug) {
   if (!slug) return null;
-  const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const re = slugAnchorRegex(slug);
   const m = re.exec(catalogHtml);
   if (!m) return null;
   const rest = catalogHtml.slice(m.index);
@@ -244,7 +253,7 @@ function lookupCatalogWarranty(catalogHtml, slug) {
 // 機能バッジの補完用（既出）
 function lookupCatalogFeatures(catalogHtml, slug) {
   if (!slug) return [];
-  const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
+  const re = slugAnchorRegex(slug);
   const m = re.exec(catalogHtml);
   if (!m) return [];
   const rest = catalogHtml.slice(m.index);
@@ -335,15 +344,15 @@ async function fetchWarrantyAndFeatures(productUrl) {
 // 「シリーズ」という文字を含むリンクだけを対象にすることで、価格表内の型番リンク
 // （見出しと同じhrefを指すがテキストは型番）を誤って拾わないようにしている。
 function extractAllCatalogSeries(catalogHtml) {
-  const re = /href="([^"]*\/general\/([a-z0-9\-]+)\/(?:index\.htm)?)"[^>]*>([^<]*シリーズ[^<]*)<\/a>/gi;
+  const re = /href="([^"]*\/nas\/(general|wss-nas|appliance)\/([a-z0-9\-]+)\/(?:index\.htm)?)"[^>]*>([^<]*シリーズ[^<]*)<\/a>/gi;
   const seen = new Set();
   const list = [];
   let m;
   while ((m = re.exec(catalogHtml)) !== null) {
-    const slug = m[2].toLowerCase();
+    const slug = m[3].toLowerCase();
     if (seen.has(slug)) continue;
     seen.add(slug);
-    list.push({ slug, name: m[3].trim(), index: m.index });
+    list.push({ slug, category: m[2].toLowerCase(), name: m[4].trim(), index: m.index });
   }
   return list.sort((a, b) => a.index - b.index);
 }
@@ -358,7 +367,7 @@ function extractCatalogVariants(catalogHtml, series, allSeries) {
     .sort((a, b) => a - b)[0];
   const block = catalogHtml.slice(startIdx, nextIdx === undefined ? startIdx + 8000 : nextIdx);
 
-  const rowRe = /href="[^"]*\/general\/[a-z0-9\-]+\/(?:index\.htm)?"[^>]*>\s*([A-Z][A-Z0-9\-\/]+)\s*<\/a>([\s\S]{0,80}?)(\d+(?:\.\d+)?)\s*TB[\s\S]{0,150}?￥([\d,]+)/gi;
+  const rowRe = /href="[^"]*\/nas\/(?:general|wss-nas|appliance)\/[a-z0-9\-]+\/(?:index\.htm)?"[^>]*>\s*([A-Z][A-Z0-9\-\/]+)\s*<\/a>([\s\S]{0,80}?)(\d+(?:\.\d+)?)\s*TB[\s\S]{0,150}?￥([\d,]+)/gi;
 
   const variants = [];
   let m;
@@ -387,12 +396,9 @@ async function main() {
   }
 
   let catalogHtml = "";
-  let wssNasHtml = "";
   for (const url of CATALOG_PAGE_URLS) {
     try {
-      const html = await fetchText(url);
-      catalogHtml += html + "\n";
-      if (url.includes("/wss-nas/")) wssNasHtml = html;
+      catalogHtml += await fetchText(url) + "\n";
     } catch (err) {
       console.warn("  -> カタログページ取得失敗:", url, "(" + err.message + ")");
     }
@@ -421,11 +427,11 @@ async function main() {
       !lookupSeriesImage(catalogHtml, slug) &&
       !lookupOfficeLabel(catalogHtml, slug);
     if (seemsUnresolved) {
-      const correctedSlug = findSlugBySku(catalogHtml, base.name);
-      if (correctedSlug) {
-        console.warn("  -> link_urlの不一致を検出、slugを補正:", slug, "->", correctedSlug);
-        slug = correctedSlug;
-        effectiveUrl = "https://www.iodata.jp/product/nas/general/" + slug + "/";
+      const corrected = findSlugBySku(catalogHtml, base.name);
+      if (corrected) {
+        console.warn("  -> link_urlの不一致を検出、slugを補正:", slug, "->", corrected.slug);
+        slug = corrected.slug;
+        effectiveUrl = "https://www.iodata.jp/product/nas/" + corrected.category + "/" + slug + "/";
       }
     }
     if (slug) coveredSlugs.add(slug);
@@ -477,7 +483,7 @@ async function main() {
     const variants = extractCatalogVariants(catalogHtml, series, allCatalogSeries);
     if (variants.length === 0) continue; // 価格表が見つからなければスキップ（バナー等の誤検出防止）
 
-    const productUrl = "https://www.iodata.jp/product/nas/general/" + series.slug + "/";
+    const productUrl = "https://www.iodata.jp/product/nas/" + series.category + "/" + series.slug + "/";
     const anyCurrent = variants.some(v => v.status === "現行");
     const officeLabel = formatOfficeLabel(lookupOfficeLabel(catalogHtml, series.slug));
     const { install, bay } = lookupInstallAndBay(catalogHtml, series.slug);
@@ -490,7 +496,7 @@ async function main() {
       id: series.slug,
       name: series.name,
       series: null, // TODO: カタログ補完分はシリーズ大分類（LAN DISK H/X/A等）を未取得
-      os: wssNasHtml.includes("/general/" + series.slug + "/") ? "Windows OS" : "Linux OS",
+      os: series.category === "wss-nas" ? "Windows OS" : "Linux OS",
       install,
       bay,
       officeSize: officeLabel,
