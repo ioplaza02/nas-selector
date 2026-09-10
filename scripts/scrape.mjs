@@ -17,8 +17,8 @@
 import fs from "node:fs/promises";
 
 const LIST_URLS = [
-  "https://www.iodata.jp/ssp/nas/biznas/selector/search_linux.js"
-  // TODO: Windows版の同等ファイル（search_windows.js的なもの）を調査して追加する
+  { url: "https://www.iodata.jp/ssp/nas/biznas/selector/search_linux.js", os: "Linux OS" },
+  { url: "https://www.iodata.jp/ssp/nas/biznas/selector/search_windows.js", os: "Windows OS" }
 ];
 
 // 在庫状況・人数ラベルの参照元。複数カテゴリーにまたがっているため全部見る。
@@ -375,16 +375,21 @@ function extractCatalogVariants(catalogHtml, series, allSeries) {
 }
 async function main() {
   const rawEntries = [];
-  for (const url of LIST_URLS) {
-    const text = await fetchText(url);
-    rawEntries.push(...parseSearchJs(text));
+  for (const source of LIST_URLS) {
+    const text = await fetchText(source.url);
+    const entries = parseSearchJs(text);
+    entries.forEach(e => { e.__os = source.os; });
+    rawEntries.push(...entries);
     await sleep(REQUEST_INTERVAL_MS);
   }
 
   let catalogHtml = "";
+  let wssNasHtml = "";
   for (const url of CATALOG_PAGE_URLS) {
     try {
-      catalogHtml += await fetchText(url) + "\n";
+      const html = await fetchText(url);
+      catalogHtml += html + "\n";
+      if (url.includes("/wss-nas/")) wssNasHtml = html;
     } catch (err) {
       console.warn("  -> カタログページ取得失敗:", url, "(" + err.message + ")");
     }
@@ -445,7 +450,7 @@ async function main() {
       id: (slug || fallbackShortName).toLowerCase(),
       name: displayName,
       series: base.series,
-      os: "Linux OS", // TODO: Windows版を追加する時はここを出し分ける
+      os: base.__os || "Linux OS",
       install: installType(base.type),
       bay: base.drive + "ベイ",
       officeSize: officeLabel || (officeSizeCode(base.office) + "：" + base.concurrent),
@@ -482,7 +487,7 @@ async function main() {
       id: series.slug,
       name: series.name,
       series: null, // TODO: カタログ補完分はシリーズ大分類（LAN DISK H/X/A等）を未取得
-      os: "Linux OS",
+      os: wssNasHtml.includes("/general/" + series.slug + "/") ? "Windows OS" : "Linux OS",
       install,
       bay,
       officeSize: officeLabel,
