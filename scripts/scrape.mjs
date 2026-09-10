@@ -137,6 +137,18 @@ function lookupSkuStatus(catalogHtml, sku) {
   return "現行";
 }
 
+// search_linux.js の link_url が実際のカタログページと食い違っている
+// （型番と一致しないURLになっている）ケースがまれにある。
+// その場合、型番そのものをカタログページ内で検索し、直前にある
+// シリーズ見出しリンクから「本当のslug」を逆引きする。
+function findSlugBySku(catalogHtml, sku) {
+  const idx = catalogHtml.indexOf(sku);
+  if (idx === -1) return null;
+  const before = catalogHtml.slice(Math.max(0, idx - 3000), idx);
+  const matches = [...before.matchAll(/\/general\/([a-z0-9\-]+)\/(?:index\.htm)?"[^>]*>([^<]*シリーズ[^<]*)</gi)];
+  return matches.length > 0 ? matches[matches.length - 1][1].toLowerCase() : null;
+}
+
 // シリーズのディレクトリ名から、直前にある【...】ラベルを探す
 function lookupOfficeLabel(catalogHtml, slug) {
   if (!slug) return null;
@@ -368,7 +380,23 @@ async function main() {
 
   for (const [linkUrl, entries] of groups) {
     const base = entries[0];
-    const slug = slugFromLinkUrl(linkUrl);
+    let slug = slugFromLinkUrl(linkUrl);
+    let effectiveUrl = linkUrl;
+
+    // link_url由来のslugでカタログ情報が一つも見つからない場合、
+    // link_url自体が間違っている可能性が高いので、型番から逆引きする
+    const seemsUnresolved =
+      !lookupSeriesName(catalogHtml, slug) &&
+      !lookupSeriesImage(catalogHtml, slug) &&
+      !lookupOfficeLabel(catalogHtml, slug);
+    if (seemsUnresolved) {
+      const correctedSlug = findSlugBySku(catalogHtml, base.name);
+      if (correctedSlug) {
+        console.warn("  -> link_urlの不一致を検出、slugを補正:", slug, "->", correctedSlug);
+        slug = correctedSlug;
+        effectiveUrl = "https://www.iodata.jp/product/nas/general/" + slug + "/";
+      }
+    }
     if (slug) coveredSlugs.add(slug);
 
     const variants = entries.map(e => ({
@@ -382,7 +410,7 @@ async function main() {
     const anyCurrent = variants.some(v => v.status === "現行");
     const officeLabel = formatOfficeLabel(lookupOfficeLabel(catalogHtml, slug));
 
-    const { warrantyYears: detailWarrantyYears, features: detailFeatures } = await fetchWarrantyAndFeatures(linkUrl);
+    const { warrantyYears: detailWarrantyYears, features: detailFeatures } = await fetchWarrantyAndFeatures(effectiveUrl);
     const warrantyYears = detailWarrantyYears ?? lookupCatalogWarranty(catalogHtml, slug);
     const features = detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, slug);
 
@@ -404,7 +432,7 @@ async function main() {
       status: anyCurrent ? "現行" : "生産終了",
       features,
       variants,
-      sourceUrl: linkUrl,
+      sourceUrl: effectiveUrl,
       lastCheckedAt: new Date().toISOString()
     });
   }
