@@ -251,13 +251,47 @@ function lookupCatalogFeatures(catalogHtml, slug) {
   return FEATURE_KEYWORDS.filter(kw => windowText.includes(kw));
 }
 
+// <table>の構造をちゃんと解析して「期間」行・「標準保証」列の値を取り出す。
+// テキストの文字間隔に頼る方式は表のレイアウトが崩れると破綻しやすいため、
+// タグの対応関係を見る、より頑丈な方式に切り替えている。
+function extractWarrantyFromTables(rawHtml) {
+  const tableRe = /<table[^>]*>[\s\S]*?<\/table>/gi;
+  let tableMatch;
+  while ((tableMatch = tableRe.exec(rawHtml)) !== null) {
+    const tableHtml = tableMatch[0];
+    // 「標準保証」を含む表だけを対象にする（文字間の空白は許容）
+    const strippedForCheck = tableHtml.replace(/<[^>]+>/g, "");
+    if (!/標\s*準\s*保\s*証/.test(strippedForCheck)) continue;
+
+    const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
+    let rowMatch;
+    while ((rowMatch = rowRe.exec(tableHtml)) !== null) {
+      const rowHtml = rowMatch[1];
+      const cellRe = /<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi;
+      const cells = [];
+      let cellMatch;
+      while ((cellMatch = cellRe.exec(rowHtml)) !== null) {
+        const cellText = cellMatch[1].replace(/<[^>]+>/g, "").replace(/\s+/g, "").trim();
+        cells.push(cellText);
+      }
+      // 1列目が「期間」の行を探し、2列目（標準保証列）の値を取る
+      if (cells.length >= 2 && /^期\s*間$/.test(cells[0])) {
+        const m = cells[1].match(/(\d+)\s*年/);
+        if (m) return Number(m[1]);
+      }
+    }
+  }
+  return null;
+}
 async function fetchWarrantyAndFeatures(productUrl) {
   const specUrl = productUrl.replace(/\/?$/, "/") + "spec.htm";
 
+  let mainHtml = "";
   let mainText = "";
   let specText = "";
   try {
-    mainText = (await fetchText(productUrl)).replace(/<[^>]+>/g, " ");
+    mainHtml = await fetchText(productUrl);
+    mainText = mainHtml.replace(/<[^>]+>/g, " ");
   } catch (err) {
     console.warn("  -> 商品ページ取得失敗:", productUrl, "(" + err.message + ")");
   }
@@ -284,25 +318,9 @@ async function fetchWarrantyAndFeatures(productUrl) {
     }
   }
 
-  if (warrantyYears === null) {
-    // 「標準保証」列・「期間」行に年数だけが書かれている表形式に対応
-    // （例: 標準保証 / 交換品お届け保守 / 訪問安心保守 の3列表で、
-    //   期間の行が「3年 / 1～7年 / 1～7年」のように並ぶ）
-    // ページ内に「標準保証」という文字列が本題と無関係な場所にも
-    // 出てくることがあるため、最初の1件だけで決め打ちせず、
-    // 直後に「期間」と年数が続く箇所が見つかるまで順番に確認する。
-    const stdMatches = [...combined.matchAll(/標\s*準\s*保\s*証/g)];
-    for (const sm of stdMatches) {
-      const nearby = combined.slice(sm.index, sm.index + 400);
-      const periodMatch = nearby.match(/期\s*間/);
-      if (!periodMatch) continue;
-      const afterPeriod = nearby.slice(periodMatch.index, periodMatch.index + 200);
-      const m = afterPeriod.match(/(\d+)\s*年/);
-      if (m) {
-        warrantyYears = Number(m[1]);
-        break;
-      }
-    }
+  if (warrantyYears === null && mainHtml) {
+    // 表の構造を正しく解析する方式（テキストの文字間隔に頼る方式より頑丈）
+    warrantyYears = extractWarrantyFromTables(mainHtml);
   }
 
   const features = FEATURE_KEYWORDS.filter(kw => combined.includes(kw));
