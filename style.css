@@ -110,6 +110,7 @@ body {
 }
 .product-card--selected { border-color: var(--accent); }
 .product-card__top { display: flex; justify-content: space-between; align-items: flex-start; }
+.product-card__image { width: 64px; height: 64px; object-fit: contain; }
 .product-card__compare { font-size: 12px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; cursor: pointer; }
 .product-card__name { margin: 0; font-size: 14px; font-weight: 600; }
 .badge-row { display: flex; gap: 4px; flex-wrap: wrap; }
@@ -160,6 +161,7 @@ body {
 .compare-table th, .compare-table td {
   border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top;
 }
+.compare-table__image { width: 80px; height: 80px; object-fit: contain; }
 .compare-table th { background: var(--surface-0); font-weight: 600; width: 120px; }
 
 @media (max-width: 720px) {

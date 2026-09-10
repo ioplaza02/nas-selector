@@ -37,7 +37,7 @@ function facetValues(key, type) {
     if (type === "array") {
       (p[key] || []).forEach(v => set.add(v));
     } else {
-      if (p[key] !== undefined) set.add(p[key]);
+      if (p[key] !== undefined && p[key] !== null) set.add(p[key]);
     }
   });
   return Array.from(set);
@@ -193,8 +193,16 @@ function render() {
 
     const top = document.createElement("div");
     top.className = "product-card__top";
-    const icon = document.createElement("span");
-    icon.textContent = "\u25A3";
+    let icon;
+    if (p.imageUrl) {
+      icon = document.createElement("img");
+      icon.src = p.imageUrl;
+      icon.alt = p.name;
+      icon.className = "product-card__image";
+    } else {
+      icon = document.createElement("span");
+      icon.textContent = "\u25A3";
+    }
     const compareLabel = document.createElement("label");
     compareLabel.className = "product-card__compare";
     const compareCb = document.createElement("input");
@@ -218,7 +226,13 @@ function render() {
 
     const badgeRow = document.createElement("div");
     badgeRow.className = "badge-row";
-    [p.officeSize, p.install, p.bay, p.warrantyYears + "年保証"].forEach(t => {
+    const badgeValues = [
+      p.officeSize,
+      p.install,
+      p.bay,
+      p.warrantyYears != null ? p.warrantyYears + "年保証" : null
+    ].filter(t => t !== null && t !== undefined);
+    badgeValues.forEach(t => {
       const b = document.createElement("span");
       b.className = "badge";
       b.textContent = t;
@@ -226,10 +240,12 @@ function render() {
     });
     card.appendChild(badgeRow);
 
-    const raidLine = document.createElement("p");
-    raidLine.className = "raid-line";
-    raidLine.textContent = "[" + p.raidSupport.join("/") + "]";
-    card.appendChild(raidLine);
+    if (p.raidSupport && p.raidSupport.length > 0) {
+      const raidLine = document.createElement("p");
+      raidLine.className = "raid-line";
+      raidLine.textContent = "[" + p.raidSupport.join("/") + "]";
+      card.appendChild(raidLine);
+    }
 
     const variantLabel = document.createElement("p");
     variantLabel.className = "variant-label";
@@ -274,17 +290,24 @@ function openCompare() {
       const v = p.variants[uiState[p.id].variantIdx];
       return v.capacityTB + "TB / " + fmtPrice(v.priceIncTax);
     }],
-    ["オフィス規模", p => p.officeSize],
-    ["設置方法", p => p.install],
-    ["OS", p => p.os],
-    ["ドライブ数", p => p.bay],
-    ["対応RAID", p => p.raidSupport.join(" / ")],
-    ["保証", p => p.warrantyYears + "年保証"],
-    ["対応機能", p => p.features.join(" / ")]
+    ["オフィス規模", p => p.officeSize || "-"],
+    ["設置方法", p => p.install || "-"],
+    ["OS", p => p.os || "-"],
+    ["ドライブ数", p => p.bay || "-"],
+    ["対応RAID", p => (p.raidSupport && p.raidSupport.length > 0) ? p.raidSupport.join(" / ") : "-"],
+    ["保証", p => p.warrantyYears != null ? p.warrantyYears + "年保証" : "-"],
+    ["対応機能", p => (p.features && p.features.length > 0) ? p.features.join(" / ") : "-"]
   ];
 
   let html = '<table class="compare-table"><tr><th></th>';
   selected.forEach(p => { html += "<th>" + p.name + "</th>"; });
+  html += "</tr>";
+  html += '<tr><th>画像</th>';
+  selected.forEach(p => {
+    html += "<td>" + (p.imageUrl
+      ? '<img src="' + p.imageUrl + '" alt="' + p.name + '" class="compare-table__image">'
+      : "-") + "</td>";
+  });
   html += "</tr>";
   rows.forEach(([label, getter]) => {
     html += "<tr><th>" + label + "</th>";
