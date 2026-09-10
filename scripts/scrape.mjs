@@ -143,7 +143,7 @@ function lookupOfficeLabel(catalogHtml, slug) {
   const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
   const m = re.exec(catalogHtml);
   if (!m) return null;
-  const before = catalogHtml.slice(Math.max(0, m.index - 400), m.index);
+  const before = catalogHtml.slice(Math.max(0, m.index - 800), m.index);
   const matches = [...before.matchAll(/【([^】]+)】/g)];
   if (matches.length === 0) return null;
   return matches[matches.length - 1][1]; // 直前に一番近いもの
@@ -170,7 +170,7 @@ function lookupSeriesName(catalogHtml, slug) {
   const anchorRe = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
   const anchorMatch = anchorRe.exec(catalogHtml);
   if (!anchorMatch) return null;
-  const before = catalogHtml.slice(Math.max(0, anchorMatch.index - 400), anchorMatch.index);
+  const before = catalogHtml.slice(Math.max(0, anchorMatch.index - 800), anchorMatch.index);
   const plainMatches = [...before.matchAll(/>([^<]*シリーズ[^<]*)</g)];
   return plainMatches.length > 0 ? plainMatches[plainMatches.length - 1][1].trim() : null;
 }
@@ -182,7 +182,7 @@ function lookupInstallAndBay(catalogHtml, slug) {
   const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
   const m = re.exec(catalogHtml);
   if (!m) return { install: null, bay: null };
-  const before = catalogHtml.slice(Math.max(0, m.index - 400), m.index).replace(/<[^>]+>/g, " ");
+  const before = catalogHtml.slice(Math.max(0, m.index - 800), m.index).replace(/<[^>]+>/g, " ");
   const bayMatch = before.match(/(\d+)\s*ドライブ/);
   const installMatch = before.match(/(BOX|ラック)/);
   return {
@@ -191,19 +191,25 @@ function lookupInstallAndBay(catalogHtml, slug) {
   };
 }
 
-// シリーズ見出し付近にある商品画像を拾う
+// シリーズ見出し付近にある商品画像を拾う。
+// icon_limit.gif（在庫限り）などの小さいステータスアイコンを誤って
+// 商品写真として拾わないよう明示的に除外する。webp形式にも対応。
 function lookupSeriesImage(catalogHtml, slug) {
   if (!slug) return null;
   const re = new RegExp("/general/" + slug + "/(?:index\\.htm)?", "i");
   const m = re.exec(catalogHtml);
   if (!m) return null;
-  const windowHtml = catalogHtml.slice(m.index, m.index + 1500);
-  const imgMatch = windowHtml.match(/<img[^>]+src="([^"]+\.(?:jpg|jpeg|png|gif))"/i);
-  if (!imgMatch) return null;
-  let src = imgMatch[1];
-  if (src.startsWith("//")) src = "https:" + src;
-  else if (src.startsWith("/")) src = "https://www.iodata.jp" + src;
-  return src;
+  const windowHtml = catalogHtml.slice(m.index, m.index + 2000);
+  const imgMatches = [...windowHtml.matchAll(/<img[^>]+src="([^"]+)"/gi)];
+  for (const im of imgMatches) {
+    const src = im[1];
+    if (/icon_/i.test(src)) continue; // 在庫限り・生産終了・グリーン購入法などのバッジ画像を除外
+    let resolved = src;
+    if (resolved.startsWith("//")) resolved = "https:" + resolved;
+    else if (resolved.startsWith("/")) resolved = "https://www.iodata.jp" + resolved;
+    return resolved;
+  }
+  return null;
 }
 
 // 機能バッジ探索と同じ範囲を使って、説明文に直接書かれた保証年数も拾う
