@@ -195,10 +195,17 @@ function render() {
     top.className = "product-card__top";
     let icon;
     if (p.imageUrl) {
-      icon = document.createElement("img");
-      icon.src = p.imageUrl;
-      icon.alt = p.name;
-      icon.className = "product-card__image";
+      const imgLink = document.createElement("a");
+      imgLink.href = p.sourceUrl;
+      imgLink.target = "_blank";
+      imgLink.rel = "noopener noreferrer";
+      imgLink.title = "公式ページを見る";
+      const img = document.createElement("img");
+      img.src = p.imageUrl;
+      img.alt = p.name;
+      img.className = "product-card__image";
+      imgLink.appendChild(img);
+      icon = imgLink;
     } else {
       icon = document.createElement("span");
       icon.textContent = "\u25A3";
