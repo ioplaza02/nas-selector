@@ -247,6 +247,18 @@ function render() {
       card.appendChild(raidLine);
     }
 
+    if (p.features && p.features.length > 0) {
+      const featureRow = document.createElement("div");
+      featureRow.className = "feature-row";
+      p.features.forEach(f => {
+        const chip = document.createElement("span");
+        chip.className = "feature-chip";
+        chip.textContent = f;
+        featureRow.appendChild(chip);
+      });
+      card.appendChild(featureRow);
+    }
+
     const variantLabel = document.createElement("p");
     variantLabel.className = "variant-label";
     variantLabel.textContent = "容量を選択";
