@@ -105,8 +105,11 @@ function officeSizeCode(code) {
 }
 
 function installType(code) {
-  // TODO: ラックマウント型の実際のコード値を確認する（"RACK"などを想定）
-  return code === "BOX" ? "BOXタイプ" : code === "RACK" ? "ラックマウントタイプ" : code;
+  if (code === "BOX") return "BOXタイプ";
+  // メーカー側の表記ゆれ（"RACK" / "ラック" / "ラックマウント" など）を
+  // すべて「ラックマウントタイプ」に統一する
+  if (/ラック|^RACK$/i.test(code || "")) return "ラックマウントタイプ";
+  return code;
 }
 
 function raidSupportList(entry) {
