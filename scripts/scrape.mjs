@@ -272,6 +272,22 @@ async function fetchWarrantyAndFeatures(productUrl) {
     }
   }
 
+  if (warrantyYears === null) {
+    // 「標準保証」列・「期間」行に年数だけが書かれている表形式に対応
+    // （例: 標準保証 / 交換品お届け保守 / 訪問安心保守 の3列表で、
+    //   期間の行が「3年 / 1～7年 / 1～7年」のように並ぶ）
+    const stdIdx = combined.indexOf("標準保証");
+    if (stdIdx !== -1) {
+      const nearby = combined.slice(stdIdx, stdIdx + 400);
+      const periodIdx = nearby.indexOf("期間");
+      if (periodIdx !== -1) {
+        const afterPeriod = nearby.slice(periodIdx, periodIdx + 30);
+        const m = afterPeriod.match(/(\d+)\s*年/);
+        if (m) warrantyYears = Number(m[1]);
+      }
+    }
+  }
+
   const features = FEATURE_KEYWORDS.filter(kw => combined.includes(kw));
 
   return { warrantyYears, features };
