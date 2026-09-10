@@ -21,6 +21,13 @@ async function init() {
   allProducts.forEach(p => {
     uiState[p.id] = { checked: false, variantIdx: 0 };
   });
+
+  if (data.updatedAt) {
+    const d = new Date(data.updatedAt);
+    const formatted = d.toLocaleDateString("ja-JP", { year: "numeric", month: "long", day: "numeric" });
+    document.getElementById("updated-at").textContent = "データ最終更新日：" + formatted;
+  }
+
   buildFilterPanel();
   render();
 
