@@ -216,7 +216,7 @@ function lookupSeriesImage(catalogHtml, slug) {
   for (const im of imgMatches) {
     const src = im[1];
     if (/icon_/i.test(src)) continue; // 在庫限り・生産終了・グリーン購入法などのバッジ画像を除外
-    let resolved = src;
+    let resolved = src.trim();
     if (resolved.startsWith("//")) resolved = "https:" + resolved;
     else if (resolved.startsWith("/")) resolved = "https://www.iodata.jp" + resolved;
     return resolved;
@@ -288,12 +288,14 @@ async function fetchWarrantyAndFeatures(productUrl) {
     // 「標準保証」列・「期間」行に年数だけが書かれている表形式に対応
     // （例: 標準保証 / 交換品お届け保守 / 訪問安心保守 の3列表で、
     //   期間の行が「3年 / 1～7年 / 1～7年」のように並ぶ）
-    const stdIdx = combined.indexOf("標準保証");
-    if (stdIdx !== -1) {
-      const nearby = combined.slice(stdIdx, stdIdx + 400);
-      const periodIdx = nearby.indexOf("期間");
-      if (periodIdx !== -1) {
-        const afterPeriod = nearby.slice(periodIdx, periodIdx + 30);
+    // 狭いセル内で「標準<br>保証」のように改行されているケースもあるため、
+    // 文字の間に空白が挟まっていても一致するようにしている。
+    const stdMatch = combined.match(/標\s*準\s*保\s*証/);
+    if (stdMatch) {
+      const nearby = combined.slice(stdMatch.index, stdMatch.index + 400);
+      const periodMatch = nearby.match(/期\s*間/);
+      if (periodMatch) {
+        const afterPeriod = nearby.slice(periodMatch.index, periodMatch.index + 30);
         const m = afterPeriod.match(/(\d+)\s*年/);
         if (m) warrantyYears = Number(m[1]);
       }
