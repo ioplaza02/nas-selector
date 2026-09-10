@@ -288,16 +288,19 @@ async function fetchWarrantyAndFeatures(productUrl) {
     // 「標準保証」列・「期間」行に年数だけが書かれている表形式に対応
     // （例: 標準保証 / 交換品お届け保守 / 訪問安心保守 の3列表で、
     //   期間の行が「3年 / 1～7年 / 1～7年」のように並ぶ）
-    // 狭いセル内で「標準<br>保証」のように改行されているケースもあるため、
-    // 文字の間に空白が挟まっていても一致するようにしている。
-    const stdMatch = combined.match(/標\s*準\s*保\s*証/);
-    if (stdMatch) {
-      const nearby = combined.slice(stdMatch.index, stdMatch.index + 400);
+    // ページ内に「標準保証」という文字列が本題と無関係な場所にも
+    // 出てくることがあるため、最初の1件だけで決め打ちせず、
+    // 直後に「期間」と年数が続く箇所が見つかるまで順番に確認する。
+    const stdMatches = [...combined.matchAll(/標\s*準\s*保\s*証/g)];
+    for (const sm of stdMatches) {
+      const nearby = combined.slice(sm.index, sm.index + 400);
       const periodMatch = nearby.match(/期\s*間/);
-      if (periodMatch) {
-        const afterPeriod = nearby.slice(periodMatch.index, periodMatch.index + 30);
-        const m = afterPeriod.match(/(\d+)\s*年/);
-        if (m) warrantyYears = Number(m[1]);
+      if (!periodMatch) continue;
+      const afterPeriod = nearby.slice(periodMatch.index, periodMatch.index + 30);
+      const m = afterPeriod.match(/(\d+)\s*年/);
+      if (m) {
+        warrantyYears = Number(m[1]);
+        break;
       }
     }
   }
