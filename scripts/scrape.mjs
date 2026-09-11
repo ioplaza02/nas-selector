@@ -104,6 +104,15 @@ function officeSizeCode(code) {
   return { "小": "小規模", "中": "中規模", "大": "大規模" }[code] || code;
 }
 
+// 「〜64人」「500人〜」のようなラベルから、絞り込み用の代表人数（一番大きい数字）を取り出す。
+// Linux版（〜100人台）とWindows版（〜500人台）でスケールも表記の向きも違うため、
+// OSを問わず同じ物差しで絞り込めるよう、ラベル文字列ではなくこの数値を使う。
+function extractOfficeSizeNumber(label) {
+  if (!label) return null;
+  const numbers = [...label.matchAll(/(\d+)/g)].map(m => Number(m[1]));
+  return numbers.length > 0 ? Math.max(...numbers) : null;
+}
+
 function installType(code) {
   if (code === "BOX") return "BOXタイプ";
   // メーカー側の表記ゆれ（"RACK" / "ラック" / "ラックマウント" など）を
@@ -463,6 +472,7 @@ async function main() {
       install: installType(base.type),
       bay: base.drive + "ベイ",
       officeSize: officeLabel || (officeSizeCode(base.office) + "：" + base.concurrent),
+      officeSizeMax: extractOfficeSizeNumber(officeLabel) ?? extractOfficeSizeNumber(base.concurrent),
       imageUrl: lookupSeriesImage(catalogHtml, slug),
       raidSupport: raidSupportList(base),
       warrantyYears,
@@ -500,6 +510,7 @@ async function main() {
       install,
       bay,
       officeSize: officeLabel,
+      officeSizeMax: extractOfficeSizeNumber(officeLabel),
       imageUrl: lookupSeriesImage(catalogHtml, series.slug),
       raidSupport: [], // このページには無い情報
       warrantyYears,
