@@ -470,7 +470,10 @@ function buildBackupHddAnchorMap(html, productIds) {
 // 個人向けモデルの節は対象外（法人向けモデルの節だけを見る）。
 // 同じ型番が両方の表に載っていることもあるため、区間ごとに別々に判定する。
 function buildCloudSupportMap(html, productIds) {
-  const personalIdx = html.indexOf("個人向けモデル");
+  // ページ最上部の目次にも「個人向けモデル」という文字が先に出てくるため、
+  // 1回目（目次リンク）ではなく2回目（実際の見出し）を境目として使う。
+  const firstMention = html.indexOf("個人向けモデル");
+  const personalIdx = firstMention === -1 ? -1 : html.indexOf("個人向けモデル", firstMention + 1);
   const bizHtml = personalIdx === -1 ? html : html.slice(0, personalIdx);
 
   const headingRe = /(テレワーク（データ共有）用途|災害対策（BCP対策）用途)/g;
@@ -566,7 +569,7 @@ async function main() {
     const anyCurrent = variants.some(v => v.status === "現行");
     const officeLabel = formatOfficeLabel(lookupOfficeLabel(catalogHtml, slug));
 
-    const { warrantyYears: detailWarrantyYears, features: detailFeatures } = await fetchWarrantyAndFeatures(effectiveUrl);
+    const { warrantyYears: detailWarrantyYears, features: detailFeatures, raidSupport: detailRaidSupport } = await fetchWarrantyAndFeatures(effectiveUrl);
     const warrantyYears = detailWarrantyYears ?? lookupCatalogWarranty(catalogHtml, slug);
     const features = detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, slug);
 
@@ -585,7 +588,7 @@ async function main() {
       officeSizeMax: extractOfficeSizeNumber(officeLabel) ?? extractOfficeSizeNumber(base.concurrent),
       maintenanceService: buildMaintenanceService(base.hoshu, base.hoshu_link),
       imageUrl: lookupSeriesImage(catalogHtml, slug),
-      raidSupport: raidSupportList(base),
+      raidSupport: raidSupportList(base).length > 0 ? raidSupportList(base) : detailRaidSupport,
       warrantyYears,
       status: anyCurrent ? "現行" : "生産終了",
       features,
