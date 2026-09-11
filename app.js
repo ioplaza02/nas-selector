@@ -510,14 +510,25 @@ function askPassword() {
   if (raw === null) return; // キャンセルされた場合は何もしない
   const input = normalizeInput(raw);
   if (input === SITE_PASSWORD) {
-    sessionStorage.setItem(UNLOCK_KEY, "1");
+    try {
+      sessionStorage.setItem(UNLOCK_KEY, "1");
+    } catch (err) {
+      console.warn("sessionStorageへの保存に失敗しましたが、表示は続行します:", err);
+    }
     showApp();
   } else {
-    window.alert("パスワードが違います");
+    window.alert("パスワードが違います（入力: " + JSON.stringify(input) + "）");
   }
 }
 
-if (sessionStorage.getItem(UNLOCK_KEY) === "1") {
+let alreadyUnlocked = false;
+try {
+  alreadyUnlocked = sessionStorage.getItem(UNLOCK_KEY) === "1";
+} catch (err) {
+  console.warn("sessionStorageの読み込みに失敗しました:", err);
+}
+
+if (alreadyUnlocked) {
   showApp();
 } else {
   document.getElementById("password-open-btn").addEventListener("click", askPassword);
