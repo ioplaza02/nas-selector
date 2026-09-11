@@ -114,10 +114,9 @@ function buildFilterPanel() {
 
   // クラウド連携は「テレワーク・データ共有」と「災害対策（BCP）バックアップ」で
   // 目的がまったく違うため、1つのチェックにまとめず分けて絞り込めるようにする。
-  const cloudSection = document.createElement("div");
-  cloudSection.className = "filter-section";
-  const cloudTitle = document.createElement("p");
-  cloudTitle.className = "filter-group__label filter-group__label--static";
+  const cloudSection = document.createElement("details");
+  const cloudTitle = document.createElement("summary");
+  cloudTitle.className = "filter-group__label";
   cloudTitle.textContent = "クラウド連携";
   cloudSection.appendChild(cloudTitle);
 
@@ -401,10 +400,26 @@ function render() {
     });
     card.appendChild(variantRow);
 
+    const priceRow = document.createElement("div");
+    priceRow.className = "price-row";
+
+    const skuBlock = document.createElement("div");
+    const skuLine = document.createElement("p");
+    skuLine.className = "sku-line";
+    skuLine.textContent = variant.sku || "-";
+    const janLine = document.createElement("p");
+    janLine.className = "jan-line";
+    janLine.textContent = variant.jan ? "JAN: " + variant.jan : "";
+    skuBlock.appendChild(skuLine);
+    skuBlock.appendChild(janLine);
+
     const price = document.createElement("p");
     price.className = "price";
     price.textContent = fmtPrice(variant.priceIncTax);
-    card.appendChild(price);
+
+    priceRow.appendChild(skuBlock);
+    priceRow.appendChild(price);
+    card.appendChild(priceRow);
 
     grid.appendChild(card);
   });
@@ -470,4 +485,29 @@ function openCompare() {
   document.getElementById("compare-modal").hidden = false;
 }
 
-init();
+// 簡易パスワードゲート（試作版の関係者限定用）。
+// GitHub Pagesは静的配信のみのため、本当の意味でのサーバー側認証ではなく、
+// このJavaScriptのチェックを通らないと中身を表示しない、という簡易的な鍵です。
+const SITE_PASSWORD = "landisk2026";
+const UNLOCK_KEY = "nas-selector-unlocked";
+
+function showApp() {
+  document.getElementById("password-gate").hidden = true;
+  document.getElementById("app-root").hidden = false;
+  init();
+}
+
+if (sessionStorage.getItem(UNLOCK_KEY) === "1") {
+  showApp();
+} else {
+  document.getElementById("password-form").addEventListener("submit", e => {
+    e.preventDefault();
+    const input = document.getElementById("password-input").value;
+    if (input === SITE_PASSWORD) {
+      sessionStorage.setItem(UNLOCK_KEY, "1");
+      showApp();
+    } else {
+      document.getElementById("password-error").hidden = false;
+    }
+  });
+}

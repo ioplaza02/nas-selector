@@ -8,9 +8,21 @@
 </head>
 <body>
 
+<div class="password-gate" id="password-gate">
+  <form class="password-gate__box" id="password-form">
+    <p class="password-gate__title">NASセレクター（試作）</p>
+    <p class="password-gate__note">関係者限定の試作版です。パスワードを入力してください。</p>
+    <input type="password" id="password-input" class="password-gate__input" autocomplete="off">
+    <button type="submit" class="password-gate__submit">入る</button>
+    <p class="password-gate__error" id="password-error" hidden>パスワードが違います</p>
+  </form>
+</div>
+
+<div id="app-root" hidden>
+
 <header class="brand-banner">
   <span class="brand-banner__badge">NASセレクター</span>
-  <span class="brand-banner__title">LAN DISK</span>
+  <img src="landisk-logo.png" alt="LAN DISK" class="brand-banner__logo">
 </header>
 
 <header class="site-header">
@@ -26,22 +38,20 @@
   <p class="disclaimer__updated" id="updated-at"></p>
 </div>
 
-<div class="status-toggle">
-  <div>
-    <p class="status-toggle__title">生産終了品（在庫限り）を含める</p>
-    <p class="status-toggle__note">オフの場合、現行商品のみを表示します</p>
-  </div>
-  <label class="switch">
-    <input type="checkbox" id="show-discontinued">
-    <span class="switch__track"><span class="switch__thumb"></span></span>
-  </label>
-</div>
-
 <main class="layout">
   <aside class="filter-panel" id="filter-panel" aria-label="絞り込み条件"></aside>
 
   <section class="result-area">
-    <p class="result-count" id="result-count"></p>
+    <div class="result-bar">
+      <p class="result-count" id="result-count"></p>
+      <label class="status-toggle-inline">
+        <span class="status-toggle-inline__text">生産終了品（在庫限り）を含める</span>
+        <span class="switch">
+          <input type="checkbox" id="show-discontinued">
+          <span class="switch__track"><span class="switch__thumb"></span></span>
+        </span>
+      </label>
+    </div>
     <div class="product-grid" id="product-grid"></div>
   </section>
 </main>
@@ -62,6 +72,8 @@
       <div id="compare-table-wrap"></div>
     </div>
   </div>
+</div>
+
 </div>
 
 <script src="app.js"></script>
