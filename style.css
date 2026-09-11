@@ -116,6 +116,13 @@ body {
 .filter-section {
   margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border);
 }
+#filter-panel .cloud-option {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 6px 0; cursor: pointer;
+}
+.cloud-option input { margin-top: 3px; width: 14px; height: 14px; flex-shrink: 0; }
+.cloud-option__title { font-size: 13px; }
+.cloud-option__note { font-size: 11px; color: var(--text-muted); }
 .filter-group__label {
   font-size: 13px; font-weight: 600; color: var(--text-secondary);
   margin: 0; padding: 10px 0; cursor: pointer; list-style: none;

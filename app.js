@@ -13,6 +13,8 @@ const uiState = {};
 let budgetMax = null;
 let capacityRange = null;
 let employeeMin = null;
+let cloudTeleworkOnly = false;
+let cloudBcpOnly = false;
 
 async function init() {
   const res = await fetch("data/products.json");
@@ -110,6 +112,53 @@ function buildFilterPanel() {
     panel.appendChild(employeeSection);
   }
 
+  // クラウド連携は「テレワーク・データ共有」と「災害対策（BCP）バックアップ」で
+  // 目的がまったく違うため、1つのチェックにまとめず分けて絞り込めるようにする。
+  const cloudSection = document.createElement("div");
+  cloudSection.className = "filter-section";
+  const cloudTitle = document.createElement("p");
+  cloudTitle.className = "filter-group__label filter-group__label--static";
+  cloudTitle.textContent = "クラウド連携";
+  cloudSection.appendChild(cloudTitle);
+
+  const cloudOptions = [
+    {
+      key: "telework",
+      title: "テレワーク・データ共有",
+      note: "OneDrive・Dropbox・Boxなど。社外からのアクセスや共同編集向け"
+    },
+    {
+      key: "bcp",
+      title: "災害対策（BCP）バックアップ",
+      note: "NarSuS・Azure・S3など。万一の際のデータ保全向け"
+    }
+  ];
+  cloudOptions.forEach(opt => {
+    const wrapper = document.createElement("label");
+    wrapper.className = "cloud-option";
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.addEventListener("change", () => {
+      if (opt.key === "telework") cloudTeleworkOnly = cb.checked;
+      else cloudBcpOnly = cb.checked;
+      render();
+    });
+    const textWrap = document.createElement("span");
+    const titleEl = document.createElement("span");
+    titleEl.className = "cloud-option__title";
+    titleEl.textContent = opt.title;
+    const noteEl = document.createElement("span");
+    noteEl.className = "cloud-option__note";
+    noteEl.textContent = opt.note;
+    textWrap.appendChild(titleEl);
+    textWrap.appendChild(document.createElement("br"));
+    textWrap.appendChild(noteEl);
+    wrapper.appendChild(cb);
+    wrapper.appendChild(textWrap);
+    cloudSection.appendChild(wrapper);
+  });
+  panel.appendChild(cloudSection);
+
   FACET_DEFS.forEach(def => {
     activeFilters[def.key] = new Set();
     const values = facetValues(def.key, def.type);
@@ -191,6 +240,8 @@ function buildFilterPanel() {
     budgetMax = null;
     capacityRange = null;
     employeeMin = null;
+    cloudTeleworkOnly = false;
+    cloudBcpOnly = false;
     buildFilterPanel();
     render();
   });
@@ -220,6 +271,8 @@ function matchesFilters(p) {
   if (employeeMin !== null) {
     if (p.officeSizeMax == null || p.officeSizeMax < employeeMin) return false;
   }
+  if (cloudTeleworkOnly && !p.cloudTelework) return false;
+  if (cloudBcpOnly && !p.cloudBcp) return false;
   return true;
 }
 
