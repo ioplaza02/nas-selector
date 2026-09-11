@@ -21,6 +21,31 @@ body {
   line-height: 1.6;
 }
 
+.brand-banner {
+  background: linear-gradient(120deg, #0b2f7a 0%, #1a56c4 55%, #2f6fe0 100%);
+  padding: 22px 24px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand-banner__badge {
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+.brand-banner__title {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
 .site-header {
   padding: 24px 24px 12px;
 }
@@ -80,24 +105,35 @@ body {
   position: sticky;
   top: 16px;
 }
-.filter-group { margin-bottom: 18px; }
-.filter-group:last-child { margin-bottom: 0; }
+#filter-panel > details {
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+#filter-panel > details:last-of-type { border-bottom: none; }
+#filter-panel > details[open] { padding-bottom: 14px; margin-bottom: 10px; }
 .filter-group__label {
   font-size: 13px; font-weight: 600; color: var(--text-secondary);
-  margin: 0 0 8px;
+  margin: 0; padding: 10px 0; cursor: pointer; list-style: none;
 }
-.filter-group label {
+.filter-group__label::-webkit-details-marker { display: none; }
+.filter-group__label::before {
+  content: "▸"; display: inline-block; width: 14px; color: var(--text-muted);
+  transition: transform .15s;
+}
+details[open] > .filter-group__label::before { transform: rotate(90deg); }
+#filter-panel label {
   display: flex; align-items: center; gap: 6px;
-  font-size: 13px; padding: 3px 0; cursor: pointer;
+  font-size: 13px; padding: 3px 0 3px 14px; cursor: pointer;
 }
-.filter-group input[type="checkbox"] { width: 14px; height: 14px; }
-.filter-group input[type="range"] { width: 100%; }
+#filter-panel input[type="checkbox"] { width: 14px; height: 14px; }
+#filter-panel input[type="range"] { width: 100%; }
 .filter-reset {
   width: 100%; margin-top: 8px; padding: 8px; font-size: 13px;
   background: none; border: 1px solid var(--border); border-radius: var(--radius);
   cursor: pointer; color: var(--text-secondary);
 }
-.range-value { font-size: 12px; color: var(--text-muted); }
+.range-value { font-size: 12px; color: var(--text-muted); padding-left: 14px; }
 
 .result-count {
   font-size: 13px; color: var(--text-secondary); margin: 0 0 12px;

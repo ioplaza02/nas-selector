@@ -1,5 +1,4 @@
 const FACET_DEFS = [
-  { key: "officeSize", label: "オフィス規模", type: "single" },
   { key: "install", label: "設置方法", type: "single" },
   { key: "os", label: "OS", type: "single" },
   { key: "bay", label: "ドライブ数", type: "single" },
@@ -13,6 +12,7 @@ const activeFilters = {};
 const uiState = {};
 let budgetMax = null;
 let capacityRange = null;
+let employeeMin = null;
 
 async function init() {
   const res = await fetch("data/products.json");
@@ -54,15 +54,46 @@ function buildFilterPanel() {
   const panel = document.getElementById("filter-panel");
   panel.innerHTML = "";
 
+  // 利用人数（Linux版・Windows版でスケールも表記も違うため、
+  // ラベルの一致ではなく数値のスライダーで統一的に絞り込む）
+  const employeeValues = allProducts.map(p => p.officeSizeMax).filter(v => v != null);
+  if (employeeValues.length > 0) {
+    const maxEmployees = Math.max(...employeeValues);
+    const employeeDetails = document.createElement("details");
+    employeeDetails.open = true;
+    const employeeSummary = document.createElement("summary");
+    employeeSummary.className = "filter-group__label";
+    employeeSummary.textContent = "利用人数の目安";
+    employeeDetails.appendChild(employeeSummary);
+
+    const employeeLabel = document.createElement("p");
+    employeeLabel.className = "range-value";
+    employeeLabel.textContent = "指定なし（全ての規模を表示）";
+    const employeeInput = document.createElement("input");
+    employeeInput.type = "range";
+    employeeInput.min = "0";
+    employeeInput.max = String(maxEmployees);
+    employeeInput.step = "5";
+    employeeInput.value = "0";
+    employeeInput.addEventListener("input", () => {
+      const v = Number(employeeInput.value);
+      employeeMin = v > 0 ? v : null;
+      employeeLabel.textContent = v > 0 ? "自社の人数：約" + v + "人" : "指定なし（全ての規模を表示）";
+      render();
+    });
+    employeeDetails.appendChild(employeeLabel);
+    employeeDetails.appendChild(employeeInput);
+    panel.appendChild(employeeDetails);
+  }
+
   FACET_DEFS.forEach(def => {
     activeFilters[def.key] = new Set();
     const values = facetValues(def.key, def.type);
-    const group = document.createElement("div");
-    group.className = "filter-group";
-    const label = document.createElement("p");
-    label.className = "filter-group__label";
-    label.textContent = def.label;
-    group.appendChild(label);
+    const details = document.createElement("details");
+    const summary = document.createElement("summary");
+    summary.className = "filter-group__label";
+    summary.textContent = def.label;
+    details.appendChild(summary);
 
     values.forEach(v => {
       const wrapper = document.createElement("label");
@@ -75,9 +106,9 @@ function buildFilterPanel() {
       });
       wrapper.appendChild(cb);
       wrapper.appendChild(document.createTextNode(def.format ? def.format(v) : v));
-      group.appendChild(wrapper);
+      details.appendChild(wrapper);
     });
-    panel.appendChild(group);
+    panel.appendChild(details);
   });
 
   // 予算・容量（レンジ）
@@ -88,11 +119,8 @@ function buildFilterPanel() {
 
   const details = document.createElement("details");
   const summary = document.createElement("summary");
+  summary.className = "filter-group__label";
   summary.textContent = "予算・容量で絞り込む";
-  summary.style.cursor = "pointer";
-  summary.style.fontSize = "13px";
-  summary.style.fontWeight = "600";
-  summary.style.color = "var(--text-secondary)";
   details.appendChild(summary);
 
   const priceLabel = document.createElement("p");
@@ -138,6 +166,7 @@ function buildFilterPanel() {
     FACET_DEFS.forEach(def => activeFilters[def.key].clear());
     budgetMax = null;
     capacityRange = null;
+    employeeMin = null;
     buildFilterPanel();
     render();
   });
@@ -163,6 +192,9 @@ function matchesFilters(p) {
   if (capacityRange !== null && capacityRange > 0) {
     const anyWithinCapacity = p.variants.some(v => v.capacityTB >= capacityRange);
     if (!anyWithinCapacity) return false;
+  }
+  if (employeeMin !== null) {
+    if (p.officeSizeMax == null || p.officeSizeMax < employeeMin) return false;
   }
   return true;
 }
