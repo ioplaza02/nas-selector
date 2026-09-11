@@ -62,16 +62,18 @@ function buildFilterPanel() {
   panel.innerHTML = "";
 
   // 利用人数（Linux版・Windows版でスケールも表記も違うため、
-  // ラベルの一致ではなく数値のスライダーで統一的に絞り込む）
+  // ラベルの一致ではなく数値のスライダーで統一的に絞り込む）。
+  // 200人を超えると該当商品の顔ぶれがほぼ変わらないため、目盛りは段階的にし、
+  // 上限は「200人以上」としてまとめる。折りたたみはせず常に開いた状態にする。
+  const EMPLOYEE_STEPS = [0, 10, 16, 20, 25, 50, 64, 100, 128, 200];
   const employeeValues = allProducts.map(p => p.officeSizeMax).filter(v => v != null);
   if (employeeValues.length > 0) {
-    const maxEmployees = Math.max(...employeeValues);
-    const employeeDetails = document.createElement("details");
-    employeeDetails.open = true;
-    const employeeSummary = document.createElement("summary");
-    employeeSummary.className = "filter-group__label";
-    employeeSummary.textContent = "利用人数の目安";
-    employeeDetails.appendChild(employeeSummary);
+    const employeeSection = document.createElement("div");
+    employeeSection.className = "filter-section";
+    const employeeLabelTitle = document.createElement("p");
+    employeeLabelTitle.className = "filter-group__label filter-group__label--static";
+    employeeLabelTitle.textContent = "利用人数の目安";
+    employeeSection.appendChild(employeeLabelTitle);
 
     const employeeLabel = document.createElement("p");
     employeeLabel.className = "range-value";
@@ -79,18 +81,33 @@ function buildFilterPanel() {
     const employeeInput = document.createElement("input");
     employeeInput.type = "range";
     employeeInput.min = "0";
-    employeeInput.max = String(maxEmployees);
-    employeeInput.step = "5";
+    employeeInput.max = String(EMPLOYEE_STEPS.length - 1);
+    employeeInput.step = "1";
     employeeInput.value = "0";
+    employeeInput.setAttribute("list", "employee-ticks");
+
+    const datalist = document.createElement("datalist");
+    datalist.id = "employee-ticks";
+    EMPLOYEE_STEPS.forEach((_, i) => {
+      const opt = document.createElement("option");
+      opt.value = String(i);
+      datalist.appendChild(opt);
+    });
+
     employeeInput.addEventListener("input", () => {
-      const v = Number(employeeInput.value);
+      const i = Number(employeeInput.value);
+      const v = EMPLOYEE_STEPS[i];
       employeeMin = v > 0 ? v : null;
-      employeeLabel.textContent = v > 0 ? "自社の人数：約" + v + "人" : "指定なし（全ての規模を表示）";
+      const isTop = i === EMPLOYEE_STEPS.length - 1;
+      employeeLabel.textContent = v > 0
+        ? "自社の人数：約" + v + "人" + (isTop ? "以上" : "〜")
+        : "指定なし（全ての規模を表示）";
       render();
     });
-    employeeDetails.appendChild(employeeLabel);
-    employeeDetails.appendChild(employeeInput);
-    panel.appendChild(employeeDetails);
+    employeeSection.appendChild(employeeLabel);
+    employeeSection.appendChild(employeeInput);
+    employeeSection.appendChild(datalist);
+    panel.appendChild(employeeSection);
   }
 
   FACET_DEFS.forEach(def => {
@@ -381,22 +398,19 @@ function openCompare() {
     html += "</tr>";
   });
 
-  // 保守サービス（ISS）の案内。主役はNAS本体なので、控えめな行として一番下に添える。
-  html += '<tr class="compare-table__soft-row"><th>保守サービス</th>';
+  // バックアップ用HDD・保守サービスの案内。主役はNAS本体なので、控えめな行として一番下に添える。
+  html += '<tr class="compare-table__soft-row"><th>対応HDD</th>';
   selected.forEach(p => {
-    html += "<td>" + (p.maintenanceService
-      ? '<a href="' + p.maintenanceService.url + '" target="_blank" rel="noopener noreferrer">'
-        + p.maintenanceService.name + "</a>"
+    html += "<td>" + (p.backupHddUrl
+      ? '<a href="' + p.backupHddUrl + '" target="_blank" rel="noopener noreferrer">対応HDD一覧</a>'
       : "-") + "</td>";
   });
   html += "</tr>";
 
   html += "</table>";
 
-  html += '<p class="compare-footnote">'
-    + 'バックアップ用の外付けHDDをお探しの場合は、'
-    + '<a href="https://www.iodata.jp/pio/io/nas/landisk/hdd.htm" target="_blank" rel="noopener noreferrer">対応HDD一覧</a>'
-    + 'でご確認いただけます。'
+  html += '<p class="compare-footnote">保守サービスもご用意しています。'
+    + '<a href="https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm" target="_blank" rel="noopener noreferrer">訪問・安心・保守</a>'
     + '</p>';
 
   document.getElementById("compare-table-wrap").innerHTML = html;
