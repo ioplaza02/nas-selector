@@ -25,7 +25,14 @@ async function init() {
   if (data.updatedAt) {
     const d = new Date(data.updatedAt);
     const formatted = d.toLocaleDateString("ja-JP", { year: "numeric", month: "long", day: "numeric" });
-    document.getElementById("updated-at").textContent = "データ最終更新日：" + formatted;
+    const daysSince = Math.floor((Date.now() - d.getTime()) / (1000 * 60 * 60 * 24));
+    const updatedEl = document.getElementById("updated-at");
+    if (daysSince > 40) {
+      updatedEl.textContent = "データ最終更新日：" + formatted + "（" + daysSince + "日前 - 更新が止まっている可能性があります）";
+      updatedEl.classList.add("disclaimer__updated--warning");
+    } else {
+      updatedEl.textContent = "データ最終更新日：" + formatted;
+    }
   }
 
   buildFilterPanel();
@@ -362,9 +369,10 @@ function openCompare() {
   html += "</tr>";
   html += '<tr><th>画像</th>';
   selected.forEach(p => {
-    html += "<td>" + (p.imageUrl
-      ? '<img src="' + p.imageUrl + '" alt="' + p.name + '" class="compare-table__image">'
-      : "-") + "</td>";
+    if (!p.imageUrl) { html += "<td>-</td>"; return; }
+    html += "<td><a href=\"" + p.sourceUrl + "\" target=\"_blank\" rel=\"noopener noreferrer\">"
+      + '<img src="' + p.imageUrl + '" alt="' + p.name + '" class="compare-table__image">'
+      + "</a></td>";
   });
   html += "</tr>";
   rows.forEach(([label, getter]) => {
@@ -372,7 +380,24 @@ function openCompare() {
     selected.forEach(p => { html += "<td>" + getter(p) + "</td>"; });
     html += "</tr>";
   });
+
+  // 保守サービス（ISS）の案内。主役はNAS本体なので、控えめな行として一番下に添える。
+  html += '<tr class="compare-table__soft-row"><th>保守サービス</th>';
+  selected.forEach(p => {
+    html += "<td>" + (p.maintenanceService
+      ? '<a href="' + p.maintenanceService.url + '" target="_blank" rel="noopener noreferrer">'
+        + p.maintenanceService.name + "</a>"
+      : "-") + "</td>";
+  });
+  html += "</tr>";
+
   html += "</table>";
+
+  html += '<p class="compare-footnote">'
+    + 'バックアップ用の外付けHDDをお探しの場合は、'
+    + '<a href="https://www.iodata.jp/pio/io/nas/landisk/hdd.htm" target="_blank" rel="noopener noreferrer">対応HDD一覧</a>'
+    + 'でご確認いただけます。'
+    + '</p>';
 
   document.getElementById("compare-table-wrap").innerHTML = html;
   document.getElementById("compare-modal").hidden = false;
