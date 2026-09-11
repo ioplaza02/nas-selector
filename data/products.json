@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T00:15:40.641Z",
+  "updatedAt": "2026-09-11T00:43:02.375Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -10,6 +10,10 @@
       "bay": "6ベイ",
       "officeSize": "大規模：～128人",
       "officeSizeMax": 128,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl6-hb_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -92,7 +96,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-09-11T00:11:26.268Z"
+      "lastCheckedAt": "2026-09-11T00:38:49.155Z"
     },
     {
       "id": "hdl4-hbex",
@@ -103,6 +107,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模：～128人",
       "officeSizeMax": 128,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-hbex_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -164,7 +172,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-09-11T00:11:31.074Z"
+      "lastCheckedAt": "2026-09-11T00:38:53.733Z"
     },
     {
       "id": "hdl2-hb",
@@ -175,6 +183,10 @@
       "bay": "2ベイ",
       "officeSize": "大規模：～128人",
       "officeSizeMax": 128,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-hb_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -256,7 +268,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-09-11T00:11:35.954Z"
+      "lastCheckedAt": "2026-09-11T00:38:58.604Z"
     },
     {
       "id": "hdl6-hab",
@@ -267,6 +279,10 @@
       "bay": "6ベイ",
       "officeSize": "大規模：～128人",
       "officeSizeMax": 128,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl6-hab_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -334,7 +350,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-09-11T00:11:40.898Z"
+      "lastCheckedAt": "2026-09-11T00:39:03.461Z"
     },
     {
       "id": "hdl4-hab-u",
@@ -345,6 +361,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模：～128人",
       "officeSizeMax": 128,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-hab-u_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -412,7 +432,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-09-11T00:11:45.877Z"
+      "lastCheckedAt": "2026-09-11T00:39:08.309Z"
     },
     {
       "id": "hdl4-haexb",
@@ -423,6 +443,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模：～128人",
       "officeSizeMax": 128,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-haexb_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -483,7 +507,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-09-11T00:11:50.835Z"
+      "lastCheckedAt": "2026-09-11T00:39:13.031Z"
     },
     {
       "id": "hdl2-habtm5",
@@ -494,6 +518,10 @@
       "bay": "2ベイ",
       "officeSize": "大規模：～128人",
       "officeSizeMax": 128,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-habtm5_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -539,7 +567,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-09-11T00:11:55.571Z"
+      "lastCheckedAt": "2026-09-11T00:39:17.761Z"
     },
     {
       "id": "hdl2-hab",
@@ -550,6 +578,10 @@
       "bay": "2ベイ",
       "officeSize": "大規模：～128人",
       "officeSizeMax": 128,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-hab_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -609,7 +641,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-09-11T00:12:00.484Z"
+      "lastCheckedAt": "2026-09-11T00:39:22.546Z"
     },
     {
       "id": "hdl4-xab-u",
@@ -620,6 +652,10 @@
       "bay": "4ベイ",
       "officeSize": "中規模：～64人",
       "officeSizeMax": 64,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-xab-u_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -693,7 +729,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-09-11T00:12:05.388Z"
+      "lastCheckedAt": "2026-09-11T00:39:27.248Z"
     },
     {
       "id": "hdl4-xab",
@@ -704,6 +740,10 @@
       "bay": "4ベイ",
       "officeSize": "中規模：～64人",
       "officeSizeMax": 64,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-xab_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -756,7 +796,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-09-11T00:12:10.058Z"
+      "lastCheckedAt": "2026-09-11T00:39:32.126Z"
     },
     {
       "id": "hdl2-xab",
@@ -767,6 +807,10 @@
       "bay": "2ベイ",
       "officeSize": "中規模：～64人",
       "officeSizeMax": 64,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-xab_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -818,7 +862,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-09-11T00:12:14.650Z"
+      "lastCheckedAt": "2026-09-11T00:39:36.837Z"
     },
     {
       "id": "hdl2-xabtm5",
@@ -829,6 +873,10 @@
       "bay": "2ベイ",
       "officeSize": "中規模：～64人",
       "officeSizeMax": 64,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-xabtm5_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -873,7 +921,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-09-11T00:12:19.508Z"
+      "lastCheckedAt": "2026-09-11T00:39:41.848Z"
     },
     {
       "id": "hdl4-lvu",
@@ -884,6 +932,10 @@
       "bay": "4ベイ",
       "officeSize": "中規模：～50人",
       "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-lvu_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -933,7 +985,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-09-11T00:12:24.235Z"
+      "lastCheckedAt": "2026-09-11T00:39:46.559Z"
     },
     {
       "id": "hdl4-lv",
@@ -944,6 +996,10 @@
       "bay": "4ベイ",
       "officeSize": "中規模：～50人",
       "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-lv_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -993,7 +1049,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-09-11T00:12:28.975Z"
+      "lastCheckedAt": "2026-09-11T00:39:51.182Z"
     },
     {
       "id": "hdl2-lv",
@@ -1004,6 +1060,10 @@
       "bay": "2ベイ",
       "officeSize": "中規模：～50人",
       "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-lv_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -1052,7 +1112,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-09-11T00:12:33.759Z"
+      "lastCheckedAt": "2026-09-11T00:39:56.038Z"
     },
     {
       "id": "hdl2-len",
@@ -1063,6 +1123,10 @@
       "bay": "2ベイ",
       "officeSize": "小規模：～25人",
       "officeSizeMax": 25,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NLO-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-len_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -1118,7 +1182,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-09-11T00:12:38.524Z"
+      "lastCheckedAt": "2026-09-11T00:40:00.641Z"
     },
     {
       "id": "hdl2-aaxwb",
@@ -1129,6 +1193,10 @@
       "bay": "2ベイ",
       "officeSize": "小規模：～16人",
       "officeSizeMax": 16,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NLO-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-aaxwb_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -1191,7 +1259,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-09-11T00:12:43.296Z"
+      "lastCheckedAt": "2026-09-11T00:40:05.306Z"
     },
     {
       "id": "hdl1-len",
@@ -1202,6 +1270,10 @@
       "bay": "1ベイ",
       "officeSize": "小規模：～25人",
       "officeSizeMax": 25,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NLO-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl1-len_l.jpg",
       "raidSupport": [],
       "warrantyYears": 5,
@@ -1251,7 +1323,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-09-11T00:12:48.092Z"
+      "lastCheckedAt": "2026-09-11T00:40:10.086Z"
     },
     {
       "id": "hdl-aaxw",
@@ -1262,6 +1334,10 @@
       "bay": "1ベイ",
       "officeSize": "SOHO向け／小規模：～16人",
       "officeSizeMax": 16,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NLO-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl-aaxw_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
@@ -1318,7 +1394,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-09-11T00:12:52.841Z"
+      "lastCheckedAt": "2026-09-11T00:40:14.881Z"
     },
     {
       "id": "hdl2-tasoho",
@@ -1329,6 +1405,10 @@
       "bay": "2ベイ",
       "officeSize": "SOHO向け～8人",
       "officeSizeMax": 8,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NLO-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-tasoho_l.jpg",
       "raidSupport": [
         "RAIDeX",
@@ -1375,7 +1455,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-09-11T00:12:57.415Z"
+      "lastCheckedAt": "2026-09-11T00:40:19.755Z"
     },
     {
       "id": "hdl1-lasoho",
@@ -1386,6 +1466,10 @@
       "bay": "1ベイ",
       "officeSize": "SOHO向け／小規模：～10名",
       "officeSizeMax": 10,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NLO-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl1-lasoho_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
@@ -1435,7 +1519,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
-      "lastCheckedAt": "2026-09-11T00:13:02.094Z"
+      "lastCheckedAt": "2026-09-11T00:40:24.477Z"
     },
     {
       "id": "hdl4-z25si3b",
@@ -1446,6 +1530,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模： 500人～",
       "officeSizeMax": 500,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25si3b_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -1515,7 +1603,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3b/",
-      "lastCheckedAt": "2026-09-11T00:13:07.075Z"
+      "lastCheckedAt": "2026-09-11T00:40:29.326Z"
     },
     {
       "id": "hdl4-z25si3bu",
@@ -1526,6 +1614,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模： 500人～",
       "officeSizeMax": 500,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25si3bu_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -1595,7 +1687,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bu/",
-      "lastCheckedAt": "2026-09-11T00:13:11.991Z"
+      "lastCheckedAt": "2026-09-11T00:40:34.142Z"
     },
     {
       "id": "hdl4-z25satb",
@@ -1606,6 +1698,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模： 200人～",
       "officeSizeMax": 200,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25satb_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -1654,7 +1750,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satb/",
-      "lastCheckedAt": "2026-09-11T00:13:16.583Z"
+      "lastCheckedAt": "2026-09-11T00:40:38.966Z"
     },
     {
       "id": "hdl2-z25satb",
@@ -1665,6 +1761,10 @@
       "bay": "2ベイ",
       "officeSize": "大規模： 200人～",
       "officeSizeMax": 200,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-z25satb_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -1713,7 +1813,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25satb/",
-      "lastCheckedAt": "2026-09-11T00:13:21.336Z"
+      "lastCheckedAt": "2026-09-11T00:40:43.770Z"
     },
     {
       "id": "hdl4-z25satbu",
@@ -1724,6 +1824,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模： ～200人",
       "officeSizeMax": 200,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25satbu_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -1793,7 +1897,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satbu/",
-      "lastCheckedAt": "2026-09-11T00:13:26.103Z"
+      "lastCheckedAt": "2026-09-11T00:40:48.751Z"
     },
     {
       "id": "hdl4-z25watb",
@@ -1804,6 +1908,10 @@
       "bay": "4ベイ",
       "officeSize": "中規模： ～50人",
       "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25watb_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -1852,7 +1960,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watb/",
-      "lastCheckedAt": "2026-09-11T00:13:30.791Z"
+      "lastCheckedAt": "2026-09-11T00:40:53.459Z"
     },
     {
       "id": "hdl2-z25watb",
@@ -1863,6 +1971,10 @@
       "bay": "2ベイ",
       "officeSize": "中規模： ～50人",
       "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-z25watb_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -1911,7 +2023,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25watb/",
-      "lastCheckedAt": "2026-09-11T00:13:35.514Z"
+      "lastCheckedAt": "2026-09-11T00:40:58.167Z"
     },
     {
       "id": "hdl4-z25watbu",
@@ -1922,6 +2034,10 @@
       "bay": "4ベイ",
       "officeSize": "中規模： ～50人",
       "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25watbu_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -1991,7 +2107,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watbu/",
-      "lastCheckedAt": "2026-09-11T00:13:40.297Z"
+      "lastCheckedAt": "2026-09-11T00:41:02.844Z"
     },
     {
       "id": "hdl4-z22si3b",
@@ -2002,6 +2118,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模： 500人～",
       "officeSizeMax": 500,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z22si3b_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -2071,7 +2191,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3b/",
-      "lastCheckedAt": "2026-09-11T00:13:45.067Z"
+      "lastCheckedAt": "2026-09-11T00:41:07.616Z"
     },
     {
       "id": "hdl2-z22si3b",
@@ -2082,6 +2202,10 @@
       "bay": "2ベイ",
       "officeSize": "大規模： 500人～",
       "officeSizeMax": 500,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-z22si3b_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -2130,7 +2254,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3b/",
-      "lastCheckedAt": "2026-09-11T00:13:49.849Z"
+      "lastCheckedAt": "2026-09-11T00:41:12.594Z"
     },
     {
       "id": "hdl4-z22si3bu",
@@ -2141,6 +2265,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模： 500人～",
       "officeSizeMax": 500,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z22si3bu_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -2189,7 +2317,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3bu/",
-      "lastCheckedAt": "2026-09-11T00:13:54.943Z"
+      "lastCheckedAt": "2026-09-11T00:41:17.190Z"
     },
     {
       "id": "hdl4-z22satb",
@@ -2200,6 +2328,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模： 200人～",
       "officeSizeMax": 200,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z22satb_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -2248,7 +2380,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satb/",
-      "lastCheckedAt": "2026-09-11T00:13:59.890Z"
+      "lastCheckedAt": "2026-09-11T00:41:21.839Z"
     },
     {
       "id": "hdl2-z22satb",
@@ -2259,6 +2391,10 @@
       "bay": "2ベイ",
       "officeSize": "大規模： 200人～",
       "officeSizeMax": 200,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-z22satb_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -2307,7 +2443,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satb/",
-      "lastCheckedAt": "2026-09-11T00:14:04.657Z"
+      "lastCheckedAt": "2026-09-11T00:41:26.584Z"
     },
     {
       "id": "hdl4-z22satbu",
@@ -2318,6 +2454,10 @@
       "bay": "4ベイ",
       "officeSize": "大規模： ～200人",
       "officeSizeMax": 200,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z22satbu_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -2366,7 +2506,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satbu/",
-      "lastCheckedAt": "2026-09-11T00:14:09.527Z"
+      "lastCheckedAt": "2026-09-11T00:41:31.289Z"
     },
     {
       "id": "hdl4-z22watb",
@@ -2377,6 +2517,10 @@
       "bay": "4ベイ",
       "officeSize": "中規模： ～50人",
       "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z22watb_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -2425,7 +2569,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watb/",
-      "lastCheckedAt": "2026-09-11T00:14:14.241Z"
+      "lastCheckedAt": "2026-09-11T00:41:36.042Z"
     },
     {
       "id": "hdl2-z22watb",
@@ -2436,6 +2580,10 @@
       "bay": "2ベイ",
       "officeSize": "中規模： ～50人",
       "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-z22watb_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -2484,7 +2632,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watb/",
-      "lastCheckedAt": "2026-09-11T00:14:19.003Z"
+      "lastCheckedAt": "2026-09-11T00:41:40.852Z"
     },
     {
       "id": "hdl4-z22watbu",
@@ -2495,6 +2643,10 @@
       "bay": "4ベイ",
       "officeSize": "中規模： ～50人",
       "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl4-z22watbu_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -2543,7 +2695,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watbu/",
-      "lastCheckedAt": "2026-09-11T00:14:23.774Z"
+      "lastCheckedAt": "2026-09-11T00:41:45.609Z"
     },
     {
       "id": "hdl2-z10atb",
@@ -2554,6 +2706,10 @@
       "bay": "2ベイ",
       "officeSize": "小規模： ～20人",
       "officeSizeMax": 20,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
       "imageUrl": "https://www.iodata.jp/image/hdl2-z10atb_l.jpg",
       "raidSupport": [
         "RAID 0",
@@ -2588,7 +2744,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z10atb/",
-      "lastCheckedAt": "2026-09-11T00:14:28.503Z"
+      "lastCheckedAt": "2026-09-11T00:41:50.483Z"
     },
     {
       "id": "hdl4-lx",
@@ -2602,6 +2758,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl4-lx_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "RAIDeX",
@@ -2667,7 +2824,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
-      "lastCheckedAt": "2026-09-11T00:14:33.146Z"
+      "lastCheckedAt": "2026-09-11T00:41:55.149Z"
     },
     {
       "id": "hdl4-lvb",
@@ -2681,6 +2838,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl4-lvb_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "RAIDeX",
@@ -2724,7 +2882,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
-      "lastCheckedAt": "2026-09-11T00:14:38.001Z"
+      "lastCheckedAt": "2026-09-11T00:41:59.892Z"
     },
     {
       "id": "hdl2-lx",
@@ -2738,6 +2896,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl2-lx_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "RAIDeX",
@@ -2782,7 +2941,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
-      "lastCheckedAt": "2026-09-11T00:14:42.759Z"
+      "lastCheckedAt": "2026-09-11T00:42:04.634Z"
     },
     {
       "id": "hdl2-lvb",
@@ -2796,6 +2955,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl2-lvb_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "RAIDeX",
@@ -2839,7 +2999,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
-      "lastCheckedAt": "2026-09-11T00:14:47.733Z"
+      "lastCheckedAt": "2026-09-11T00:42:09.607Z"
     },
     {
       "id": "hdl2-lenb",
@@ -2853,6 +3013,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl2-lenb_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "RAIDeX",
@@ -2902,7 +3063,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
-      "lastCheckedAt": "2026-09-11T00:14:52.440Z"
+      "lastCheckedAt": "2026-09-11T00:42:14.269Z"
     },
     {
       "id": "hdl1-lenb",
@@ -2916,6 +3077,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl1-lenb_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "10GbE",
@@ -2964,7 +3126,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
-      "lastCheckedAt": "2026-09-11T00:14:57.154Z"
+      "lastCheckedAt": "2026-09-11T00:42:19.193Z"
     },
     {
       "id": "hdl4-lxu",
@@ -2978,6 +3140,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl4-lxu_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "RAIDeX",
@@ -3043,7 +3206,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
-      "lastCheckedAt": "2026-09-11T00:15:02.123Z"
+      "lastCheckedAt": "2026-09-11T00:42:23.841Z"
     },
     {
       "id": "hdl4-lvub",
@@ -3057,6 +3220,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl4-lvub_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "RAIDeX",
@@ -3100,7 +3264,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
-      "lastCheckedAt": "2026-09-11T00:15:06.976Z"
+      "lastCheckedAt": "2026-09-11T00:42:28.684Z"
     },
     {
       "id": "bcsp-lvreut",
@@ -3114,6 +3278,7 @@
       "imageUrl": "https://www.iodata.jp/image/bcsp-lvreut_l.jpg",
       "raidSupport": [],
       "warrantyYears": 5,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "RAIDeX",
@@ -3149,7 +3314,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/bcsp-lvreut/",
-      "lastCheckedAt": "2026-09-11T00:15:11.829Z"
+      "lastCheckedAt": "2026-09-11T00:42:33.516Z"
     },
     {
       "id": "hdl4-z25si3bb",
@@ -3163,6 +3328,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25si3bb_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "10GbE",
@@ -3219,7 +3385,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bb/",
-      "lastCheckedAt": "2026-09-11T00:15:16.429Z"
+      "lastCheckedAt": "2026-09-11T00:42:38.322Z"
     },
     {
       "id": "hdl4-z25wi3bb",
@@ -3233,6 +3399,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25wi3bb_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "10GbE",
@@ -3267,7 +3434,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bb/",
-      "lastCheckedAt": "2026-09-11T00:15:21.149Z"
+      "lastCheckedAt": "2026-09-11T00:42:43.415Z"
     },
     {
       "id": "hdl2-z25si3bb",
@@ -3281,6 +3448,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl2-z25si3bb_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "10GbE",
@@ -3316,7 +3484,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25si3bb/",
-      "lastCheckedAt": "2026-09-11T00:15:26.114Z"
+      "lastCheckedAt": "2026-09-11T00:42:48.186Z"
     },
     {
       "id": "hdl2-z25wi3bb",
@@ -3330,6 +3498,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl2-z25wi3bb_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "10GbE",
@@ -3371,7 +3540,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25wi3bb/",
-      "lastCheckedAt": "2026-09-11T00:15:30.712Z"
+      "lastCheckedAt": "2026-09-11T00:42:52.859Z"
     },
     {
       "id": "hdl4-z25si3bub",
@@ -3385,6 +3554,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25si3bub_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "10GbE",
@@ -3441,7 +3611,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bub/",
-      "lastCheckedAt": "2026-09-11T00:15:35.936Z"
+      "lastCheckedAt": "2026-09-11T00:42:57.638Z"
     },
     {
       "id": "hdl4-z25wi3bub",
@@ -3455,6 +3625,7 @@
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25wi3bub_l.jpg",
       "raidSupport": [],
       "warrantyYears": 3,
+      "maintenanceService": null,
       "status": "現行",
       "features": [
         "10GbE",
@@ -3489,7 +3660,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bub/",
-      "lastCheckedAt": "2026-09-11T00:15:40.641Z"
+      "lastCheckedAt": "2026-09-11T00:43:02.374Z"
     }
   ]
 }
