@@ -505,22 +505,6 @@ function showApp() {
   init();
 }
 
-function askPassword() {
-  const raw = window.prompt("パスワードを入力してください");
-  if (raw === null) return; // キャンセルされた場合は何もしない
-  const input = normalizeInput(raw);
-  if (input === SITE_PASSWORD) {
-    try {
-      sessionStorage.setItem(UNLOCK_KEY, "1");
-    } catch (err) {
-      console.warn("sessionStorageへの保存に失敗しましたが、表示は続行します:", err);
-    }
-    showApp();
-  } else {
-    window.alert("パスワードが違います（入力: " + JSON.stringify(input) + "）");
-  }
-}
-
 let alreadyUnlocked = false;
 try {
   alreadyUnlocked = sessionStorage.getItem(UNLOCK_KEY) === "1";
@@ -531,5 +515,29 @@ try {
 if (alreadyUnlocked) {
   showApp();
 } else {
-  document.getElementById("password-open-btn").addEventListener("click", askPassword);
+  const passwordInput = document.getElementById("password-input");
+  const toggleBtn = document.getElementById("password-toggle");
+  const errorEl = document.getElementById("password-error");
+
+  toggleBtn.addEventListener("click", () => {
+    const showing = passwordInput.type === "text";
+    passwordInput.type = showing ? "password" : "text";
+    toggleBtn.textContent = showing ? "👁" : "🙈";
+  });
+
+  document.getElementById("password-form").addEventListener("submit", e => {
+    e.preventDefault();
+    const input = normalizeInput(passwordInput.value);
+    if (input === SITE_PASSWORD) {
+      try {
+        sessionStorage.setItem(UNLOCK_KEY, "1");
+      } catch (err) {
+        console.warn("sessionStorageへの保存に失敗しましたが、表示は続行します:", err);
+      }
+      showApp();
+    } else {
+      errorEl.textContent = "パスワードが違います（入力: " + JSON.stringify(input) + "）";
+      errorEl.hidden = false;
+    }
+  });
 }
