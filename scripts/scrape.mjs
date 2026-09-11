@@ -28,6 +28,13 @@ const CATALOG_PAGE_URLS = [
   "https://www.iodata.jp/product/nas/appliance/"
 ];
 
+// バックアップ用HDD対応表（型番ごとに、どの区分の表に載っているかをここから自動判定する）
+const HDD_COMPAT_URL = "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm";
+const HDD_COMPAT_ANCHORS = [
+  "linux-h1", "linux-h2", "linux-e1", "linux-e2",
+  "windows2025", "windows2022", "windows2019", "cons"
+];
+
 const OUTPUT_PATH = new URL("../data/products.json", import.meta.url);
 const REQUEST_INTERVAL_MS = 2000;
 
@@ -356,7 +363,17 @@ async function fetchWarrantyAndFeatures(productUrl) {
 
   const features = FEATURE_KEYWORDS.filter(kw => combined.includes(kw));
 
-  return { warrantyYears, features };
+  // 「冗長化設定」欄（例:「RAIDeX（出荷時）／RAID 6／RAID 5／RAID 0」）からRAID対応状況を拾う。
+  // search_linux/windows.js に無いカタログ補完分の商品で使う。
+  let raidSupport = [];
+  const raidSectionIdx = combined.indexOf("冗長化設定");
+  if (raidSectionIdx !== -1) {
+    const raidWindow = combined.slice(raidSectionIdx, raidSectionIdx + 200);
+    const raidOrder = ["RAIDeX", "RAID 0", "RAID 1", "RAID 5", "RAID 6"];
+    raidSupport = raidOrder.filter(r => raidWindow.includes(r));
+  }
+
+  return { warrantyYears, features, raidSupport };
 }
 
 // カタログページ全体から、全シリーズの見出しリンク（slug・シリーズ名・出現位置）を洗い出す。
@@ -402,8 +419,36 @@ function extractCatalogVariants(catalogHtml, series, allSeries) {
       status
     });
   }
-  return variants;
+  return variants.sort((a, b) => a.capacityTB - b.capacityTB);
 }
+// バックアップ用HDD対応表の中で、型番ごとにどの見出し区分（アンカー）に
+// 載っているかを判定する。区分の境目は、既知のアンカー名の出現位置を目印にする。
+function buildBackupHddAnchorMap(html, productIds) {
+  const anchorPositions = [];
+  for (const name of HDD_COMPAT_ANCHORS) {
+    const re = new RegExp('(?:id|name)="' + name + '"', "i");
+    const m = re.exec(html);
+    if (m) anchorPositions.push({ name, index: m.index });
+  }
+  anchorPositions.sort((a, b) => a.index - b.index);
+
+  const upperHtml = html.toUpperCase();
+  const map = {};
+  for (const id of productIds) {
+    if (!id) continue;
+    const idx = upperHtml.indexOf(id.toUpperCase());
+    if (idx === -1) continue;
+    let anchor = null;
+    for (const a of anchorPositions) {
+      if (a.index <= idx) anchor = a.name;
+      else break;
+    }
+    if (anchor) map[id] = anchor;
+  }
+  return map;
+}
+
+
 async function main() {
   const rawEntries = [];
   for (const source of LIST_URLS) {
@@ -461,7 +506,7 @@ async function main() {
       priceIncTax: e.price,
       jan: String(e.jan),
       status: lookupSkuStatus(catalogHtml, e.name) || "現行"
-    }));
+    })).sort((a, b) => a.capacityTB - b.capacityTB);
 
     const anyCurrent = variants.some(v => v.status === "現行");
     const officeLabel = formatOfficeLabel(lookupOfficeLabel(catalogHtml, slug));
@@ -509,7 +554,7 @@ async function main() {
     const officeLabel = formatOfficeLabel(lookupOfficeLabel(catalogHtml, series.slug));
     const { install, bay } = lookupInstallAndBay(catalogHtml, series.slug);
 
-    const { warrantyYears: detailWarrantyYears, features: detailFeatures } = await fetchWarrantyAndFeatures(productUrl);
+    const { warrantyYears: detailWarrantyYears, features: detailFeatures, raidSupport: detailRaidSupport } = await fetchWarrantyAndFeatures(productUrl);
     const warrantyYears = detailWarrantyYears ?? lookupCatalogWarranty(catalogHtml, series.slug);
     const features = detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, series.slug);
 
@@ -523,7 +568,7 @@ async function main() {
       officeSize: officeLabel,
       officeSizeMax: extractOfficeSizeNumber(officeLabel),
       imageUrl: lookupSeriesImage(catalogHtml, series.slug),
-      raidSupport: [], // このページには無い情報
+      raidSupport: detailRaidSupport, // 商品ページの「冗長化設定」欄から取得
       warrantyYears,
       maintenanceService: null, // カタログ補完分はsearch_linux/windows.js由来のhoshu情報を持たない
       status: anyCurrent ? "現行" : "生産終了",
@@ -534,6 +579,20 @@ async function main() {
     });
   }
 
+
+  // バックアップ用HDD対応表を取得し、型番ごとの区分（アンカー）を付与する
+  try {
+    const hddCompatHtml = await fetchText(HDD_COMPAT_URL);
+    const anchorMap = buildBackupHddAnchorMap(hddCompatHtml, products.map(p => p.id));
+    products.forEach(p => {
+      const anchor = anchorMap[p.id];
+      p.backupHddUrl = anchor ? HDD_COMPAT_URL + "#" + anchor : HDD_COMPAT_URL;
+    });
+  } catch (err) {
+    console.warn("  -> HDD対応表の取得失敗:", err.message);
+    products.forEach(p => { p.backupHddUrl = HDD_COMPAT_URL; });
+  }
+  await sleep(REQUEST_INTERVAL_MS);
 
   const output = {
     updatedAt: new Date().toISOString(),
