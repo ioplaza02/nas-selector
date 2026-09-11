@@ -508,9 +508,18 @@ function showApp() {
 if (sessionStorage.getItem(UNLOCK_KEY) === "1") {
   showApp();
 } else {
+  const passwordInput = document.getElementById("password-input");
+  const toggleBtn = document.getElementById("password-toggle");
+  toggleBtn.addEventListener("click", () => {
+    const showing = passwordInput.type === "text";
+    passwordInput.type = showing ? "password" : "text";
+    toggleBtn.textContent = showing ? "👁" : "🙈";
+    toggleBtn.setAttribute("aria-label", showing ? "パスワードを表示" : "パスワードを非表示");
+  });
+
   document.getElementById("password-form").addEventListener("submit", e => {
     e.preventDefault();
-    const input = normalizeInput(document.getElementById("password-input").value);
+    const input = normalizeInput(passwordInput.value);
     if (input === SITE_PASSWORD) {
       sessionStorage.setItem(UNLOCK_KEY, "1");
       showApp();

@@ -12,7 +12,10 @@
   <form class="password-gate__box" id="password-form">
     <p class="password-gate__title">NASセレクター（試作）</p>
     <p class="password-gate__note">関係者限定の試作版です。パスワードを入力してください。</p>
-    <input type="password" id="password-input" class="password-gate__input" autocomplete="off">
+    <div class="password-gate__field">
+      <input type="password" id="password-input" class="password-gate__input" autocomplete="off">
+      <button type="button" id="password-toggle" class="password-gate__toggle" aria-label="パスワードを表示">👁</button>
+    </div>
     <button type="submit" class="password-gate__submit">入る</button>
     <p class="password-gate__error" id="password-error" hidden>パスワードが違います</p>
   </form>

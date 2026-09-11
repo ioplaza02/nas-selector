@@ -257,9 +257,17 @@ details[open] > .filter-group__label::before { transform: rotate(90deg); }
 }
 .password-gate__title { margin: 0 0 4px; font-size: 16px; font-weight: 700; }
 .password-gate__note { margin: 0 0 16px; font-size: 12px; color: var(--text-muted); }
+.password-gate__field {
+  position: relative; margin-bottom: 10px;
+}
 .password-gate__input {
-  width: 100%; padding: 8px 10px; font-size: 14px;
-  border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 10px;
+  width: 100%; padding: 8px 36px 8px 10px; font-size: 14px;
+  border: 1px solid var(--border); border-radius: var(--radius); box-sizing: border-box;
+}
+.password-gate__toggle {
+  position: absolute; top: 50%; right: 6px; transform: translateY(-50%);
+  border: none; background: none; cursor: pointer; font-size: 16px;
+  padding: 4px; line-height: 1; color: var(--text-secondary);
 }
 .password-gate__submit {
   width: 100%; padding: 8px; font-size: 14px; border: none; border-radius: var(--radius);
