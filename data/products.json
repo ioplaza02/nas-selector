@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T00:43:02.375Z",
+  "updatedAt": "2026-09-11T01:19:58.185Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -39,38 +39,17 @@
       ],
       "variants": [
         {
-          "sku": "HDL6-HB144",
-          "capacityTB": 144,
-          "priceIncTax": 1980000,
-          "jan": "4957180181370",
-          "status": "現行"
+          "sku": "HDL6-HB06",
+          "capacityTB": 6,
+          "priceIncTax": 254100,
+          "jan": "4957180174242",
+          "status": "生産終了"
         },
         {
-          "sku": "HDL6-HB120",
-          "capacityTB": 120,
-          "priceIncTax": 1782000,
-          "jan": "4957180181363",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL6-HB96",
-          "capacityTB": 96,
-          "priceIncTax": 1430000,
-          "jan": "4957180174297",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL6-HB48",
-          "capacityTB": 48,
-          "priceIncTax": 822800,
-          "jan": "4957180174280",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL6-HB36",
-          "capacityTB": 36,
-          "priceIncTax": 685300,
-          "jan": "4957180174273",
+          "sku": "HDL6-HB12",
+          "capacityTB": 12,
+          "priceIncTax": 328900,
+          "jan": "4957180174259",
           "status": "現行"
         },
         {
@@ -81,22 +60,44 @@
           "status": "現行"
         },
         {
-          "sku": "HDL6-HB12",
-          "capacityTB": 12,
-          "priceIncTax": 328900,
-          "jan": "4957180174259",
+          "sku": "HDL6-HB36",
+          "capacityTB": 36,
+          "priceIncTax": 685300,
+          "jan": "4957180174273",
           "status": "現行"
         },
         {
-          "sku": "HDL6-HB06",
-          "capacityTB": 6,
-          "priceIncTax": 254100,
-          "jan": "4957180174242",
-          "status": "生産終了"
+          "sku": "HDL6-HB48",
+          "capacityTB": 48,
+          "priceIncTax": 822800,
+          "jan": "4957180174280",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL6-HB96",
+          "capacityTB": 96,
+          "priceIncTax": 1430000,
+          "jan": "4957180174297",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL6-HB120",
+          "capacityTB": 120,
+          "priceIncTax": 1782000,
+          "jan": "4957180181363",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL6-HB144",
+          "capacityTB": 144,
+          "priceIncTax": 1980000,
+          "jan": "4957180181370",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-09-11T00:38:49.155Z"
+      "lastCheckedAt": "2026-09-11T01:15:34.605Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl4-hbex",
@@ -136,24 +137,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-HB32EX",
-          "capacityTB": 32,
-          "priceIncTax": 610500,
-          "jan": "4957180174341",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-HB24EX",
-          "capacityTB": 24,
-          "priceIncTax": 492800,
-          "jan": "4957180174334",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-HB16EX",
-          "capacityTB": 16,
-          "priceIncTax": 377300,
-          "jan": "4957180174327",
+          "sku": "HDL4-HB04EX",
+          "capacityTB": 4,
+          "priceIncTax": 242000,
+          "jan": "4957180174303",
           "status": "現行"
         },
         {
@@ -164,15 +151,30 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-HB04EX",
-          "capacityTB": 4,
-          "priceIncTax": 242000,
-          "jan": "4957180174303",
+          "sku": "HDL4-HB16EX",
+          "capacityTB": 16,
+          "priceIncTax": 377300,
+          "jan": "4957180174327",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-HB24EX",
+          "capacityTB": 24,
+          "priceIncTax": 492800,
+          "jan": "4957180174334",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-HB32EX",
+          "capacityTB": 32,
+          "priceIncTax": 610500,
+          "jan": "4957180174341",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-09-11T00:38:53.733Z"
+      "lastCheckedAt": "2026-09-11T01:15:39.630Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl2-hb",
@@ -211,10 +213,17 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-HB08/08",
-          "capacityTB": 8,
-          "priceIncTax": 368280,
-          "jan": "4957180184180",
+          "sku": "HDL2-HB02/02",
+          "capacityTB": 2,
+          "priceIncTax": 206800,
+          "jan": "4957180184166",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-HB02",
+          "capacityTB": 2,
+          "priceIncTax": 176000,
+          "jan": "4957180174396",
           "status": "生産終了"
         },
         {
@@ -225,24 +234,17 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-HB02/02",
-          "capacityTB": 2,
-          "priceIncTax": 206800,
-          "jan": "4957180184166",
+          "sku": "HDL2-HB04",
+          "capacityTB": 4,
+          "priceIncTax": 217800,
+          "jan": "4957180174358",
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-HB16",
-          "capacityTB": 16,
-          "priceIncTax": 388300,
-          "jan": "4957180174389",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL2-HB12",
-          "capacityTB": 12,
-          "priceIncTax": 317900,
-          "jan": "4957180174372",
+          "sku": "HDL2-HB08/08",
+          "capacityTB": 8,
+          "priceIncTax": 368280,
+          "jan": "4957180184180",
           "status": "生産終了"
         },
         {
@@ -253,22 +255,23 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-HB04",
-          "capacityTB": 4,
-          "priceIncTax": 217800,
-          "jan": "4957180174358",
+          "sku": "HDL2-HB12",
+          "capacityTB": 12,
+          "priceIncTax": 317900,
+          "jan": "4957180174372",
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-HB02",
-          "capacityTB": 2,
-          "priceIncTax": 176000,
-          "jan": "4957180174396",
+          "sku": "HDL2-HB16",
+          "capacityTB": 16,
+          "priceIncTax": 388300,
+          "jan": "4957180174389",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-09-11T00:38:58.604Z"
+      "lastCheckedAt": "2026-09-11T01:15:44.570Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl6-hab",
@@ -307,31 +310,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL6-HA96B",
-          "capacityTB": 96,
-          "priceIncTax": 1430000,
-          "jan": "4957180161112",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL6-HA48B",
-          "capacityTB": 48,
-          "priceIncTax": 731500,
-          "jan": "4957180159966",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL6-HA36B",
-          "capacityTB": 36,
-          "priceIncTax": 580800,
-          "jan": "4957180159959",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL6-HA24B",
-          "capacityTB": 24,
-          "priceIncTax": 374000,
-          "jan": "4957180159942",
+          "sku": "HDL6-HA6B",
+          "capacityTB": 6,
+          "priceIncTax": 209000,
+          "jan": "4957180159928",
           "status": "生産終了"
         },
         {
@@ -342,15 +324,37 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL6-HA6B",
-          "capacityTB": 6,
-          "priceIncTax": 209000,
-          "jan": "4957180159928",
+          "sku": "HDL6-HA24B",
+          "capacityTB": 24,
+          "priceIncTax": 374000,
+          "jan": "4957180159942",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL6-HA36B",
+          "capacityTB": 36,
+          "priceIncTax": 580800,
+          "jan": "4957180159959",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL6-HA48B",
+          "capacityTB": 48,
+          "priceIncTax": 731500,
+          "jan": "4957180159966",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL6-HA96B",
+          "capacityTB": 96,
+          "priceIncTax": 1430000,
+          "jan": "4957180161112",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-09-11T00:39:03.461Z"
+      "lastCheckedAt": "2026-09-11T01:15:49.606Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2"
     },
     {
       "id": "hdl4-hab-u",
@@ -389,31 +393,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-HA64-UB",
-          "capacityTB": 64,
-          "priceIncTax": 990000,
-          "jan": "4957180161020",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-HA32-UB",
-          "capacityTB": 32,
-          "priceIncTax": 577500,
-          "jan": "4957180160115",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-HA24-UB",
-          "capacityTB": 24,
-          "priceIncTax": 458700,
-          "jan": "4957180160108",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-HA16-UB",
-          "capacityTB": 16,
-          "priceIncTax": 339900,
-          "jan": "4957180160092",
+          "sku": "HDL4-HA4-UB",
+          "capacityTB": 4,
+          "priceIncTax": 227700,
+          "jan": "4957180160078",
           "status": "生産終了"
         },
         {
@@ -424,15 +407,37 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL4-HA4-UB",
-          "capacityTB": 4,
-          "priceIncTax": 227700,
-          "jan": "4957180160078",
+          "sku": "HDL4-HA16-UB",
+          "capacityTB": 16,
+          "priceIncTax": 339900,
+          "jan": "4957180160092",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-HA24-UB",
+          "capacityTB": 24,
+          "priceIncTax": 458700,
+          "jan": "4957180160108",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-HA32-UB",
+          "capacityTB": 32,
+          "priceIncTax": 577500,
+          "jan": "4957180160115",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-HA64-UB",
+          "capacityTB": 64,
+          "priceIncTax": 990000,
+          "jan": "4957180161020",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-09-11T00:39:08.309Z"
+      "lastCheckedAt": "2026-09-11T01:15:54.560Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2"
     },
     {
       "id": "hdl4-haexb",
@@ -471,24 +476,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-HA32EXB",
-          "capacityTB": 32,
-          "priceIncTax": 553300,
-          "jan": "4957180160016",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-HA24EXB",
-          "capacityTB": 24,
-          "priceIncTax": 434500,
-          "jan": "4957180160009",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-HA16EXB",
-          "capacityTB": 16,
-          "priceIncTax": 315700,
-          "jan": "4957180159997",
+          "sku": "HDL4-HA4EXB",
+          "capacityTB": 4,
+          "priceIncTax": 190300,
+          "jan": "4957180159973",
           "status": "生産終了"
         },
         {
@@ -499,15 +490,30 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL4-HA4EXB",
-          "capacityTB": 4,
-          "priceIncTax": 190300,
-          "jan": "4957180159973",
+          "sku": "HDL4-HA16EXB",
+          "capacityTB": 16,
+          "priceIncTax": 315700,
+          "jan": "4957180159997",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-HA24EXB",
+          "capacityTB": 24,
+          "priceIncTax": 434500,
+          "jan": "4957180160009",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-HA32EXB",
+          "capacityTB": 32,
+          "priceIncTax": 553300,
+          "jan": "4957180160016",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-09-11T00:39:13.031Z"
+      "lastCheckedAt": "2026-09-11T01:15:59.686Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2"
     },
     {
       "id": "hdl2-habtm5",
@@ -545,10 +551,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-HA8B/TM5",
-          "capacityTB": 8,
-          "priceIncTax": 231000,
-          "jan": "4957180160146",
+          "sku": "HDL2-HA2B/TM5",
+          "capacityTB": 2,
+          "priceIncTax": 176000,
+          "jan": "4957180160122",
           "status": "生産終了"
         },
         {
@@ -559,15 +565,16 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-HA2B/TM5",
-          "capacityTB": 2,
-          "priceIncTax": 176000,
-          "jan": "4957180160122",
+          "sku": "HDL2-HA8B/TM5",
+          "capacityTB": 8,
+          "priceIncTax": 231000,
+          "jan": "4957180160146",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-09-11T00:39:17.761Z"
+      "lastCheckedAt": "2026-09-11T01:16:04.870Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm"
     },
     {
       "id": "hdl2-hab",
@@ -605,24 +612,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-HA16B",
-          "capacityTB": 16,
-          "priceIncTax": 388300,
-          "jan": "4957180160061",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL2-HA12B",
-          "capacityTB": 12,
-          "priceIncTax": 269500,
-          "jan": "4957180160054",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL2-HA8B",
-          "capacityTB": 8,
-          "priceIncTax": 198000,
-          "jan": "4957180160047",
+          "sku": "HDL2-HA2B",
+          "capacityTB": 2,
+          "priceIncTax": 143000,
+          "jan": "4957180160023",
           "status": "生産終了"
         },
         {
@@ -633,15 +626,30 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-HA2B",
-          "capacityTB": 2,
-          "priceIncTax": 143000,
-          "jan": "4957180160023",
+          "sku": "HDL2-HA8B",
+          "capacityTB": 8,
+          "priceIncTax": 198000,
+          "jan": "4957180160047",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-HA12B",
+          "capacityTB": 12,
+          "priceIncTax": 269500,
+          "jan": "4957180160054",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-HA16B",
+          "capacityTB": 16,
+          "priceIncTax": 388300,
+          "jan": "4957180160061",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-09-11T00:39:22.546Z"
+      "lastCheckedAt": "2026-09-11T01:16:09.822Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2"
     },
     {
       "id": "hdl4-xab-u",
@@ -679,38 +687,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-XA96-UB",
-          "capacityTB": 96,
-          "priceIncTax": 1342000,
-          "jan": "4957180183657",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-XA80-UB",
-          "capacityTB": 80,
-          "priceIncTax": 1111000,
-          "jan": "4957180183640",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-XA64-UB",
-          "capacityTB": 64,
-          "priceIncTax": 880000,
-          "jan": "4957180183633",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-XA32-UB",
-          "capacityTB": 32,
-          "priceIncTax": 542300,
-          "jan": "4957180158037",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-XA16-UB",
-          "capacityTB": 16,
-          "priceIncTax": 302500,
-          "jan": "4957180158020",
+          "sku": "HDL4-XA4-UB",
+          "capacityTB": 4,
+          "priceIncTax": 198000,
+          "jan": "4957180158006",
           "status": "生産終了"
         },
         {
@@ -721,15 +701,44 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL4-XA4-UB",
-          "capacityTB": 4,
-          "priceIncTax": 198000,
-          "jan": "4957180158006",
+          "sku": "HDL4-XA16-UB",
+          "capacityTB": 16,
+          "priceIncTax": 302500,
+          "jan": "4957180158020",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-XA32-UB",
+          "capacityTB": 32,
+          "priceIncTax": 542300,
+          "jan": "4957180158037",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-XA64-UB",
+          "capacityTB": 64,
+          "priceIncTax": 880000,
+          "jan": "4957180183633",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-XA80-UB",
+          "capacityTB": 80,
+          "priceIncTax": 1111000,
+          "jan": "4957180183640",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-XA96-UB",
+          "capacityTB": 96,
+          "priceIncTax": 1342000,
+          "jan": "4957180183657",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-09-11T00:39:27.248Z"
+      "lastCheckedAt": "2026-09-11T01:16:15.096Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2"
     },
     {
       "id": "hdl4-xab",
@@ -767,18 +776,11 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-XA32B",
-          "capacityTB": 32,
-          "priceIncTax": 495000,
-          "jan": "4957180157955",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-XA16B",
-          "capacityTB": 16,
-          "priceIncTax": 267300,
-          "jan": "4957180157948",
-          "status": "現行"
+          "sku": "HDL4-XA4B",
+          "capacityTB": 4,
+          "priceIncTax": 161700,
+          "jan": "4957180157924",
+          "status": "生産終了"
         },
         {
           "sku": "HDL4-XA8B",
@@ -788,15 +790,23 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL4-XA4B",
-          "capacityTB": 4,
-          "priceIncTax": 161700,
-          "jan": "4957180157924",
-          "status": "生産終了"
+          "sku": "HDL4-XA16B",
+          "capacityTB": 16,
+          "priceIncTax": 267300,
+          "jan": "4957180157948",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-XA32B",
+          "capacityTB": 32,
+          "priceIncTax": 495000,
+          "jan": "4957180157955",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-09-11T00:39:32.126Z"
+      "lastCheckedAt": "2026-09-11T01:16:19.977Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2"
     },
     {
       "id": "hdl2-xab",
@@ -833,17 +843,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-XA16B",
-          "capacityTB": 16,
-          "priceIncTax": 265100,
-          "jan": "4957180157993",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL2-XA8B",
-          "capacityTB": 8,
-          "priceIncTax": 173800,
-          "jan": "4957180157986",
+          "sku": "HDL2-XA2B",
+          "capacityTB": 2,
+          "priceIncTax": 100100,
+          "jan": "4957180157962",
           "status": "生産終了"
         },
         {
@@ -854,15 +857,23 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-XA2B",
-          "capacityTB": 2,
-          "priceIncTax": 100100,
-          "jan": "4957180157962",
+          "sku": "HDL2-XA8B",
+          "capacityTB": 8,
+          "priceIncTax": 173800,
+          "jan": "4957180157986",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-XA16B",
+          "capacityTB": 16,
+          "priceIncTax": 265100,
+          "jan": "4957180157993",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-09-11T00:39:36.837Z"
+      "lastCheckedAt": "2026-09-11T01:16:24.870Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2"
     },
     {
       "id": "hdl2-xabtm5",
@@ -899,10 +910,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-XA8B/TM5",
-          "capacityTB": 8,
-          "priceIncTax": 206800,
-          "jan": "4957180169378",
+          "sku": "HDL2-XA2B/TM5",
+          "capacityTB": 2,
+          "priceIncTax": 133100,
+          "jan": "4957180169354",
           "status": "生産終了"
         },
         {
@@ -913,15 +924,16 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-XA2B/TM5",
-          "capacityTB": 2,
-          "priceIncTax": 133100,
-          "jan": "4957180169354",
+          "sku": "HDL2-XA8B/TM5",
+          "capacityTB": 8,
+          "priceIncTax": 206800,
+          "jan": "4957180169378",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-09-11T00:39:41.848Z"
+      "lastCheckedAt": "2026-09-11T01:16:29.716Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm"
     },
     {
       "id": "hdl4-lvu",
@@ -956,17 +968,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-LV32U",
-          "capacityTB": 32,
-          "priceIncTax": 536800,
-          "jan": "4957180173276",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-LV16U",
-          "capacityTB": 16,
-          "priceIncTax": 297000,
-          "jan": "4957180173269",
+          "sku": "HDL4-LV04U",
+          "capacityTB": 4,
+          "priceIncTax": 192500,
+          "jan": "4957180173245",
           "status": "現行"
         },
         {
@@ -977,15 +982,23 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-LV04U",
-          "capacityTB": 4,
-          "priceIncTax": 192500,
-          "jan": "4957180173245",
+          "sku": "HDL4-LV16U",
+          "capacityTB": 16,
+          "priceIncTax": 297000,
+          "jan": "4957180173269",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-LV32U",
+          "capacityTB": 32,
+          "priceIncTax": 536800,
+          "jan": "4957180173276",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-09-11T00:39:46.559Z"
+      "lastCheckedAt": "2026-09-11T01:16:34.635Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl4-lv",
@@ -1020,17 +1033,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-LV32",
-          "capacityTB": 32,
-          "priceIncTax": 489500,
-          "jan": "4957180173214",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-LV16",
-          "capacityTB": 16,
-          "priceIncTax": 261800,
-          "jan": "4957180173191",
+          "sku": "HDL4-LV04",
+          "capacityTB": 4,
+          "priceIncTax": 156200,
+          "jan": "4957180173160",
           "status": "現行"
         },
         {
@@ -1041,15 +1047,23 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-LV04",
-          "capacityTB": 4,
-          "priceIncTax": 156200,
-          "jan": "4957180173160",
+          "sku": "HDL4-LV16",
+          "capacityTB": 16,
+          "priceIncTax": 261800,
+          "jan": "4957180173191",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-LV32",
+          "capacityTB": 32,
+          "priceIncTax": 489500,
+          "jan": "4957180173214",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-09-11T00:39:51.182Z"
+      "lastCheckedAt": "2026-09-11T01:16:39.630Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl2-lv",
@@ -1083,17 +1097,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-LV16",
-          "capacityTB": 16,
-          "priceIncTax": 259600,
-          "jan": "4957180173146",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL2-LV08",
-          "capacityTB": 8,
-          "priceIncTax": 168300,
-          "jan": "4957180173139",
+          "sku": "HDL2-LV02",
+          "capacityTB": 2,
+          "priceIncTax": 94600,
+          "jan": "4957180173115",
           "status": "現行"
         },
         {
@@ -1104,15 +1111,23 @@
           "status": "現行"
         },
         {
-          "sku": "HDL2-LV02",
-          "capacityTB": 2,
-          "priceIncTax": 94600,
-          "jan": "4957180173115",
+          "sku": "HDL2-LV08",
+          "capacityTB": 8,
+          "priceIncTax": 168300,
+          "jan": "4957180173139",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-LV16",
+          "capacityTB": 16,
+          "priceIncTax": 259600,
+          "jan": "4957180173146",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-09-11T00:39:56.038Z"
+      "lastCheckedAt": "2026-09-11T01:16:44.426Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl2-len",
@@ -1146,24 +1161,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-LE16N",
-          "capacityTB": 16,
-          "priceIncTax": 152460,
-          "jan": "4957180173474",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL2-LE12N",
-          "capacityTB": 12,
-          "priceIncTax": 127050,
-          "jan": "4957180173467",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL2-LE08N",
-          "capacityTB": 8,
-          "priceIncTax": 86680,
-          "jan": "4957180173450",
+          "sku": "HDL2-LE02N",
+          "capacityTB": 2,
+          "priceIncTax": 58960,
+          "jan": "4957180173436",
           "status": "現行"
         },
         {
@@ -1174,15 +1175,30 @@
           "status": "現行"
         },
         {
-          "sku": "HDL2-LE02N",
-          "capacityTB": 2,
-          "priceIncTax": 58960,
-          "jan": "4957180173436",
+          "sku": "HDL2-LE08N",
+          "capacityTB": 8,
+          "priceIncTax": 86680,
+          "jan": "4957180173450",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-LE12N",
+          "capacityTB": 12,
+          "priceIncTax": 127050,
+          "jan": "4957180173467",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-LE16N",
+          "capacityTB": 16,
+          "priceIncTax": 152460,
+          "jan": "4957180173474",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-09-11T00:40:00.641Z"
+      "lastCheckedAt": "2026-09-11T01:16:49.271Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1"
     },
     {
       "id": "hdl2-aaxwb",
@@ -1216,31 +1232,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-AAX16WB",
-          "capacityTB": 16,
-          "priceIncTax": 152460,
-          "jan": "4957180157849",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL2-AAX12WB",
-          "capacityTB": 12,
-          "priceIncTax": 127050,
-          "jan": "4957180157832",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL2-AAX8WB",
-          "capacityTB": 8,
-          "priceIncTax": 86680,
-          "jan": "4957180157825",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL2-AAX6WB",
-          "capacityTB": 6,
-          "priceIncTax": 76230,
-          "jan": "4957180157818",
+          "sku": "HDL2-AAX2WB",
+          "capacityTB": 2,
+          "priceIncTax": 58960,
+          "jan": "4957180157795",
           "status": "生産終了"
         },
         {
@@ -1251,15 +1246,37 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-AAX2WB",
-          "capacityTB": 2,
-          "priceIncTax": 58960,
-          "jan": "4957180157795",
+          "sku": "HDL2-AAX6WB",
+          "capacityTB": 6,
+          "priceIncTax": 76230,
+          "jan": "4957180157818",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-AAX8WB",
+          "capacityTB": 8,
+          "priceIncTax": 86680,
+          "jan": "4957180157825",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-AAX12WB",
+          "capacityTB": 12,
+          "priceIncTax": 127050,
+          "jan": "4957180157832",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-AAX16WB",
+          "capacityTB": 16,
+          "priceIncTax": 152460,
+          "jan": "4957180157849",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-09-11T00:40:05.306Z"
+      "lastCheckedAt": "2026-09-11T01:16:54.054Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e2"
     },
     {
       "id": "hdl1-len",
@@ -1287,24 +1304,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL1-LE08N",
-          "capacityTB": 8,
-          "priceIncTax": 83050,
-          "jan": "4957180173320",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL1-LE06N",
-          "capacityTB": 6,
-          "priceIncTax": 65780,
-          "jan": "4957180173313",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL1-LE04N",
-          "capacityTB": 4,
-          "priceIncTax": 50820,
-          "jan": "4957180173306",
+          "sku": "HDL1-LE01N",
+          "capacityTB": 1,
+          "priceIncTax": 35090,
+          "jan": "4957180173283",
           "status": "現行"
         },
         {
@@ -1315,15 +1318,30 @@
           "status": "現行"
         },
         {
-          "sku": "HDL1-LE01N",
-          "capacityTB": 1,
-          "priceIncTax": 35090,
-          "jan": "4957180173283",
+          "sku": "HDL1-LE04N",
+          "capacityTB": 4,
+          "priceIncTax": 50820,
+          "jan": "4957180173306",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL1-LE06N",
+          "capacityTB": 6,
+          "priceIncTax": 65780,
+          "jan": "4957180173313",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL1-LE08N",
+          "capacityTB": 8,
+          "priceIncTax": 83050,
+          "jan": "4957180173320",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-09-11T00:40:10.086Z"
+      "lastCheckedAt": "2026-09-11T01:16:58.978Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1"
     },
     {
       "id": "hdl-aaxw",
@@ -1351,31 +1369,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL-AAX8W",
-          "capacityTB": 8,
-          "priceIncTax": 79750,
-          "jan": "4957180143682",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL-AAX6W",
-          "capacityTB": 6,
-          "priceIncTax": 62480,
-          "jan": "4957180143675",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL-AAX4W",
-          "capacityTB": 4,
-          "priceIncTax": 47520,
-          "jan": "4957180143668",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL-AAX3W",
-          "capacityTB": 3,
-          "priceIncTax": 39930,
-          "jan": "4957180143651",
+          "sku": "HDL-AAX1W",
+          "capacityTB": 1,
+          "priceIncTax": 31790,
+          "jan": "4957180143637",
           "status": "生産終了"
         },
         {
@@ -1386,15 +1383,37 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL-AAX1W",
-          "capacityTB": 1,
-          "priceIncTax": 31790,
-          "jan": "4957180143637",
+          "sku": "HDL-AAX3W",
+          "capacityTB": 3,
+          "priceIncTax": 39930,
+          "jan": "4957180143651",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL-AAX4W",
+          "capacityTB": 4,
+          "priceIncTax": 47520,
+          "jan": "4957180143668",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL-AAX6W",
+          "capacityTB": 6,
+          "priceIncTax": 62480,
+          "jan": "4957180143675",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL-AAX8W",
+          "capacityTB": 8,
+          "priceIncTax": 79750,
+          "jan": "4957180143682",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-09-11T00:40:14.881Z"
+      "lastCheckedAt": "2026-09-11T01:17:03.702Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e2"
     },
     {
       "id": "hdl2-tasoho",
@@ -1426,17 +1445,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-TA8SOHO",
-          "capacityTB": 8,
-          "priceIncTax": 81180,
-          "jan": "4957180174983",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL2-TA6SOHO",
-          "capacityTB": 6,
-          "priceIncTax": 70730,
-          "jan": "4957180175157",
+          "sku": "HDL2-TA2SOHO",
+          "capacityTB": 2,
+          "priceIncTax": 53460,
+          "jan": "4957180174969",
           "status": "現行"
         },
         {
@@ -1447,15 +1459,23 @@
           "status": "現行"
         },
         {
-          "sku": "HDL2-TA2SOHO",
-          "capacityTB": 2,
-          "priceIncTax": 53460,
-          "jan": "4957180174969",
+          "sku": "HDL2-TA6SOHO",
+          "capacityTB": 6,
+          "priceIncTax": 70730,
+          "jan": "4957180175157",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-TA8SOHO",
+          "capacityTB": 8,
+          "priceIncTax": 81180,
+          "jan": "4957180174983",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-09-11T00:40:19.755Z"
+      "lastCheckedAt": "2026-09-11T01:17:08.668Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1"
     },
     {
       "id": "hdl1-lasoho",
@@ -1483,24 +1503,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL1-LA08SOHO",
-          "capacityTB": 8,
-          "priceIncTax": 85800,
-          "jan": "4957180173689",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL1-LA06SOHO",
-          "capacityTB": 6,
-          "priceIncTax": 66330,
-          "jan": "4957180173672",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL1-LA04SOHO",
-          "capacityTB": 4,
-          "priceIncTax": 44220,
-          "jan": "4957180173665",
+          "sku": "HDL1-LA01SOHO",
+          "capacityTB": 1,
+          "priceIncTax": 28490,
+          "jan": "4957180173641",
           "status": "現行"
         },
         {
@@ -1511,15 +1517,30 @@
           "status": "現行"
         },
         {
-          "sku": "HDL1-LA01SOHO",
-          "capacityTB": 1,
-          "priceIncTax": 28490,
-          "jan": "4957180173641",
+          "sku": "HDL1-LA04SOHO",
+          "capacityTB": 4,
+          "priceIncTax": 44220,
+          "jan": "4957180173665",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL1-LA06SOHO",
+          "capacityTB": 6,
+          "priceIncTax": 66330,
+          "jan": "4957180173672",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL1-LA08SOHO",
+          "capacityTB": 8,
+          "priceIncTax": 85800,
+          "jan": "4957180173689",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
-      "lastCheckedAt": "2026-09-11T00:40:24.477Z"
+      "lastCheckedAt": "2026-09-11T01:17:13.560Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1"
     },
     {
       "id": "hdl4-z25si3b",
@@ -1553,24 +1574,24 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z25SI3B80",
-          "capacityTB": 80,
-          "priceIncTax": 1485000,
-          "jan": "4957180182261",
-          "status": "現行"
+          "sku": "HDL4-Z25SI3B04",
+          "capacityTB": 4,
+          "priceIncTax": 434500,
+          "jan": "4957180182209",
+          "status": "生産終了"
         },
         {
-          "sku": "HDL4-Z25SI3B64",
-          "capacityTB": 64,
-          "priceIncTax": 1265000,
-          "jan": "4957180182254",
-          "status": "現行"
+          "sku": "HDL4-Z25SI3B08",
+          "capacityTB": 8,
+          "priceIncTax": 465300,
+          "jan": "4957180182216",
+          "status": "生産終了"
         },
         {
-          "sku": "HDL4-Z25SI3B48",
-          "capacityTB": 48,
-          "priceIncTax": 957000,
-          "jan": "4957180182247",
+          "sku": "HDL4-Z25SI3B16",
+          "capacityTB": 16,
+          "priceIncTax": 542300,
+          "jan": "4957180182223",
           "status": "現行"
         },
         {
@@ -1581,29 +1602,30 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-Z25SI3B16",
-          "capacityTB": 16,
-          "priceIncTax": 542300,
-          "jan": "4957180182223",
+          "sku": "HDL4-Z25SI3B48",
+          "capacityTB": 48,
+          "priceIncTax": 957000,
+          "jan": "4957180182247",
           "status": "現行"
         },
         {
-          "sku": "HDL4-Z25SI3B08",
-          "capacityTB": 8,
-          "priceIncTax": 465300,
-          "jan": "4957180182216",
-          "status": "生産終了"
+          "sku": "HDL4-Z25SI3B64",
+          "capacityTB": 64,
+          "priceIncTax": 1265000,
+          "jan": "4957180182254",
+          "status": "現行"
         },
         {
-          "sku": "HDL4-Z25SI3B04",
-          "capacityTB": 4,
-          "priceIncTax": 434500,
-          "jan": "4957180182209",
-          "status": "生産終了"
+          "sku": "HDL4-Z25SI3B80",
+          "capacityTB": 80,
+          "priceIncTax": 1485000,
+          "jan": "4957180182261",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3b/",
-      "lastCheckedAt": "2026-09-11T00:40:29.326Z"
+      "lastCheckedAt": "2026-09-11T01:17:18.341Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl4-z25si3bu",
@@ -1637,38 +1659,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z25SI3B80U",
-          "capacityTB": 80,
-          "priceIncTax": 1573000,
-          "jan": "4957180182339",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z25SI3B64U",
-          "capacityTB": 64,
-          "priceIncTax": 1361800,
-          "jan": "4957180182322",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z25SI3B48U",
-          "capacityTB": 48,
-          "priceIncTax": 1062600,
-          "jan": "4957180182315",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z25SI3B32U",
-          "capacityTB": 32,
-          "priceIncTax": 775500,
-          "jan": "4957180182308",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z25SI3B16U",
-          "capacityTB": 16,
-          "priceIncTax": 636900,
-          "jan": "4957180182292",
+          "sku": "HDL4-Z25SI3B04U",
+          "capacityTB": 4,
+          "priceIncTax": 526900,
+          "jan": "4957180182278",
           "status": "現行"
         },
         {
@@ -1679,15 +1673,44 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL4-Z25SI3B04U",
-          "capacityTB": 4,
-          "priceIncTax": 526900,
-          "jan": "4957180182278",
+          "sku": "HDL4-Z25SI3B16U",
+          "capacityTB": 16,
+          "priceIncTax": 636900,
+          "jan": "4957180182292",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B32U",
+          "capacityTB": 32,
+          "priceIncTax": 775500,
+          "jan": "4957180182308",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B48U",
+          "capacityTB": 48,
+          "priceIncTax": 1062600,
+          "jan": "4957180182315",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B64U",
+          "capacityTB": 64,
+          "priceIncTax": 1361800,
+          "jan": "4957180182322",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25SI3B80U",
+          "capacityTB": 80,
+          "priceIncTax": 1573000,
+          "jan": "4957180182339",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bu/",
-      "lastCheckedAt": "2026-09-11T00:40:34.142Z"
+      "lastCheckedAt": "2026-09-11T01:17:23.345Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl4-z25satb",
@@ -1721,17 +1744,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z25SATB32",
-          "capacityTB": 32,
-          "priceIncTax": 630300,
-          "jan": "4957180181943",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z25SATB16",
-          "capacityTB": 16,
-          "priceIncTax": 443300,
-          "jan": "4957180181936",
+          "sku": "HDL4-Z25SATB04",
+          "capacityTB": 4,
+          "priceIncTax": 335500,
+          "jan": "4957180181912",
           "status": "生産終了"
         },
         {
@@ -1742,15 +1758,23 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL4-Z25SATB04",
-          "capacityTB": 4,
-          "priceIncTax": 335500,
-          "jan": "4957180181912",
+          "sku": "HDL4-Z25SATB16",
+          "capacityTB": 16,
+          "priceIncTax": 443300,
+          "jan": "4957180181936",
           "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB32",
+          "capacityTB": 32,
+          "priceIncTax": 630300,
+          "jan": "4957180181943",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satb/",
-      "lastCheckedAt": "2026-09-11T00:40:38.966Z"
+      "lastCheckedAt": "2026-09-11T01:17:28.103Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl2-z25satb",
@@ -1784,10 +1808,17 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-Z25SATB16",
-          "capacityTB": 16,
-          "priceIncTax": 412500,
-          "jan": "4957180181868",
+          "sku": "HDL2-Z25SATB02",
+          "capacityTB": 2,
+          "priceIncTax": 272800,
+          "jan": "4957180181837",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z25SATB04",
+          "capacityTB": 4,
+          "priceIncTax": 298100,
+          "jan": "4957180181844",
           "status": "現行"
         },
         {
@@ -1798,22 +1829,16 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-Z25SATB04",
-          "capacityTB": 4,
-          "priceIncTax": 298100,
-          "jan": "4957180181844",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL2-Z25SATB02",
-          "capacityTB": 2,
-          "priceIncTax": 272800,
-          "jan": "4957180181837",
+          "sku": "HDL2-Z25SATB16",
+          "capacityTB": 16,
+          "priceIncTax": 412500,
+          "jan": "4957180181868",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25satb/",
-      "lastCheckedAt": "2026-09-11T00:40:43.770Z"
+      "lastCheckedAt": "2026-09-11T01:17:33.058Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl4-z25satbu",
@@ -1847,38 +1872,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z25SATB80U",
-          "capacityTB": 80,
-          "priceIncTax": 1474000,
-          "jan": "4957180182117",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-Z25SATB64U",
-          "capacityTB": 64,
-          "priceIncTax": 1262800,
-          "jan": "4957180182100",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-Z25SATB48U",
-          "capacityTB": 48,
-          "priceIncTax": 963600,
-          "jan": "4957180182094",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-Z25SATB32U",
-          "capacityTB": 32,
-          "priceIncTax": 676500,
-          "jan": "4957180182087",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-Z25SATB16U",
-          "capacityTB": 16,
-          "priceIncTax": 537900,
-          "jan": "4957180182070",
+          "sku": "HDL4-Z25SATB04U",
+          "capacityTB": 4,
+          "priceIncTax": 427900,
+          "jan": "4957180182056",
           "status": "生産終了"
         },
         {
@@ -1889,15 +1886,44 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-Z25SATB04U",
-          "capacityTB": 4,
-          "priceIncTax": 427900,
-          "jan": "4957180182056",
+          "sku": "HDL4-Z25SATB16U",
+          "capacityTB": 16,
+          "priceIncTax": 537900,
+          "jan": "4957180182070",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB32U",
+          "capacityTB": 32,
+          "priceIncTax": 676500,
+          "jan": "4957180182087",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB48U",
+          "capacityTB": 48,
+          "priceIncTax": 963600,
+          "jan": "4957180182094",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB64U",
+          "capacityTB": 64,
+          "priceIncTax": 1262800,
+          "jan": "4957180182100",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25SATB80U",
+          "capacityTB": 80,
+          "priceIncTax": 1474000,
+          "jan": "4957180182117",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satbu/",
-      "lastCheckedAt": "2026-09-11T00:40:48.751Z"
+      "lastCheckedAt": "2026-09-11T01:17:38.148Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl4-z25watb",
@@ -1931,10 +1957,17 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z25WATB32",
-          "capacityTB": 32,
-          "priceIncTax": 531300,
-          "jan": "4957180182018",
+          "sku": "HDL4-Z25WATB04",
+          "capacityTB": 4,
+          "priceIncTax": 236500,
+          "jan": "4957180181981",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z25WATB08",
+          "capacityTB": 8,
+          "priceIncTax": 267300,
+          "jan": "4957180181998",
           "status": "現行"
         },
         {
@@ -1945,22 +1978,16 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-Z25WATB08",
-          "capacityTB": 8,
-          "priceIncTax": 267300,
-          "jan": "4957180181998",
+          "sku": "HDL4-Z25WATB32",
+          "capacityTB": 32,
+          "priceIncTax": 531300,
+          "jan": "4957180182018",
           "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z25WATB04",
-          "capacityTB": 4,
-          "priceIncTax": 236500,
-          "jan": "4957180181981",
-          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watb/",
-      "lastCheckedAt": "2026-09-11T00:40:53.459Z"
+      "lastCheckedAt": "2026-09-11T01:17:43.274Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl2-z25watb",
@@ -1994,17 +2021,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-Z25WATB16",
-          "capacityTB": 16,
-          "priceIncTax": 313500,
-          "jan": "4957180181905",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL2-Z25WATB08",
-          "capacityTB": 8,
-          "priceIncTax": 236500,
-          "jan": "4957180181882",
+          "sku": "HDL2-Z25WATB02",
+          "capacityTB": 2,
+          "priceIncTax": 173800,
+          "jan": "4957180181875",
           "status": "現行"
         },
         {
@@ -2015,15 +2035,23 @@
           "status": "現行"
         },
         {
-          "sku": "HDL2-Z25WATB02",
-          "capacityTB": 2,
-          "priceIncTax": 173800,
-          "jan": "4957180181875",
+          "sku": "HDL2-Z25WATB08",
+          "capacityTB": 8,
+          "priceIncTax": 236500,
+          "jan": "4957180181882",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z25WATB16",
+          "capacityTB": 16,
+          "priceIncTax": 313500,
+          "jan": "4957180181905",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25watb/",
-      "lastCheckedAt": "2026-09-11T00:40:58.167Z"
+      "lastCheckedAt": "2026-09-11T01:17:48.299Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl4-z25watbu",
@@ -2057,38 +2085,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z25WATB80U",
-          "capacityTB": 80,
-          "priceIncTax": 1411300,
-          "jan": "4957180182186",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z25WATB64U",
-          "capacityTB": 64,
-          "priceIncTax": 1200100,
-          "jan": "4957180182179",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z25WATB48U",
-          "capacityTB": 48,
-          "priceIncTax": 900900,
-          "jan": "4957180182162",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z25WATB32U",
-          "capacityTB": 32,
-          "priceIncTax": 613800,
-          "jan": "4957180182155",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z25WATB16U",
-          "capacityTB": 16,
-          "priceIncTax": 438900,
-          "jan": "4957180182148",
+          "sku": "HDL4-Z25WATB04U",
+          "capacityTB": 4,
+          "priceIncTax": 322300,
+          "jan": "4957180182124",
           "status": "現行"
         },
         {
@@ -2099,15 +2099,44 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-Z25WATB04U",
-          "capacityTB": 4,
-          "priceIncTax": 322300,
-          "jan": "4957180182124",
+          "sku": "HDL4-Z25WATB16U",
+          "capacityTB": 16,
+          "priceIncTax": 438900,
+          "jan": "4957180182148",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB32U",
+          "capacityTB": 32,
+          "priceIncTax": 613800,
+          "jan": "4957180182155",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB48U",
+          "capacityTB": 48,
+          "priceIncTax": 900900,
+          "jan": "4957180182162",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB64U",
+          "capacityTB": 64,
+          "priceIncTax": 1200100,
+          "jan": "4957180182179",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z25WATB80U",
+          "capacityTB": 80,
+          "priceIncTax": 1411300,
+          "jan": "4957180182186",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watbu/",
-      "lastCheckedAt": "2026-09-11T00:41:02.844Z"
+      "lastCheckedAt": "2026-09-11T01:17:53.368Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl4-z22si3b",
@@ -2141,38 +2170,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z22SI3B80",
-          "capacityTB": 80,
-          "priceIncTax": 1452000,
-          "jan": "4957180177267",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z22SI3B64",
-          "capacityTB": 64,
-          "priceIncTax": 1232000,
-          "jan": "4957180177250",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-Z22SI3B48",
-          "capacityTB": 48,
-          "priceIncTax": 924000,
-          "jan": "4957180177243",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL4-Z22SI3B32",
-          "capacityTB": 32,
-          "priceIncTax": 696300,
-          "jan": "4957180160757",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z22SI3B16",
-          "capacityTB": 16,
-          "priceIncTax": 509300,
-          "jan": "4957180160740",
+          "sku": "HDL4-Z22SI3B04",
+          "capacityTB": 4,
+          "priceIncTax": 401500,
+          "jan": "4957180160726",
           "status": "現行"
         },
         {
@@ -2183,15 +2184,44 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL4-Z22SI3B04",
-          "capacityTB": 4,
-          "priceIncTax": 401500,
-          "jan": "4957180160726",
+          "sku": "HDL4-Z22SI3B16",
+          "capacityTB": 16,
+          "priceIncTax": 509300,
+          "jan": "4957180160740",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SI3B32",
+          "capacityTB": 32,
+          "priceIncTax": 696300,
+          "jan": "4957180160757",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SI3B48",
+          "capacityTB": 48,
+          "priceIncTax": 924000,
+          "jan": "4957180177243",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22SI3B64",
+          "capacityTB": 64,
+          "priceIncTax": 1232000,
+          "jan": "4957180177250",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22SI3B80",
+          "capacityTB": 80,
+          "priceIncTax": 1452000,
+          "jan": "4957180177267",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3b/",
-      "lastCheckedAt": "2026-09-11T00:41:07.616Z"
+      "lastCheckedAt": "2026-09-11T01:17:58.301Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022"
     },
     {
       "id": "hdl2-z22si3b",
@@ -2225,17 +2255,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-Z22SI3B16",
-          "capacityTB": 16,
-          "priceIncTax": 478500,
-          "jan": "4957180160702",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL2-Z22SI3B08",
-          "capacityTB": 8,
-          "priceIncTax": 401500,
-          "jan": "4957180160696",
+          "sku": "HDL2-Z22SI3B02",
+          "capacityTB": 2,
+          "priceIncTax": 338800,
+          "jan": "4957180160672",
           "status": "現行"
         },
         {
@@ -2246,15 +2269,23 @@
           "status": "現行"
         },
         {
-          "sku": "HDL2-Z22SI3B02",
-          "capacityTB": 2,
-          "priceIncTax": 338800,
-          "jan": "4957180160672",
+          "sku": "HDL2-Z22SI3B08",
+          "capacityTB": 8,
+          "priceIncTax": 401500,
+          "jan": "4957180160696",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z22SI3B16",
+          "capacityTB": 16,
+          "priceIncTax": 478500,
+          "jan": "4957180160702",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3b/",
-      "lastCheckedAt": "2026-09-11T00:41:12.594Z"
+      "lastCheckedAt": "2026-09-11T01:18:03.224Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022"
     },
     {
       "id": "hdl4-z22si3bu",
@@ -2288,17 +2319,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z22SI3B32U",
-          "capacityTB": 32,
-          "priceIncTax": 742500,
-          "jan": "4957180160801",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z22SI3B16U",
-          "capacityTB": 16,
-          "priceIncTax": 603900,
-          "jan": "4957180160795",
+          "sku": "HDL4-Z22SI3B04U",
+          "capacityTB": 4,
+          "priceIncTax": 493900,
+          "jan": "4957180160771",
           "status": "現行"
         },
         {
@@ -2309,15 +2333,23 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-Z22SI3B04U",
-          "capacityTB": 4,
-          "priceIncTax": 493900,
-          "jan": "4957180160771",
+          "sku": "HDL4-Z22SI3B16U",
+          "capacityTB": 16,
+          "priceIncTax": 603900,
+          "jan": "4957180160795",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL4-Z22SI3B32U",
+          "capacityTB": 32,
+          "priceIncTax": 742500,
+          "jan": "4957180160801",
           "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3bu/",
-      "lastCheckedAt": "2026-09-11T00:41:17.190Z"
+      "lastCheckedAt": "2026-09-11T01:18:08.197Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022"
     },
     {
       "id": "hdl4-z22satb",
@@ -2351,10 +2383,17 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z22SATB32",
-          "capacityTB": 32,
-          "priceIncTax": 597300,
-          "jan": "4957180163277",
+          "sku": "HDL4-Z22SATB04",
+          "capacityTB": 4,
+          "priceIncTax": 302500,
+          "jan": "4957180163246",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22SATB08",
+          "capacityTB": 8,
+          "priceIncTax": 333300,
+          "jan": "4957180163253",
           "status": "現行"
         },
         {
@@ -2365,22 +2404,16 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-Z22SATB08",
-          "capacityTB": 8,
-          "priceIncTax": 333300,
-          "jan": "4957180163253",
+          "sku": "HDL4-Z22SATB32",
+          "capacityTB": 32,
+          "priceIncTax": 597300,
+          "jan": "4957180163277",
           "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z22SATB04",
-          "capacityTB": 4,
-          "priceIncTax": 302500,
-          "jan": "4957180163246",
-          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satb/",
-      "lastCheckedAt": "2026-09-11T00:41:21.839Z"
+      "lastCheckedAt": "2026-09-11T01:18:13.121Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022"
     },
     {
       "id": "hdl2-z22satb",
@@ -2414,18 +2447,11 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-Z22SATB16",
-          "capacityTB": 16,
-          "priceIncTax": 379500,
-          "jan": "4957180163222",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL2-Z22SATB08",
-          "capacityTB": 8,
-          "priceIncTax": 302500,
-          "jan": "4957180163215",
-          "status": "現行"
+          "sku": "HDL2-Z22SATB02",
+          "capacityTB": 2,
+          "priceIncTax": 239800,
+          "jan": "4957180163185",
+          "status": "生産終了"
         },
         {
           "sku": "HDL2-Z22SATB04",
@@ -2435,15 +2461,23 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-Z22SATB02",
-          "capacityTB": 2,
-          "priceIncTax": 239800,
-          "jan": "4957180163185",
-          "status": "生産終了"
+          "sku": "HDL2-Z22SATB08",
+          "capacityTB": 8,
+          "priceIncTax": 302500,
+          "jan": "4957180163215",
+          "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z22SATB16",
+          "capacityTB": 16,
+          "priceIncTax": 379500,
+          "jan": "4957180163222",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satb/",
-      "lastCheckedAt": "2026-09-11T00:41:26.584Z"
+      "lastCheckedAt": "2026-09-11T01:18:18.380Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022"
     },
     {
       "id": "hdl4-z22satbu",
@@ -2477,10 +2511,17 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z22SATB32U",
-          "capacityTB": 32,
-          "priceIncTax": 643500,
-          "jan": "4957180163321",
+          "sku": "HDL4-Z22SATB04U",
+          "capacityTB": 4,
+          "priceIncTax": 394900,
+          "jan": "4957180163291",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22SATB08U",
+          "capacityTB": 8,
+          "priceIncTax": 416900,
+          "jan": "4957180163307",
           "status": "現行"
         },
         {
@@ -2491,22 +2532,16 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-Z22SATB08U",
-          "capacityTB": 8,
-          "priceIncTax": 416900,
-          "jan": "4957180163307",
+          "sku": "HDL4-Z22SATB32U",
+          "capacityTB": 32,
+          "priceIncTax": 643500,
+          "jan": "4957180163321",
           "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z22SATB04U",
-          "capacityTB": 4,
-          "priceIncTax": 394900,
-          "jan": "4957180163291",
-          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satbu/",
-      "lastCheckedAt": "2026-09-11T00:41:31.289Z"
+      "lastCheckedAt": "2026-09-11T01:18:23.337Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022"
     },
     {
       "id": "hdl4-z22watb",
@@ -2540,17 +2575,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z22WATB32",
-          "capacityTB": 32,
-          "priceIncTax": 509300,
-          "jan": "4957180163413",
-          "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z22WATB16",
-          "capacityTB": 16,
-          "priceIncTax": 322300,
-          "jan": "4957180163406",
+          "sku": "HDL4-Z22WATB04",
+          "capacityTB": 4,
+          "priceIncTax": 214500,
+          "jan": "4957180163383",
           "status": "生産終了"
         },
         {
@@ -2561,15 +2589,23 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL4-Z22WATB04",
-          "capacityTB": 4,
-          "priceIncTax": 214500,
-          "jan": "4957180163383",
+          "sku": "HDL4-Z22WATB16",
+          "capacityTB": 16,
+          "priceIncTax": 322300,
+          "jan": "4957180163406",
           "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22WATB32",
+          "capacityTB": 32,
+          "priceIncTax": 509300,
+          "jan": "4957180163413",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watb/",
-      "lastCheckedAt": "2026-09-11T00:41:36.042Z"
+      "lastCheckedAt": "2026-09-11T01:18:28.197Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022"
     },
     {
       "id": "hdl2-z22watb",
@@ -2603,17 +2639,10 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-Z22WATB16",
-          "capacityTB": 16,
-          "priceIncTax": 291500,
-          "jan": "4957180163376",
-          "status": "生産終了"
-        },
-        {
-          "sku": "HDL2-Z22WATB08",
-          "capacityTB": 8,
-          "priceIncTax": 214500,
-          "jan": "4957180163369",
+          "sku": "HDL2-Z22WATB02",
+          "capacityTB": 2,
+          "priceIncTax": 151800,
+          "jan": "4957180163345",
           "status": "生産終了"
         },
         {
@@ -2624,15 +2653,23 @@
           "status": "生産終了"
         },
         {
-          "sku": "HDL2-Z22WATB02",
-          "capacityTB": 2,
-          "priceIncTax": 151800,
-          "jan": "4957180163345",
+          "sku": "HDL2-Z22WATB08",
+          "capacityTB": 8,
+          "priceIncTax": 214500,
+          "jan": "4957180163369",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL2-Z22WATB16",
+          "capacityTB": 16,
+          "priceIncTax": 291500,
+          "jan": "4957180163376",
           "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watb/",
-      "lastCheckedAt": "2026-09-11T00:41:40.852Z"
+      "lastCheckedAt": "2026-09-11T01:18:33.095Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022"
     },
     {
       "id": "hdl4-z22watbu",
@@ -2666,10 +2703,17 @@
       ],
       "variants": [
         {
-          "sku": "HDL4-Z22WATB32U",
-          "capacityTB": 32,
-          "priceIncTax": 591800,
-          "jan": "4957180163451",
+          "sku": "HDL4-Z22WATB04U",
+          "capacityTB": 4,
+          "priceIncTax": 300300,
+          "jan": "4957180163420",
+          "status": "生産終了"
+        },
+        {
+          "sku": "HDL4-Z22WATB08U",
+          "capacityTB": 8,
+          "priceIncTax": 323400,
+          "jan": "4957180163437",
           "status": "現行"
         },
         {
@@ -2680,22 +2724,16 @@
           "status": "現行"
         },
         {
-          "sku": "HDL4-Z22WATB08U",
-          "capacityTB": 8,
-          "priceIncTax": 323400,
-          "jan": "4957180163437",
+          "sku": "HDL4-Z22WATB32U",
+          "capacityTB": 32,
+          "priceIncTax": 591800,
+          "jan": "4957180163451",
           "status": "現行"
-        },
-        {
-          "sku": "HDL4-Z22WATB04U",
-          "capacityTB": 4,
-          "priceIncTax": 300300,
-          "jan": "4957180163420",
-          "status": "生産終了"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watbu/",
-      "lastCheckedAt": "2026-09-11T00:41:45.609Z"
+      "lastCheckedAt": "2026-09-11T01:18:37.931Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022"
     },
     {
       "id": "hdl2-z10atb",
@@ -2729,22 +2767,23 @@
       ],
       "variants": [
         {
-          "sku": "HDL2-Z10ATB04",
-          "capacityTB": 4,
-          "priceIncTax": 173800,
-          "jan": "4957180172101",
-          "status": "現行"
-        },
-        {
           "sku": "HDL2-Z10ATB02",
           "capacityTB": 2,
           "priceIncTax": 143000,
           "jan": "4957180172095",
           "status": "現行"
+        },
+        {
+          "sku": "HDL2-Z10ATB04",
+          "capacityTB": 4,
+          "priceIncTax": 173800,
+          "jan": "4957180172101",
+          "status": "現行"
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z10atb/",
-      "lastCheckedAt": "2026-09-11T00:41:50.483Z"
+      "lastCheckedAt": "2026-09-11T01:18:42.812Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2019"
     },
     {
       "id": "hdl4-lx",
@@ -2756,7 +2795,10 @@
       "officeSize": "中規模：～64人",
       "officeSizeMax": 64,
       "imageUrl": "https://www.iodata.jp/image/hdl4-lx_l.jpg",
-      "raidSupport": [],
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "現行",
@@ -2824,7 +2866,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
-      "lastCheckedAt": "2026-09-11T00:41:55.149Z"
+      "lastCheckedAt": "2026-09-11T01:18:47.842Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl4-lvb",
@@ -2836,7 +2879,11 @@
       "officeSize": "中規模：～50人",
       "officeSizeMax": 50,
       "imageUrl": "https://www.iodata.jp/image/hdl4-lvb_l.jpg",
-      "raidSupport": [],
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5",
+        "RAID 6"
+      ],
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "現行",
@@ -2882,7 +2929,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
-      "lastCheckedAt": "2026-09-11T00:41:59.892Z"
+      "lastCheckedAt": "2026-09-11T01:18:52.842Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl2-lx",
@@ -2894,7 +2942,10 @@
       "officeSize": "中規模：～64人",
       "officeSizeMax": 64,
       "imageUrl": "https://www.iodata.jp/image/hdl2-lx_l.jpg",
-      "raidSupport": [],
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "現行",
@@ -2941,7 +2992,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
-      "lastCheckedAt": "2026-09-11T00:42:04.634Z"
+      "lastCheckedAt": "2026-09-11T01:18:57.650Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl2-lvb",
@@ -2953,7 +3005,10 @@
       "officeSize": "中規模：～50人",
       "officeSizeMax": 50,
       "imageUrl": "https://www.iodata.jp/image/hdl2-lvb_l.jpg",
-      "raidSupport": [],
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "現行",
@@ -2999,7 +3054,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
-      "lastCheckedAt": "2026-09-11T00:42:09.607Z"
+      "lastCheckedAt": "2026-09-11T01:19:02.587Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl2-lenb",
@@ -3011,7 +3067,11 @@
       "officeSize": "小規模：～25人",
       "officeSizeMax": 25,
       "imageUrl": "https://www.iodata.jp/image/hdl2-lenb_l.jpg",
-      "raidSupport": [],
+      "raidSupport": [
+        "RAIDeX",
+        "RAID 0",
+        "RAID 1"
+      ],
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "現行",
@@ -3063,7 +3123,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
-      "lastCheckedAt": "2026-09-11T00:42:14.269Z"
+      "lastCheckedAt": "2026-09-11T01:19:07.417Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1"
     },
     {
       "id": "hdl1-lenb",
@@ -3126,7 +3187,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
-      "lastCheckedAt": "2026-09-11T00:42:19.193Z"
+      "lastCheckedAt": "2026-09-11T01:19:12.197Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1"
     },
     {
       "id": "hdl4-lxu",
@@ -3138,7 +3200,10 @@
       "officeSize": "中規模：～64人",
       "officeSizeMax": 64,
       "imageUrl": "https://www.iodata.jp/image/hdl4-lxu_l.jpg",
-      "raidSupport": [],
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "現行",
@@ -3206,7 +3271,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
-      "lastCheckedAt": "2026-09-11T00:42:23.841Z"
+      "lastCheckedAt": "2026-09-11T01:19:17.141Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "hdl4-lvub",
@@ -3218,7 +3284,11 @@
       "officeSize": "中規模：～50人",
       "officeSizeMax": 50,
       "imageUrl": "https://www.iodata.jp/image/hdl4-lvub_l.jpg",
-      "raidSupport": [],
+      "raidSupport": [
+        "RAID 0",
+        "RAID 5",
+        "RAID 6"
+      ],
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "現行",
@@ -3264,7 +3334,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
-      "lastCheckedAt": "2026-09-11T00:42:28.684Z"
+      "lastCheckedAt": "2026-09-11T01:19:22.215Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1"
     },
     {
       "id": "bcsp-lvreut",
@@ -3276,7 +3347,10 @@
       "officeSize": null,
       "officeSizeMax": null,
       "imageUrl": "https://www.iodata.jp/image/bcsp-lvreut_l.jpg",
-      "raidSupport": [],
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "現行",
@@ -3314,7 +3388,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/bcsp-lvreut/",
-      "lastCheckedAt": "2026-09-11T00:42:33.516Z"
+      "lastCheckedAt": "2026-09-11T01:19:26.969Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm"
     },
     {
       "id": "hdl4-z25si3bb",
@@ -3385,7 +3460,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bb/",
-      "lastCheckedAt": "2026-09-11T00:42:38.322Z"
+      "lastCheckedAt": "2026-09-11T01:19:31.890Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl4-z25wi3bb",
@@ -3397,7 +3473,11 @@
       "officeSize": "中規模： ～50人",
       "officeSizeMax": 50,
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25wi3bb_l.jpg",
-      "raidSupport": [],
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5"
+      ],
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "現行",
@@ -3434,7 +3514,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bb/",
-      "lastCheckedAt": "2026-09-11T00:42:43.415Z"
+      "lastCheckedAt": "2026-09-11T01:19:36.563Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl2-z25si3bb",
@@ -3484,7 +3565,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25si3bb/",
-      "lastCheckedAt": "2026-09-11T00:42:48.186Z"
+      "lastCheckedAt": "2026-09-11T01:19:41.358Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl2-z25wi3bb",
@@ -3540,7 +3622,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25wi3bb/",
-      "lastCheckedAt": "2026-09-11T00:42:52.859Z"
+      "lastCheckedAt": "2026-09-11T01:19:46.146Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl4-z25si3bub",
@@ -3611,7 +3694,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bub/",
-      "lastCheckedAt": "2026-09-11T00:42:57.638Z"
+      "lastCheckedAt": "2026-09-11T01:19:51.115Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     },
     {
       "id": "hdl4-z25wi3bub",
@@ -3623,7 +3707,11 @@
       "officeSize": "小規模： ～50人",
       "officeSizeMax": 50,
       "imageUrl": "https://www.iodata.jp/image/hdl4-z25wi3bub_l.jpg",
-      "raidSupport": [],
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5"
+      ],
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "現行",
@@ -3660,7 +3748,8 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bub/",
-      "lastCheckedAt": "2026-09-11T00:43:02.374Z"
+      "lastCheckedAt": "2026-09-11T01:19:55.842Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025"
     }
   ]
 }
