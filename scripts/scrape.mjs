@@ -99,6 +99,16 @@ function parseRaidCell(cell) {
   return { supported: true, effectiveCapacity: m ? m[1] : null };
 }
 
+// search_linux.js / search_windows.js の hoshu / hoshu_link フィールドから
+// 保守サービス（ISS等）の名前とリンクを整形する。
+// hoshu は "訪問安心保守5年\nISS-NHI-PR5" のように改行区切りで
+// サービス名＋型番が入っているため、読みやすい一行にまとめる。
+function buildMaintenanceService(hoshu, hoshuLink) {
+  if (!hoshu || !hoshuLink) return null;
+  const name = String(hoshu).replace(/\s*\n\s*/g, "（") + (hoshu.includes("\n") ? "）" : "");
+  return { name, url: hoshuLink };
+}
+
 function officeSizeCode(code) {
   // TODO: 実際の値のバリエーション（小/中/大 以外があるか）を確認する
   return { "小": "小規模", "中": "中規模", "大": "大規模" }[code] || code;
@@ -473,6 +483,7 @@ async function main() {
       bay: base.drive + "ベイ",
       officeSize: officeLabel || (officeSizeCode(base.office) + "：" + base.concurrent),
       officeSizeMax: extractOfficeSizeNumber(officeLabel) ?? extractOfficeSizeNumber(base.concurrent),
+      maintenanceService: buildMaintenanceService(base.hoshu, base.hoshu_link),
       imageUrl: lookupSeriesImage(catalogHtml, slug),
       raidSupport: raidSupportList(base),
       warrantyYears,
@@ -514,6 +525,7 @@ async function main() {
       imageUrl: lookupSeriesImage(catalogHtml, series.slug),
       raidSupport: [], // このページには無い情報
       warrantyYears,
+      maintenanceService: null, // カタログ補完分はsearch_linux/windows.js由来のhoshu情報を持たない
       status: anyCurrent ? "現行" : "生産終了",
       features,
       variants,
