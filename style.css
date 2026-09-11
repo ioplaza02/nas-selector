@@ -251,6 +251,7 @@ details[open] > .filter-group__label::before { transform: rotate(90deg); }
   position: fixed; inset: 0; background: var(--surface-0);
   display: flex; align-items: center; justify-content: center; z-index: 200;
 }
+.password-gate[hidden] { display: none; }
 .password-gate__box {
   background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
   padding: 32px; width: 100%; max-width: 320px; text-align: center;
