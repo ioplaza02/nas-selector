@@ -491,6 +491,14 @@ function openCompare() {
 const SITE_PASSWORD = "landisk2026";
 const UNLOCK_KEY = "nas-selector-unlocked";
 
+// 日本語入力がオンのまま打つと全角（ａ－ｚ、０－９）になってしまうことがあるため、
+// 比較の前に半角へ変換し、前後の空白も取り除く。
+function normalizeInput(str) {
+  return str
+    .trim()
+    .replace(/[Ａ-Ｚａ-ｚ０-９]/g, ch => String.fromCharCode(ch.charCodeAt(0) - 0xFEE0));
+}
+
 function showApp() {
   document.getElementById("password-gate").hidden = true;
   document.getElementById("app-root").hidden = false;
@@ -502,7 +510,7 @@ if (sessionStorage.getItem(UNLOCK_KEY) === "1") {
 } else {
   document.getElementById("password-form").addEventListener("submit", e => {
     e.preventDefault();
-    const input = document.getElementById("password-input").value;
+    const input = normalizeInput(document.getElementById("password-input").value);
     if (input === SITE_PASSWORD) {
       sessionStorage.setItem(UNLOCK_KEY, "1");
       showApp();
