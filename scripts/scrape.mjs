@@ -35,6 +35,9 @@ const HDD_COMPAT_ANCHORS = [
   "windows2025", "windows2022", "windows2019", "cons"
 ];
 
+// クラウドストレージ対応表（テレワーク・データ共有用途／災害対策BCP用途を型番ごとに判定する）
+const CLOUD_COMPAT_URL = "https://www.iodata.jp/pio/io/nas/landisk/cloud.htm";
+
 const OUTPUT_PATH = new URL("../data/products.json", import.meta.url);
 const REQUEST_INTERVAL_MS = 2000;
 
@@ -363,14 +366,27 @@ async function fetchWarrantyAndFeatures(productUrl) {
 
   const features = FEATURE_KEYWORDS.filter(kw => combined.includes(kw));
 
-  // 「冗長化設定」欄（例:「RAIDeX（出荷時）／RAID 6／RAID 5／RAID 0」）からRAID対応状況を拾う。
+  // 「冗長化」欄からRAID対応状況を拾う。
   // search_linux/windows.js に無いカタログ補完分の商品で使う。
+  // Linux版は「冗長化設定：RAIDeX（出荷時）／RAID 6／RAID 5／RAID 0」（RAIDと数字の間にスペースあり）、
+  // Windows版は「冗長化」の下に「方式」「設定」と分かれ、値は「RAID1（出荷時）、RAID0」
+  // （RAIDと数字の間にスペースなし）と表記が異なるため、両方に対応させる。
   let raidSupport = [];
-  const raidSectionIdx = combined.indexOf("冗長化設定");
-  if (raidSectionIdx !== -1) {
-    const raidWindow = combined.slice(raidSectionIdx, raidSectionIdx + 200);
-    const raidOrder = ["RAIDeX", "RAID 0", "RAID 1", "RAID 5", "RAID 6"];
-    raidSupport = raidOrder.filter(r => raidWindow.includes(r));
+  const redundancyIdx = combined.indexOf("冗長化");
+  if (redundancyIdx !== -1) {
+    const nearby = combined.slice(redundancyIdx, redundancyIdx + 300);
+    const settingIdx = nearby.indexOf("設定");
+    if (settingIdx !== -1) {
+      const raidWindow = nearby.slice(settingIdx, settingIdx + 150);
+      const raidChecks = [
+        ["RAIDeX", /RAIDeX/],
+        ["RAID 0", /RAID\s?0/],
+        ["RAID 1", /RAID\s?1/],
+        ["RAID 5", /RAID\s?5/],
+        ["RAID 6", /RAID\s?6/]
+      ];
+      raidSupport = raidChecks.filter(([, re]) => re.test(raidWindow)).map(([label]) => label);
+    }
   }
 
   return { warrantyYears, features, raidSupport };
@@ -444,6 +460,45 @@ function buildBackupHddAnchorMap(html, productIds) {
       else break;
     }
     if (anchor) map[id] = anchor;
+  }
+  return map;
+}
+
+
+// クラウドストレージ対応表から、型番ごとに
+// 「テレワーク・データ共有用途」「災害対策（BCP対策）用途」のどちらに対応しているかを判定する。
+// 個人向けモデルの節は対象外（法人向けモデルの節だけを見る）。
+// 同じ型番が両方の表に載っていることもあるため、区間ごとに別々に判定する。
+function buildCloudSupportMap(html, productIds) {
+  const personalIdx = html.indexOf("個人向けモデル");
+  const bizHtml = personalIdx === -1 ? html : html.slice(0, personalIdx);
+
+  const headingRe = /(テレワーク（データ共有）用途|災害対策（BCP対策）用途)/g;
+  const headings = [];
+  let hm;
+  while ((hm = headingRe.exec(bizHtml)) !== null) {
+    headings.push({ type: hm[1].startsWith("テレワーク") ? "telework" : "bcp", index: hm.index });
+  }
+  headings.sort((a, b) => a.index - b.index);
+
+  const regions = headings.map((h, i) => ({
+    type: h.type,
+    start: h.index,
+    end: i + 1 < headings.length ? headings[i + 1].index : bizHtml.length
+  }));
+
+  const map = {};
+  for (const id of productIds) {
+    if (!id) continue;
+    for (const region of regions) {
+      const section = bizHtml.slice(region.start, region.end);
+      const idx = section.toUpperCase().indexOf(id.toUpperCase());
+      if (idx === -1) continue;
+      const windowText = section.slice(idx, idx + 600);
+      const supported = /[◯〇]/.test(windowText);
+      if (!map[id]) map[id] = {};
+      map[id][region.type] = map[id][region.type] || supported;
+    }
   }
   return map;
 }
@@ -591,6 +646,21 @@ async function main() {
   } catch (err) {
     console.warn("  -> HDD対応表の取得失敗:", err.message);
     products.forEach(p => { p.backupHddUrl = HDD_COMPAT_URL; });
+  }
+  await sleep(REQUEST_INTERVAL_MS);
+
+  // クラウドストレージ対応表を取得し、型番ごとの用途対応を付与する
+  try {
+    const cloudCompatHtml = await fetchText(CLOUD_COMPAT_URL);
+    const cloudMap = buildCloudSupportMap(cloudCompatHtml, products.map(p => p.id));
+    products.forEach(p => {
+      const entry = cloudMap[p.id] || {};
+      p.cloudTelework = !!entry.telework;
+      p.cloudBcp = !!entry.bcp;
+    });
+  } catch (err) {
+    console.warn("  -> クラウド対応表の取得失敗:", err.message);
+    products.forEach(p => { p.cloudTelework = false; p.cloudBcp = false; });
   }
   await sleep(REQUEST_INTERVAL_MS);
 
