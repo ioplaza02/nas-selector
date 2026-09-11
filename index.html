@@ -9,16 +9,11 @@
 <body>
 
 <div class="password-gate" id="password-gate">
-  <form class="password-gate__box" id="password-form">
+  <div class="password-gate__box">
     <p class="password-gate__title">NASセレクター（試作）</p>
-    <p class="password-gate__note">関係者限定の試作版です。パスワードを入力してください。</p>
-    <div class="password-gate__field">
-      <input type="password" id="password-input" class="password-gate__input" autocomplete="off">
-      <button type="button" id="password-toggle" class="password-gate__toggle" aria-label="パスワードを表示">👁</button>
-    </div>
-    <button type="submit" class="password-gate__submit">入る</button>
-    <p class="password-gate__error" id="password-error" hidden>パスワードが違います</p>
-  </form>
+    <p class="password-gate__note">関係者限定の試作版です。</p>
+    <button type="button" id="password-open-btn" class="password-gate__submit">パスワードを入力して入る</button>
+  </div>
 </div>
 
 <div id="app-root" hidden>

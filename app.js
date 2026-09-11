@@ -505,26 +505,20 @@ function showApp() {
   init();
 }
 
+function askPassword() {
+  const raw = window.prompt("パスワードを入力してください");
+  if (raw === null) return; // キャンセルされた場合は何もしない
+  const input = normalizeInput(raw);
+  if (input === SITE_PASSWORD) {
+    sessionStorage.setItem(UNLOCK_KEY, "1");
+    showApp();
+  } else {
+    window.alert("パスワードが違います");
+  }
+}
+
 if (sessionStorage.getItem(UNLOCK_KEY) === "1") {
   showApp();
 } else {
-  const passwordInput = document.getElementById("password-input");
-  const toggleBtn = document.getElementById("password-toggle");
-  toggleBtn.addEventListener("click", () => {
-    const showing = passwordInput.type === "text";
-    passwordInput.type = showing ? "password" : "text";
-    toggleBtn.textContent = showing ? "👁" : "🙈";
-    toggleBtn.setAttribute("aria-label", showing ? "パスワードを表示" : "パスワードを非表示");
-  });
-
-  document.getElementById("password-form").addEventListener("submit", e => {
-    e.preventDefault();
-    const input = normalizeInput(passwordInput.value);
-    if (input === SITE_PASSWORD) {
-      sessionStorage.setItem(UNLOCK_KEY, "1");
-      showApp();
-    } else {
-      document.getElementById("password-error").hidden = false;
-    }
-  });
+  document.getElementById("password-open-btn").addEventListener("click", askPassword);
 }
