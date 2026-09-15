@@ -237,10 +237,18 @@ function lookupInstallAndBay(catalogHtml, slug) {
   if (!m) return { install: null, bay: null };
   const before = catalogHtml.slice(Math.max(0, m.index - 800), m.index).replace(/<[^>]+>/g, " ");
   const bayMatch = before.match(/(\d+)\s*ドライブ/);
-  const installMatch = before.match(/(BOX|ラック)/);
+  // 「BOX」「ラック」は複数箇所に出現しうる（例：ページ上部のナビゲーション
+  // 「サーバーラックマウント対応一覧」など、商品説明とは無関係な文言）。
+  // 最初に見つかったものではなく、アンカーに一番近い（＝最後に出現する）ものを
+  // 採用することで、無関係な文言を誤って拾わないようにする。
+  const installMatches = [...before.matchAll(/(BOX|ラック)/g)];
+  const lastInstall = installMatches.length > 0
+    ? installMatches[installMatches.length - 1][1]
+    : null;
   return {
     bay: bayMatch ? bayMatch[1] + "ベイ" : null,
-    install: installMatch ? (installMatch[1] === "BOX" ? "BOXタイプ" : "ラックマウントタイプ") : null
+    // 明示的に「ラック」と書かれていない商品は、すべてBOXタイプとして扱う
+    install: lastInstall === "ラック" ? "ラックマウントタイプ" : "BOXタイプ"
   };
 }
 
