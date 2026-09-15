@@ -1,1 +1,75 @@
+name: Scrape and Update Product Data
 
+# 毎日 深夜3:00(日本時間) に自動実行。
+# cronはUTC基準のため、JST 3:00 = 前日のUTC 18:00 と指定する。
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch: # 手動実行もできるように残しておく
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: Node.jsのセットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 前回データを退避
+        run: cp data/products.json data/products.previous.json
+
+      - name: スクレイパーを実行
+        run: node scripts/scrape.mjs
+
+      - name: 健全性チェック
+        id: healthcheck
+        run: node scripts/health-check.mjs
+        continue-on-error: true
+
+      # 健全性チェックOKの場合：確認なしでそのまま本番に反映
+      - name: 正常時：自動でそのまま反映
+        if: steps.healthcheck.outcome == 'success'
+        run: |
+          rm -f data/products.previous.json
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/products.json
+          if git diff --cached --quiet; then
+            echo "データに変化がなかったため、コミットは行いません。"
+            exit 0
+          fi
+          git commit -m "chore: 自動データ更新 $(date -u +'%Y-%m-%d')"
+          git push
+
+      # 健全性チェックNGの場合：本番には反映せず、PRとIssueを作って知らせる
+      - name: 異常時：PRとIssueを作成して停止
+        if: steps.healthcheck.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rm -f data/products.previous.json
+          BRANCH="auto-update-$(date -u +'%Y%m%d-%H%M%S')"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data/products.json
+          git commit -m "chore: 自動データ更新（要確認） $(date -u +'%Y-%m-%d')"
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "⚠️ 要確認: 自動データ更新で異常を検知しました" \
+            --body "健全性チェックに引っかかりました。マージする前に、必ずActionsのログとこの差分内容を確認してください。" \
+            --base main --head "$BRANCH"
+          gh issue create \
+            --title "⚠️ NASセレクター: データ更新で異常を検知しました（$(date -u +'%Y-%m-%d')）" \
+            --body "自動スクレイピングの健全性チェックで問題が検知されたため、本番への自動反映を止めました。作成されたPull Requestを確認してください。"
+          echo "異常を検知したため、このジョブを失敗として終了します。"
+          exit 1
