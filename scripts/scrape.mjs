@@ -379,21 +379,36 @@ async function fetchWarrantyAndFeatures(productUrl) {
   // Linux版は「冗長化設定：RAIDeX（出荷時）／RAID 6／RAID 5／RAID 0」（RAIDと数字の間にスペースあり）、
   // Windows版は「冗長化」の下に「方式」「設定」と分かれ、値は「RAID1（出荷時）、RAID0」
   // （RAIDと数字の間にスペースなし）と表記が異なるため、両方に対応させる。
+  //
+  // 「冗長化」という単語は、実際の仕様表だけでなく「独自の冗長化技術『RAIDeX』採用」の
+  // ようなマーケティング文章中にも登場する。以前は最初の出現箇所だけを見ていたため、
+  // 先にマーケティング文章側の「冗長化」に引っかかって仕様表まで辿り着けない
+  // （＝raidSupportが空になる）不具合があった。
+  // そのため、出現箇所を1つずつすべて試し、実際にRAID情報が読み取れたものが
+  // 見つかるたびに採用結果を更新する（＝一番仕様表に近い、最後に見つかった
+  // 有効な結果が最終的に残る）方式に変更した。
   let raidSupport = [];
-  const redundancyIdx = combined.indexOf("冗長化");
-  if (redundancyIdx !== -1) {
+  const raidChecks = [
+    ["RAIDeX", /RAIDeX/],
+    ["RAID 0", /RAID\s?0/],
+    ["RAID 1", /RAID\s?1/],
+    ["RAID 5", /RAID\s?5/],
+    ["RAID 6", /RAID\s?6/]
+  ];
+  let searchFrom = 0;
+  while (true) {
+    const redundancyIdx = combined.indexOf("冗長化", searchFrom);
+    if (redundancyIdx === -1) break;
+    searchFrom = redundancyIdx + 1;
+
     const nearby = combined.slice(redundancyIdx, redundancyIdx + 300);
     const settingIdx = nearby.indexOf("設定");
-    if (settingIdx !== -1) {
-      const raidWindow = nearby.slice(settingIdx, settingIdx + 150);
-      const raidChecks = [
-        ["RAIDeX", /RAIDeX/],
-        ["RAID 0", /RAID\s?0/],
-        ["RAID 1", /RAID\s?1/],
-        ["RAID 5", /RAID\s?5/],
-        ["RAID 6", /RAID\s?6/]
-      ];
-      raidSupport = raidChecks.filter(([, re]) => re.test(raidWindow)).map(([label]) => label);
+    if (settingIdx === -1) continue;
+
+    const raidWindow = nearby.slice(settingIdx, settingIdx + 150);
+    const found = raidChecks.filter(([, re]) => re.test(raidWindow)).map(([label]) => label);
+    if (found.length > 0) {
+      raidSupport = found;
     }
   }
 
