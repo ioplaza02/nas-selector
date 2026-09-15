@@ -25,7 +25,7 @@ body {
   background: linear-gradient(120deg, #0b2f7a 0%, #1a56c4 55%, #2f6fe0 100%);
   padding: 22px 24px;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 16px;
   flex-wrap: wrap;
 }
