@@ -198,6 +198,19 @@ details[open] > .filter-group__label::before { transform: rotate(90deg); }
 .jan-line { margin: 2px 0 0; font-size: 10px; color: var(--text-muted); }
 .price { margin: 0; font-size: 18px; font-weight: 600; white-space: nowrap; }
 
+.iss-link {
+  display: block;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  text-align: right;
+}
+.iss-link:hover { text-decoration: underline; }
+
 .compare-tray {
   position: sticky; bottom: 0; margin: 16px 24px 0;
   background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;

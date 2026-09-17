@@ -421,6 +421,16 @@ function render() {
     priceRow.appendChild(price);
     card.appendChild(priceRow);
 
+    if (variant.sku) {
+      const issLink = document.createElement("a");
+      issLink.className = "iss-link";
+      issLink.href = "https://ioplaza02.github.io/nas-iss-selector/?model=" + encodeURIComponent(variant.sku);
+      issLink.target = "_blank";
+      issLink.rel = "noopener";
+      issLink.textContent = "この機種のISS（保守サービス）を見る →";
+      card.appendChild(issLink);
+    }
+
     grid.appendChild(card);
   });
 
