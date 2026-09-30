@@ -250,6 +250,32 @@ details[open] > .filter-group__label::before { transform: rotate(90deg); }
   color: var(--text-muted); font-size: 12px; font-weight: 400;
 }
 .compare-table__soft-row a { color: var(--text-muted); }
+
+/* 候補間で値が違う行は目立たせ、同じ行はあえて淡色にして視線を「違い」に集める */
+.compare-table__row--diff td {
+  background: var(--accent-bg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.compare-table__row--diff th {
+  background: var(--accent-bg);
+  border-left: 3px solid var(--accent);
+}
+.compare-table__row--same td {
+  color: var(--text-muted);
+}
+
+/* 「詳細スペック」など、行のかたまりを分ける見出し行 */
+.compare-table__section-row th {
+  background: var(--surface-0);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 14px;
+  border-left: none;
+  border-right: none;
+}
 .compare-footnote {
   margin: 10px 2px 0; font-size: 12px; color: var(--text-muted);
 }

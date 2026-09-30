@@ -445,7 +445,9 @@ function updateTray() {
 
 function openCompare() {
   const selected = allProducts.filter(p => uiState[p.id].checked);
-  const rows = [
+
+  // 基本項目（候補を絞る時点でだいたい似通いやすい項目）
+  const basicRows = [
     ["容量／価格", p => {
       const v = p.variants[uiState[p.id].variantIdx];
       return v.capacityTB + "TB / " + fmtPrice(v.priceIncTax);
@@ -459,6 +461,30 @@ function openCompare() {
     ["対応機能", p => (p.features && p.features.length > 0) ? p.features.join(" / ") : "-"]
   ];
 
+  // 詳細スペック（基本項目だけでは候補同士の見分けがつきにくい時に効く項目）。
+  // 商品ページの仕様表から取得できたものだけを載せる（specDetailsが無い旧データにも対応）。
+  const detailRows = [
+    ["CPU", p => (p.specDetails && p.specDetails.cpu) || null],
+    ["メモリ容量", p => (p.specDetails && p.specDetails.memoryCapacity) || null],
+    ["OS詳細（エディション）", p => (p.specDetails && p.specDetails.osEdition) || null],
+    ["LANポート", p => (p.specDetails && p.specDetails.lanPort) || null],
+    ["USBポート", p => (p.specDetails && p.specDetails.usbPort) || null],
+    ["映像出力", p => (p.specDetails && p.specDetails.videoOutput) || null]
+  // 選んだ候補の中に1つも値が無い項目は、比較表に出しても意味が無いので後で除外する
+  ].filter(([, getter]) => selected.some(p => getter(p)));
+
+  // 行ごとに、選んだ候補全体で値が同じか違うかを見て、違う行だけ目立たせる。
+  // 「同じでした」という安心も伝えたいので、値が全部揃っている行はあえて淡色にする。
+  function rowHtml(label, getter, opts) {
+    const values = selected.map(p => getter(p) || "-");
+    const allSame = values.every(v => v === values[0]);
+    const rowClass = (opts && opts.noDiff) ? "" : (allSame ? "compare-table__row--same" : "compare-table__row--diff");
+    let out = '<tr class="' + rowClass + '"><th>' + label + "</th>";
+    values.forEach(v => { out += "<td>" + v + "</td>"; });
+    out += "</tr>";
+    return out;
+  }
+
   let html = '<table class="compare-table"><tr><th></th>';
   selected.forEach(p => { html += "<th>" + p.name + "</th>"; });
   html += "</tr>";
@@ -470,11 +496,14 @@ function openCompare() {
       + "</a></td>";
   });
   html += "</tr>";
-  rows.forEach(([label, getter]) => {
-    html += "<tr><th>" + label + "</th>";
-    selected.forEach(p => { html += "<td>" + getter(p) + "</td>"; });
-    html += "</tr>";
-  });
+
+  basicRows.forEach(([label, getter]) => { html += rowHtml(label, getter); });
+
+  if (detailRows.length > 0) {
+    html += '<tr class="compare-table__section-row"><th colspan="' + (selected.length + 1)
+      + '">詳細スペック（商品ページより）</th></tr>';
+    detailRows.forEach(([label, getter]) => { html += rowHtml(label, getter); });
+  }
 
   // バックアップ用HDD・保守サービスの案内。主役はNAS本体なので、控えめな行として一番下に添える。
   html += '<tr class="compare-table__soft-row"><th>対応HDD</th>';
