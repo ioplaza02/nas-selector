@@ -332,11 +332,144 @@ function extractWarrantyFromTables(rawHtml) {
   }
   return null;
 }
+
+// 「保存可能容量」「実効容量」というタイトルの表から、SKUごと・RAIDモードごとの
+// 実効容量（TB）を抜き出す（DASセレクターの「実効容量×2でDASを選ぶ」機能で使う）。
+// 見出し行に出てくるRAIDモードの種類・並び順は商品シリーズによって異なる
+// （例：2ベイ機は RAIDeX/RAID1/RAID0、4〜6ベイ機は RAIDeX/RAID6/RAID5/RAID0）ため、
+// 決め打ちにせず、見出し行のラベルを都度読み取ってから列をマッピングする。
+// 見出しが「型番」の行と、実際のRAID名が並ぶ行の2段に分かれているケースにも対応する。
+function extractEffectiveCapacityTable(rawHtml) {
+  const tableRe = /<table[^>]*>[\s\S]*?<\/table>/gi;
+  let tableMatch;
+  while ((tableMatch = tableRe.exec(rawHtml)) !== null) {
+    const tableHtml = tableMatch[0];
+    const strippedForCheck = tableHtml.replace(/<[^>]+>/g, "");
+    if (!/(保存可能容量|実効容量)/.test(strippedForCheck)) continue;
+
+    const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
+    const rows = [];
+    let rowMatch;
+    while ((rowMatch = rowRe.exec(tableHtml)) !== null) {
+      const rowHtml = rowMatch[1];
+      const cellRe = /<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi;
+      const cells = [];
+      let cellMatch;
+      while ((cellMatch = cellRe.exec(rowHtml)) !== null) {
+        const cellText = cellMatch[1].replace(/<[^>]+>/g, "").replace(/\s+/g, "").trim();
+        cells.push(cellText);
+      }
+      if (cells.length > 0) rows.push(cells);
+    }
+
+    const headerRowIdx = rows.findIndex(r => r.some(c => /^型番$/.test(c)));
+    if (headerRowIdx === -1) continue;
+
+    // 「型番」の行自体にRAIDラベルが同居していない場合、次の行を見出しとして使う
+    // （「型番」セルがrowspanで1列目に縦結合されているケース）。
+    // その場合、RAIDラベルの行には「型番」列のセル自体が物理的に存在しないため、
+    // データ行と列位置がずれないよう、先頭にダミー列を補って位置を合わせる。
+    let labelRow = rows[headerRowIdx];
+    let labelRowIdx = headerRowIdx;
+    if (!labelRow.some(c => /RAID/i.test(c))) {
+      const next = rows[headerRowIdx + 1];
+      if (next && next.some(c => /RAID/i.test(c))) {
+        labelRow = ["型番", ...next];
+        labelRowIdx = headerRowIdx + 1;
+      }
+    }
+
+    const colKeys = labelRow.map(label => {
+      if (/RAIDeX/i.test(label)) return "raidex";
+      if (/RAID\s?0/i.test(label)) return "raid0";
+      if (/RAID\s?1/i.test(label)) return "raid1";
+      if (/RAID\s?5/i.test(label)) return "raid5";
+      if (/RAID\s?6/i.test(label)) return "raid6";
+      return null;
+    });
+
+    const map = {};
+    for (let i = labelRowIdx + 1; i < rows.length; i++) {
+      const row = rows[i];
+      const sku = row[0];
+      if (!sku || !/^[A-Z]/i.test(sku)) continue; // 型番以外の行（脚注など）はスキップ
+      const entry = {};
+      for (let c = 1; c < row.length; c++) {
+        const key = colKeys[c];
+        if (!key) continue;
+        const m = row[c].match(/(\d+(?:\.\d+)?)\s*TB/);
+        if (m) entry[key] = Number(m[1]);
+      }
+      if (Object.keys(entry).length > 0) map[sku.toUpperCase()] = entry;
+    }
+    if (Object.keys(map).length > 0) return map;
+  }
+  return null;
+}
+
+// 商品比較画面で「実は違う項目」を目立たせるための詳細スペック。
+// 同じ表記ゆれの心配が少ない、値がラベルセルの直後の1セルに入っている
+// シンプルな「ラベル｜値」形式の行だけを対象にする（複雑な結合セルの表は対象外）。
+// 同じラベルが複数回出てくる項目（USBポートの世代別など）は、出現順にすべて集める。
+const SPEC_LABEL_MAP = [
+  ["cpu", /^CPU$/i],
+  ["memoryCapacity", /^メモリ[ーー]?容量$/],
+  ["osEdition", /^OS$/],
+  ["lanPort", /^LAN\s*ポート$/],
+  ["usbPort", /^USB\s*ポート$/],
+  ["videoOutput", /^映像出力$/]
+];
+
+function extractLabeledSpecs(rawHtml) {
+  const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
+  const result = {};
+  let rowMatch;
+  while ((rowMatch = rowRe.exec(rawHtml)) !== null) {
+    const rowHtml = rowMatch[1];
+    const cellRe = /<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi;
+    // ラベル照合用（空白を完全に詰めた版）と、画面表示用（単語間の空白は残す版）を両方持つ
+    const cellsForMatch = [];
+    const cellsForDisplay = [];
+    let cellMatch;
+    while ((cellMatch = cellRe.exec(rowHtml)) !== null) {
+      const rawCell = cellMatch[1].replace(/<[^>]+>/g, " ");
+      cellsForMatch.push(rawCell.replace(/\s+/g, "").trim());
+      cellsForDisplay.push(rawCell.replace(/\s+/g, " ").trim());
+    }
+    if (cellsForMatch.length < 2) continue;
+    const label = cellsForMatch[0];
+    const value = cellsForDisplay[cellsForDisplay.length - 1];
+    if (!label || !value) continue;
+    for (const [key, re] of SPEC_LABEL_MAP) {
+      if (re.test(label)) {
+        if (!result[key]) result[key] = [];
+        // 同じ値の重複（結合セルが複数行にまたがって同じテキストを繰り返す場合）は避ける
+        if (!result[key].includes(value)) result[key].push(value);
+      }
+    }
+  }
+  return result;
+}
+
+// spec.htm側とindex.htm側、それぞれから拾えた詳細スペックをキーごとにマージする。
+// 同じキーが両方にある場合は、より情報量の多い方（配列が長い方）を採用する。
+function mergeSpecDetails(specResult, mainResult) {
+  const merged = {};
+  const keys = new Set([...Object.keys(specResult), ...Object.keys(mainResult)]);
+  for (const key of keys) {
+    const a = specResult[key] || [];
+    const b = mainResult[key] || [];
+    merged[key] = a.length >= b.length ? a : b;
+  }
+  return merged;
+}
+
 async function fetchWarrantyAndFeatures(productUrl) {
   const specUrl = productUrl.replace(/\/?$/, "/") + "spec.htm";
 
   let mainHtml = "";
   let mainText = "";
+  let specHtml = "";
   let specText = "";
   try {
     mainHtml = await fetchText(productUrl);
@@ -346,11 +479,25 @@ async function fetchWarrantyAndFeatures(productUrl) {
   }
   await sleep(REQUEST_INTERVAL_MS);
   try {
-    specText = (await fetchText(specUrl)).replace(/<[^>]+>/g, " ");
+    specHtml = await fetchText(specUrl);
+    specText = specHtml.replace(/<[^>]+>/g, " ");
   } catch (err) {
     console.warn("  -> spec.htm取得失敗:", specUrl, "(" + err.message + ")");
   }
   await sleep(REQUEST_INTERVAL_MS);
+
+  // 実効容量（保存可能容量）表は基本的にspec.htmにあるが、シリーズによっては
+  // 商品トップページ（index.htm）側に出ることもあるため、両方試す。
+  const effectiveCapacityBySku =
+    extractEffectiveCapacityTable(specHtml) || extractEffectiveCapacityTable(mainHtml);
+
+  // 商品比較画面用の詳細スペック（CPU・メモリ容量・OS表記・LAN/USBポート・映像出力）。
+  // spec.htmを優先し、無ければmain側も見る。同じラベルがspec/main両方にあった場合は
+  // 値の種類が多いほう（＝より詳しい方）を採用する。
+  const specDetails = mergeSpecDetails(
+    extractLabeledSpecs(specHtml),
+    extractLabeledSpecs(mainHtml)
+  );
 
   const combined = mainText + " " + specText;
 
@@ -412,7 +559,18 @@ async function fetchWarrantyAndFeatures(productUrl) {
     }
   }
 
-  return { warrantyYears, features, raidSupport };
+  // 各詳細スペックは配列（同じラベルの行が複数あった場合はすべて）で来るので、
+  // 表示用に「／」区切りの1つの文字列にまとめる。値が取れなかった項目はnullのまま。
+  const specSummary = {
+    cpu: (specDetails.cpu && specDetails.cpu[0]) || null,
+    memoryCapacity: (specDetails.memoryCapacity && specDetails.memoryCapacity[0]) || null,
+    osEdition: (specDetails.osEdition && specDetails.osEdition[0]) || null,
+    lanPort: (specDetails.lanPort && specDetails.lanPort[0]) || null,
+    usbPort: specDetails.usbPort && specDetails.usbPort.length > 0 ? specDetails.usbPort.join(" / ") : null,
+    videoOutput: (specDetails.videoOutput && specDetails.videoOutput[0]) || null
+  };
+
+  return { warrantyYears, features, raidSupport, effectiveCapacityBySku, specSummary };
 }
 
 // カタログページ全体から、全シリーズの見出しリンク（slug・シリーズ名・出現位置）を洗い出す。
@@ -592,9 +750,25 @@ async function main() {
     const anyCurrent = variants.some(v => v.status === "現行");
     const officeLabel = formatOfficeLabel(lookupOfficeLabel(catalogHtml, slug));
 
-    const { warrantyYears: detailWarrantyYears, features: detailFeatures, raidSupport: detailRaidSupport } = await fetchWarrantyAndFeatures(effectiveUrl);
+    const {
+      warrantyYears: detailWarrantyYears,
+      features: detailFeatures,
+      raidSupport: detailRaidSupport,
+      effectiveCapacityBySku,
+      specSummary
+    } = await fetchWarrantyAndFeatures(effectiveUrl);
     const warrantyYears = detailWarrantyYears ?? lookupCatalogWarranty(catalogHtml, slug);
     const features = detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, slug);
+
+    // DASセレクター用：SKUごとのRAIDモード別実効容量（TB）を、わかる分だけ変種に付与する
+    // （DAS用HDD対応表に無い旧機種や、表が見つからなかった場合はnullのまま）
+    if (effectiveCapacityBySku) {
+      variants.forEach(v => {
+        v.effectiveCapacityTB = effectiveCapacityBySku[v.sku.toUpperCase()] || null;
+      });
+    } else {
+      variants.forEach(v => { v.effectiveCapacityTB = null; });
+    }
 
     const catalogSeriesName = lookupSeriesName(catalogHtml, slug);
     const fallbackShortName = base.name.replace(/\d+$/, "");
@@ -615,6 +789,7 @@ async function main() {
       warrantyYears,
       status: anyCurrent ? "現行" : "生産終了",
       features,
+      specDetails: specSummary,
       variants,
       sourceUrl: effectiveUrl,
       lastCheckedAt: new Date().toISOString()
@@ -635,9 +810,23 @@ async function main() {
     const officeLabel = formatOfficeLabel(lookupOfficeLabel(catalogHtml, series.slug));
     const { install, bay } = lookupInstallAndBay(catalogHtml, series.slug);
 
-    const { warrantyYears: detailWarrantyYears, features: detailFeatures, raidSupport: detailRaidSupport } = await fetchWarrantyAndFeatures(productUrl);
+    const {
+      warrantyYears: detailWarrantyYears,
+      features: detailFeatures,
+      raidSupport: detailRaidSupport,
+      effectiveCapacityBySku,
+      specSummary
+    } = await fetchWarrantyAndFeatures(productUrl);
     const warrantyYears = detailWarrantyYears ?? lookupCatalogWarranty(catalogHtml, series.slug);
     const features = detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, series.slug);
+
+    if (effectiveCapacityBySku) {
+      variants.forEach(v => {
+        v.effectiveCapacityTB = effectiveCapacityBySku[v.sku.toUpperCase()] || null;
+      });
+    } else {
+      variants.forEach(v => { v.effectiveCapacityTB = null; });
+    }
 
     products.push({
       id: series.slug,
@@ -654,6 +843,7 @@ async function main() {
       maintenanceService: null, // カタログ補完分はsearch_linux/windows.js由来のhoshu情報を持たない
       status: anyCurrent ? "現行" : "生産終了",
       features,
+      specDetails: specSummary,
       variants,
       sourceUrl: productUrl,
       lastCheckedAt: new Date().toISOString()
