@@ -414,7 +414,7 @@ function extractEffectiveCapacityTable(rawHtml) {
 const SPEC_LABEL_MAP = [
   ["cpu", /^CPU$/i],
   ["memoryCapacity", /^メモリ[ーー]?容量$/],
-  ["osEdition", /^OS$/],
+  ["osEdition", /^搭載OS$/],
   ["lanPort", /^LAN\s*ポート$/],
   ["usbPort", /^USB\s*ポート$/],
   ["videoOutput", /^映像出力$/]
