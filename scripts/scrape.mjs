@@ -172,7 +172,13 @@ function lookupSkuStatus(catalogHtml, sku) {
   if (idx === -1) return null; // このカタログページには載っていない
   const window = catalogHtml.slice(idx, idx + 250);
   if (/icon_close/.test(window)) return "生産終了";
-  if (/icon_limit/.test(window)) return "生産終了"; // 店頭在庫限りも「現行」からは外す
+  // 店頭在庫限りは「生産終了」とは別物として区別する。
+  // NASセレクター自身の表示（「生産終了品（在庫限り）を含める」トグル）では
+  // 従来通りまとめて「現行」から外して扱うが、ISSセレクターなど他ツールが
+  // この status をそのまま「保守サービス対象外」の判定に使っているため、
+  // まだ購入・保守に加入できる在庫限り品を生産終了と取り違えないよう、
+  // 文字列としては別の値（「在庫限り」）を返すようにする。
+  if (/icon_limit/.test(window)) return "在庫限り";
   return "現行";
 }
 
@@ -607,7 +613,10 @@ function extractCatalogVariants(catalogHtml, series, allSeries) {
   while ((m = rowRe.exec(block)) !== null) {
     const sku = m[1].trim();
     const statusWindow = m[2];
-    const status = /icon_close|icon_limit/.test(statusWindow) ? "生産終了" : "現行";
+    // 上の lookupSkuStatus と同じ理由で、在庫限りと生産終了を別の値として区別する。
+    const status = /icon_close/.test(statusWindow) ? "生産終了"
+      : /icon_limit/.test(statusWindow) ? "在庫限り"
+      : "現行";
     variants.push({
       sku,
       capacityTB: Number(m[3]),
