@@ -211,6 +211,17 @@ details[open] > .filter-group__label::before { transform: rotate(90deg); }
 }
 .iss-link:hover { text-decoration: underline; }
 
+.das-link {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a56c4;
+  text-decoration: none;
+  text-align: right;
+}
+.das-link:hover { text-decoration: underline; }
+
 .compare-tray {
   position: sticky; bottom: 0; margin: 16px 24px 0;
   background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;

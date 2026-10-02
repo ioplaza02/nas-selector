@@ -429,6 +429,14 @@ function render() {
       issLink.rel = "noopener";
       issLink.textContent = "この機種のISS（保守サービス）を見る →";
       card.appendChild(issLink);
+
+      const dasLink = document.createElement("a");
+      dasLink.className = "das-link";
+      dasLink.href = "https://ioplaza02.github.io/nas-das-selector/?model=" + encodeURIComponent(variant.sku);
+      dasLink.target = "_blank";
+      dasLink.rel = "noopener";
+      dasLink.textContent = "この機種のおすすめDASを見る →";
+      card.appendChild(dasLink);
     }
 
     grid.appendChild(card);
