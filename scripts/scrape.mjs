@@ -807,6 +807,20 @@ async function main() {
 
   // search_linux.js に無いシリーズ（LXシリーズなど）をカタログページから補完する。
   // JANコード・RAID対応・推奨接続台数はこのページに無いため空/不明のままになる。
+  //
+  // これらのカタログ補完分には、search_linux/windows.js側が持つ「series」フィールド
+  // （LAN DISK H / X / A…といったシリーズ大分類）が無いため、従来は series: null の
+  // ままになっていた（DASセレクター側でシリーズを特定できない原因になっていた）。
+  // I-O DATA公式のバックアップ用HDD対応表（hdd.htm）の脚注で
+  // 「LAN DISK LXシリーズ：HDL4-LX, HDL4-LXU, HDL2-LX」と明記されているのを
+  // 確認済みのため、分かっている分だけ slug → series名の対応表で補っておく。
+  // （ここに無いslugは今まで通り series: null のまま。見つかり次第ここに追加していく）
+  const CATALOG_SERIES_NAME_OVERRIDE = {
+    "hdl4-lx": "LAN DISK LX",
+    "hdl4-lxu": "LAN DISK LX",
+    "hdl2-lx": "LAN DISK LX"
+  };
+
   const allCatalogSeries = extractAllCatalogSeries(catalogHtml);
   for (const series of allCatalogSeries) {
     if (coveredSlugs.has(series.slug)) continue;
@@ -840,7 +854,7 @@ async function main() {
     products.push({
       id: series.slug,
       name: series.name,
-      series: null, // TODO: カタログ補完分はシリーズ大分類（LAN DISK H/X/A等）を未取得
+      series: CATALOG_SERIES_NAME_OVERRIDE[series.slug] || null, // 上の対応表に無いものは引き続き未取得のまま
       os: series.category === "wss-nas" ? "Windows OS" : "Linux OS",
       install,
       bay,
