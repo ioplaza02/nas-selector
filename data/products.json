@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T04:58:12.949Z",
+  "updatedAt": "2026-10-05T18:20:44.457Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -62,7 +62,7 @@
         {
           "sku": "HDL6-HB12",
           "capacityTB": 12,
-          "priceIncTax": 328900,
+          "priceIncTax": 389400,
           "jan": "4957180174259",
           "status": "現行",
           "effectiveCapacityTB": {
@@ -75,7 +75,7 @@
         {
           "sku": "HDL6-HB24",
           "capacityTB": 24,
-          "priceIncTax": 503800,
+          "priceIncTax": 564300,
           "jan": "4957180174266",
           "status": "現行",
           "effectiveCapacityTB": {
@@ -88,7 +88,7 @@
         {
           "sku": "HDL6-HB36",
           "capacityTB": 36,
-          "priceIncTax": 685300,
+          "priceIncTax": 748000,
           "jan": "4957180174273",
           "status": "現行",
           "effectiveCapacityTB": {
@@ -101,7 +101,7 @@
         {
           "sku": "HDL6-HB48",
           "capacityTB": 48,
-          "priceIncTax": 822800,
+          "priceIncTax": 886600,
           "jan": "4957180174280",
           "status": "現行",
           "effectiveCapacityTB": {
@@ -152,7 +152,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-10-02T04:53:43.643Z",
+      "lastCheckedAt": "2026-10-05T18:17:22.474Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -205,7 +205,7 @@
         {
           "sku": "HDL4-HB04EX",
           "capacityTB": 4,
-          "priceIncTax": 242000,
+          "priceIncTax": 300300,
           "jan": "4957180174303",
           "status": "現行",
           "effectiveCapacityTB": {
@@ -218,7 +218,7 @@
         {
           "sku": "HDL4-HB08EX",
           "capacityTB": 8,
-          "priceIncTax": 293700,
+          "priceIncTax": 342100,
           "jan": "4957180174310",
           "status": "現行",
           "effectiveCapacityTB": {
@@ -231,7 +231,7 @@
         {
           "sku": "HDL4-HB16EX",
           "capacityTB": 16,
-          "priceIncTax": 377300,
+          "priceIncTax": 425700,
           "jan": "4957180174327",
           "status": "現行",
           "effectiveCapacityTB": {
@@ -244,7 +244,7 @@
         {
           "sku": "HDL4-HB24EX",
           "capacityTB": 24,
-          "priceIncTax": 492800,
+          "priceIncTax": 544500,
           "jan": "4957180174334",
           "status": "現行",
           "effectiveCapacityTB": {
@@ -257,7 +257,7 @@
         {
           "sku": "HDL4-HB32EX",
           "capacityTB": 32,
-          "priceIncTax": 610500,
+          "priceIncTax": 663300,
           "jan": "4957180174341",
           "status": "現行",
           "effectiveCapacityTB": {
@@ -269,7 +269,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-10-02T04:53:48.905Z",
+      "lastCheckedAt": "2026-10-05T18:17:27.492Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -321,7 +321,7 @@
         {
           "sku": "HDL2-HB02/02",
           "capacityTB": 2,
-          "priceIncTax": 206800,
+          "priceIncTax": 284900,
           "jan": "4957180184166",
           "status": "在庫限り",
           "effectiveCapacityTB": {
@@ -333,7 +333,7 @@
         {
           "sku": "HDL2-HB02",
           "capacityTB": 2,
-          "priceIncTax": 176000,
+          "priceIncTax": 253000,
           "jan": "4957180174396",
           "status": "在庫限り",
           "effectiveCapacityTB": {
@@ -345,7 +345,7 @@
         {
           "sku": "HDL2-HB04/04",
           "capacityTB": 4,
-          "priceIncTax": 272800,
+          "priceIncTax": 317900,
           "jan": "4957180184173",
           "status": "在庫限り",
           "effectiveCapacityTB": {
@@ -357,7 +357,7 @@
         {
           "sku": "HDL2-HB04",
           "capacityTB": 4,
-          "priceIncTax": 217800,
+          "priceIncTax": 261800,
           "jan": "4957180174358",
           "status": "在庫限り",
           "effectiveCapacityTB": {
@@ -369,7 +369,7 @@
         {
           "sku": "HDL2-HB08/08",
           "capacityTB": 8,
-          "priceIncTax": 368280,
+          "priceIncTax": 418000,
           "jan": "4957180184180",
           "status": "在庫限り",
           "effectiveCapacityTB": {
@@ -381,7 +381,7 @@
         {
           "sku": "HDL2-HB08",
           "capacityTB": 8,
-          "priceIncTax": 258500,
+          "priceIncTax": 308000,
           "jan": "4957180174365",
           "status": "在庫限り",
           "effectiveCapacityTB": {
@@ -393,7 +393,7 @@
         {
           "sku": "HDL2-HB12",
           "capacityTB": 12,
-          "priceIncTax": 317900,
+          "priceIncTax": 338800,
           "jan": "4957180174372",
           "status": "在庫限り",
           "effectiveCapacityTB": {
@@ -405,7 +405,7 @@
         {
           "sku": "HDL2-HB16",
           "capacityTB": 16,
-          "priceIncTax": 388300,
+          "priceIncTax": 392700,
           "jan": "4957180174389",
           "status": "在庫限り",
           "effectiveCapacityTB": {
@@ -416,316 +416,73 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-10-02T04:53:53.901Z",
+      "lastCheckedAt": "2026-10-05T18:17:32.627Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
       "cloudBcp": true
     },
     {
-      "id": "hdl6-hab",
-      "name": "LAN DISK（HDL6-HABシリーズ）",
-      "series": "LAN DISK H",
+      "id": "hdl4-lx",
+      "name": "LAN DISK（HDL4-LXシリーズ）",
+      "series": "LAN DISK L",
       "os": "Linux OS",
       "install": "BOXタイプ",
-      "bay": "6ベイ",
-      "officeSize": "大規模：～128人",
-      "officeSizeMax": 128,
-      "maintenanceService": {
-        "name": "訪問安心保守5年（ISS-NHI-PR5）",
-        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
-      },
-      "imageUrl": "https://www.iodata.jp/image/hdl6-hab_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 5",
-        "RAID 6"
-      ],
-      "warrantyYears": 5,
-      "status": "生産終了",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "ワンタッチセキュア",
-        "多要素認証",
-        "ログインロックアウト",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": "バックアップ所要時間（時間:分:秒）",
-        "osEdition": null,
-        "lanPort": "10GBASE-T／1000BASE-T &times; 2 ※10GBASE-Tまたは1000BASE-T以外のネットワーク機器には対応しておりません",
-        "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL6-HA6B",
-          "capacityTB": 6,
-          "priceIncTax": 209000,
-          "jan": "4957180159928",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL6-HA12B",
-          "capacityTB": 12,
-          "priceIncTax": 247500,
-          "jan": "4957180159935",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 6,
-            "raid6": 8,
-            "raid5": 10,
-            "raid0": 12
-          }
-        },
-        {
-          "sku": "HDL6-HA24B",
-          "capacityTB": 24,
-          "priceIncTax": 374000,
-          "jan": "4957180159942",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 12,
-            "raid6": 16,
-            "raid5": 20,
-            "raid0": 24
-          }
-        },
-        {
-          "sku": "HDL6-HA36B",
-          "capacityTB": 36,
-          "priceIncTax": 580800,
-          "jan": "4957180159959",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 18,
-            "raid6": 24,
-            "raid5": 30,
-            "raid0": 36
-          }
-        },
-        {
-          "sku": "HDL6-HA48B",
-          "capacityTB": 48,
-          "priceIncTax": 731500,
-          "jan": "4957180159966",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 24,
-            "raid6": 32,
-            "raid5": 40,
-            "raid0": 48
-          }
-        },
-        {
-          "sku": "HDL6-HA96B",
-          "capacityTB": 96,
-          "priceIncTax": 1430000,
-          "jan": "4957180161112",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 48,
-            "raid6": 64,
-            "raid5": 80,
-            "raid0": 96
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-10-02T04:53:59.140Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl4-hab-u",
-      "name": "LAN DISK（HDL4-HAB-Uシリーズ）",
-      "series": "LAN DISK H",
-      "os": "Linux OS",
-      "install": "ラックマウントタイプ",
       "bay": "4ベイ",
-      "officeSize": "大規模：～128人",
-      "officeSizeMax": 128,
+      "officeSize": "中規模：～64人",
+      "officeSizeMax": 64,
       "maintenanceService": {
         "name": "訪問安心保守5年（ISS-NHI-PR5）",
         "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
       },
-      "imageUrl": "https://www.iodata.jp/image/hdl4-hab-u_l.jpg",
+      "imageUrl": "https://www.iodata.jp/image/hdl4-lx_l.jpg",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
         "RAID 5",
         "RAID 6"
       ],
-      "warrantyYears": 5,
-      "status": "生産終了",
+      "warrantyYears": 3,
+      "status": "現行",
       "features": [
         "RAIDeX",
         "10GbE",
+        "NAS専用HDD",
         "データ復旧サービス",
-        "UPS対応",
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
         "ワンタッチセキュア",
         "多要素認証",
-        "ログインロックアウト",
-        "Time Machine"
+        "ログインロックアウト"
       ],
       "specDetails": {
-        "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": "バックアップ所要時間（時間:分:秒）",
-        "osEdition": null,
-        "lanPort": "10GBASE-T／1000BASE-T &times; 2 ※10GBASE-Tまたは1000BASE-T以外のネットワーク機器には対応しておりません",
-        "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
+        "cpu": "intel Atom X6211E 3.0GHz／2コア／2スレッド",
+        "memoryCapacity": "DDR4 8GB",
+        "osEdition": "Linux OS（オリジナル）",
+        "lanPort": null,
+        "usbPort": null,
         "videoOutput": null
       },
       "variants": [
         {
-          "sku": "HDL4-HA4-UB",
+          "sku": "HDL4-LX04",
           "capacityTB": 4,
-          "priceIncTax": 227700,
-          "jan": "4957180160078",
-          "status": "在庫限り",
+          "priceIncTax": 308000,
+          "jan": "4957180180489",
+          "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 2,
-            "raid6": 3,
-            "raid5": 4
+            "raid6": 2,
+            "raid5": 3,
+            "raid0": 4
           }
         },
         {
-          "sku": "HDL4-HA8-UB",
+          "sku": "HDL4-LX08",
           "capacityTB": 8,
-          "priceIncTax": 256300,
-          "jan": "4957180160085",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid6": 6,
-            "raid5": 8
-          }
-        },
-        {
-          "sku": "HDL4-HA16-UB",
-          "capacityTB": 16,
-          "priceIncTax": 339900,
-          "jan": "4957180160092",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid6": 12,
-            "raid5": 16
-          }
-        },
-        {
-          "sku": "HDL4-HA24-UB",
-          "capacityTB": 24,
-          "priceIncTax": 458700,
-          "jan": "4957180160108",
-          "status": "生産終了",
-          "effectiveCapacityTB": {
-            "raidex": 12,
-            "raid6": 18,
-            "raid5": 24
-          }
-        },
-        {
-          "sku": "HDL4-HA32-UB",
-          "capacityTB": 32,
-          "priceIncTax": 577500,
-          "jan": "4957180160115",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 16,
-            "raid6": 24,
-            "raid5": 32
-          }
-        },
-        {
-          "sku": "HDL4-HA64-UB",
-          "capacityTB": 64,
-          "priceIncTax": 990000,
-          "jan": "4957180161020",
-          "status": "生産終了",
-          "effectiveCapacityTB": {
-            "raidex": 32,
-            "raid6": 48,
-            "raid5": 64
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-10-02T04:54:04.772Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
-      "cloudTelework": true,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl4-haexb",
-      "name": "LAN DISK（HDL4-HAEXBシリーズ）",
-      "series": "LAN DISK H",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "4ベイ",
-      "officeSize": "大規模：～128人",
-      "officeSizeMax": 128,
-      "maintenanceService": {
-        "name": "訪問安心保守5年（ISS-NHI-PR5）",
-        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
-      },
-      "imageUrl": "https://www.iodata.jp/image/hdl4-haexb_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 5",
-        "RAID 6"
-      ],
-      "warrantyYears": 5,
-      "status": "生産終了",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "ワンタッチセキュア",
-        "多要素認証",
-        "ログインロックアウト",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": "バックアップ所要時間（時間:分:秒）",
-        "osEdition": null,
-        "lanPort": "10GBASE-T／1000BASE-T &times; 2 ※10GBASE-Tまたは1000BASE-T以外のネットワーク機器には対応しておりません",
-        "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL4-HA4EXB",
-          "capacityTB": 4,
-          "priceIncTax": 190300,
-          "jan": "4957180159973",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-HA8EXB",
-          "capacityTB": 8,
-          "priceIncTax": 232100,
-          "jan": "4957180159980",
-          "status": "在庫限り",
+          "priceIncTax": 330000,
+          "jan": "4957180180496",
+          "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 4,
             "raid6": 4,
@@ -734,11 +491,11 @@
           }
         },
         {
-          "sku": "HDL4-HA16EXB",
+          "sku": "HDL4-LX16",
           "capacityTB": 16,
-          "priceIncTax": 315700,
-          "jan": "4957180159997",
-          "status": "在庫限り",
+          "priceIncTax": 352000,
+          "jan": "4957180180502",
+          "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 8,
             "raid6": 8,
@@ -747,189 +504,136 @@
           }
         },
         {
-          "sku": "HDL4-HA24EXB",
-          "capacityTB": 24,
-          "priceIncTax": 434500,
-          "jan": "4957180160009",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 12,
-            "raid6": 12,
-            "raid5": 18,
-            "raid0": 24
-          }
-        },
-        {
-          "sku": "HDL4-HA32EXB",
+          "sku": "HDL4-LX32",
           "capacityTB": 32,
-          "priceIncTax": 553300,
-          "jan": "4957180160016",
-          "status": "在庫限り",
+          "priceIncTax": 528000,
+          "jan": "4957180180519",
+          "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 16,
             "raid6": 16,
             "raid5": 24,
             "raid0": 32
           }
+        },
+        {
+          "sku": "HDL4-LX64",
+          "capacityTB": 64,
+          "priceIncTax": 869000,
+          "jan": "4957180180526",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 32,
+            "raid6": 32,
+            "raid5": 48,
+            "raid0": 64
+          }
+        },
+        {
+          "sku": "HDL4-LX80",
+          "capacityTB": 80,
+          "priceIncTax": 1056000,
+          "jan": "4957180180533",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 40,
+            "raid6": 40,
+            "raid5": 60,
+            "raid0": 80
+          }
+        },
+        {
+          "sku": "HDL4-LX96",
+          "capacityTB": 96,
+          "priceIncTax": 1199000,
+          "jan": "4957180180540",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 48,
+            "raid6": 48,
+            "raid5": 72,
+            "raid0": 96
+          }
         }
       ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-10-02T04:54:09.937Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
+      "lastCheckedAt": "2026-10-05T18:17:37.749Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
     },
     {
-      "id": "hdl2-habtm5",
-      "name": "LAN DISK（HDL2-HAB/TM5シリーズ）",
-      "series": "LAN DISK H",
+      "id": "hdl2-lx",
+      "name": "LAN DISK（HDL2-LXシリーズ）",
+      "series": "LAN DISK L",
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
-      "officeSize": "大規模：～128人",
-      "officeSizeMax": 128,
+      "officeSize": "中規模：～64人",
+      "officeSizeMax": 64,
       "maintenanceService": {
         "name": "訪問安心保守5年（ISS-NHI-PR5）",
         "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
       },
-      "imageUrl": "https://www.iodata.jp/image/hdl2-habtm5_l.jpg",
+      "imageUrl": "https://www.iodata.jp/image/hdl2-lx_l.jpg",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
         "RAID 1"
       ],
-      "warrantyYears": 5,
-      "status": "生産終了",
+      "warrantyYears": 3,
+      "status": "現行",
       "features": [
         "RAIDeX",
         "10GbE",
+        "NAS専用HDD",
         "データ復旧サービス",
-        "UPS対応",
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
         "ワンタッチセキュア",
         "多要素認証",
-        "ログインロックアウト",
-        "Time Machine"
+        "ログインロックアウト"
       ],
       "specDetails": {
-        "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": null,
-        "osEdition": null,
-        "lanPort": "10GBASE-T／1000BASE-T &times; 2 ※10GBASE-Tまたは1000BASE-T以外のネットワーク機器には対応しておりません",
-        "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
+        "cpu": "intel Atom X6211E 3.0GHz／2コア／2スレッド",
+        "memoryCapacity": "DDR4 8GB",
+        "osEdition": "Linux OS（オリジナル）",
+        "lanPort": null,
+        "usbPort": null,
         "videoOutput": null
       },
       "variants": [
         {
-          "sku": "HDL2-HA2B/TM5",
+          "sku": "HDL2-LX02",
           "capacityTB": 2,
-          "priceIncTax": 176000,
-          "jan": "4957180160122",
-          "status": "生産終了",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL2-HA4B/TM5",
-          "capacityTB": 4,
-          "priceIncTax": 184800,
-          "jan": "4957180160139",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid1": 2,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL2-HA8B/TM5",
-          "capacityTB": 8,
-          "priceIncTax": 231000,
-          "jan": "4957180160146",
-          "status": "生産終了",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid1": 4,
-            "raid0": 8
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-10-02T04:54:15.156Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
-      "cloudTelework": false,
-      "cloudBcp": false
-    },
-    {
-      "id": "hdl2-hab",
-      "name": "LAN DISK（HDL2-HABシリーズ）",
-      "series": "LAN DISK H",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "2ベイ",
-      "officeSize": "大規模：～128人",
-      "officeSizeMax": 128,
-      "maintenanceService": {
-        "name": "訪問安心保守5年（ISS-NHI-PR5）",
-        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
-      },
-      "imageUrl": "https://www.iodata.jp/image/hdl2-hab_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 1"
-      ],
-      "warrantyYears": 5,
-      "status": "生産終了",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "ワンタッチセキュア",
-        "多要素認証",
-        "ログインロックアウト",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": "バックアップ所要時間（時間:分:秒）",
-        "osEdition": null,
-        "lanPort": "10GBASE-T／1000BASE-T &times; 2 ※10GBASE-Tまたは1000BASE-T以外のネットワーク機器には対応しておりません",
-        "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL2-HA2B",
-          "capacityTB": 2,
-          "priceIncTax": 143000,
-          "jan": "4957180160023",
-          "status": "生産終了",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL2-HA4B",
-          "capacityTB": 4,
-          "priceIncTax": 151800,
-          "jan": "4957180160030",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid1": 2,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL2-HA8B",
-          "capacityTB": 8,
           "priceIncTax": 198000,
-          "jan": "4957180160047",
-          "status": "生産終了",
+          "jan": "4957180180441",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 1,
+            "raid1": 1,
+            "raid0": 2
+          }
+        },
+        {
+          "sku": "HDL2-LX04",
+          "capacityTB": 4,
+          "priceIncTax": 209000,
+          "jan": "4957180180458",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 2,
+            "raid1": 2,
+            "raid0": 4
+          }
+        },
+        {
+          "sku": "HDL2-LX08",
+          "capacityTB": 8,
+          "priceIncTax": 220000,
+          "jan": "4957180180465",
+          "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 4,
             "raid1": 4,
@@ -937,23 +641,11 @@
           }
         },
         {
-          "sku": "HDL2-HA12B",
-          "capacityTB": 12,
-          "priceIncTax": 269500,
-          "jan": "4957180160054",
-          "status": "生産終了",
-          "effectiveCapacityTB": {
-            "raidex": 6,
-            "raid1": 6,
-            "raid0": 12
-          }
-        },
-        {
-          "sku": "HDL2-HA16B",
+          "sku": "HDL2-LX16",
           "capacityTB": 16,
-          "priceIncTax": 388300,
-          "jan": "4957180160061",
-          "status": "在庫限り",
+          "priceIncTax": 308000,
+          "jan": "4957180180472",
+          "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 8,
             "raid1": 8,
@@ -961,10 +653,151 @@
           }
         }
       ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-10-02T04:54:20.325Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
-      "cloudTelework": true,
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
+      "lastCheckedAt": "2026-10-05T18:17:42.774Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
+      "cloudTelework": false,
+      "cloudBcp": true
+    },
+    {
+      "id": "hdl4-lxu",
+      "name": "LAN DISK（HDL4-LXUシリーズ）",
+      "series": "LAN DISK L",
+      "os": "Linux OS",
+      "install": "ラックマウントタイプ",
+      "bay": "4ベイ",
+      "officeSize": "中規模：～64人",
+      "officeSizeMax": 64,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
+      "imageUrl": "https://www.iodata.jp/image/hdl4-lxu_l.jpg",
+      "raidSupport": [
+        "RAIDeX",
+        "RAID 0",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "warrantyYears": 3,
+      "status": "現行",
+      "features": [
+        "RAIDeX",
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
+        "ログインロックアウト"
+      ],
+      "specDetails": {
+        "cpu": "intel Atom X6211E 3.0GHz／2コア／2スレッド",
+        "memoryCapacity": "DDR4 8GB",
+        "osEdition": "Linux OS（オリジナル）",
+        "lanPort": null,
+        "usbPort": null,
+        "videoOutput": null
+      },
+      "variants": [
+        {
+          "sku": "HDL4-LX04U",
+          "capacityTB": 4,
+          "priceIncTax": 346500,
+          "jan": "4957180180557",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 2,
+            "raid6": 2,
+            "raid5": 3,
+            "raid0": 4
+          }
+        },
+        {
+          "sku": "HDL4-LX08U",
+          "capacityTB": 8,
+          "priceIncTax": 368500,
+          "jan": "4957180180564",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 4,
+            "raid6": 4,
+            "raid5": 6,
+            "raid0": 8
+          }
+        },
+        {
+          "sku": "HDL4-LX16U",
+          "capacityTB": 16,
+          "priceIncTax": 390500,
+          "jan": "4957180180571",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 8,
+            "raid6": 8,
+            "raid5": 12,
+            "raid0": 16
+          }
+        },
+        {
+          "sku": "HDL4-LX32U",
+          "capacityTB": 32,
+          "priceIncTax": 566500,
+          "jan": "4957180180588",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 16,
+            "raid6": 16,
+            "raid5": 24,
+            "raid0": 32
+          }
+        },
+        {
+          "sku": "HDL4-LX64U",
+          "capacityTB": 64,
+          "priceIncTax": 907500,
+          "jan": "4957180180595",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 32,
+            "raid6": 32,
+            "raid5": 48,
+            "raid0": 64
+          }
+        },
+        {
+          "sku": "HDL4-LX80U",
+          "capacityTB": 80,
+          "priceIncTax": 1094500,
+          "jan": "4957180180601",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 40,
+            "raid6": 40,
+            "raid5": 60,
+            "raid0": 80
+          }
+        },
+        {
+          "sku": "HDL4-LX96U",
+          "capacityTB": 96,
+          "priceIncTax": 1237500,
+          "jan": "4957180180618",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 48,
+            "raid6": 48,
+            "raid5": 72,
+            "raid0": 96
+          }
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
+      "lastCheckedAt": "2026-10-05T18:17:47.824Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
+      "cloudTelework": false,
       "cloudBcp": true
     },
     {
@@ -1011,66 +844,6 @@
       },
       "variants": [
         {
-          "sku": "HDL4-XA4-UB",
-          "capacityTB": 4,
-          "priceIncTax": 198000,
-          "jan": "4957180158006",
-          "status": "生産終了",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid6": 3,
-            "raid5": 4
-          }
-        },
-        {
-          "sku": "HDL4-XA8-UB",
-          "capacityTB": 8,
-          "priceIncTax": 218900,
-          "jan": "4957180158013",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid6": 6,
-            "raid5": 8
-          }
-        },
-        {
-          "sku": "HDL4-XA16-UB",
-          "capacityTB": 16,
-          "priceIncTax": 302500,
-          "jan": "4957180158020",
-          "status": "生産終了",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid6": 12,
-            "raid5": 16
-          }
-        },
-        {
-          "sku": "HDL4-XA32-UB",
-          "capacityTB": 32,
-          "priceIncTax": 542300,
-          "jan": "4957180158037",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 16,
-            "raid6": 24,
-            "raid5": 32
-          }
-        },
-        {
-          "sku": "HDL4-XA64-UB",
-          "capacityTB": 64,
-          "priceIncTax": 880000,
-          "jan": "4957180183633",
-          "status": "生産終了",
-          "effectiveCapacityTB": {
-            "raidex": 32,
-            "raid6": 48,
-            "raid5": 64
-          }
-        },
-        {
           "sku": "HDL4-XA80-UB",
           "capacityTB": 80,
           "priceIncTax": 1111000,
@@ -1081,22 +854,10 @@
             "raid6": 60,
             "raid5": 80
           }
-        },
-        {
-          "sku": "HDL4-XA96-UB",
-          "capacityTB": 96,
-          "priceIncTax": 1342000,
-          "jan": "4957180183657",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 48,
-            "raid6": 72,
-            "raid5": 96
-          }
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-10-02T04:54:25.696Z",
+      "lastCheckedAt": "2026-10-05T18:17:53.050Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1145,30 +906,9 @@
       },
       "variants": [
         {
-          "sku": "HDL4-XA4B",
-          "capacityTB": 4,
-          "priceIncTax": 161700,
-          "jan": "4957180157924",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-XA8B",
-          "capacityTB": 8,
-          "priceIncTax": 178200,
-          "jan": "4957180157931",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid6": 4,
-            "raid5": 6,
-            "raid0": 8
-          }
-        },
-        {
           "sku": "HDL4-XA16B",
           "capacityTB": 16,
-          "priceIncTax": 267300,
+          "priceIncTax": 310200,
           "jan": "4957180157948",
           "status": "在庫限り",
           "effectiveCapacityTB": {
@@ -1181,7 +921,7 @@
         {
           "sku": "HDL4-XA32B",
           "capacityTB": 32,
-          "priceIncTax": 495000,
+          "priceIncTax": 547800,
           "jan": "4957180157955",
           "status": "現行",
           "effectiveCapacityTB": {
@@ -1193,67 +933,171 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-10-02T04:54:31.143Z",
+      "lastCheckedAt": "2026-10-05T18:17:58.219Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": false,
       "cloudBcp": true
     },
     {
-      "id": "hdl2-xab",
-      "name": "LAN DISK（HDL2-XABシリーズ）",
-      "series": "LAN DISK X",
+      "id": "hdl4-lvb",
+      "name": "LAN DISK（HDL4-LVBシリーズ）",
+      "series": "LAN DISK L",
       "os": "Linux OS",
       "install": "BOXタイプ",
-      "bay": "2ベイ",
-      "officeSize": "中規模：～64人",
-      "officeSizeMax": 64,
+      "bay": "4ベイ",
+      "officeSize": "中規模：～50人",
+      "officeSizeMax": 50,
       "maintenanceService": {
         "name": "訪問安心保守5年（ISS-NHI-PR5）",
         "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
       },
-      "imageUrl": "https://www.iodata.jp/image/hdl2-xab_l.jpg",
+      "imageUrl": "https://www.iodata.jp/image/hdl4-lvb_l.jpg",
+      "raidSupport": [
+        "RAIDeX",
+        "RAID 0",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "warrantyYears": 3,
+      "status": "現行",
+      "features": [
+        "RAIDeX",
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "リモートアクセス",
+        "NarSuS",
+        "多要素認証",
+        "ログインロックアウト",
+        "Time Machine"
+      ],
+      "specDetails": {
+        "cpu": "ARM Cortex-A55/1.8GHz/4コア/4スレッド",
+        "memoryCapacity": "DDR4 2GB",
+        "osEdition": "Linux OS（オリジナル）",
+        "lanPort": null,
+        "usbPort": null,
+        "videoOutput": null
+      },
+      "variants": [
+        {
+          "sku": "HDL4-LV04B",
+          "capacityTB": 4,
+          "priceIncTax": 264000,
+          "jan": "4957180191867",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 2,
+            "raid6": 2,
+            "raid5": 3,
+            "raid0": 4
+          }
+        },
+        {
+          "sku": "HDL4-LV08B",
+          "capacityTB": 8,
+          "priceIncTax": 286000,
+          "jan": "4957180191874",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 4,
+            "raid6": 4,
+            "raid5": 6,
+            "raid0": 8
+          }
+        },
+        {
+          "sku": "HDL4-LV16B",
+          "capacityTB": 16,
+          "priceIncTax": 308000,
+          "jan": "4957180191881",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 8,
+            "raid6": 8,
+            "raid5": 12,
+            "raid0": 16
+          }
+        },
+        {
+          "sku": "HDL4-LV32B",
+          "capacityTB": 32,
+          "priceIncTax": 484000,
+          "jan": "4957180191898",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 16,
+            "raid6": 16,
+            "raid5": 24,
+            "raid0": 32
+          }
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
+      "lastCheckedAt": "2026-10-05T18:18:03.248Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
+      "cloudTelework": false,
+      "cloudBcp": false
+    },
+    {
+      "id": "hdl2-lvb",
+      "name": "LAN DISK（HDL2-LVBシリーズ）",
+      "series": "LAN DISK L",
+      "os": "Linux OS",
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
+      "officeSize": "中規模：～50人",
+      "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
+      "imageUrl": "https://www.iodata.jp/image/hdl2-lvb_l.jpg",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
         "RAID 1"
       ],
-      "warrantyYears": 5,
-      "status": "生産終了",
+      "warrantyYears": 3,
+      "status": "現行",
       "features": [
         "RAIDeX",
         "10GbE",
+        "NAS専用HDD",
         "データ復旧サービス",
-        "UPS対応",
         "リモートアクセス",
-        "クラウドストレージ連携",
         "NarSuS",
-        "NarSuSクラウドバックアップ",
         "多要素認証",
+        "ログインロックアウト",
         "Time Machine"
       ],
       "specDetails": {
-        "cpu": "Intel Atom Processor C3338（2.20GHz Dual Core）",
-        "memoryCapacity": null,
-        "osEdition": null,
-        "lanPort": "（10GBASE-T／5GBASE-T／2.5GBASE-T／1000BASE-T／100BASE-TX）&times;1 （1000BASE-T／100BASE-TX／10BASE-T）&times;1",
-        "usbPort": "背面&times;2",
+        "cpu": "ARM Cortex-A55/1.8GHz/4コア/4スレッド",
+        "memoryCapacity": "DDR4 2GB",
+        "osEdition": "Linux OS（オリジナル）",
+        "lanPort": null,
+        "usbPort": null,
         "videoOutput": null
       },
       "variants": [
         {
-          "sku": "HDL2-XA2B",
+          "sku": "HDL2-LV02B",
           "capacityTB": 2,
-          "priceIncTax": 100100,
-          "jan": "4957180157962",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
+          "priceIncTax": 154000,
+          "jan": "4957180191829",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 1,
+            "raid1": 1,
+            "raid0": 2
+          }
         },
         {
-          "sku": "HDL2-XA4B",
+          "sku": "HDL2-LV04B",
           "capacityTB": 4,
-          "priceIncTax": 136400,
-          "jan": "4957180157979",
-          "status": "在庫限り",
+          "priceIncTax": 165000,
+          "jan": "4957180191836",
+          "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 2,
             "raid1": 2,
@@ -1261,11 +1105,11 @@
           }
         },
         {
-          "sku": "HDL2-XA8B",
+          "sku": "HDL2-LV08B",
           "capacityTB": 8,
-          "priceIncTax": 173800,
-          "jan": "4957180157986",
-          "status": "在庫限り",
+          "priceIncTax": 176000,
+          "jan": "4957180191843",
+          "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 4,
             "raid1": 4,
@@ -1273,11 +1117,11 @@
           }
         },
         {
-          "sku": "HDL2-XA16B",
+          "sku": "HDL2-LV16B",
           "capacityTB": 16,
-          "priceIncTax": 265100,
-          "jan": "4957180157993",
-          "status": "在庫限り",
+          "priceIncTax": 264000,
+          "jan": "4957180191850",
+          "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 8,
             "raid1": 8,
@@ -1285,97 +1129,16 @@
           }
         }
       ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-10-02T04:54:35.935Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
-      "cloudTelework": true,
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
+      "lastCheckedAt": "2026-10-05T18:18:08.279Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
+      "cloudTelework": false,
       "cloudBcp": true
     },
     {
-      "id": "hdl2-xabtm5",
-      "name": "LAN DISK（HDL2-XAB/TM5シリーズ）",
-      "series": "LAN DISK X",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "2ベイ",
-      "officeSize": "中規模：～64人",
-      "officeSizeMax": 64,
-      "maintenanceService": {
-        "name": "訪問安心保守5年（ISS-NHI-PR5）",
-        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
-      },
-      "imageUrl": "https://www.iodata.jp/image/hdl2-xabtm5_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 1"
-      ],
-      "warrantyYears": 5,
-      "status": "生産終了",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "クラウドストレージ連携",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "多要素認証",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Intel Atom Processor C3338（2.20GHz Dual Core）",
-        "memoryCapacity": null,
-        "osEdition": null,
-        "lanPort": "（10GBASE-T／5GBASE-T／2.5GBASE-T／1000BASE-T／100BASE-TX）&times;1 （1000BASE-T／100BASE-TX／10BASE-T）&times;1",
-        "usbPort": "背面&times;2",
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL2-XA2B/TM5",
-          "capacityTB": 2,
-          "priceIncTax": 133100,
-          "jan": "4957180169354",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL2-XA4B/TM5",
-          "capacityTB": 4,
-          "priceIncTax": 169400,
-          "jan": "4957180169361",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid1": 2,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL2-XA8B/TM5",
-          "capacityTB": 8,
-          "priceIncTax": 206800,
-          "jan": "4957180169378",
-          "status": "在庫限り",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid1": 4,
-            "raid0": 8
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-10-02T04:54:40.945Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
-      "cloudTelework": false,
-      "cloudBcp": false
-    },
-    {
-      "id": "hdl4-lvu",
-      "name": "LAN DISK（HDL4-LVUシリーズ）",
-      "series": "LAN DISK LV",
+      "id": "hdl4-lvub",
+      "name": "LAN DISK（HDL4-LVUBシリーズ）",
+      "series": "LAN DISK L",
       "os": "Linux OS",
       "install": "ラックマウントタイプ",
       "bay": "4ベイ",
@@ -1385,38 +1148,40 @@
         "name": "訪問安心保守5年（ISS-NHI-PR5）",
         "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
       },
-      "imageUrl": "https://www.iodata.jp/image/hdl4-lvu_l.jpg",
+      "imageUrl": "https://www.iodata.jp/image/hdl4-lvub_l.jpg",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
         "RAID 5",
         "RAID 6"
       ],
-      "warrantyYears": 5,
+      "warrantyYears": 3,
       "status": "現行",
       "features": [
         "RAIDeX",
+        "10GbE",
+        "NAS専用HDD",
         "データ復旧サービス",
-        "UPS対応",
         "リモートアクセス",
-        "クラウドストレージ連携",
         "NarSuS",
+        "多要素認証",
+        "ログインロックアウト",
         "Time Machine"
       ],
       "specDetails": {
-        "cpu": "ARM Cortex-A55 Quad core 1.8GHz",
-        "memoryCapacity": null,
-        "osEdition": null,
-        "lanPort": "（2.5GBASE-T／1000BASE-T／100BASE-TX）&times;1 （1000BASE-T／100BASE-TX／10BASE-T）&times;1",
-        "usbPort": "背面&times;2",
+        "cpu": "ARM Cortex-A55/1.8GHz/4コア/4スレッド",
+        "memoryCapacity": "DDR4 2GB",
+        "osEdition": "Linux OS（オリジナル）",
+        "lanPort": null,
+        "usbPort": null,
         "videoOutput": null
       },
       "variants": [
         {
-          "sku": "HDL4-LV04U",
+          "sku": "HDL4-LV04UB",
           "capacityTB": 4,
-          "priceIncTax": 192500,
-          "jan": "4957180173245",
+          "priceIncTax": 302500,
+          "jan": "4957180191904",
           "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 2,
@@ -1426,10 +1191,10 @@
           }
         },
         {
-          "sku": "HDL4-LV08U",
+          "sku": "HDL4-LV08UB",
           "capacityTB": 8,
-          "priceIncTax": 213400,
-          "jan": "4957180173252",
+          "priceIncTax": 324500,
+          "jan": "4957180191911",
           "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 4,
@@ -1439,23 +1204,10 @@
           }
         },
         {
-          "sku": "HDL4-LV16U",
-          "capacityTB": 16,
-          "priceIncTax": 297000,
-          "jan": "4957180173269",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid6": 8,
-            "raid5": 12,
-            "raid0": 16
-          }
-        },
-        {
-          "sku": "HDL4-LV32U",
+          "sku": "HDL4-LV32UB",
           "capacityTB": 32,
-          "priceIncTax": 536800,
-          "jan": "4957180173276",
+          "priceIncTax": 522500,
+          "jan": "4957180191935",
           "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 16,
@@ -1463,211 +1215,31 @@
             "raid5": 24,
             "raid0": 32
           }
+        },
+        {
+          "sku": "HDL4-LV16UB",
+          "capacityTB": 50,
+          "priceIncTax": 346500,
+          "jan": "4957180191928",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 8,
+            "raid6": 8,
+            "raid5": 12,
+            "raid0": 16
+          }
         }
       ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-10-02T04:54:45.999Z",
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
+      "lastCheckedAt": "2026-10-05T18:18:13.287Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
     },
     {
-      "id": "hdl4-lv",
-      "name": "LAN DISK（HDL4-LVシリーズ）",
-      "series": "LAN DISK LV",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "4ベイ",
-      "officeSize": "中規模：～50人",
-      "officeSizeMax": 50,
-      "maintenanceService": {
-        "name": "訪問安心保守5年（ISS-NHI-PR5）",
-        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
-      },
-      "imageUrl": "https://www.iodata.jp/image/hdl4-lv_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 5",
-        "RAID 6"
-      ],
-      "warrantyYears": 5,
-      "status": "現行",
-      "features": [
-        "RAIDeX",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "クラウドストレージ連携",
-        "NarSuS",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "ARM Cortex-A55 Quad core 1.8GHz",
-        "memoryCapacity": null,
-        "osEdition": null,
-        "lanPort": "（2.5GBASE-T／1000BASE-T／100BASE-TX）&times;1 （1000BASE-T／100BASE-TX／10BASE-T）&times;1",
-        "usbPort": "背面&times;2",
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL4-LV04",
-          "capacityTB": 4,
-          "priceIncTax": 156200,
-          "jan": "4957180173160",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid6": 2,
-            "raid5": 3,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL4-LV08",
-          "capacityTB": 8,
-          "priceIncTax": 172700,
-          "jan": "4957180173177",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid6": 4,
-            "raid5": 6,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL4-LV16",
-          "capacityTB": 16,
-          "priceIncTax": 261800,
-          "jan": "4957180173191",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid6": 8,
-            "raid5": 12,
-            "raid0": 16
-          }
-        },
-        {
-          "sku": "HDL4-LV32",
-          "capacityTB": 32,
-          "priceIncTax": 489500,
-          "jan": "4957180173214",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 16,
-            "raid6": 16,
-            "raid5": 24,
-            "raid0": 32
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-10-02T04:54:50.925Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
-      "cloudTelework": false,
-      "cloudBcp": false
-    },
-    {
-      "id": "hdl2-lv",
-      "name": "LAN DISK（HDL2-LVシリーズ）",
-      "series": "LAN DISK LV",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "2ベイ",
-      "officeSize": "中規模：～50人",
-      "officeSizeMax": 50,
-      "maintenanceService": {
-        "name": "訪問安心保守5年（ISS-NHI-PR5）",
-        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
-      },
-      "imageUrl": "https://www.iodata.jp/image/hdl2-lv_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 1"
-      ],
-      "warrantyYears": 5,
-      "status": "現行",
-      "features": [
-        "RAIDeX",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "クラウドストレージ連携",
-        "NarSuS",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "ARM Cortex-A55 Quad core 1.8GHz",
-        "memoryCapacity": null,
-        "osEdition": null,
-        "lanPort": "（2.5GBASE-T／1000BASE-T／100BASE-TX）&times;1 （1000BASE-T／100BASE-TX／10BASE-T）&times;1",
-        "usbPort": "背面&times;2",
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL2-LV02",
-          "capacityTB": 2,
-          "priceIncTax": 94600,
-          "jan": "4957180173115",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 1,
-            "raid1": 1,
-            "raid0": 2
-          }
-        },
-        {
-          "sku": "HDL2-LV04",
-          "capacityTB": 4,
-          "priceIncTax": 130900,
-          "jan": "4957180173122",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid1": 2,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL2-LV08",
-          "capacityTB": 8,
-          "priceIncTax": 168300,
-          "jan": "4957180173139",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid1": 4,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL2-LV16",
-          "capacityTB": 16,
-          "priceIncTax": 259600,
-          "jan": "4957180173146",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid1": 8,
-            "raid0": 16
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-10-02T04:54:55.852Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
-      "cloudTelework": false,
-      "cloudBcp": false
-    },
-    {
-      "id": "hdl2-len",
-      "name": "LAN DISK（HDL2-LENシリーズ）",
-      "series": "LAN DISK LE",
+      "id": "hdl2-lenb",
+      "name": "LAN DISK（HDL2-LENBシリーズ）",
+      "series": "LAN DISK L",
       "os": "Linux OS",
       "install": "BOXタイプ",
       "bay": "2ベイ",
@@ -1677,37 +1249,38 @@
         "name": "訪問安心保守5年（ISS-NLO-PR5）",
         "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
       },
-      "imageUrl": "https://www.iodata.jp/image/hdl2-len_l.jpg",
+      "imageUrl": "https://www.iodata.jp/image/hdl2-lenb_l.jpg",
       "raidSupport": [
         "RAIDeX",
         "RAID 0",
         "RAID 1"
       ],
-      "warrantyYears": 5,
+      "warrantyYears": 3,
       "status": "現行",
       "features": [
         "RAIDeX",
+        "10GbE",
+        "NAS専用HDD",
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
-        "クラウドストレージ連携",
         "NarSuS",
         "Time Machine"
       ],
       "specDetails": {
-        "cpu": "ARM Cortex-A55 Quad core 2.0GHz",
-        "memoryCapacity": null,
-        "osEdition": "Linux（オリジナルOS）",
-        "lanPort": "（2.5GBASE-T／1000BASE-T／100BASE-TX）&times;1",
-        "usbPort": "USB-A：背面&times;1",
+        "cpu": "ARM Cortex-A55/2.0GHz/4コア/4スレッド",
+        "memoryCapacity": "DDR3 1GB",
+        "osEdition": "Linux OS（オリジナル）",
+        "lanPort": null,
+        "usbPort": null,
         "videoOutput": null
       },
       "variants": [
         {
-          "sku": "HDL2-LE02N",
+          "sku": "HDL2-LE02NB",
           "capacityTB": 2,
-          "priceIncTax": 58960,
-          "jan": "4957180173436",
+          "priceIncTax": 99000,
+          "jan": "4957180191775",
           "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 1,
@@ -1716,10 +1289,10 @@
           }
         },
         {
-          "sku": "HDL2-LE04N",
+          "sku": "HDL2-LE04NB",
           "capacityTB": 4,
-          "priceIncTax": 68200,
-          "jan": "4957180173443",
+          "priceIncTax": 110000,
+          "jan": "4957180191782",
           "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 2,
@@ -1728,10 +1301,10 @@
           }
         },
         {
-          "sku": "HDL2-LE08N",
+          "sku": "HDL2-LE08NB",
           "capacityTB": 8,
-          "priceIncTax": 86680,
-          "jan": "4957180173450",
+          "priceIncTax": 121000,
+          "jan": "4957180191799",
           "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 4,
@@ -1740,10 +1313,10 @@
           }
         },
         {
-          "sku": "HDL2-LE12N",
+          "sku": "HDL2-LE12NB",
           "capacityTB": 12,
-          "priceIncTax": 127050,
-          "jan": "4957180173467",
+          "priceIncTax": 165000,
+          "jan": "4957180191805",
           "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 6,
@@ -1752,10 +1325,10 @@
           }
         },
         {
-          "sku": "HDL2-LE16N",
+          "sku": "HDL2-LE16NB",
           "capacityTB": 16,
-          "priceIncTax": 152460,
-          "jan": "4957180173474",
+          "priceIncTax": 209000,
+          "jan": "4957180191812",
           "status": "現行",
           "effectiveCapacityTB": {
             "raidex": 8,
@@ -1764,8 +1337,262 @@
           }
         }
       ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-10-02T04:55:00.741Z",
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
+      "lastCheckedAt": "2026-10-05T18:18:18.395Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
+      "cloudTelework": true,
+      "cloudBcp": true
+    },
+    {
+      "id": "hdl1-lenb",
+      "name": "LAN DISK（HDL1-LENBシリーズ）",
+      "series": "LAN DISK L",
+      "os": "Linux OS",
+      "install": "BOXタイプ",
+      "bay": "1ベイ",
+      "officeSize": "小規模：～25人",
+      "officeSizeMax": 25,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NLO-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
+      },
+      "imageUrl": "https://www.iodata.jp/image/hdl1-lenb_l.jpg",
+      "raidSupport": [],
+      "warrantyYears": 3,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "Time Machine"
+      ],
+      "specDetails": {
+        "cpu": "ARM Cortex-A55/2.0GHz/4コア/4スレッド",
+        "memoryCapacity": "DDR3 1GB",
+        "osEdition": "Linux OS（オリジナル）",
+        "lanPort": null,
+        "usbPort": null,
+        "videoOutput": null
+      },
+      "variants": [
+        {
+          "sku": "HDL1-LE01NB",
+          "capacityTB": 1,
+          "priceIncTax": 55000,
+          "jan": "4957180191478",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL1-LE02NB",
+          "capacityTB": 2,
+          "priceIncTax": 60500,
+          "jan": "4957180191485",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL1-LE04NB",
+          "capacityTB": 4,
+          "priceIncTax": 66000,
+          "jan": "4957180191492",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL1-LE06NB",
+          "capacityTB": 6,
+          "priceIncTax": 82500,
+          "jan": "4957180191508",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL1-LE08NB",
+          "capacityTB": 8,
+          "priceIncTax": 93500,
+          "jan": "4957180191515",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
+      "lastCheckedAt": "2026-10-05T18:18:23.395Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
+      "cloudTelework": true,
+      "cloudBcp": true
+    },
+    {
+      "id": "hdl2-tasoho",
+      "name": "LAN DISK for SOHO（HDL2-TASOHOシリーズ）",
+      "series": "LAN DISK for SOHO",
+      "os": "Linux OS",
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
+      "officeSize": "SOHO向け～8人",
+      "officeSizeMax": 8,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NLO-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
+      },
+      "imageUrl": "https://www.iodata.jp/image/hdl2-tasoho_l.jpg",
+      "raidSupport": [
+        "RAIDeX",
+        "RAID 0",
+        "RAID 1"
+      ],
+      "warrantyYears": 3,
+      "status": "現行",
+      "features": [
+        "RAIDeX",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "Time Machine"
+      ],
+      "specDetails": {
+        "cpu": null,
+        "memoryCapacity": null,
+        "osEdition": null,
+        "lanPort": "（1000BASE-T／100BASE-TX／10BASE-T）&times; 1",
+        "usbPort": "USB 2.0 ※USBハブを経由してUSB機器を接続することはできません",
+        "videoOutput": null
+      },
+      "variants": [
+        {
+          "sku": "HDL2-TA2SOHO",
+          "capacityTB": 2,
+          "priceIncTax": 88000,
+          "jan": "4957180174969",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 1,
+            "raid1": 1,
+            "raid0": 2
+          }
+        },
+        {
+          "sku": "HDL2-TA4SOHO",
+          "capacityTB": 4,
+          "priceIncTax": 99000,
+          "jan": "4957180174976",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 2,
+            "raid1": 2,
+            "raid0": 4
+          }
+        },
+        {
+          "sku": "HDL2-TA6SOHO",
+          "capacityTB": 6,
+          "priceIncTax": 104500,
+          "jan": "4957180175157",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 3,
+            "raid1": 3,
+            "raid0": 6
+          }
+        },
+        {
+          "sku": "HDL2-TA8SOHO",
+          "capacityTB": 8,
+          "priceIncTax": 110000,
+          "jan": "4957180174983",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 4,
+            "raid1": 4,
+            "raid0": 8
+          }
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
+      "lastCheckedAt": "2026-10-05T18:18:28.450Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
+      "cloudTelework": false,
+      "cloudBcp": false
+    },
+    {
+      "id": "hdl1-lasoho",
+      "name": "HDL1-LASOHOシリーズ",
+      "series": "LAN DISK for SOHO",
+      "os": "Linux OS",
+      "install": "BOXタイプ",
+      "bay": "1ベイ",
+      "officeSize": "SOHO向け／小規模：～10名",
+      "officeSizeMax": 10,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NLO-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
+      },
+      "imageUrl": "https://www.iodata.jp/image/hdl1-lasoho_l.jpg",
+      "raidSupport": [],
+      "warrantyYears": 3,
+      "status": "現行",
+      "features": [
+        "UPS対応",
+        "リモートアクセス",
+        "クラウドストレージ連携",
+        "NarSuS",
+        "Time Machine"
+      ],
+      "specDetails": {
+        "cpu": "ARM Cortex-A55 Quad core 1.8GHz",
+        "memoryCapacity": null,
+        "osEdition": null,
+        "lanPort": "（1000BASE-T／100BASE-TX）&times; 1",
+        "usbPort": "USB 2.0 ※USBハブを経由してUSB機器を接続することはできません",
+        "videoOutput": null
+      },
+      "variants": [
+        {
+          "sku": "HDL1-LA01SOHO",
+          "capacityTB": 1,
+          "priceIncTax": 49500,
+          "jan": "4957180173641",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL1-LA02SOHO",
+          "capacityTB": 2,
+          "priceIncTax": 55000,
+          "jan": "4957180173658",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL1-LA04SOHO",
+          "capacityTB": 4,
+          "priceIncTax": 60500,
+          "jan": "4957180173665",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL1-LA06SOHO",
+          "capacityTB": 6,
+          "priceIncTax": 77000,
+          "jan": "4957180173672",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL1-LA08SOHO",
+          "capacityTB": 8,
+          "priceIncTax": 88000,
+          "jan": "4957180173689",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
+      "lastCheckedAt": "2026-10-05T18:18:33.501Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1879,354 +1706,14 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-10-02T04:55:05.970Z",
+      "lastCheckedAt": "2026-10-05T18:18:38.603Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e2",
       "cloudTelework": true,
       "cloudBcp": true
     },
     {
-      "id": "hdl1-len",
-      "name": "LAN DISK（HDL1-LENシリーズ）",
-      "series": "LAN DISK LE",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "1ベイ",
-      "officeSize": "小規模：～25人",
-      "officeSizeMax": 25,
-      "maintenanceService": {
-        "name": "訪問安心保守5年（ISS-NLO-PR5）",
-        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
-      },
-      "imageUrl": "https://www.iodata.jp/image/hdl1-len_l.jpg",
-      "raidSupport": [],
-      "warrantyYears": 5,
-      "status": "現行",
-      "features": [
-        "UPS対応",
-        "リモートアクセス",
-        "クラウドストレージ連携",
-        "NarSuS",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "ARM Cortex-A55 Quad core 2.0GHz",
-        "memoryCapacity": null,
-        "osEdition": "Linux（オリジナルOS）",
-        "lanPort": "（2.5GBASE-T／1000BASE-T／100BASE-TX）&times;1",
-        "usbPort": "USB-A：背面&times;1",
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL1-LE01N",
-          "capacityTB": 1,
-          "priceIncTax": 35090,
-          "jan": "4957180173283",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LE02N",
-          "capacityTB": 2,
-          "priceIncTax": 37950,
-          "jan": "4957180173290",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LE04N",
-          "capacityTB": 4,
-          "priceIncTax": 50820,
-          "jan": "4957180173306",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LE06N",
-          "capacityTB": 6,
-          "priceIncTax": 65780,
-          "jan": "4957180173313",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LE08N",
-          "capacityTB": 8,
-          "priceIncTax": 83050,
-          "jan": "4957180173320",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-10-02T04:55:10.802Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
-      "cloudTelework": true,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl-aaxw",
-      "name": "LAN DISK（HDL-AAXWシリーズ）",
-      "series": "LAN DISK A",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "1ベイ",
-      "officeSize": "SOHO向け／小規模：～16人",
-      "officeSizeMax": 16,
-      "maintenanceService": {
-        "name": "訪問安心保守5年（ISS-NLO-PR5）",
-        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
-      },
-      "imageUrl": "https://www.iodata.jp/image/hdl-aaxw_l.jpg",
-      "raidSupport": [],
-      "warrantyYears": 3,
-      "status": "生産終了",
-      "features": [
-        "UPS対応",
-        "リモートアクセス",
-        "NarSuS",
-        "多要素認証",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Marvell Armada382 Dual Core 1.33GHz",
-        "memoryCapacity": null,
-        "osEdition": null,
-        "lanPort": "( 2.5GBASE-T / 1000BASE-T/ 100BASE-TX/ 10BASE-T )&times; 1",
-        "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL-AAX1W",
-          "capacityTB": 1,
-          "priceIncTax": 31790,
-          "jan": "4957180143637",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL-AAX2W",
-          "capacityTB": 2,
-          "priceIncTax": 34650,
-          "jan": "4957180143644",
-          "status": "生産終了",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL-AAX3W",
-          "capacityTB": 3,
-          "priceIncTax": 39930,
-          "jan": "4957180143651",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL-AAX4W",
-          "capacityTB": 4,
-          "priceIncTax": 47520,
-          "jan": "4957180143668",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL-AAX6W",
-          "capacityTB": 6,
-          "priceIncTax": 62480,
-          "jan": "4957180143675",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL-AAX8W",
-          "capacityTB": 8,
-          "priceIncTax": 79750,
-          "jan": "4957180143682",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-10-02T04:55:15.872Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e2",
-      "cloudTelework": true,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl2-tasoho",
-      "name": "LAN DISK for SOHO（HDL2-TASOHOシリーズ）",
-      "series": "LAN DISK for SOHO",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "2ベイ",
-      "officeSize": "SOHO向け～8人",
-      "officeSizeMax": 8,
-      "maintenanceService": {
-        "name": "訪問安心保守5年（ISS-NLO-PR5）",
-        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
-      },
-      "imageUrl": "https://www.iodata.jp/image/hdl2-tasoho_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 1"
-      ],
-      "warrantyYears": 3,
-      "status": "現行",
-      "features": [
-        "RAIDeX",
-        "UPS対応",
-        "リモートアクセス",
-        "NarSuS",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": null,
-        "memoryCapacity": null,
-        "osEdition": null,
-        "lanPort": "（1000BASE-T／100BASE-TX／10BASE-T）&times; 1",
-        "usbPort": "USB 2.0 ※USBハブを経由してUSB機器を接続することはできません",
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL2-TA2SOHO",
-          "capacityTB": 2,
-          "priceIncTax": 53460,
-          "jan": "4957180174969",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 1,
-            "raid1": 1,
-            "raid0": 2
-          }
-        },
-        {
-          "sku": "HDL2-TA4SOHO",
-          "capacityTB": 4,
-          "priceIncTax": 62700,
-          "jan": "4957180174976",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid1": 2,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL2-TA6SOHO",
-          "capacityTB": 6,
-          "priceIncTax": 70730,
-          "jan": "4957180175157",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 3,
-            "raid1": 3,
-            "raid0": 6
-          }
-        },
-        {
-          "sku": "HDL2-TA8SOHO",
-          "capacityTB": 8,
-          "priceIncTax": 81180,
-          "jan": "4957180174983",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid1": 4,
-            "raid0": 8
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-10-02T04:55:20.780Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
-      "cloudTelework": false,
-      "cloudBcp": false
-    },
-    {
-      "id": "hdl1-lasoho",
-      "name": "HDL1-LASOHOシリーズ",
-      "series": "LAN DISK for SOHO",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "1ベイ",
-      "officeSize": "SOHO向け／小規模：～10名",
-      "officeSizeMax": 10,
-      "maintenanceService": {
-        "name": "訪問安心保守5年（ISS-NLO-PR5）",
-        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup03"
-      },
-      "imageUrl": "https://www.iodata.jp/image/hdl1-lasoho_l.jpg",
-      "raidSupport": [],
-      "warrantyYears": 3,
-      "status": "現行",
-      "features": [
-        "UPS対応",
-        "リモートアクセス",
-        "クラウドストレージ連携",
-        "NarSuS",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "ARM Cortex-A55 Quad core 1.8GHz",
-        "memoryCapacity": null,
-        "osEdition": null,
-        "lanPort": "（1000BASE-T／100BASE-TX）&times; 1",
-        "usbPort": "USB 2.0 ※USBハブを経由してUSB機器を接続することはできません",
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL1-LA01SOHO",
-          "capacityTB": 1,
-          "priceIncTax": 28490,
-          "jan": "4957180173641",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LA02SOHO",
-          "capacityTB": 2,
-          "priceIncTax": 31350,
-          "jan": "4957180173658",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LA04SOHO",
-          "capacityTB": 4,
-          "priceIncTax": 44220,
-          "jan": "4957180173665",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LA06SOHO",
-          "capacityTB": 6,
-          "priceIncTax": 66330,
-          "jan": "4957180173672",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LA08SOHO",
-          "capacityTB": 8,
-          "priceIncTax": 85800,
-          "jan": "4957180173689",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
-      "lastCheckedAt": "2026-10-02T04:55:25.518Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
-      "cloudTelework": true,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl4-z25si3b",
-      "name": "LAN DISK（HDL4-Z25SI3Bシリーズ）",
+      "id": "hdl4-z25si3bb",
+      "name": "LAN DISK（HDL4-Z25SI3BBシリーズ）",
       "series": "LAN DISK Z",
       "os": "Windows OS",
       "install": "BOXタイプ",
@@ -2237,12 +1724,13 @@
         "name": "訪問安心保守5年（ISS-NHI-PR5）",
         "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
       },
-      "imageUrl": "https://www.iodata.jp/image/hdl4-z25si3b_l.jpg",
+      "imageUrl": "https://www.iodata.jp/image/hdl4-z25si3bb_l.jpg",
       "raidSupport": [
         "RAID 0",
+        "RAID 1",
         "RAID 5"
       ],
-      "warrantyYears": 5,
+      "warrantyYears": 3,
       "status": "現行",
       "features": [
         "10GbE",
@@ -2256,75 +1744,485 @@
       ],
       "specDetails": {
         "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
-        "memoryCapacity": "8GB",
+        "memoryCapacity": "8GB（Non-ECC）",
         "osEdition": "Windows Server IoT 2025 for Storage Standard",
-        "lanPort": "10GBASE-T／5GBASE-T／2.5GBASE-T／1000BASE-T／100BASE-TX／10BASE-T&times;1 2.5GBASE-T／1000BASE-T／100BASE-TX／10BASE-T&times;1",
-        "usbPort": "USB-A：背面&times;2",
+        "lanPort": "RJ45&times;2",
+        "usbPort": "背面&times;2 ※Type-A コネクター",
         "videoOutput": "HDMI&times;1（背面）"
       },
       "variants": [
         {
-          "sku": "HDL4-Z25SI3B04",
-          "capacityTB": 4,
-          "priceIncTax": 434500,
-          "jan": "4957180182209",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B08",
-          "capacityTB": 8,
-          "priceIncTax": 465300,
-          "jan": "4957180182216",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B16",
+          "sku": "HDL4-Z25SI3B16B",
           "capacityTB": 16,
-          "priceIncTax": 542300,
-          "jan": "4957180182223",
+          "priceIncTax": 605000,
+          "jan": "4957180192048",
           "status": "現行",
           "effectiveCapacityTB": null
         },
         {
-          "sku": "HDL4-Z25SI3B32",
+          "sku": "HDL4-Z25SI3B32B",
           "capacityTB": 32,
-          "priceIncTax": 729300,
-          "jan": "4957180182230",
+          "priceIncTax": 781000,
+          "jan": "4957180192055",
           "status": "現行",
           "effectiveCapacityTB": null
         },
         {
-          "sku": "HDL4-Z25SI3B48",
+          "sku": "HDL4-Z25SI3B48B",
           "capacityTB": 48,
-          "priceIncTax": 957000,
-          "jan": "4957180182247",
+          "priceIncTax": 1078000,
+          "jan": "4957180192062",
           "status": "現行",
           "effectiveCapacityTB": null
         },
         {
-          "sku": "HDL4-Z25SI3B64",
+          "sku": "HDL4-Z25SI3B64B",
           "capacityTB": 64,
-          "priceIncTax": 1265000,
-          "jan": "4957180182254",
+          "priceIncTax": 1122000,
+          "jan": "4957180192079",
           "status": "現行",
           "effectiveCapacityTB": null
         },
         {
-          "sku": "HDL4-Z25SI3B80",
+          "sku": "HDL4-Z25SI3B80B",
           "capacityTB": 80,
-          "priceIncTax": 1485000,
-          "jan": "4957180182261",
+          "priceIncTax": 1309000,
+          "jan": "4957180192086",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL4-Z25SI3B128B",
+          "capacityTB": 128,
+          "priceIncTax": 2112000,
+          "jan": "4957180192109",
           "status": "現行",
           "effectiveCapacityTB": null
         }
       ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3b/",
-      "lastCheckedAt": "2026-10-02T04:55:30.603Z",
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bb/",
+      "lastCheckedAt": "2026-10-05T18:18:43.664Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": false
+      "cloudBcp": true
+    },
+    {
+      "id": "hdl2-z25si3bb",
+      "name": "LAN DISK（HDL2-Z25SI3BBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
+      "officeSize": "大規模： 500人～",
+      "officeSizeMax": 500,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
+      "imageUrl": "https://www.iodata.jp/image/hdl2-z25si3bb_l.jpg",
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
+      "warrantyYears": 3,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "specDetails": {
+        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
+        "memoryCapacity": "8GB（Non-ECC）",
+        "osEdition": "Windows Server IoT 2025 for Storage Standard",
+        "lanPort": "RJ45&times;2",
+        "usbPort": "背面&times;2 ※Type-A コネクター&times;1、Type-C コネクター &times;1",
+        "videoOutput": "HDMI&times;1（背面） Type-C（DP Alt）&times;1（背面）"
+      },
+      "variants": [
+        {
+          "sku": "HDL2-Z25SI3B08B",
+          "capacityTB": 8,
+          "priceIncTax": 473000,
+          "jan": "4957180191980",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL2-Z25SI3B16B",
+          "capacityTB": 16,
+          "priceIncTax": 561000,
+          "jan": "4957180191997",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL2-Z25SI3B64B",
+          "capacityTB": 64,
+          "priceIncTax": 1243000,
+          "jan": "4957180192017",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25si3bb/",
+      "lastCheckedAt": "2026-10-05T18:18:48.677Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
+      "cloudTelework": false,
+      "cloudBcp": true
+    },
+    {
+      "id": "hdl4-z25si3bub",
+      "name": "LAN DISK（HDL4-Z25SI3BUBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "ラックマウントタイプ",
+      "bay": "4ベイ",
+      "officeSize": "大規模： 500人～",
+      "officeSizeMax": 500,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
+      "imageUrl": "https://www.iodata.jp/image/hdl4-z25si3bub_l.jpg",
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5"
+      ],
+      "warrantyYears": 3,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "UPS対応",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "specDetails": {
+        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
+        "memoryCapacity": "8GB（Non-ECC）",
+        "osEdition": "Windows Server IoT 2025 for Storage Standard",
+        "lanPort": "RJ45&times;2",
+        "usbPort": "背面&times;2 ※Type-A コネクター",
+        "videoOutput": "HDMI&times;1（背面）"
+      },
+      "variants": [
+        {
+          "sku": "HDL4-Z25SI3B16UB",
+          "capacityTB": 16,
+          "priceIncTax": 643500,
+          "jan": "4957180192130",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL4-Z25SI3B32UB",
+          "capacityTB": 32,
+          "priceIncTax": 819500,
+          "jan": "4957180192147",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL4-Z25SI3B48UB",
+          "capacityTB": 48,
+          "priceIncTax": 1116500,
+          "jan": "4957180192154",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL4-Z25SI3B64UB",
+          "capacityTB": 64,
+          "priceIncTax": 1160500,
+          "jan": "4957180192161",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL4-Z25SI3B80UB",
+          "capacityTB": 80,
+          "priceIncTax": 1347500,
+          "jan": "4957180192178",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        },
+        {
+          "sku": "HDL4-Z25SI3B128UB",
+          "capacityTB": 128,
+          "priceIncTax": 2150500,
+          "jan": "4957180192192",
+          "status": "現行",
+          "effectiveCapacityTB": null
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bub/",
+      "lastCheckedAt": "2026-10-05T18:18:53.699Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
+      "cloudTelework": false,
+      "cloudBcp": true
+    },
+    {
+      "id": "hdl4-z25wi3bb",
+      "name": "LAN DISK（HDL4-Z25WI3BBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "4ベイ",
+      "officeSize": "中規模： ～50人",
+      "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
+      "imageUrl": "https://www.iodata.jp/image/hdl4-z25wi3bb_l.jpg",
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5"
+      ],
+      "warrantyYears": 3,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "specDetails": {
+        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
+        "memoryCapacity": "DDR4 non-ECC 8GB",
+        "osEdition": "Windows Server IoT 2025 for Storage Workgroup",
+        "lanPort": null,
+        "usbPort": null,
+        "videoOutput": null
+      },
+      "variants": [
+        {
+          "sku": "HDL4-Z25WI3B08B",
+          "capacityTB": 8,
+          "priceIncTax": 418000,
+          "jan": "4957180192710",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raid5": 6,
+            "raid1": 4,
+            "raid0": 8
+          }
+        },
+        {
+          "sku": "HDL4-Z25WI3B16B",
+          "capacityTB": 16,
+          "priceIncTax": 440000,
+          "jan": "4957180192727",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raid5": 12,
+            "raid1": 8,
+            "raid0": 16
+          }
+        },
+        {
+          "sku": "HDL4-Z25WI3B32B",
+          "capacityTB": 32,
+          "priceIncTax": 616000,
+          "jan": "4957180192734",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raid5": 24,
+            "raid1": 16,
+            "raid0": 32
+          }
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bb/",
+      "lastCheckedAt": "2026-10-05T18:18:58.654Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
+      "cloudTelework": false,
+      "cloudBcp": true
+    },
+    {
+      "id": "hdl2-z25wi3bb",
+      "name": "LAN DISK（HDL2-Z25WI3BBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "BOXタイプ",
+      "bay": "2ベイ",
+      "officeSize": "小規模： ～50人",
+      "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
+      "imageUrl": "https://www.iodata.jp/image/hdl2-z25wi3bb_l.jpg",
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1"
+      ],
+      "warrantyYears": 3,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "specDetails": {
+        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
+        "memoryCapacity": "DDR4 non-ECC 8GB",
+        "osEdition": "Windows Server IoT 2025 for Storage Workgroup",
+        "lanPort": null,
+        "usbPort": null,
+        "videoOutput": null
+      },
+      "variants": [
+        {
+          "sku": "HDL2-Z25WI3B02B",
+          "capacityTB": 2,
+          "priceIncTax": 319000,
+          "jan": "4957180192659",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raid1": 1,
+            "raid0": 2
+          }
+        },
+        {
+          "sku": "HDL2-Z25WI3B04B",
+          "capacityTB": 4,
+          "priceIncTax": 330000,
+          "jan": "4957180192666",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raid1": 2,
+            "raid0": 4
+          }
+        },
+        {
+          "sku": "HDL2-Z25WI3B08B",
+          "capacityTB": 8,
+          "priceIncTax": 341000,
+          "jan": "4957180192673",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raid1": 4,
+            "raid0": 8
+          }
+        },
+        {
+          "sku": "HDL2-Z25WI3B16B",
+          "capacityTB": 16,
+          "priceIncTax": 429000,
+          "jan": "4957180192680",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raid1": 8,
+            "raid0": 16
+          }
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25wi3bb/",
+      "lastCheckedAt": "2026-10-05T18:19:03.871Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
+      "cloudTelework": false,
+      "cloudBcp": true
+    },
+    {
+      "id": "hdl4-z25wi3bub",
+      "name": "LAN DISK（HDL4-Z25WI3BUBシリーズ）",
+      "series": "LAN DISK Z",
+      "os": "Windows OS",
+      "install": "ラックマウントタイプ",
+      "bay": "4ベイ",
+      "officeSize": "小規模： ～50人",
+      "officeSizeMax": 50,
+      "maintenanceService": {
+        "name": "訪問安心保守5年（ISS-NHI-PR5）",
+        "url": "https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm#lineup01"
+      },
+      "imageUrl": "https://www.iodata.jp/image/hdl4-z25wi3bub_l.jpg",
+      "raidSupport": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5"
+      ],
+      "warrantyYears": 3,
+      "status": "現行",
+      "features": [
+        "10GbE",
+        "NAS専用HDD",
+        "データ復旧サービス",
+        "リモートアクセス",
+        "NarSuS",
+        "NarSuSクラウドバックアップ",
+        "Time Machine"
+      ],
+      "specDetails": {
+        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
+        "memoryCapacity": "DDR4 non-ECC 8GB",
+        "osEdition": "Windows Server IoT 2025 for Storage Workgroup",
+        "lanPort": null,
+        "usbPort": null,
+        "videoOutput": null
+      },
+      "variants": [
+        {
+          "sku": "HDL4-Z25WI3B08UB",
+          "capacityTB": 8,
+          "priceIncTax": 456500,
+          "jan": "4957180192796",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raid5": 6,
+            "raid1": 4,
+            "raid0": 8
+          }
+        },
+        {
+          "sku": "HDL4-Z25WI3B16UB",
+          "capacityTB": 16,
+          "priceIncTax": 478500,
+          "jan": "4957180192802",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raid5": 12,
+            "raid1": 8,
+            "raid0": 16
+          }
+        },
+        {
+          "sku": "HDL4-Z25WI3B32UB",
+          "capacityTB": 32,
+          "priceIncTax": 654500,
+          "jan": "4957180192819",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raid5": 24,
+            "raid1": 16,
+            "raid0": 32
+          }
+        }
+      ],
+      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bub/",
+      "lastCheckedAt": "2026-10-05T18:19:08.838Z",
+      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
+      "cloudTelework": false,
+      "cloudBcp": true
     },
     {
       "id": "hdl4-z25si3bu",
@@ -2345,7 +2243,7 @@
         "RAID 5"
       ],
       "warrantyYears": 5,
-      "status": "現行",
+      "status": "生産終了",
       "features": [
         "10GbE",
         "NAS専用HDD",
@@ -2366,64 +2264,16 @@
       },
       "variants": [
         {
-          "sku": "HDL4-Z25SI3B04U",
-          "capacityTB": 4,
-          "priceIncTax": 526900,
-          "jan": "4957180182278",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z25SI3B08U",
           "capacityTB": 8,
-          "priceIncTax": 548900,
+          "priceIncTax": 556600,
           "jan": "4957180182285",
           "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B16U",
-          "capacityTB": 16,
-          "priceIncTax": 636900,
-          "jan": "4957180182292",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B32U",
-          "capacityTB": 32,
-          "priceIncTax": 775500,
-          "jan": "4957180182308",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B48U",
-          "capacityTB": 48,
-          "priceIncTax": 1062600,
-          "jan": "4957180182315",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B64U",
-          "capacityTB": 64,
-          "priceIncTax": 1361800,
-          "jan": "4957180182322",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B80U",
-          "capacityTB": 80,
-          "priceIncTax": 1573000,
-          "jan": "4957180182339",
-          "status": "現行",
           "effectiveCapacityTB": null
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bu/",
-      "lastCheckedAt": "2026-10-02T04:55:35.756Z",
+      "lastCheckedAt": "2026-10-05T18:19:13.986Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2468,40 +2318,16 @@
       },
       "variants": [
         {
-          "sku": "HDL4-Z25SATB04",
-          "capacityTB": 4,
-          "priceIncTax": 335500,
-          "jan": "4957180181912",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SATB08",
-          "capacityTB": 8,
-          "priceIncTax": 366300,
-          "jan": "4957180181929",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SATB16",
-          "capacityTB": 16,
-          "priceIncTax": 443300,
-          "jan": "4957180181936",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z25SATB32",
           "capacityTB": 32,
-          "priceIncTax": 630300,
+          "priceIncTax": 638000,
           "jan": "4957180181943",
           "status": "現行",
           "effectiveCapacityTB": null
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satb/",
-      "lastCheckedAt": "2026-10-02T04:55:40.694Z",
+      "lastCheckedAt": "2026-10-05T18:19:18.969Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2548,38 +2374,22 @@
         {
           "sku": "HDL2-Z25SATB02",
           "capacityTB": 2,
-          "priceIncTax": 272800,
+          "priceIncTax": 278300,
           "jan": "4957180181837",
           "status": "現行",
           "effectiveCapacityTB": null
         },
         {
-          "sku": "HDL2-Z25SATB04",
-          "capacityTB": 4,
-          "priceIncTax": 298100,
-          "jan": "4957180181844",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL2-Z25SATB08",
-          "capacityTB": 8,
-          "priceIncTax": 335500,
-          "jan": "4957180181851",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL2-Z25SATB16",
           "capacityTB": 16,
-          "priceIncTax": 412500,
+          "priceIncTax": 418000,
           "jan": "4957180181868",
           "status": "現行",
           "effectiveCapacityTB": null
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25satb/",
-      "lastCheckedAt": "2026-10-02T04:55:45.546Z",
+      "lastCheckedAt": "2026-10-05T18:19:23.984Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2624,64 +2434,16 @@
       },
       "variants": [
         {
-          "sku": "HDL4-Z25SATB04U",
-          "capacityTB": 4,
-          "priceIncTax": 427900,
-          "jan": "4957180182056",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z25SATB08U",
           "capacityTB": 8,
-          "priceIncTax": 449900,
+          "priceIncTax": 457600,
           "jan": "4957180182063",
           "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SATB16U",
-          "capacityTB": 16,
-          "priceIncTax": 537900,
-          "jan": "4957180182070",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SATB32U",
-          "capacityTB": 32,
-          "priceIncTax": 676500,
-          "jan": "4957180182087",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SATB48U",
-          "capacityTB": 48,
-          "priceIncTax": 963600,
-          "jan": "4957180182094",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SATB64U",
-          "capacityTB": 64,
-          "priceIncTax": 1262800,
-          "jan": "4957180182100",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SATB80U",
-          "capacityTB": 80,
-          "priceIncTax": 1474000,
-          "jan": "4957180182117",
-          "status": "在庫限り",
           "effectiveCapacityTB": null
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satbu/",
-      "lastCheckedAt": "2026-10-02T04:55:50.293Z",
+      "lastCheckedAt": "2026-10-05T18:19:29.052Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2726,17 +2488,9 @@
       },
       "variants": [
         {
-          "sku": "HDL4-Z25WATB04",
-          "capacityTB": 4,
-          "priceIncTax": 236500,
-          "jan": "4957180181981",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z25WATB08",
           "capacityTB": 8,
-          "priceIncTax": 267300,
+          "priceIncTax": 363000,
           "jan": "4957180181998",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -2744,7 +2498,7 @@
         {
           "sku": "HDL4-Z25WATB16",
           "capacityTB": 16,
-          "priceIncTax": 344300,
+          "priceIncTax": 385000,
           "jan": "4957180182001",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -2752,14 +2506,14 @@
         {
           "sku": "HDL4-Z25WATB32",
           "capacityTB": 32,
-          "priceIncTax": 531300,
+          "priceIncTax": 561000,
           "jan": "4957180182018",
           "status": "現行",
           "effectiveCapacityTB": null
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watb/",
-      "lastCheckedAt": "2026-10-02T04:55:55.091Z",
+      "lastCheckedAt": "2026-10-05T18:19:34.036Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2806,7 +2560,7 @@
         {
           "sku": "HDL2-Z25WATB02",
           "capacityTB": 2,
-          "priceIncTax": 173800,
+          "priceIncTax": 231000,
           "jan": "4957180181875",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -2814,7 +2568,7 @@
         {
           "sku": "HDL2-Z25WATB04",
           "capacityTB": 4,
-          "priceIncTax": 199100,
+          "priceIncTax": 242000,
           "jan": "4957180181899",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -2822,7 +2576,7 @@
         {
           "sku": "HDL2-Z25WATB08",
           "capacityTB": 8,
-          "priceIncTax": 236500,
+          "priceIncTax": 253000,
           "jan": "4957180181882",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -2830,14 +2584,14 @@
         {
           "sku": "HDL2-Z25WATB16",
           "capacityTB": 16,
-          "priceIncTax": 313500,
+          "priceIncTax": 341000,
           "jan": "4957180181905",
           "status": "現行",
           "effectiveCapacityTB": null
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25watb/",
-      "lastCheckedAt": "2026-10-02T04:56:00.015Z",
+      "lastCheckedAt": "2026-10-05T18:19:39.008Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2884,7 +2638,7 @@
         {
           "sku": "HDL4-Z25WATB04U",
           "capacityTB": 4,
-          "priceIncTax": 322300,
+          "priceIncTax": 379500,
           "jan": "4957180182124",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -2892,7 +2646,7 @@
         {
           "sku": "HDL4-Z25WATB08U",
           "capacityTB": 8,
-          "priceIncTax": 345400,
+          "priceIncTax": 401500,
           "jan": "4957180182131",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -2900,7 +2654,7 @@
         {
           "sku": "HDL4-Z25WATB16U",
           "capacityTB": 16,
-          "priceIncTax": 438900,
+          "priceIncTax": 446600,
           "jan": "4957180182148",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -2908,7 +2662,7 @@
         {
           "sku": "HDL4-Z25WATB32U",
           "capacityTB": 32,
-          "priceIncTax": 613800,
+          "priceIncTax": 621500,
           "jan": "4957180182155",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -2916,7 +2670,7 @@
         {
           "sku": "HDL4-Z25WATB48U",
           "capacityTB": 48,
-          "priceIncTax": 900900,
+          "priceIncTax": 911900,
           "jan": "4957180182162",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -2939,7 +2693,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watbu/",
-      "lastCheckedAt": "2026-10-02T04:56:04.999Z",
+      "lastCheckedAt": "2026-10-05T18:19:44.064Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2992,14 +2746,6 @@
           "effectiveCapacityTB": null
         },
         {
-          "sku": "HDL4-Z22SI3B08",
-          "capacityTB": 8,
-          "priceIncTax": 432300,
-          "jan": "4957180160733",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z22SI3B16",
           "capacityTB": 16,
           "priceIncTax": 509300,
@@ -3016,22 +2762,6 @@
           "effectiveCapacityTB": null
         },
         {
-          "sku": "HDL4-Z22SI3B48",
-          "capacityTB": 48,
-          "priceIncTax": 924000,
-          "jan": "4957180177243",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z22SI3B64",
-          "capacityTB": 64,
-          "priceIncTax": 1232000,
-          "jan": "4957180177250",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z22SI3B80",
           "capacityTB": 80,
           "priceIncTax": 1452000,
@@ -3041,7 +2771,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3b/",
-      "lastCheckedAt": "2026-10-02T04:56:09.893Z",
+      "lastCheckedAt": "2026-10-05T18:19:49.128Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3119,7 +2849,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3b/",
-      "lastCheckedAt": "2026-10-02T04:56:14.840Z",
+      "lastCheckedAt": "2026-10-05T18:19:54.128Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3180,14 +2910,6 @@
           "effectiveCapacityTB": null
         },
         {
-          "sku": "HDL4-Z22SI3B16U",
-          "capacityTB": 16,
-          "priceIncTax": 603900,
-          "jan": "4957180160795",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z22SI3B32U",
           "capacityTB": 32,
           "priceIncTax": 742500,
@@ -3197,7 +2919,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3bu/",
-      "lastCheckedAt": "2026-10-02T04:56:19.884Z",
+      "lastCheckedAt": "2026-10-05T18:19:59.199Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3242,14 +2964,6 @@
       },
       "variants": [
         {
-          "sku": "HDL4-Z22SATB04",
-          "capacityTB": 4,
-          "priceIncTax": 302500,
-          "jan": "4957180163246",
-          "status": "生産終了",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z22SATB08",
           "capacityTB": 8,
           "priceIncTax": 333300,
@@ -3275,7 +2989,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satb/",
-      "lastCheckedAt": "2026-10-02T04:56:24.852Z",
+      "lastCheckedAt": "2026-10-05T18:20:04.335Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3353,7 +3067,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satb/",
-      "lastCheckedAt": "2026-10-02T04:56:29.748Z",
+      "lastCheckedAt": "2026-10-05T18:20:09.532Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3398,14 +3112,6 @@
       },
       "variants": [
         {
-          "sku": "HDL4-Z22SATB04U",
-          "capacityTB": 4,
-          "priceIncTax": 394900,
-          "jan": "4957180163291",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z22SATB08U",
           "capacityTB": 8,
           "priceIncTax": 416900,
@@ -3431,7 +3137,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satbu/",
-      "lastCheckedAt": "2026-10-02T04:56:34.665Z",
+      "lastCheckedAt": "2026-10-05T18:20:14.525Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3476,30 +3182,6 @@
       },
       "variants": [
         {
-          "sku": "HDL4-Z22WATB04",
-          "capacityTB": 4,
-          "priceIncTax": 214500,
-          "jan": "4957180163383",
-          "status": "生産終了",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z22WATB08",
-          "capacityTB": 8,
-          "priceIncTax": 245300,
-          "jan": "4957180163390",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z22WATB16",
-          "capacityTB": 16,
-          "priceIncTax": 322300,
-          "jan": "4957180163406",
-          "status": "在庫限り",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z22WATB32",
           "capacityTB": 32,
           "priceIncTax": 509300,
@@ -3509,7 +3191,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watb/",
-      "lastCheckedAt": "2026-10-02T04:56:39.432Z",
+      "lastCheckedAt": "2026-10-05T18:20:19.527Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3587,7 +3269,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watb/",
-      "lastCheckedAt": "2026-10-02T04:56:44.268Z",
+      "lastCheckedAt": "2026-10-05T18:20:24.656Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3632,14 +3314,6 @@
       },
       "variants": [
         {
-          "sku": "HDL4-Z22WATB04U",
-          "capacityTB": 4,
-          "priceIncTax": 300300,
-          "jan": "4957180163420",
-          "status": "生産終了",
-          "effectiveCapacityTB": null
-        },
-        {
           "sku": "HDL4-Z22WATB08U",
           "capacityTB": 8,
           "priceIncTax": 323400,
@@ -3665,7 +3339,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watbu/",
-      "lastCheckedAt": "2026-10-02T04:56:49.132Z",
+      "lastCheckedAt": "2026-10-05T18:20:29.721Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3712,7 +3386,7 @@
         {
           "sku": "HDL2-Z10ATB02",
           "capacityTB": 2,
-          "priceIncTax": 143000,
+          "priceIncTax": 220000,
           "jan": "4957180172095",
           "status": "現行",
           "effectiveCapacityTB": null
@@ -3720,857 +3394,15 @@
         {
           "sku": "HDL2-Z10ATB04",
           "capacityTB": 4,
-          "priceIncTax": 173800,
+          "priceIncTax": 231000,
           "jan": "4957180172101",
           "status": "現行",
           "effectiveCapacityTB": null
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z10atb/",
-      "lastCheckedAt": "2026-10-02T04:56:54.035Z",
+      "lastCheckedAt": "2026-10-05T18:20:34.622Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2019",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl4-lx",
-      "name": "LAN DISK（HDL4-LXシリーズ）",
-      "series": "LAN DISK LX",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "4ベイ",
-      "officeSize": "中規模：～64人",
-      "officeSizeMax": 64,
-      "imageUrl": "https://www.iodata.jp/image/hdl4-lx_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 5",
-        "RAID 6"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "ワンタッチセキュア",
-        "多要素認証",
-        "ログインロックアウト"
-      ],
-      "specDetails": {
-        "cpu": "intel Atom X6211E 3.0GHz／2コア／2スレッド",
-        "memoryCapacity": "DDR4 8GB",
-        "osEdition": "Linux OS（オリジナル）",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL4-LX04",
-          "capacityTB": 4,
-          "priceIncTax": 308000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid6": 2,
-            "raid5": 3,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL4-LX08",
-          "capacityTB": 8,
-          "priceIncTax": 330000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid6": 4,
-            "raid5": 6,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL4-LX16",
-          "capacityTB": 16,
-          "priceIncTax": 352000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid6": 8,
-            "raid5": 12,
-            "raid0": 16
-          }
-        },
-        {
-          "sku": "HDL4-LX32",
-          "capacityTB": 32,
-          "priceIncTax": 528000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 16,
-            "raid6": 16,
-            "raid5": 24,
-            "raid0": 32
-          }
-        },
-        {
-          "sku": "HDL4-LX64",
-          "capacityTB": 64,
-          "priceIncTax": 869000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 32,
-            "raid6": 32,
-            "raid5": 48,
-            "raid0": 64
-          }
-        },
-        {
-          "sku": "HDL4-LX80",
-          "capacityTB": 80,
-          "priceIncTax": 1056000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 40,
-            "raid6": 40,
-            "raid5": 60,
-            "raid0": 80
-          }
-        },
-        {
-          "sku": "HDL4-LX96",
-          "capacityTB": 96,
-          "priceIncTax": 1199000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 48,
-            "raid6": 48,
-            "raid5": 72,
-            "raid0": 96
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
-      "lastCheckedAt": "2026-10-02T04:56:59.197Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl4-lvb",
-      "name": "LAN DISK（HDL4-LVBシリーズ）",
-      "series": null,
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "4ベイ",
-      "officeSize": "中規模：～50人",
-      "officeSizeMax": 50,
-      "imageUrl": "https://www.iodata.jp/image/hdl4-lvb_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 5",
-        "RAID 6"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "リモートアクセス",
-        "NarSuS",
-        "多要素認証",
-        "ログインロックアウト",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "ARM Cortex-A55/1.8GHz/4コア/4スレッド",
-        "memoryCapacity": "DDR4 2GB",
-        "osEdition": "Linux OS（オリジナル）",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL4-LV04B",
-          "capacityTB": 4,
-          "priceIncTax": 264000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid6": 2,
-            "raid5": 3,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL4-LV08B",
-          "capacityTB": 8,
-          "priceIncTax": 286000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid6": 4,
-            "raid5": 6,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL4-LV16B",
-          "capacityTB": 16,
-          "priceIncTax": 308000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid6": 8,
-            "raid5": 12,
-            "raid0": 16
-          }
-        },
-        {
-          "sku": "HDL4-LV32B",
-          "capacityTB": 32,
-          "priceIncTax": 484000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 16,
-            "raid6": 16,
-            "raid5": 24,
-            "raid0": 32
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
-      "lastCheckedAt": "2026-10-02T04:57:04.174Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
-      "cloudTelework": false,
-      "cloudBcp": false
-    },
-    {
-      "id": "hdl2-lx",
-      "name": "LAN DISK（HDL2-LXシリーズ）",
-      "series": "LAN DISK LX",
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "2ベイ",
-      "officeSize": "中規模：～64人",
-      "officeSizeMax": 64,
-      "imageUrl": "https://www.iodata.jp/image/hdl2-lx_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 1"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "ワンタッチセキュア",
-        "多要素認証",
-        "ログインロックアウト"
-      ],
-      "specDetails": {
-        "cpu": "intel Atom X6211E 3.0GHz／2コア／2スレッド",
-        "memoryCapacity": "DDR4 8GB",
-        "osEdition": "Linux OS（オリジナル）",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL2-LX02",
-          "capacityTB": 2,
-          "priceIncTax": 198000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 1,
-            "raid1": 1,
-            "raid0": 2
-          }
-        },
-        {
-          "sku": "HDL2-LX04",
-          "capacityTB": 4,
-          "priceIncTax": 209000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid1": 2,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL2-LX08",
-          "capacityTB": 8,
-          "priceIncTax": 220000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid1": 4,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL2-LX16",
-          "capacityTB": 16,
-          "priceIncTax": 308000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid1": 8,
-            "raid0": 16
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
-      "lastCheckedAt": "2026-10-02T04:57:09.198Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl2-lvb",
-      "name": "LAN DISK（HDL2-LVBシリーズ）",
-      "series": null,
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "2ベイ",
-      "officeSize": "中規模：～50人",
-      "officeSizeMax": 50,
-      "imageUrl": "https://www.iodata.jp/image/hdl2-lvb_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 1"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "リモートアクセス",
-        "NarSuS",
-        "多要素認証",
-        "ログインロックアウト",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "ARM Cortex-A55/1.8GHz/4コア/4スレッド",
-        "memoryCapacity": "DDR4 2GB",
-        "osEdition": "Linux OS（オリジナル）",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL2-LV02B",
-          "capacityTB": 2,
-          "priceIncTax": 154000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 1,
-            "raid1": 1,
-            "raid0": 2
-          }
-        },
-        {
-          "sku": "HDL2-LV04B",
-          "capacityTB": 4,
-          "priceIncTax": 165000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid1": 2,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL2-LV08B",
-          "capacityTB": 8,
-          "priceIncTax": 176000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid1": 4,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL2-LV16B",
-          "capacityTB": 16,
-          "priceIncTax": 264000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid1": 8,
-            "raid0": 16
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
-      "lastCheckedAt": "2026-10-02T04:57:13.980Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl2-lenb",
-      "name": "LAN DISK（HDL2-LENBシリーズ）",
-      "series": null,
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "2ベイ",
-      "officeSize": "小規模：～25人",
-      "officeSizeMax": 25,
-      "imageUrl": "https://www.iodata.jp/image/hdl2-lenb_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 1"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "NarSuS",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "ARM Cortex-A55/2.0GHz/4コア/4スレッド",
-        "memoryCapacity": "DDR3 1GB",
-        "osEdition": "Linux OS（オリジナル）",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL2-LE02NB",
-          "capacityTB": 2,
-          "priceIncTax": 99000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 1,
-            "raid1": 1,
-            "raid0": 2
-          }
-        },
-        {
-          "sku": "HDL2-LE04NB",
-          "capacityTB": 4,
-          "priceIncTax": 110000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid1": 2,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL2-LE08NB",
-          "capacityTB": 8,
-          "priceIncTax": 121000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid1": 4,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL2-LE12NB",
-          "capacityTB": 12,
-          "priceIncTax": 165000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 6,
-            "raid1": 6,
-            "raid0": 12
-          }
-        },
-        {
-          "sku": "HDL2-LE16NB",
-          "capacityTB": 16,
-          "priceIncTax": 209000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid1": 8,
-            "raid0": 16
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
-      "lastCheckedAt": "2026-10-02T04:57:18.921Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
-      "cloudTelework": true,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl1-lenb",
-      "name": "LAN DISK（HDL1-LENBシリーズ）",
-      "series": null,
-      "os": "Linux OS",
-      "install": "BOXタイプ",
-      "bay": "1ベイ",
-      "officeSize": "小規模：～25人",
-      "officeSizeMax": 25,
-      "imageUrl": "https://www.iodata.jp/image/hdl1-lenb_l.jpg",
-      "raidSupport": [],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "NarSuS",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "ARM Cortex-A55/2.0GHz/4コア/4スレッド",
-        "memoryCapacity": "DDR3 1GB",
-        "osEdition": "Linux OS（オリジナル）",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL1-LE01NB",
-          "capacityTB": 1,
-          "priceIncTax": 55000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LE02NB",
-          "capacityTB": 2,
-          "priceIncTax": 60500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LE04NB",
-          "capacityTB": 4,
-          "priceIncTax": 66000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LE06NB",
-          "capacityTB": 6,
-          "priceIncTax": 82500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL1-LE08NB",
-          "capacityTB": 8,
-          "priceIncTax": 93500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
-      "lastCheckedAt": "2026-10-02T04:57:23.916Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
-      "cloudTelework": true,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl4-lxu",
-      "name": "LAN DISK（HDL4-LXUシリーズ）",
-      "series": "LAN DISK LX",
-      "os": "Linux OS",
-      "install": "ラックマウントタイプ",
-      "bay": "4ベイ",
-      "officeSize": "中規模：～64人",
-      "officeSizeMax": 64,
-      "imageUrl": "https://www.iodata.jp/image/hdl4-lxu_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 5",
-        "RAID 6"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "ワンタッチセキュア",
-        "多要素認証",
-        "ログインロックアウト"
-      ],
-      "specDetails": {
-        "cpu": "intel Atom X6211E 3.0GHz／2コア／2スレッド",
-        "memoryCapacity": "DDR4 8GB",
-        "osEdition": "Linux OS（オリジナル）",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL4-LX04U",
-          "capacityTB": 4,
-          "priceIncTax": 346500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid6": 2,
-            "raid5": 3,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL4-LX08U",
-          "capacityTB": 8,
-          "priceIncTax": 368500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid6": 4,
-            "raid5": 6,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL4-LX16U",
-          "capacityTB": 16,
-          "priceIncTax": 390500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid6": 8,
-            "raid5": 12,
-            "raid0": 16
-          }
-        },
-        {
-          "sku": "HDL4-LX32U",
-          "capacityTB": 32,
-          "priceIncTax": 566500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 16,
-            "raid6": 16,
-            "raid5": 24,
-            "raid0": 32
-          }
-        },
-        {
-          "sku": "HDL4-LX64U",
-          "capacityTB": 64,
-          "priceIncTax": 907500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 32,
-            "raid6": 32,
-            "raid5": 48,
-            "raid0": 64
-          }
-        },
-        {
-          "sku": "HDL4-LX80U",
-          "capacityTB": 80,
-          "priceIncTax": 1094500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 40,
-            "raid6": 40,
-            "raid5": 60,
-            "raid0": 80
-          }
-        },
-        {
-          "sku": "HDL4-LX96U",
-          "capacityTB": 96,
-          "priceIncTax": 1237500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 48,
-            "raid6": 48,
-            "raid5": 72,
-            "raid0": 96
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
-      "lastCheckedAt": "2026-10-02T04:57:28.685Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl4-lvub",
-      "name": "LAN DISK（HDL4-LVUBシリーズ）",
-      "series": null,
-      "os": "Linux OS",
-      "install": "ラックマウントタイプ",
-      "bay": "4ベイ",
-      "officeSize": "中規模：～50人",
-      "officeSizeMax": 50,
-      "imageUrl": "https://www.iodata.jp/image/hdl4-lvub_l.jpg",
-      "raidSupport": [
-        "RAIDeX",
-        "RAID 0",
-        "RAID 5",
-        "RAID 6"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "RAIDeX",
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "リモートアクセス",
-        "NarSuS",
-        "多要素認証",
-        "ログインロックアウト",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "ARM Cortex-A55/1.8GHz/4コア/4スレッド",
-        "memoryCapacity": "DDR4 2GB",
-        "osEdition": "Linux OS（オリジナル）",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL4-LV04UB",
-          "capacityTB": 4,
-          "priceIncTax": 302500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 2,
-            "raid6": 2,
-            "raid5": 3,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL4-LV08UB",
-          "capacityTB": 8,
-          "priceIncTax": 324500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 4,
-            "raid6": 4,
-            "raid5": 6,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL4-LV16UB",
-          "capacityTB": 16,
-          "priceIncTax": 346500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid6": 8,
-            "raid5": 12,
-            "raid0": 16
-          }
-        },
-        {
-          "sku": "HDL4-LV32UB",
-          "capacityTB": 32,
-          "priceIncTax": 522500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 16,
-            "raid6": 16,
-            "raid5": 24,
-            "raid0": 32
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
-      "lastCheckedAt": "2026-10-02T04:57:33.630Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
     },
@@ -4636,505 +3468,10 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/bcsp-lvreut/",
-      "lastCheckedAt": "2026-10-02T04:57:38.594Z",
+      "lastCheckedAt": "2026-10-05T18:20:39.642Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
       "cloudTelework": false,
       "cloudBcp": false
-    },
-    {
-      "id": "hdl4-z25si3bb",
-      "name": "LAN DISK（HDL4-Z25SI3BBシリーズ）",
-      "series": null,
-      "os": "Windows OS",
-      "install": "BOXタイプ",
-      "bay": "4ベイ",
-      "officeSize": "大規模： 500人～",
-      "officeSizeMax": 500,
-      "imageUrl": "https://www.iodata.jp/image/hdl4-z25si3bb_l.jpg",
-      "raidSupport": [
-        "RAID 0",
-        "RAID 1",
-        "RAID 5"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
-        "memoryCapacity": "8GB（Non-ECC）",
-        "osEdition": "Windows Server IoT 2025 for Storage Standard",
-        "lanPort": "RJ45&times;2",
-        "usbPort": "背面&times;2 ※Type-A コネクター",
-        "videoOutput": "HDMI&times;1（背面）"
-      },
-      "variants": [
-        {
-          "sku": "HDL4-Z25SI3B16B",
-          "capacityTB": 16,
-          "priceIncTax": 605000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B32B",
-          "capacityTB": 32,
-          "priceIncTax": 781000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B48B",
-          "capacityTB": 48,
-          "priceIncTax": 1078000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B64B",
-          "capacityTB": 64,
-          "priceIncTax": 1122000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B80B",
-          "capacityTB": 80,
-          "priceIncTax": 1309000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B128B",
-          "capacityTB": 128,
-          "priceIncTax": 2112000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bb/",
-      "lastCheckedAt": "2026-10-02T04:57:43.877Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl4-z25wi3bb",
-      "name": "LAN DISK（HDL4-Z25WI3BBシリーズ）",
-      "series": null,
-      "os": "Windows OS",
-      "install": "BOXタイプ",
-      "bay": "4ベイ",
-      "officeSize": "中規模： ～50人",
-      "officeSizeMax": 50,
-      "imageUrl": "https://www.iodata.jp/image/hdl4-z25wi3bb_l.jpg",
-      "raidSupport": [
-        "RAID 0",
-        "RAID 1",
-        "RAID 5"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
-        "memoryCapacity": "DDR4 non-ECC 8GB",
-        "osEdition": "Windows Server IoT 2025 for Storage Workgroup",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL4-Z25WI3B08B",
-          "capacityTB": 8,
-          "priceIncTax": 418000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raid5": 6,
-            "raid1": 4,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL4-Z25WI3B16B",
-          "capacityTB": 16,
-          "priceIncTax": 440000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raid5": 12,
-            "raid1": 8,
-            "raid0": 16
-          }
-        },
-        {
-          "sku": "HDL4-Z25WI3B32B",
-          "capacityTB": 32,
-          "priceIncTax": 616000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raid5": 24,
-            "raid1": 16,
-            "raid0": 32
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bb/",
-      "lastCheckedAt": "2026-10-02T04:57:48.642Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl2-z25si3bb",
-      "name": "LAN DISK（HDL2-Z25SI3BBシリーズ）",
-      "series": null,
-      "os": "Windows OS",
-      "install": "BOXタイプ",
-      "bay": "2ベイ",
-      "officeSize": "大規模： 500人～",
-      "officeSizeMax": 500,
-      "imageUrl": "https://www.iodata.jp/image/hdl2-z25si3bb_l.jpg",
-      "raidSupport": [
-        "RAID 0",
-        "RAID 1"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
-        "memoryCapacity": "8GB（Non-ECC）",
-        "osEdition": "Windows Server IoT 2025 for Storage Standard",
-        "lanPort": "RJ45&times;2",
-        "usbPort": "背面&times;2 ※Type-A コネクター&times;1、Type-C コネクター &times;1",
-        "videoOutput": "HDMI&times;1（背面） Type-C（DP Alt）&times;1（背面）"
-      },
-      "variants": [
-        {
-          "sku": "HDL2-Z25SI3B08B",
-          "capacityTB": 8,
-          "priceIncTax": 473000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL2-Z25SI3B16B",
-          "capacityTB": 16,
-          "priceIncTax": 561000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL2-Z25SI3B64B",
-          "capacityTB": 64,
-          "priceIncTax": 1243000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25si3bb/",
-      "lastCheckedAt": "2026-10-02T04:57:53.607Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl2-z25wi3bb",
-      "name": "LAN DISK（HDL2-Z25WI3BBシリーズ）",
-      "series": null,
-      "os": "Windows OS",
-      "install": "BOXタイプ",
-      "bay": "2ベイ",
-      "officeSize": "小規模： ～50人",
-      "officeSizeMax": 50,
-      "imageUrl": "https://www.iodata.jp/image/hdl2-z25wi3bb_l.jpg",
-      "raidSupport": [
-        "RAID 0",
-        "RAID 1"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
-        "memoryCapacity": "DDR4 non-ECC 8GB",
-        "osEdition": "Windows Server IoT 2025 for Storage Workgroup",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL2-Z25WI3B02B",
-          "capacityTB": 2,
-          "priceIncTax": 319000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raid1": 1,
-            "raid0": 2
-          }
-        },
-        {
-          "sku": "HDL2-Z25WI3B04B",
-          "capacityTB": 4,
-          "priceIncTax": 330000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raid1": 2,
-            "raid0": 4
-          }
-        },
-        {
-          "sku": "HDL2-Z25WI3B08B",
-          "capacityTB": 8,
-          "priceIncTax": 341000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raid1": 4,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL2-Z25WI3B16B",
-          "capacityTB": 16,
-          "priceIncTax": 429000,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raid1": 8,
-            "raid0": 16
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25wi3bb/",
-      "lastCheckedAt": "2026-10-02T04:57:58.466Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl4-z25si3bub",
-      "name": "LAN DISK（HDL4-Z25SI3BUBシリーズ）",
-      "series": null,
-      "os": "Windows OS",
-      "install": "ラックマウントタイプ",
-      "bay": "4ベイ",
-      "officeSize": "大規模： 500人～",
-      "officeSizeMax": 500,
-      "imageUrl": "https://www.iodata.jp/image/hdl4-z25si3bub_l.jpg",
-      "raidSupport": [
-        "RAID 0",
-        "RAID 1",
-        "RAID 5"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "UPS対応",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
-        "memoryCapacity": "8GB（Non-ECC）",
-        "osEdition": "Windows Server IoT 2025 for Storage Standard",
-        "lanPort": "RJ45&times;2",
-        "usbPort": "背面&times;2 ※Type-A コネクター",
-        "videoOutput": "HDMI&times;1（背面）"
-      },
-      "variants": [
-        {
-          "sku": "HDL4-Z25SI3B16UB",
-          "capacityTB": 16,
-          "priceIncTax": 643500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B32UB",
-          "capacityTB": 32,
-          "priceIncTax": 819500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B48UB",
-          "capacityTB": 48,
-          "priceIncTax": 1116500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B64UB",
-          "capacityTB": 64,
-          "priceIncTax": 1160500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B80UB",
-          "capacityTB": 80,
-          "priceIncTax": 1347500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        },
-        {
-          "sku": "HDL4-Z25SI3B128UB",
-          "capacityTB": 128,
-          "priceIncTax": 2150500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": null
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bub/",
-      "lastCheckedAt": "2026-10-02T04:58:03.486Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
-      "cloudTelework": false,
-      "cloudBcp": true
-    },
-    {
-      "id": "hdl4-z25wi3bub",
-      "name": "LAN DISK（HDL4-Z25WI3BUBシリーズ）",
-      "series": null,
-      "os": "Windows OS",
-      "install": "ラックマウントタイプ",
-      "bay": "4ベイ",
-      "officeSize": "小規模： ～50人",
-      "officeSizeMax": 50,
-      "imageUrl": "https://www.iodata.jp/image/hdl4-z25wi3bub_l.jpg",
-      "raidSupport": [
-        "RAID 0",
-        "RAID 1",
-        "RAID 5"
-      ],
-      "warrantyYears": 3,
-      "maintenanceService": null,
-      "status": "現行",
-      "features": [
-        "10GbE",
-        "NAS専用HDD",
-        "データ復旧サービス",
-        "リモートアクセス",
-        "NarSuS",
-        "NarSuSクラウドバックアップ",
-        "Time Machine"
-      ],
-      "specDetails": {
-        "cpu": "Intel Core i3-12100TE Quad Core 4.00 GHz",
-        "memoryCapacity": "DDR4 non-ECC 8GB",
-        "osEdition": "Windows Server IoT 2025 for Storage Workgroup",
-        "lanPort": null,
-        "usbPort": null,
-        "videoOutput": null
-      },
-      "variants": [
-        {
-          "sku": "HDL4-Z25WI3B08UB",
-          "capacityTB": 8,
-          "priceIncTax": 456500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raid5": 6,
-            "raid1": 4,
-            "raid0": 8
-          }
-        },
-        {
-          "sku": "HDL4-Z25WI3B16UB",
-          "capacityTB": 16,
-          "priceIncTax": 478500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raid5": 12,
-            "raid1": 8,
-            "raid0": 16
-          }
-        },
-        {
-          "sku": "HDL4-Z25WI3B32UB",
-          "capacityTB": 32,
-          "priceIncTax": 654500,
-          "jan": "",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raid5": 24,
-            "raid1": 16,
-            "raid0": 32
-          }
-        }
-      ],
-      "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bub/",
-      "lastCheckedAt": "2026-10-02T04:58:08.310Z",
-      "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
-      "cloudTelework": false,
-      "cloudBcp": true
     }
   ]
 }
