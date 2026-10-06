@@ -534,6 +534,16 @@ function mergeSpecDetails(specResult, mainResult) {
   return merged;
 }
 
+// シリーズ全体の販売状況。現行の容量が1つでもあれば「現行」、
+// 現行は無いが在庫限りの容量があれば「在庫限り」、どれも無ければ「生産終了」。
+// （以前は在庫限りしか無いシリーズも「生産終了」にしていたため、まだ購入・保守加入できる
+//   在庫限り品が、ISSセレクターで保守対象外として除外されてしまっていた）
+function seriesStatus(variants) {
+  if (variants.some(v => v.status === "現行")) return "現行";
+  if (variants.some(v => v.status === "在庫限り")) return "在庫限り";
+  return "生産終了";
+}
+
 // カタログページ側の機能タグを使った場合も、仕様表でLAN速度が確認できていれば「10GbE」を付け直す
 function withLanCheckedFeatures(features, lanSpeedMax, checked) {
   const list = [...features];
@@ -695,7 +705,11 @@ function extractCatalogVariants(catalogHtml, series, allSeries) {
     .sort((a, b) => a - b)[0];
   const block = catalogHtml.slice(startIdx, nextIdx === undefined ? startIdx + 8000 : nextIdx);
 
-  const rowRe = /href="[^"]*\/nas\/(?:general|wss-nas|appliance)\/[a-z0-9\-]+\/(?:index\.htm)?"[^>]*>\s*([A-Z][A-Z0-9\-\/]+)\s*<\/a>([\s\S]{0,80}?)(\d+(?:\.\d+)?)\s*TB[\s\S]{0,150}?￥([\d,]+)/gi;
+  // 型番の直後に「店頭在庫限り」「生産終了」などのアイコン画像（<img … alt="店頭在庫限り" …>）が
+  // 入っている行は、型番から容量までが100文字を超える。以前は80文字までしか見ていなかったため、
+  // アイコン付きの行（＝旧モデル）を1件も拾えていなかった。
+  // 読み取り範囲を広げる代わりに、次の行（</tr>）をまたがないよう制限している。
+  const rowRe = /href="[^"]*\/nas\/(?:general|wss-nas|appliance)\/[a-z0-9\-]+\/(?:index\.htm)?"[^>]*>\s*([A-Z][A-Z0-9\-\/]+)\s*<\/a>((?:(?!<\/tr>)[\s\S]){0,300}?)(\d+(?:\.\d+)?)\s*TB(?:(?!<\/tr>)[\s\S]){0,300}?￥([\d,]+)/gi;
 
   const variants = [];
   let m;
@@ -710,7 +724,7 @@ function extractCatalogVariants(catalogHtml, series, allSeries) {
       sku,
       capacityTB: Number(m[3]),
       priceIncTax: Number(m[4].replace(/,/g, "")),
-      jan: "",
+      jan: PREVIOUS_JAN_BY_SKU[sku.toUpperCase()] || "",
       status
     });
   }
@@ -786,7 +800,31 @@ function buildCloudSupportMap(html, productIds) {
 }
 
 
+// 前回のデータ（data/products.json）。公式のデータファイル（search_linux/windows.js）から
+// 外れた旧モデルはカタログページから補うが、カタログにはシリーズ大分類（LAN DISK H/X/Z…）や
+// JANコードが無い。DASセレクターがシリーズ大分類を使うため、前回のデータにあった値を引き継ぐ。
+const PREVIOUS_SERIES_BY_SLUG = {};
+const PREVIOUS_JAN_BY_SKU = {};
+
+async function loadPreviousData() {
+  try {
+    const prev = JSON.parse(await fs.readFile(OUTPUT_PATH, "utf8"));
+    (prev.products || []).forEach(p => {
+      const slug = String(p.sourceUrl || "").replace(/\/+$/, "").split("/").pop();
+      if (slug && p.series) PREVIOUS_SERIES_BY_SLUG[slug.toLowerCase()] = p.series;
+      (p.variants || []).forEach(v => {
+        if (v.sku && v.jan) PREVIOUS_JAN_BY_SKU[String(v.sku).toUpperCase()] = String(v.jan);
+      });
+    });
+    console.log(`前回データから引き継ぎ: シリーズ大分類 ${Object.keys(PREVIOUS_SERIES_BY_SLUG).length} 件 / JANコード ${Object.keys(PREVIOUS_JAN_BY_SKU).length} 件`);
+  } catch (err) {
+    console.warn("前回データが読めなかったため、引き継ぎは行いません:", err.message);
+  }
+}
+
 async function main() {
+  console.log("NASセレクター スクレイパー（版：2026-10-06b 旧モデル補完・在庫限り判定・LAN速度対応）");
+  await loadPreviousData();
   const rawEntries = [];
   for (const source of LIST_URLS) {
     const text = await fetchText(source.url);
@@ -815,6 +853,9 @@ async function main() {
 
   const products = [];
   const coveredSlugs = new Set();
+  // 公式データファイルに残っているシリーズでも、一部の容量（在庫限りの旧容量など）が
+  // データファイルから外れ、カタログにだけ載っていることがある。その分を足すために使う。
+  const catalogSeriesForMerge = extractAllCatalogSeries(catalogHtml);
 
   for (const [linkUrl, entries] of groups) {
     const base = entries[0];
@@ -844,6 +885,19 @@ async function main() {
       jan: String(e.jan),
       status: lookupSkuStatus(catalogHtml, e.name) || "現行"
     })).sort((a, b) => a.capacityTB - b.capacityTB);
+
+    // カタログにだけ載っている容量（データファイルから外れた在庫限り品など）を足す
+    const catalogSeries = catalogSeriesForMerge.find(cs => cs.slug === slug);
+    if (catalogSeries) {
+      const known = new Set(variants.map(v => v.sku.toUpperCase()));
+      const extra = extractCatalogVariants(catalogHtml, catalogSeries, catalogSeriesForMerge)
+        .filter(cv => !known.has(cv.sku.toUpperCase()));
+      if (extra.length > 0) {
+        console.log(`  -> ${slug}: カタログにだけある容量を追加 ${extra.map(v => v.sku).join(", ")}`);
+        variants.push(...extra);
+        variants.sort((a, b) => a.capacityTB - b.capacityTB);
+      }
+    }
 
     const anyCurrent = variants.some(v => v.status === "現行");
     const officeLabel = formatOfficeLabel(lookupOfficeLabel(catalogHtml, slug));
@@ -889,7 +943,7 @@ async function main() {
       imageUrl: lookupSeriesImage(catalogHtml, slug),
       raidSupport: raidSupportList(base).length > 0 ? raidSupportList(base) : detailRaidSupport,
       warrantyYears,
-      status: anyCurrent ? "現行" : "生産終了",
+      status: seriesStatus(variants),
       features,
       lanSpeedMax,
       lanMaxPorts,
@@ -953,7 +1007,10 @@ async function main() {
     products.push({
       id: series.slug,
       name: series.name,
-      series: CATALOG_SERIES_NAME_OVERRIDE[series.slug] || null, // 上の対応表に無いものは引き続き未取得のまま
+      // 対応表 → 前回のデータ（公式データファイルに載っていた頃のシリーズ大分類）の順に引き継ぐ
+      // Windows系（wss-nas）は、大分類が分かっている機種がすべて「LAN DISK Z」なので、不明なものもそれに合わせる
+      series: CATALOG_SERIES_NAME_OVERRIDE[series.slug] || PREVIOUS_SERIES_BY_SLUG[series.slug]
+        || (series.category === "wss-nas" ? "LAN DISK Z" : null),
       os: series.category === "wss-nas" ? "Windows OS" : "Linux OS",
       install,
       bay,
@@ -963,7 +1020,7 @@ async function main() {
       raidSupport: detailRaidSupport, // 商品ページの「冗長化設定」欄から取得
       warrantyYears,
       maintenanceService: null, // カタログ補完分はsearch_linux/windows.js由来のhoshu情報を持たない
-      status: anyCurrent ? "現行" : "生産終了",
+      status: seriesStatus(variants),
       features,
       lanSpeedMax,
       lanMaxPorts,
@@ -1011,6 +1068,14 @@ async function main() {
 
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(output, null, 2) + "\n");
   console.log("done. products:", products.length, "/ raw entries:", rawEntries.length);
+  // 確認用のまとめ（販売状況ごとの件数と、LAN速度・シリーズ大分類が取れなかったもの）
+  const byStatus = {};
+  products.forEach(p => { byStatus[p.status] = (byStatus[p.status] || 0) + 1; });
+  console.log("販売状況ごとのシリーズ数:", JSON.stringify(byStatus));
+  const noLan = products.filter(p => !p.lanSpeedMax).map(p => p.id);
+  console.log(`LAN速度が取れなかったシリーズ: ${noLan.length}件 ${noLan.join(", ")}`);
+  const noSeries = products.filter(p => !p.series).map(p => p.id);
+  console.log(`シリーズ大分類が無いシリーズ: ${noSeries.length}件 ${noSeries.join(", ")}`);
 }
 
 main().catch(err => {
