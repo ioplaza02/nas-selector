@@ -457,6 +457,70 @@ function extractLabeledSpecs(rawHtml) {
   return result;
 }
 
+// ---------------------------------------------------------------------------
+// LANポートの速さ（「一番速いNAS」を選べるようにするための項目）
+//
+// 公式の仕様表は、シリーズによってLANポートの書き方が3通りある。
+//   ①「LANポート」1行に全部書く
+//      例：（10GBASE-T／5GBASE-T／…）×1 （1000BASE-T／…）×1
+//   ②「筐体特徴」の下に、速度ごとの行がある（ポートが無い速度は「－」）
+//      例：10GbE LAN port｜（10GBASE-T／…）背面×1、2.5GbE LAN port｜－
+//   ③「LAN ポート」の下の「転送規格」の行にまとめて書く
+//      例：2.5GbE LAN port (2.5GBASE-T／…)×1 10GbE LAN port (10GBASE-T／…)×1
+// ①の書き方でも「LANポートコネクタ形状｜RJ45×2」のような速度の無い行があるため、
+// 速度表記（○○BASE-T）を含む行だけを集める。行の先頭以外のセル（結合セルの子ラベル）も見る。
+// ---------------------------------------------------------------------------
+
+const LAN_SPEED_ORDER = ["1G", "2.5G", "5G", "10G"];
+
+function lanSpeedOfText(text) {
+  const t = String(text).normalize("NFKC");
+  if (/10GBASE-T/i.test(t)) return "10G";
+  if (/(?<![\d.])5GBASE-T/i.test(t)) return "5G";
+  if (/2\.5GBASE-T/i.test(t)) return "2.5G";
+  if (/1000BASE-T/i.test(t)) return "1G";
+  return null;
+}
+
+export function extractLanInfo(rawHtml) {
+  const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
+  const texts = [];
+  let rowMatch;
+  while ((rowMatch = rowRe.exec(rawHtml || "")) !== null) {
+    const cellRe = /<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi;
+    const cells = [];
+    let cm;
+    while ((cm = cellRe.exec(rowMatch[1])) !== null) {
+      cells.push(cm[1].replace(/<[^>]+>/g, " ").replace(/&times;/g, "×").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim());
+    }
+    if (cells.length < 2) continue;
+    const value = cells[cells.length - 1];
+    const labels = cells.slice(0, -1).map(c => c.normalize("NFKC").replace(/\s+/g, ""));
+    const isLanRow = labels.some(l =>
+      /^(10|5|2\.5|1)GbELANport$/i.test(l) || /^LANポート$/.test(l) || /^転送規格$/.test(l));
+    if (!isLanRow) continue;
+    if (!/BASE-T/i.test(value)) continue; // 「－」（その速度のポートは無い）や「RJ45×2」は除外
+    // ②の書き方では、値に速度名が入っていないのでラベル（10GbE LAN port など）を前に付ける
+    const speedLabel = labels.find(l => /GbELANport$/i.test(l));
+    const display = speedLabel ? speedLabel.replace(/LANport$/i, " LAN port ") + value : value;
+    if (!texts.includes(display)) texts.push(display);
+  }
+  if (texts.length === 0) return null;
+  const joined = texts.join(" ");
+  const maxSpeed = lanSpeedOfText(joined);
+
+  // 最速の速度に対応したポートが何個あるか（例：10GbE×1）。
+  // 「（…10GBASE-T…）×1」「10GBASE-T／1000BASE-T × 2」のどちらの書き方でも数える。
+  let maxPorts = 0;
+  const segRe = /([^×]*?)×\s*(\d+)/g;
+  let sm;
+  const norm = joined.normalize("NFKC");
+  while ((sm = segRe.exec(norm)) !== null) {
+    if (maxSpeed && lanSpeedOfText(sm[1]) === maxSpeed) maxPorts += Number(sm[2]);
+  }
+  return { maxSpeed, maxPorts: maxPorts || null, summary: texts.join(" / ") };
+}
+
 // spec.htm側とindex.htm側、それぞれから拾えた詳細スペックをキーごとにマージする。
 // 同じキーが両方にある場合は、より情報量の多い方（配列が長い方）を採用する。
 function mergeSpecDetails(specResult, mainResult) {
@@ -468,6 +532,16 @@ function mergeSpecDetails(specResult, mainResult) {
     merged[key] = a.length >= b.length ? a : b;
   }
   return merged;
+}
+
+// カタログページ側の機能タグを使った場合も、仕様表でLAN速度が確認できていれば「10GbE」を付け直す
+function withLanCheckedFeatures(features, lanSpeedMax, checked) {
+  const list = [...features];
+  if (!checked) return list;
+  const idx = list.indexOf("10GbE");
+  if (lanSpeedMax === "10G" && idx === -1) list.push("10GbE");
+  if (lanSpeedMax !== "10G" && idx !== -1) list.splice(idx, 1);
+  return list;
 }
 
 async function fetchWarrantyAndFeatures(productUrl) {
@@ -527,6 +601,16 @@ async function fetchWarrantyAndFeatures(productUrl) {
 
   const features = FEATURE_KEYWORDS.filter(kw => combined.includes(kw));
 
+  // LANポートの速さ。仕様表（spec.htm → 無ければindex.htm）の値から判定する。
+  const lanInfo = extractLanInfo(specHtml) || extractLanInfo(mainHtml);
+  // 「10GbE」の機能タグは、本文中の言葉（例：他機種の紹介文に出てくる「10GbE」）では判定せず、
+  // 仕様表のLAN速度で付け直す。仕様表から速度が取れなかったときだけ、本文の判定を残す。
+  if (lanInfo && lanInfo.maxSpeed) {
+    const idx = features.indexOf("10GbE");
+    if (lanInfo.maxSpeed === "10G" && idx === -1) features.push("10GbE");
+    if (lanInfo.maxSpeed !== "10G" && idx !== -1) features.splice(idx, 1);
+  }
+
   // 「冗長化」欄からRAID対応状況を拾う。
   // search_linux/windows.js に無いカタログ補完分の商品で使う。
   // Linux版は「冗長化設定：RAIDeX（出荷時）／RAID 6／RAID 5／RAID 0」（RAIDと数字の間にスペースあり）、
@@ -571,12 +655,17 @@ async function fetchWarrantyAndFeatures(productUrl) {
     cpu: (specDetails.cpu && specDetails.cpu[0]) || null,
     memoryCapacity: (specDetails.memoryCapacity && specDetails.memoryCapacity[0]) || null,
     osEdition: (specDetails.osEdition && specDetails.osEdition[0]) || null,
-    lanPort: (specDetails.lanPort && specDetails.lanPort[0]) || null,
+    lanPort: (lanInfo && lanInfo.summary) || (specDetails.lanPort && specDetails.lanPort[0]) || null,
     usbPort: specDetails.usbPort && specDetails.usbPort.length > 0 ? specDetails.usbPort.join(" / ") : null,
     videoOutput: (specDetails.videoOutput && specDetails.videoOutput[0]) || null
   };
 
-  return { warrantyYears, features, raidSupport, effectiveCapacityBySku, specSummary };
+  return {
+    warrantyYears, features, raidSupport, effectiveCapacityBySku, specSummary,
+    lanSpeedMax: lanInfo ? lanInfo.maxSpeed : null,
+    lanMaxPorts: lanInfo ? lanInfo.maxPorts : null,
+    lanFeatureChecked: !!(lanInfo && lanInfo.maxSpeed)
+  };
 }
 
 // カタログページ全体から、全シリーズの見出しリンク（slug・シリーズ名・出現位置）を洗い出す。
@@ -764,10 +853,14 @@ async function main() {
       features: detailFeatures,
       raidSupport: detailRaidSupport,
       effectiveCapacityBySku,
-      specSummary
+      specSummary,
+      lanSpeedMax,
+      lanMaxPorts,
+      lanFeatureChecked
     } = await fetchWarrantyAndFeatures(effectiveUrl);
     const warrantyYears = detailWarrantyYears ?? lookupCatalogWarranty(catalogHtml, slug);
-    const features = detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, slug);
+    const features = withLanCheckedFeatures(
+      detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, slug), lanSpeedMax, lanFeatureChecked);
 
     // DASセレクター用：SKUごとのRAIDモード別実効容量（TB）を、わかる分だけ変種に付与する
     // （DAS用HDD対応表に無い旧機種や、表が見つからなかった場合はnullのまま）
@@ -798,6 +891,8 @@ async function main() {
       warrantyYears,
       status: anyCurrent ? "現行" : "生産終了",
       features,
+      lanSpeedMax,
+      lanMaxPorts,
       specDetails: specSummary,
       variants,
       sourceUrl: effectiveUrl,
@@ -838,10 +933,14 @@ async function main() {
       features: detailFeatures,
       raidSupport: detailRaidSupport,
       effectiveCapacityBySku,
-      specSummary
+      specSummary,
+      lanSpeedMax,
+      lanMaxPorts,
+      lanFeatureChecked
     } = await fetchWarrantyAndFeatures(productUrl);
     const warrantyYears = detailWarrantyYears ?? lookupCatalogWarranty(catalogHtml, series.slug);
-    const features = detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, series.slug);
+    const features = withLanCheckedFeatures(
+      detailFeatures.length > 0 ? detailFeatures : lookupCatalogFeatures(catalogHtml, series.slug), lanSpeedMax, lanFeatureChecked);
 
     if (effectiveCapacityBySku) {
       variants.forEach(v => {
@@ -866,6 +965,8 @@ async function main() {
       maintenanceService: null, // カタログ補完分はsearch_linux/windows.js由来のhoshu情報を持たない
       status: anyCurrent ? "現行" : "生産終了",
       features,
+      lanSpeedMax,
+      lanMaxPorts,
       specDetails: specSummary,
       variants,
       sourceUrl: productUrl,
