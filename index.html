@@ -48,6 +48,10 @@
   <section class="result-area">
     <div class="result-bar">
       <p class="result-count" id="result-count"></p>
+      <div class="share-area">
+        <button type="button" class="share-btn" id="share-btn">このページのURLをコピー</button>
+        <span class="share-feedback" id="share-feedback" hidden></span>
+      </div>
       <label class="status-toggle-inline">
         <span class="status-toggle-inline__text">生産終了品（在庫限り）を含める</span>
         <span class="switch">
@@ -55,6 +59,10 @@
           <span class="switch__track"><span class="switch__thumb"></span></span>
         </span>
       </label>
+    </div>
+    <div class="share-fallback" id="share-fallback" hidden>
+      <p class="share-fallback__note">自動でコピーできなかったため、下のURLを選択してコピーしてください。</p>
+      <input type="text" class="share-fallback__input" id="share-fallback-input" readonly>
     </div>
     <div class="product-grid" id="product-grid"></div>
   </section>
@@ -72,7 +80,17 @@
   <div class="compare-modal__inner">
     <button class="compare-modal__close" id="compare-close" aria-label="閉じる">×</button>
     <div class="compare-modal__scroll">
-      <h2>商品比較</h2>
+      <div class="compare-modal__head">
+        <h2>商品比較</h2>
+        <div class="share-area">
+          <button type="button" class="share-btn" id="compare-share-btn">この比較結果のURLをコピー</button>
+          <span class="share-feedback" id="compare-share-feedback" hidden></span>
+        </div>
+      </div>
+      <div class="share-fallback" id="compare-share-fallback" hidden>
+        <p class="share-fallback__note">自動でコピーできなかったため、下のURLを選択してコピーしてください。</p>
+        <input type="text" class="share-fallback__input" id="compare-share-fallback-input" readonly>
+      </div>
       <div id="compare-table-wrap"></div>
     </div>
   </div>

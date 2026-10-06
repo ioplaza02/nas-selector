@@ -58,10 +58,20 @@ async function init() {
     }
   }
 
+  // 共有されたURL（?emp=50&lan=10G&cmp=… など）から、絞り込み条件・比較の選択を復元する
+  const openCompareFromUrl = applyStateFromUrl();
+
   buildFilterPanel();
   render();
 
   document.getElementById("show-discontinued").addEventListener("change", render);
+  document.getElementById("share-btn").addEventListener("click", () => {
+    copyShareUrl(buildShareUrl(false), "share-feedback", "share-fallback", "share-fallback-input");
+  });
+  document.getElementById("compare-share-btn").addEventListener("click", () => {
+    copyShareUrl(buildShareUrl(true), "compare-share-feedback", "compare-share-fallback", "compare-share-fallback-input");
+  });
+  if (openCompareFromUrl && allProducts.filter(p => uiState[p.id].checked).length >= 2) openCompare();
   document.getElementById("compare-close").addEventListener("click", () => {
     document.getElementById("compare-modal").hidden = true;
   });
@@ -107,7 +117,12 @@ function buildFilterPanel() {
     employeeInput.min = "0";
     employeeInput.max = String(EMPLOYEE_STEPS.length - 1);
     employeeInput.step = "1";
-    employeeInput.value = "0";
+    // 共有URLから復元した人数があれば、その目盛りに合わせる
+    const restoredIdx = employeeMin ? EMPLOYEE_STEPS.indexOf(employeeMin) : 0;
+    employeeInput.value = String(restoredIdx > 0 ? restoredIdx : 0);
+    if (restoredIdx > 0) {
+      employeeLabel.textContent = "自社の人数：約" + employeeMin + "人" + (restoredIdx === EMPLOYEE_STEPS.length - 1 ? "以上" : "〜");
+    }
     employeeInput.setAttribute("list", "employee-ticks");
 
     const datalist = document.createElement("datalist");
@@ -202,6 +217,8 @@ function buildFilterPanel() {
     wrapper.className = "cloud-option";
     const cb = document.createElement("input");
     cb.type = "checkbox";
+    cb.checked = opt.key === "telework" ? cloudTeleworkOnly : cloudBcpOnly;
+    if (cb.checked) cloudSection.open = true;
     cb.addEventListener("change", () => {
       if (opt.key === "telework") cloudTeleworkOnly = cb.checked;
       else cloudBcpOnly = cb.checked;
@@ -224,7 +241,7 @@ function buildFilterPanel() {
   panel.appendChild(cloudSection);
 
   FACET_DEFS.forEach(def => {
-    activeFilters[def.key] = new Set();
+    if (!activeFilters[def.key]) activeFilters[def.key] = new Set();
     const values = facetValues(def.key, def.type);
     const details = document.createElement("details");
     const summary = document.createElement("summary");
@@ -236,6 +253,8 @@ function buildFilterPanel() {
       const wrapper = document.createElement("label");
       const cb = document.createElement("input");
       cb.type = "checkbox";
+      cb.checked = activeFilters[def.key].has(v);
+      if (cb.checked) details.open = true;
       cb.addEventListener("change", () => {
         if (cb.checked) activeFilters[def.key].add(v);
         else activeFilters[def.key].delete(v);
@@ -268,7 +287,8 @@ function buildFilterPanel() {
   priceInput.min = "0";
   priceInput.max = String(maxPrice);
   priceInput.step = "10000";
-  priceInput.value = String(maxPrice);
+  priceInput.value = String(budgetMax !== null ? budgetMax : maxPrice);
+  if (budgetMax !== null) priceLabel.textContent = "予算上限：¥" + budgetMax.toLocaleString();
   priceInput.addEventListener("input", () => {
     budgetMax = Number(priceInput.value);
     priceLabel.textContent = "予算上限：¥" + budgetMax.toLocaleString();
@@ -283,7 +303,9 @@ function buildFilterPanel() {
   capInput.min = "0";
   capInput.max = String(maxCap);
   capInput.step = "4";
-  capInput.value = "0";
+  capInput.value = String(capacityRange || 0);
+  if (capacityRange) capLabel.textContent = "総容量下限：" + capacityRange + "TB";
+  if (budgetMax !== null || capacityRange) details.open = true;
   capInput.addEventListener("input", () => {
     capacityRange = Number(capInput.value);
     capLabel.textContent = "総容量下限：" + capacityRange + "TB";
@@ -364,6 +386,12 @@ function fmtExTax(n) {
 }
 
 function render() {
+  // アドレス欄のURLも、いまの絞り込み条件に合わせて更新しておく（そのままコピーしても共有できる）
+  try {
+    history.replaceState(null, "", buildShareUrl(false));
+  } catch (err) {
+    console.warn("URLの更新に失敗しました:", err);
+  }
   const visible = visibleProducts();
   const hiddenDiscontinued = allProducts.filter(p => p.status !== "現行").length;
   const showDiscontinued = document.getElementById("show-discontinued").checked;
@@ -615,6 +643,96 @@ function openCompare() {
 
   document.getElementById("compare-table-wrap").innerHTML = html;
   document.getElementById("compare-modal").hidden = false;
+}
+
+// ---------------------------------------------------------------------------
+// 選定結果のURL共有（ISSセレクターの「このページのURLをコピー」と同じ考え方）
+//
+// URLに入れるもの：
+//   emp=50          利用人数の目安
+//   lan=10G         LANポートの速さ（〜以上）
+//   cloud=telework  クラウド連携（telework / bcp、複数可）
+//   install= os= bay= raid= warranty= feature=   左の各チェック項目（複数可）
+//   budget= cap=    予算上限・総容量下限
+//   disc=1          生産終了品（在庫限り）を含める
+//   cmp=ID:容量番号  比較に選んだ機種と、カードで選んでいる容量（複数可）
+//   view=compare    開いたときに比較表を表示する
+// ---------------------------------------------------------------------------
+
+const FACET_PARAM = { install: "install", os: "os", bay: "bay", raidSupport: "raid", warrantyYears: "warranty", features: "feature" };
+
+function buildShareUrl(withCompareView) {
+  const params = new URLSearchParams();
+  if (employeeMin) params.set("emp", String(employeeMin));
+  if (lanSpeedMin) params.set("lan", lanSpeedMin);
+  if (cloudTeleworkOnly) params.append("cloud", "telework");
+  if (cloudBcpOnly) params.append("cloud", "bcp");
+  FACET_DEFS.forEach(def => {
+    (activeFilters[def.key] ? [...activeFilters[def.key]] : []).forEach(v => params.append(FACET_PARAM[def.key], String(v)));
+  });
+  if (budgetMax !== null) params.set("budget", String(budgetMax));
+  if (capacityRange) params.set("cap", String(capacityRange));
+  const disc = document.getElementById("show-discontinued");
+  if (disc && disc.checked) params.set("disc", "1");
+  allProducts.forEach(p => {
+    const s = uiState[p.id];
+    if (s && s.checked) params.append("cmp", p.id + ":" + s.variantIdx);
+  });
+  if (withCompareView) params.set("view", "compare");
+  const query = params.toString();
+  return location.origin + location.pathname + (query ? "?" + query : "");
+}
+
+// 共有URLの条件を画面の状態に反映する。比較表を開くよう指定されていれば true を返す
+function applyStateFromUrl() {
+  const params = new URLSearchParams(location.search);
+  const emp = Number(params.get("emp"));
+  if (emp > 0) employeeMin = emp;
+  const lan = params.get("lan");
+  if (lan && LAN_SPEED_ORDER.includes(lan)) lanSpeedMin = lan;
+  const cloud = params.getAll("cloud");
+  cloudTeleworkOnly = cloud.includes("telework");
+  cloudBcpOnly = cloud.includes("bcp");
+  FACET_DEFS.forEach(def => {
+    const wanted = params.getAll(FACET_PARAM[def.key]);
+    const set = new Set();
+    // URLの値は文字列なので、実際のデータの値（保証年数などは数値）と文字列で突き合わせる
+    facetValues(def.key, def.type).forEach(v => { if (wanted.includes(String(v))) set.add(v); });
+    activeFilters[def.key] = set;
+  });
+  const budget = Number(params.get("budget"));
+  if (budget > 0) budgetMax = budget;
+  const cap = Number(params.get("cap"));
+  if (cap > 0) capacityRange = cap;
+  if (params.get("disc") === "1") document.getElementById("show-discontinued").checked = true;
+  params.getAll("cmp").forEach(item => {
+    const [id, idx] = item.split(":");
+    const p = allProducts.find(x => x.id === id);
+    if (!p) return;
+    uiState[p.id].checked = true;
+    const n = Number(idx);
+    if (n >= 0 && n < p.variants.length) uiState[p.id].variantIdx = n;
+  });
+  return params.get("view") === "compare";
+}
+
+async function copyShareUrl(url, feedbackId, fallbackId, fallbackInputId) {
+  const feedback = document.getElementById(feedbackId);
+  const fallback = document.getElementById(fallbackId);
+  const fallbackInput = document.getElementById(fallbackInputId);
+  try {
+    await navigator.clipboard.writeText(url);
+    fallback.hidden = true;
+    feedback.textContent = "URLをコピーしました";
+    feedback.hidden = false;
+    setTimeout(() => { feedback.hidden = true; }, 2500);
+  } catch (err) {
+    // クリップボードが使えない環境では、確認ウィンドウ（prompt）は使わずに、画面上にURLを表示して手でコピーしてもらう
+    fallbackInput.value = url;
+    fallback.hidden = false;
+    fallbackInput.focus();
+    fallbackInput.select();
+  }
 }
 
 // 簡易パスワードゲート（試作版の関係者限定用）。
