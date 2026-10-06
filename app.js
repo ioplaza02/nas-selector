@@ -37,7 +37,8 @@ function lanSpeedText(p) {
 }
 
 async function init() {
-  const res = await fetch("data/products.json");
+  // 毎日更新されるデータなので、ブラウザに古いものを使い回させない（毎回サーバーに最新か確認する）
+  const res = await fetch("data/products.json", { cache: "no-cache" });
   const data = await res.json();
   allProducts = data.products;
   allProducts.forEach(p => {
@@ -356,6 +357,12 @@ function fmtPrice(n) {
   return "\u00a5" + n.toLocaleString();
 }
 
+// 税抜価格。I-O DATA公式の表記「￥156,200（税抜￥142,000）」に合わせて、税込÷1.1で求める
+// （公式の価格はすべて税込÷1.1で割り切れることを確認済み）
+function fmtExTax(n) {
+  return "（税抜 \u00a5" + Math.round(n / 1.1).toLocaleString() + "）";
+}
+
 function render() {
   const visible = visibleProducts();
   const hiddenDiscontinued = allProducts.filter(p => p.status !== "現行").length;
@@ -486,6 +493,10 @@ function render() {
     const price = document.createElement("p");
     price.className = "price";
     price.textContent = fmtPrice(variant.priceIncTax);
+    const priceEx = document.createElement("span");
+    priceEx.className = "price__ex";
+    priceEx.textContent = fmtExTax(variant.priceIncTax);
+    price.appendChild(priceEx);
 
     priceRow.appendChild(skuBlock);
     priceRow.appendChild(price);
@@ -528,7 +539,7 @@ function openCompare() {
   const basicRows = [
     ["容量／価格", p => {
       const v = p.variants[uiState[p.id].variantIdx];
-      return v.capacityTB + "TB / " + fmtPrice(v.priceIncTax);
+      return v.capacityTB + "TB / " + fmtPrice(v.priceIncTax) + fmtExTax(v.priceIncTax);
     }],
     ["オフィス規模", p => p.officeSize || "-"],
     ["設置方法", p => p.install || "-"],

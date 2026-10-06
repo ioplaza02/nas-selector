@@ -339,3 +339,6 @@ details[open] > .filter-group__label::before { transform: rotate(90deg); }
 }
 .speed-pill:hover { border-color: var(--accent); }
 .speed-pill--on { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* 税抜価格（公式の表記「￥156,200（税抜￥142,000）」に合わせ、税込の下に小さく添える） */
+.price__ex { display: block; font-size: 11px; font-weight: 400; color: var(--text-muted); text-align: right; }
