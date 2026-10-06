@@ -15,6 +15,26 @@ let capacityRange = null;
 let employeeMin = null;
 let cloudTeleworkOnly = false;
 let cloudBcpOnly = false;
+let lanSpeedMin = null; // LANポートの速さ（「〜以上」で1つだけ選ぶ）
+
+// LANポートの最大速度。スクレイパーが付けた lanSpeedMax を優先し、
+// まだ無い古いデータでは仕様表のLANポート表記（specDetails.lanPort）から判定する。
+const LAN_SPEED_ORDER = ["1G", "2.5G", "5G", "10G"];
+const LAN_SPEED_LABEL = { "1G": "1GbE", "2.5G": "2.5GbE", "5G": "5GbE", "10G": "10GbE" };
+function lanSpeedOf(p) {
+  if (p.lanSpeedMax) return p.lanSpeedMax;
+  const t = String((p.specDetails && p.specDetails.lanPort) || "").normalize("NFKC");
+  if (/10GBASE-T/i.test(t)) return "10G";
+  if (/(?<![\d.])5GBASE-T/i.test(t)) return "5G";
+  if (/2\.5GBASE-T/i.test(t)) return "2.5G";
+  if (/1000BASE-T/i.test(t)) return "1G";
+  return null;
+}
+function lanSpeedText(p) {
+  const sp = lanSpeedOf(p);
+  if (!sp) return null;
+  return LAN_SPEED_LABEL[sp] + (p.lanMaxPorts ? "×" + p.lanMaxPorts : "");
+}
 
 async function init() {
   const res = await fetch("data/products.json");
@@ -51,7 +71,8 @@ function facetValues(key, type) {
   const set = new Set();
   allProducts.forEach(p => {
     if (type === "array") {
-      (p[key] || []).forEach(v => set.add(v));
+      // 「10GbE」は「LANポートの速さ」の項目で選べるので、対応機能の一覧には重ねて出さない
+      (p[key] || []).forEach(v => { if (!(key === "features" && v === "10GbE")) set.add(v); });
     } else {
       if (p[key] !== undefined && p[key] !== null) set.add(p[key]);
     }
@@ -110,6 +131,49 @@ function buildFilterPanel() {
     employeeSection.appendChild(employeeInput);
     employeeSection.appendChild(datalist);
     panel.appendChild(employeeSection);
+  }
+
+  // LANポートの速さ。「一番速いNASがほしい」というご要望に応えるための項目。
+  // 速いポートは遅い速度にも対応しているので「〜以上」で選ぶ（一番遅い1GbEは全機種が当てはまるため選択肢から外す）。
+  const lanSpeeds = LAN_SPEED_ORDER.filter(sp => allProducts.some(p => lanSpeedOf(p) === sp));
+  if (lanSpeeds.length > 1) {
+    const lanSection = document.createElement("details");
+    lanSection.open = true;
+    const lanTitle = document.createElement("summary");
+    lanTitle.className = "filter-group__label";
+    lanTitle.textContent = "LANポートの速さ";
+    lanSection.appendChild(lanTitle);
+    const lanNote = document.createElement("p");
+    lanNote.className = "filter-note";
+    lanNote.textContent = "データの読み書きを速くしたいなら2.5GbE・10GbE。一番速いのは10GbEです";
+    lanSection.appendChild(lanNote);
+    const lanRow = document.createElement("div");
+    lanRow.className = "speed-pill-row";
+    const options = [{ value: null, label: "指定なし" }].concat(
+      lanSpeeds.slice(1).map((sp, i, arr) => ({ value: sp, label: LAN_SPEED_LABEL[sp] + (i < arr.length - 1 ? "以上" : "") }))
+    );
+    const buttons = [];
+    options.forEach(opt => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "speed-pill";
+      btn.textContent = opt.label;
+      btn.addEventListener("click", () => {
+        lanSpeedMin = opt.value;
+        buttons.forEach(b => b.btn.classList.toggle("speed-pill--on", b.opt.value === lanSpeedMin));
+        render();
+      });
+      buttons.push({ btn, opt });
+      lanRow.appendChild(btn);
+    });
+    buttons.forEach(b => b.btn.classList.toggle("speed-pill--on", b.opt.value === lanSpeedMin));
+    lanSection.appendChild(lanRow);
+    const lanCaution = document.createElement("p");
+    lanCaution.className = "filter-note filter-note--sub";
+    lanCaution.innerHTML = "※速さを活かすには、つなぐスイッチやパソコンも同じ速度に対応している必要があります。"
+      + '<a href="https://ioplaza02.github.io/switch-selector/" target="_blank" rel="noopener">対応スイッチを探す →</a>';
+    lanSection.appendChild(lanCaution);
+    panel.appendChild(lanSection);
   }
 
   // クラウド連携は「テレワーク・データ共有」と「災害対策（BCP）バックアップ」で
@@ -241,6 +305,7 @@ function buildFilterPanel() {
     employeeMin = null;
     cloudTeleworkOnly = false;
     cloudBcpOnly = false;
+    lanSpeedMin = null;
     buildFilterPanel();
     render();
   });
@@ -269,6 +334,10 @@ function matchesFilters(p) {
   }
   if (employeeMin !== null) {
     if (p.officeSizeMax == null || p.officeSizeMax < employeeMin) return false;
+  }
+  if (lanSpeedMin) {
+    const sp = lanSpeedOf(p);
+    if (!sp || LAN_SPEED_ORDER.indexOf(sp) < LAN_SPEED_ORDER.indexOf(lanSpeedMin)) return false;
   }
   if (cloudTeleworkOnly && !p.cloudTelework) return false;
   if (cloudBcpOnly && !p.cloudBcp) return false;
@@ -352,6 +421,7 @@ function render() {
       p.officeSize,
       p.install,
       p.bay,
+      lanSpeedOf(p) ? "LAN " + LAN_SPEED_LABEL[lanSpeedOf(p)] : null,
       p.warrantyYears != null ? p.warrantyYears + "年保証" : null
     ].filter(t => t !== null && t !== undefined);
     badgeValues.forEach(t => {
@@ -372,7 +442,7 @@ function render() {
     if (p.features && p.features.length > 0) {
       const featureRow = document.createElement("div");
       featureRow.className = "feature-row";
-      p.features.forEach(f => {
+      p.features.filter(f => f !== "10GbE").forEach(f => {
         const chip = document.createElement("span");
         chip.className = "feature-chip";
         chip.textContent = f;
@@ -464,9 +534,13 @@ function openCompare() {
     ["設置方法", p => p.install || "-"],
     ["OS", p => p.os || "-"],
     ["ドライブ数", p => p.bay || "-"],
+    ["LANポート（最速）", p => lanSpeedText(p) || "-"],
     ["対応RAID", p => (p.raidSupport && p.raidSupport.length > 0) ? p.raidSupport.join(" / ") : "-"],
     ["保証", p => p.warrantyYears != null ? p.warrantyYears + "年保証" : "-"],
-    ["対応機能", p => (p.features && p.features.length > 0) ? p.features.join(" / ") : "-"]
+    ["対応機能", p => {
+      const list = (p.features || []).filter(f => f !== "10GbE");
+      return list.length > 0 ? list.join(" / ") : "-";
+    }]
   ];
 
   // 詳細スペック（基本項目だけでは候補同士の見分けがつきにくい時に効く項目）。
