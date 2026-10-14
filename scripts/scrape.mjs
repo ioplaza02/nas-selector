@@ -1012,7 +1012,7 @@ async function main() {
   // 表の行×列を読み取り（cloud-table.mjs）、型番は完全一致で照合する。
   //   cloudTelework / cloudBcp          … テレワーク（データ共有）用途／災害対策（BCP）用途に対応しているか
   //   cloudTeleworkServices / cloudBcpServices … 対応しているサービス名（OneDrive、Dropbox など）
-  //   cloudTableMatched                 … 対応表に載っていたか（false は「判定できなかった」＝非対応とは限らない）
+  //   cloudTableMatched                 … 対応表に載っていたか（false は「掲載なし」＝動作確認が取れていないので非対応として扱う）
   // features の「クラウドストレージ連携」「NarSuSクラウドバックアップ」も、この対応表の結果で上書きする。
   try {
     const cloudCompatHtml = await fetchText(CLOUD_COMPAT_URL);

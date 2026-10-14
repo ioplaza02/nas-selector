@@ -204,7 +204,7 @@ function rowMatchesProduct(row, keys) {
 }
 
 // 戻り値：
-//   matched            … 対応表のどこかの行に載っていたか（false なら「表に載っていない」＝判定不能）
+//   matched            … 対応表のどこかの行に載っていたか（false なら「表に載っていない」＝非対応とみなす）
 //   telework / bcp     … その区分で1つでも対応サービスがあるか
 //   teleworkServices / bcpServices … 対応しているサービス名の一覧
 //   teleworkRowFound / bcpRowFound … その区分の表に行があったか
@@ -245,10 +245,16 @@ export function lookupCloudSupport(parsed, product) {
 //   ・クラウドストレージ連携 … 対応表の「テレワーク（データ共有）」区分を正とする。
 //     （Windowsモデルの表には「災害対策」の区分しかないので、載っていれば「連携なし」になる）
 //   ・NarSuSクラウドバックアップ … 対応表の「NarSuSクラウド」列を正とする。
-// 対応表のどこにも載っていない商品は、判定材料が無いので features には触らない。
+// 対応表のどこにも載っていない商品は「対応していない（動作確認が取れていない）」とみなし、
+// 2項目とも features から外す。商品ページの文言には頼らない。
 export function applyCloudFeatures(features, r, keywordOrder = []) {
-  if (!r.matched) return features;
   const set = new Set(features);
+  if (!r.matched) {
+    set.delete("クラウドストレージ連携");
+    set.delete("NarSuSクラウドバックアップ");
+    const ordered0 = keywordOrder.filter(k => set.has(k));
+    return [...ordered0, ...[...set].filter(k => !keywordOrder.includes(k))];
+  }
 
   if (r.telework) set.add("クラウドストレージ連携");
   else set.delete("クラウドストレージ連携");
