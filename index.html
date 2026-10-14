@@ -3,15 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NAS選定ツール（試作）</title>
-<link rel="stylesheet" href="style.css">
+<title>B社 NAS比較ツール（社内用）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261014-2">
 </head>
 <body>
 
 <div class="password-gate" id="password-gate">
   <form class="password-gate__box" id="password-form">
-    <p class="password-gate__title">NASセレクター（試作）</p>
-    <p class="password-gate__note">関係者限定の試作版です。パスワードを入力してください。</p>
+    <p class="password-gate__title">B社 NAS比較ツール（社内用）</p>
+    <p class="password-gate__note">社内関係者限定です。パスワードを入力してください。</p>
     <div class="password-gate__field">
       <input type="password" id="password-input" class="password-gate__input" autocomplete="off">
       <button type="button" id="password-toggle" class="password-gate__toggle" aria-label="パスワードを表示">👁</button>
@@ -24,80 +27,87 @@
 <div id="app-root" hidden>
 
 <header class="brand-banner">
-  <span class="brand-banner__badge">NASセレクター</span>
-  <img src="landisk-logo.png" alt="LAN DISK" class="brand-banner__logo">
-</header>
-
-<header class="site-header">
-  <h1>NAS選定ツール</h1>
-  <p class="site-header__sub">条件を絞り込んで、比較したい機種を選んでください</p>
+  <span class="brand-banner__badge">社内営業用</span>
+  <span class="brand-banner__title">B社 NAS 比較ツール</span>
 </header>
 
 <div class="disclaimer">
   <p>
-    表示価格は、I-O DATA公式サイトに掲載のメーカー希望小売価格（税込）です。
-    価格・在庫状況は変動する場合があります。最新情報は、各商品カードの写真をクリックすると開く
-    I-O DATA公式ページでご確認ください。
+    お客様へご提案する前の下調べ用ツールです。B社製品の情報はB社公式サイトの仕様表から取得しています。
+    お客様へ提示する前に、必ず表の「出典」行のリンクから最新の仕様をご確認ください。
+    価格はB社が公式に掲載していないことが多いため、比較対象にしていません。
   </p>
   <p class="disclaimer__updated" id="updated-at"></p>
 </div>
 
-<main class="layout">
-  <aside class="filter-panel" id="filter-panel" aria-label="絞り込み条件"></aside>
+<nav class="tabs" role="tablist">
+  <button type="button" class="tabs__btn is-active" data-tab="list" role="tab">① I-O DATA商品一覧</button>
+  <button type="button" class="tabs__btn" data-tab="io2other" role="tab">② I-O DATA → B社の近い機種</button>
+  <button type="button" class="tabs__btn" data-tab="other2io" role="tab">③ B社型番 → I-O DATAの候補</button>
+</nav>
 
-  <section class="result-area">
-    <div class="result-bar">
-      <p class="result-count" id="result-count"></p>
-      <div class="share-area">
-        <button type="button" class="share-btn" id="share-btn">このページのURLをコピー</button>
-        <span class="share-feedback" id="share-feedback" hidden></span>
-      </div>
-      <label class="status-toggle-inline">
-        <span class="status-toggle-inline__text">生産終了品（在庫限り）を含める</span>
-        <span class="switch">
-          <input type="checkbox" id="show-discontinued">
-          <span class="switch__track"><span class="switch__thumb"></span></span>
-        </span>
-      </label>
+<main class="main">
+
+  <!-- ① I-O DATA商品一覧 -->
+  <section class="panel" id="panel-list">
+    <div class="toolbar">
+      <input type="search" id="list-search" class="text-input" placeholder="型番・シリーズ名で検索（例：HDL4-Z25）">
+      <select id="list-os" class="select">
+        <option value="">OS：すべて</option>
+        <option value="Windows">Windows系</option>
+        <option value="Linux">独自OS（Linux系）</option>
+      </select>
+      <select id="list-install" class="select">
+        <option value="">設置：すべて</option>
+        <option value="BOXタイプ">BOXタイプ</option>
+        <option value="ラックマウントタイプ">ラックマウントタイプ</option>
+      </select>
+      <label class="check"><input type="checkbox" id="list-discontinued"> 在庫限り・生産終了品も表示</label>
     </div>
-    <div class="share-fallback" id="share-fallback" hidden>
-      <p class="share-fallback__note">自動でコピーできなかったため、下のURLを選択してコピーしてください。</p>
-      <input type="text" class="share-fallback__input" id="share-fallback-input" readonly>
-    </div>
-    <div class="product-grid" id="product-grid"></div>
+    <p class="result-count" id="list-count"></p>
+    <div class="io-grid" id="list-grid"></div>
   </section>
+
+  <!-- ② I-O DATA → B社 -->
+  <section class="panel" id="panel-io2other" hidden>
+    <div class="query-box">
+      <label class="query-box__label" for="io-input">I-O DATA の型番（容量違いの型番でも、シリーズでもOK）</label>
+      <input type="text" id="io-input" class="text-input text-input--wide" list="io-datalist" placeholder="例：HDL4-Z25SI3B16B / HDL4-Z25SI3BB" autocomplete="off">
+      <datalist id="io-datalist"></datalist>
+
+
+      <label class="check"><input type="checkbox" id="io2other-discontinued"> 在庫限り品も候補に含める</label>
+
+      <button type="button" class="run-btn" id="io2other-run">実行</button>
+      <p class="query-box__error" id="io2other-error" hidden></p>
+    </div>
+    <div id="io2other-result"></div>
+  </section>
+
+  <!-- ③ B社 → I-O DATA -->
+  <section class="panel" id="panel-other2io" hidden>
+    <div class="query-box">
+      <label class="query-box__label" for="other-input">B社の型番（自由入力）</label>
+      <input type="text" id="other-input" class="text-input text-input--wide" list="other-datalist" placeholder="例：TS5420DN0804 / WS5420DN08W5 / TS3430RN" autocomplete="off">
+      <datalist id="other-datalist"></datalist>
+      <p class="query-box__hint">全角・ハイフン・スペースの違いは自動で吸収します。シリーズ名だけでも検索できます。</p>
+
+      <label class="check"><input type="checkbox" id="other2io-discontinued"> 在庫限り・生産終了品も候補に含める</label>
+
+      <button type="button" class="run-btn" id="other2io-run">実行</button>
+      <div class="query-box__error" id="other2io-error" hidden></div>
+    </div>
+    <div id="other2io-result"></div>
+  </section>
+
 </main>
 
-<div class="compare-tray" id="compare-tray">
-  <div>
-    <p class="compare-tray__title">商品比較（<span id="tray-count">0</span>件選択中）</p>
-    <p class="compare-tray__note">比較したい商品を選んでください</p>
-  </div>
-  <button id="tray-btn" disabled>比較する</button>
-</div>
-
-<div class="compare-modal" id="compare-modal" hidden>
-  <div class="compare-modal__inner">
-    <button class="compare-modal__close" id="compare-close" aria-label="閉じる">×</button>
-    <div class="compare-modal__scroll">
-      <div class="compare-modal__head">
-        <h2>商品比較</h2>
-        <div class="share-area">
-          <button type="button" class="share-btn" id="compare-share-btn">この比較結果のURLをコピー</button>
-          <span class="share-feedback" id="compare-share-feedback" hidden></span>
-        </div>
-      </div>
-      <div class="share-fallback" id="compare-share-fallback" hidden>
-        <p class="share-fallback__note">自動でコピーできなかったため、下のURLを選択してコピーしてください。</p>
-        <input type="text" class="share-fallback__input" id="compare-share-fallback-input" readonly>
-      </div>
-      <div id="compare-table-wrap"></div>
-    </div>
-  </div>
-</div>
+<footer class="footer">
+  <p>一致度は「OSの系統・ベイ数・設置形態・LAN速度・容量・販売状況」を点数化した目安です。最終判断は解説と出典ページをご確認ください。</p>
+</footer>
 
 </div>
 
-<script src="app.js"></script>
+<script src="app.js?v=20261014-2"></script>
 </body>
 </html>
