@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T07:28:33.939Z",
+  "updatedAt": "2026-10-14T07:38:55.891Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -154,10 +154,25 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-10-14T07:23:14.735Z",
+      "lastCheckedAt": "2026-10-14T07:33:43.711Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Dropbox",
+        "Box",
+        "WorkingFolder",
+        "HOME-BOX²"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "Azumasyストレージサービス"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-hbex",
@@ -273,10 +288,25 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-10-14T07:23:19.951Z",
+      "lastCheckedAt": "2026-10-14T07:33:48.707Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Dropbox",
+        "Box",
+        "WorkingFolder",
+        "HOME-BOX²"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "Azumasyストレージサービス"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-hb",
@@ -422,10 +452,25 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-10-14T07:23:24.939Z",
+      "lastCheckedAt": "2026-10-14T07:33:54.086Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Dropbox",
+        "Box",
+        "WorkingFolder",
+        "HOME-BOX²"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "Azumasyストレージサービス"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-lx",
@@ -565,10 +610,18 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
-      "lastCheckedAt": "2026-10-14T07:23:30.012Z",
+      "lastCheckedAt": "2026-10-14T07:33:59.273Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-lx",
@@ -664,10 +717,18 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
-      "lastCheckedAt": "2026-10-14T07:23:35.137Z",
+      "lastCheckedAt": "2026-10-14T07:34:04.448Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-lxu",
@@ -807,10 +868,18 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
-      "lastCheckedAt": "2026-10-14T07:23:40.233Z",
+      "lastCheckedAt": "2026-10-14T07:34:09.614Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-xab-u",
@@ -943,10 +1012,28 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-10-14T07:23:45.526Z",
+      "lastCheckedAt": "2026-10-14T07:34:14.862Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "Azumasyストレージサービス",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-xab",
@@ -1042,10 +1129,28 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-10-14T07:23:50.815Z",
+      "lastCheckedAt": "2026-10-14T07:34:19.852Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
-      "cloudTelework": false,
-      "cloudBcp": true
+      "cloudTelework": true,
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "Azumasyストレージサービス",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-lvb",
@@ -1144,10 +1249,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
-      "lastCheckedAt": "2026-10-14T07:23:56.094Z",
+      "lastCheckedAt": "2026-10-14T07:34:24.926Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
-      "cloudBcp": false
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-lvb",
@@ -1241,10 +1352,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
-      "lastCheckedAt": "2026-10-14T07:24:01.239Z",
+      "lastCheckedAt": "2026-10-14T07:34:29.860Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-lvub",
@@ -1343,10 +1460,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
-      "lastCheckedAt": "2026-10-14T07:24:06.436Z",
+      "lastCheckedAt": "2026-10-14T07:34:34.840Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-lenb",
@@ -1375,6 +1498,7 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "Time Machine"
       ],
@@ -1451,10 +1575,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
-      "lastCheckedAt": "2026-10-14T07:24:11.853Z",
+      "lastCheckedAt": "2026-10-14T07:34:39.952Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl1-lenb",
@@ -1478,6 +1611,7 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "Time Machine"
       ],
@@ -1534,10 +1668,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
-      "lastCheckedAt": "2026-10-14T07:24:16.972Z",
+      "lastCheckedAt": "2026-10-14T07:34:45.122Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-tasoho",
@@ -1628,10 +1771,13 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-10-14T07:24:22.061Z",
+      "lastCheckedAt": "2026-10-14T07:34:50.161Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": false,
-      "cloudBcp": false
+      "cloudBcp": false,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [],
+      "cloudTableMatched": false
     },
     {
       "id": "hdl1-lasoho",
@@ -1710,10 +1856,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
-      "lastCheckedAt": "2026-10-14T07:24:27.118Z",
+      "lastCheckedAt": "2026-10-14T07:34:55.208Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-aaxwb",
@@ -1741,6 +1896,7 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "多要素認証",
         "Time Machine"
@@ -1826,10 +1982,25 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-10-14T07:24:32.280Z",
+      "lastCheckedAt": "2026-10-14T07:35:00.253Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e2",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z25si3bb",
@@ -1923,10 +2094,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bb/",
-      "lastCheckedAt": "2026-10-14T07:24:37.367Z",
+      "lastCheckedAt": "2026-10-14T07:35:05.214Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z25si3bb",
@@ -1995,10 +2175,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25si3bb/",
-      "lastCheckedAt": "2026-10-14T07:24:42.484Z",
+      "lastCheckedAt": "2026-10-14T07:35:10.176Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z25si3bub",
@@ -2092,10 +2281,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bub/",
-      "lastCheckedAt": "2026-10-14T07:24:47.439Z",
+      "lastCheckedAt": "2026-10-14T07:35:15.340Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z25wi3bb",
@@ -2176,10 +2374,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bb/",
-      "lastCheckedAt": "2026-10-14T07:24:52.485Z",
+      "lastCheckedAt": "2026-10-14T07:35:20.609Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z25wi3bb",
@@ -2267,10 +2474,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25wi3bb/",
-      "lastCheckedAt": "2026-10-14T07:24:57.563Z",
+      "lastCheckedAt": "2026-10-14T07:35:25.599Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z25wi3bub",
@@ -2351,10 +2567,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bub/",
-      "lastCheckedAt": "2026-10-14T07:25:02.744Z",
+      "lastCheckedAt": "2026-10-14T07:35:30.643Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z25si3bu",
@@ -2463,10 +2688,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bu/",
-      "lastCheckedAt": "2026-10-14T07:25:07.799Z",
+      "lastCheckedAt": "2026-10-14T07:35:35.610Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z25satb",
@@ -2543,10 +2777,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satb/",
-      "lastCheckedAt": "2026-10-14T07:25:12.878Z",
+      "lastCheckedAt": "2026-10-14T07:35:40.543Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z25satb",
@@ -2623,10 +2866,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25satb/",
-      "lastCheckedAt": "2026-10-14T07:25:17.940Z",
+      "lastCheckedAt": "2026-10-14T07:35:45.483Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z25satbu",
@@ -2727,10 +2979,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satbu/",
-      "lastCheckedAt": "2026-10-14T07:25:23.425Z",
+      "lastCheckedAt": "2026-10-14T07:35:50.503Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z25watb",
@@ -2807,10 +3068,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watb/",
-      "lastCheckedAt": "2026-10-14T07:25:28.634Z",
+      "lastCheckedAt": "2026-10-14T07:35:55.420Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z25watb",
@@ -2887,10 +3157,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25watb/",
-      "lastCheckedAt": "2026-10-14T07:25:33.820Z",
+      "lastCheckedAt": "2026-10-14T07:36:00.349Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z25watbu",
@@ -2991,10 +3270,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watbu/",
-      "lastCheckedAt": "2026-10-14T07:25:38.823Z",
+      "lastCheckedAt": "2026-10-14T07:36:05.336Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z22si3b",
@@ -3095,10 +3383,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3b/",
-      "lastCheckedAt": "2026-10-14T07:25:43.830Z",
+      "lastCheckedAt": "2026-10-14T07:36:10.341Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z22si3b",
@@ -3175,10 +3472,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3b/",
-      "lastCheckedAt": "2026-10-14T07:25:49.049Z",
+      "lastCheckedAt": "2026-10-14T07:36:15.292Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z22si3bu",
@@ -3279,10 +3585,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3bu/",
-      "lastCheckedAt": "2026-10-14T07:25:54.392Z",
+      "lastCheckedAt": "2026-10-14T07:36:20.289Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z22satb",
@@ -3359,10 +3674,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satb/",
-      "lastCheckedAt": "2026-10-14T07:25:59.507Z",
+      "lastCheckedAt": "2026-10-14T07:36:25.336Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z22satb",
@@ -3439,10 +3763,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satb/",
-      "lastCheckedAt": "2026-10-14T07:26:04.594Z",
+      "lastCheckedAt": "2026-10-14T07:36:30.255Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z22satbu",
@@ -3519,10 +3852,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satbu/",
-      "lastCheckedAt": "2026-10-14T07:26:09.609Z",
+      "lastCheckedAt": "2026-10-14T07:36:35.305Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z22watb",
@@ -3599,10 +3941,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watb/",
-      "lastCheckedAt": "2026-10-14T07:26:14.730Z",
+      "lastCheckedAt": "2026-10-14T07:36:40.230Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z22watb",
@@ -3679,10 +4030,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watb/",
-      "lastCheckedAt": "2026-10-14T07:26:19.707Z",
+      "lastCheckedAt": "2026-10-14T07:36:45.451Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z22watbu",
@@ -3759,10 +4119,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watbu/",
-      "lastCheckedAt": "2026-10-14T07:26:24.886Z",
+      "lastCheckedAt": "2026-10-14T07:36:50.551Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z10atb",
@@ -3823,10 +4192,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z10atb/",
-      "lastCheckedAt": "2026-10-14T07:26:29.952Z",
+      "lastCheckedAt": "2026-10-14T07:36:55.517Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2019",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "コラストレージ"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl6-hab",
@@ -3852,6 +4230,7 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "NarSuSクラウドバックアップ",
         "ワンタッチセキュア",
@@ -3958,10 +4337,29 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-10-14T07:26:35.365Z",
+      "lastCheckedAt": "2026-10-14T07:37:00.680Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
-      "cloudTelework": false,
-      "cloudBcp": true
+      "cloudTelework": true,
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box",
+        "WorkingFolder",
+        "HOME-BOX²"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-haexb",
@@ -3987,6 +4385,7 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "NarSuSクラウドバックアップ",
         "ワンタッチセキュア",
@@ -4067,10 +4466,29 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-10-14T07:26:40.673Z",
+      "lastCheckedAt": "2026-10-14T07:37:05.628Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
-      "cloudTelework": false,
-      "cloudBcp": true
+      "cloudTelework": true,
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box",
+        "WorkingFolder",
+        "HOME-BOX²"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-lv",
@@ -4095,7 +4513,6 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
-        "クラウドストレージ連携",
         "NarSuS",
         "Time Machine"
       ],
@@ -4164,10 +4581,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-10-14T07:26:45.940Z",
+      "lastCheckedAt": "2026-10-14T07:37:10.543Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
-      "cloudBcp": false
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-habtm5",
@@ -4192,6 +4615,7 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "NarSuSクラウドバックアップ",
         "ワンタッチセキュア",
@@ -4244,10 +4668,29 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-10-14T07:26:50.941Z",
+      "lastCheckedAt": "2026-10-14T07:37:15.529Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
-      "cloudTelework": false,
-      "cloudBcp": false
+      "cloudTelework": true,
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box",
+        "WorkingFolder",
+        "HOME-BOX²"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-hab",
@@ -4272,6 +4715,7 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "NarSuSクラウドバックアップ",
         "ワンタッチセキュア",
@@ -4348,10 +4792,29 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-10-14T07:26:55.989Z",
+      "lastCheckedAt": "2026-10-14T07:37:20.480Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box",
+        "WorkingFolder",
+        "HOME-BOX²"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-xabtm5",
@@ -4427,10 +4890,28 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-10-14T07:27:01.108Z",
+      "lastCheckedAt": "2026-10-14T07:37:25.445Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
-      "cloudTelework": false,
-      "cloudBcp": false
+      "cloudTelework": true,
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "Azumasyストレージサービス",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-xab",
@@ -4518,10 +4999,28 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-10-14T07:27:06.197Z",
+      "lastCheckedAt": "2026-10-14T07:37:30.447Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "Azumasyストレージサービス",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-lv",
@@ -4545,7 +5044,6 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
-        "クラウドストレージ連携",
         "NarSuS",
         "Time Machine"
       ],
@@ -4610,10 +5108,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-10-14T07:27:11.345Z",
+      "lastCheckedAt": "2026-10-14T07:37:35.468Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
-      "cloudBcp": false
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-len",
@@ -4715,10 +5219,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-10-14T07:27:16.276Z",
+      "lastCheckedAt": "2026-10-14T07:37:40.436Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl1-len",
@@ -4794,10 +5307,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-10-14T07:27:21.381Z",
+      "lastCheckedAt": "2026-10-14T07:37:45.838Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl-aaxw",
@@ -4816,6 +5338,7 @@
       "features": [
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "多要素認証",
         "Time Machine"
@@ -4881,10 +5404,25 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-10-14T07:27:26.381Z",
+      "lastCheckedAt": "2026-10-14T07:37:50.778Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e2",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box"
+      ],
+      "cloudBcpServices": [
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-hab-u",
@@ -4910,6 +5448,7 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
+        "クラウドストレージ連携",
         "NarSuS",
         "NarSuSクラウドバックアップ",
         "ワンタッチセキュア",
@@ -5014,10 +5553,29 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-10-14T07:27:31.721Z",
+      "lastCheckedAt": "2026-10-14T07:37:55.814Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [
+        "Microsoft OneDrive",
+        "Microsoft OneDrive for Business",
+        "Googleドライブ",
+        "Dropbox",
+        "Box",
+        "WorkingFolder",
+        "HOME-BOX²"
+      ],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage",
+        "BCPリモートバックアップ",
+        "フレッツ・あずけ～るPRO"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-lvu",
@@ -5042,7 +5600,6 @@
         "データ復旧サービス",
         "UPS対応",
         "リモートアクセス",
-        "クラウドストレージ連携",
         "NarSuS",
         "Time Machine"
       ],
@@ -5111,10 +5668,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-10-14T07:27:36.876Z",
+      "lastCheckedAt": "2026-10-14T07:38:00.827Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Amazon S3互換",
+        "Wasabi Hot Cloud Storage"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "bcsp-lvreut",
@@ -5180,10 +5743,13 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/bcsp-lvreut/",
-      "lastCheckedAt": "2026-10-14T07:27:42.246Z",
+      "lastCheckedAt": "2026-10-14T07:38:05.800Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
       "cloudTelework": false,
-      "cloudBcp": false
+      "cloudBcp": false,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [],
+      "cloudTableMatched": false
     },
     {
       "id": "hdl4-z25si3b",
@@ -5290,10 +5856,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3b/",
-      "lastCheckedAt": "2026-10-14T07:27:47.287Z",
+      "lastCheckedAt": "2026-10-14T07:38:10.741Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": false
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z22watab",
@@ -5366,10 +5941,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watab/",
-      "lastCheckedAt": "2026-10-14T07:27:52.319Z",
+      "lastCheckedAt": "2026-10-14T07:38:15.683Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": false
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Microsoft Azure",
+        "Amazon S3互換"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z25si3b",
@@ -5451,10 +6032,19 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25si3b/",
-      "lastCheckedAt": "2026-10-14T07:27:57.337Z",
+      "lastCheckedAt": "2026-10-14T07:38:20.623Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "NarSuSクラウド",
+        "NarSuSクラウドSC",
+        "Microsoft Azure",
+        "Amazon S3互換",
+        "Wasabi Cloud NAS"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z22si3ab",
@@ -5527,10 +6117,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3ab/",
-      "lastCheckedAt": "2026-10-14T07:28:02.430Z",
+      "lastCheckedAt": "2026-10-14T07:38:25.634Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Microsoft Azure",
+        "Amazon S3互換"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z22satab",
@@ -5603,10 +6199,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satab/",
-      "lastCheckedAt": "2026-10-14T07:28:07.534Z",
+      "lastCheckedAt": "2026-10-14T07:38:30.800Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Microsoft Azure",
+        "Amazon S3互換"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl2-z22watab",
@@ -5679,10 +6281,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watab/",
-      "lastCheckedAt": "2026-10-14T07:28:12.718Z",
+      "lastCheckedAt": "2026-10-14T07:38:35.876Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Microsoft Azure",
+        "Amazon S3互換"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z22satau",
@@ -5754,10 +6362,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satau/",
-      "lastCheckedAt": "2026-10-14T07:28:18.183Z",
+      "lastCheckedAt": "2026-10-14T07:38:40.826Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Microsoft Azure",
+        "Amazon S3互換"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z22sataub",
@@ -5830,10 +6444,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22sataub/",
-      "lastCheckedAt": "2026-10-14T07:28:23.737Z",
+      "lastCheckedAt": "2026-10-14T07:38:46.020Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Microsoft Azure",
+        "Amazon S3互換"
+      ],
+      "cloudTableMatched": true
     },
     {
       "id": "hdl4-z22wataub",
@@ -5906,10 +6526,16 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22wataub/",
-      "lastCheckedAt": "2026-10-14T07:28:29.046Z",
+      "lastCheckedAt": "2026-10-14T07:38:51.077Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
-      "cloudBcp": true
+      "cloudBcp": true,
+      "cloudTeleworkServices": [],
+      "cloudBcpServices": [
+        "Microsoft Azure",
+        "Amazon S3互換"
+      ],
+      "cloudTableMatched": true
     }
   ]
 }
