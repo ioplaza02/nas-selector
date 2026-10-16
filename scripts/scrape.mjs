@@ -15,7 +15,6 @@
 // 正規表現で走査して拾う（DOM構造への依存を避けるため）。
 
 import fs from "node:fs/promises";
-import { parseCloudCompatTables, lookupCloudSupport, applyCloudFeatures } from "./cloud-table.mjs";
 
 const LIST_URLS = [
   { url: "https://www.iodata.jp/ssp/nas/biznas/selector/search_linux.js", os: "Linux OS" },
@@ -759,7 +758,46 @@ function buildBackupHddAnchorMap(html, productIds) {
 }
 
 
-// クラウドストレージ対応表の読み取りは cloud-table.mjs に分離した（表の行×列をそのまま読む方式）。
+// クラウドストレージ対応表から、型番ごとに
+// 「テレワーク・データ共有用途」「災害対策（BCP対策）用途」のどちらに対応しているかを判定する。
+// 個人向けモデルの節は対象外（法人向けモデルの節だけを見る）。
+// 同じ型番が両方の表に載っていることもあるため、区間ごとに別々に判定する。
+function buildCloudSupportMap(html, productIds) {
+  // ページ最上部の目次にも「個人向けモデル」という文字が先に出てくるため、
+  // 1回目（目次リンク）ではなく2回目（実際の見出し）を境目として使う。
+  const firstMention = html.indexOf("個人向けモデル");
+  const personalIdx = firstMention === -1 ? -1 : html.indexOf("個人向けモデル", firstMention + 1);
+  const bizHtml = personalIdx === -1 ? html : html.slice(0, personalIdx);
+
+  const headingRe = /(テレワーク（データ共有）用途|災害対策（BCP対策）用途)/g;
+  const headings = [];
+  let hm;
+  while ((hm = headingRe.exec(bizHtml)) !== null) {
+    headings.push({ type: hm[1].startsWith("テレワーク") ? "telework" : "bcp", index: hm.index });
+  }
+  headings.sort((a, b) => a.index - b.index);
+
+  const regions = headings.map((h, i) => ({
+    type: h.type,
+    start: h.index,
+    end: i + 1 < headings.length ? headings[i + 1].index : bizHtml.length
+  }));
+
+  const map = {};
+  for (const id of productIds) {
+    if (!id) continue;
+    for (const region of regions) {
+      const section = bizHtml.slice(region.start, region.end);
+      const idx = section.toUpperCase().indexOf(id.toUpperCase());
+      if (idx === -1) continue;
+      const windowText = section.slice(idx, idx + 600);
+      const supported = /[◯〇]/.test(windowText);
+      if (!map[id]) map[id] = {};
+      map[id][region.type] = map[id][region.type] || supported;
+    }
+  }
+  return map;
+}
 
 
 // 前回のデータ（data/products.json）。公式のデータファイル（search_linux/windows.js）から
@@ -785,7 +823,7 @@ async function loadPreviousData() {
 }
 
 async function main() {
-  console.log("NASセレクター スクレイパー（版：2026-10-14 旧モデル補完・在庫限り判定・LAN速度対応・クラウド対応表の行列読み取り）");
+  console.log("NASセレクター スクレイパー（版：2026-10-06b 旧モデル補完・在庫限り判定・LAN速度対応）");
   await loadPreviousData();
   const rawEntries = [];
   for (const source of LIST_URLS) {
@@ -1008,38 +1046,18 @@ async function main() {
   }
   await sleep(REQUEST_INTERVAL_MS);
 
-  // クラウドストレージ対応表を取得し、商品ごとに対応状況を付与する。
-  // 表の行×列を読み取り（cloud-table.mjs）、型番は完全一致で照合する。
-  //   cloudTelework / cloudBcp          … テレワーク（データ共有）用途／災害対策（BCP）用途に対応しているか
-  //   cloudTeleworkServices / cloudBcpServices … 対応しているサービス名（OneDrive、Dropbox など）
-  //   cloudTableMatched                 … 対応表に載っていたか（false は「掲載なし」＝動作確認が取れていないので非対応として扱う）
-  // features の「クラウドストレージ連携」「NarSuSクラウドバックアップ」も、この対応表の結果で上書きする。
+  // クラウドストレージ対応表を取得し、型番ごとの用途対応を付与する
   try {
     const cloudCompatHtml = await fetchText(CLOUD_COMPAT_URL);
-    const parsedCloud = parseCloudCompatTables(cloudCompatHtml);
-    if (parsedCloud.telework.length === 0 || parsedCloud.bcp.length === 0) {
-      throw new Error("対応表の行が読み取れませんでした（ページの構造が変わった可能性）: telework "
-        + parsedCloud.telework.length + " 行 / bcp " + parsedCloud.bcp.length + " 行");
-    }
-    const unmatched = [];
+    const cloudMap = buildCloudSupportMap(cloudCompatHtml, products.map(p => p.id));
     products.forEach(p => {
-      const r = lookupCloudSupport(parsedCloud, p);
-      p.cloudTelework = r.telework;
-      p.cloudBcp = r.bcp;
-      p.cloudTeleworkServices = r.teleworkServices;
-      p.cloudBcpServices = r.bcpServices;
-      p.cloudTableMatched = r.matched;
-      p.features = applyCloudFeatures(p.features, r, FEATURE_KEYWORDS);
-      if (!r.matched) unmatched.push(p.id);
+      const entry = cloudMap[p.id] || {};
+      p.cloudTelework = !!entry.telework;
+      p.cloudBcp = !!entry.bcp;
     });
-    console.log(`クラウド対応表: テレワーク ${parsedCloud.telework.length} 行 / BCP ${parsedCloud.bcp.length} 行を読み取り`);
-    console.log(`クラウド対応表に載っていない商品: ${unmatched.length}件 ${unmatched.join(", ")}`);
   } catch (err) {
     console.warn("  -> クラウド対応表の取得失敗:", err.message);
-    products.forEach(p => {
-      p.cloudTelework = false; p.cloudBcp = false;
-      p.cloudTeleworkServices = []; p.cloudBcpServices = []; p.cloudTableMatched = false;
-    });
+    products.forEach(p => { p.cloudTelework = false; p.cloudBcp = false; });
   }
   await sleep(REQUEST_INTERVAL_MS);
 
