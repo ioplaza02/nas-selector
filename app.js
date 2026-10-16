@@ -72,6 +72,7 @@ async function init() {
     copyShareUrl(buildShareUrl(true), "compare-share-feedback", "compare-share-fallback", "compare-share-fallback-input");
   });
   if (openCompareFromUrl && allProducts.filter(p => uiState[p.id].checked).length >= 2) openCompare();
+  document.getElementById("compare-pdf-btn").addEventListener("click", saveComparePdf);
   document.getElementById("compare-close").addEventListener("click", () => {
     document.getElementById("compare-modal").hidden = true;
   });
@@ -385,6 +386,8 @@ function fmtExTax(n) {
   return "（税抜 \u00a5" + Math.round(n / 1.1).toLocaleString() + "）";
 }
 
+let animateCards = true; // 最初の表示のときだけ、カードをふわっと順に出す
+
 function render() {
   // アドレス欄のURLも、いまの絞り込み条件に合わせて更新しておく（そのままコピーしても共有できる）
   try {
@@ -403,12 +406,16 @@ function render() {
   const grid = document.getElementById("product-grid");
   grid.innerHTML = "";
 
-  visible.forEach(p => {
+  visible.forEach((p, idx) => {
     const s = uiState[p.id];
     const variant = p.variants[s.variantIdx];
 
     const card = document.createElement("div");
     card.className = "product-card" + (s.checked ? " product-card--selected" : "");
+    if (animateCards) {
+      card.classList.add("product-card--enter");
+      card.style.setProperty("--d", (350 + idx * 80) + "ms");
+    }
 
     const top = document.createElement("div");
     top.className = "product-card__top";
@@ -551,6 +558,7 @@ function render() {
     grid.appendChild(card);
   });
 
+  animateCards = false;
   updateTray();
 }
 
@@ -643,6 +651,47 @@ function openCompare() {
 
   document.getElementById("compare-table-wrap").innerHTML = html;
   document.getElementById("compare-modal").hidden = false;
+}
+
+// ---------------------------------------------------------------------------
+// 比較結果の「PDFで保存」
+//
+// ブラウザの印刷機能（「PDFに保存」）を使う。日本語の文字が崩れず、表もそのまま出力できる。
+// Chromeなどは「ページのタイトル」を保存ファイル名の初期値にするため、
+// 印刷する間だけタイトルを「型番_日付8桁」に差し替え、終わったら元に戻す。
+//   例）HDL4-Z25SI3B16B_HDL2-Z25SI3B08B_20261016
+// ---------------------------------------------------------------------------
+function ymd8(d) {
+  const pad = n => String(n).padStart(2, "0");
+  return d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate());
+}
+
+function comparePdfName() {
+  const skus = allProducts
+    .filter(p => uiState[p.id].checked)
+    .map(p => p.variants[uiState[p.id].variantIdx].sku)
+    .filter(Boolean);
+  let head = skus.slice(0, 4).join("_");
+  if (skus.length > 4) head += "_ほか" + (skus.length - 4) + "機種";
+  return (head || "NASセレクター比較") + "_" + ymd8(new Date());
+}
+
+function saveComparePdf() {
+  const name = comparePdfName();
+  const meta = document.getElementById("print-meta");
+  if (meta) {
+    const d = new Date();
+    meta.textContent = "NASセレクター 商品比較　出力日：" + d.getFullYear() + "年" + (d.getMonth() + 1) + "月" + d.getDate()
+      + "日　（価格はメーカー希望小売価格・税込。最新情報は I-O DATA 公式サイトでご確認ください）";
+  }
+  const originalTitle = document.title;
+  const restore = () => {
+    document.title = originalTitle;
+    window.removeEventListener("afterprint", restore);
+  };
+  window.addEventListener("afterprint", restore);
+  document.title = name;
+  window.print();
 }
 
 // ---------------------------------------------------------------------------

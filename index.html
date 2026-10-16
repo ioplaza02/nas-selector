@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NAS選定ツール（試作）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,8 +27,8 @@
 <div id="app-root" hidden>
 
 <header class="brand-banner">
-  <span class="brand-banner__badge">NASセレクター</span>
   <img src="landisk-logo.png" alt="LAN DISK" class="brand-banner__logo">
+  <span class="brand-banner__badge">NASセレクター</span>
 </header>
 
 <header class="site-header">
@@ -84,6 +87,7 @@
         <h2>商品比較</h2>
         <div class="share-area">
           <button type="button" class="share-btn" id="compare-share-btn">この比較結果のURLをコピー</button>
+          <button type="button" class="pdf-btn" id="compare-pdf-btn">PDFで保存</button>
           <span class="share-feedback" id="compare-share-feedback" hidden></span>
         </div>
       </div>
@@ -91,6 +95,8 @@
         <p class="share-fallback__note">自動でコピーできなかったため、下のURLを選択してコピーしてください。</p>
         <input type="text" class="share-fallback__input" id="compare-share-fallback-input" readonly>
       </div>
+      <p class="print-only" id="print-meta"></p>
+      <p class="compare-legend">黄色の行 ＝ 商品によって違う項目</p>
       <div id="compare-table-wrap"></div>
     </div>
   </div>
