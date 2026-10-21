@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T21:27:27.209Z",
+  "updatedAt": "2026-10-21T21:28:29.561Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -154,7 +154,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-10-20T21:22:24.622Z",
+      "lastCheckedAt": "2026-10-21T21:23:15.260Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -273,7 +273,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-10-20T21:22:29.428Z",
+      "lastCheckedAt": "2026-10-21T21:23:20.279Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -422,7 +422,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-10-20T21:22:34.402Z",
+      "lastCheckedAt": "2026-10-21T21:23:25.540Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -565,7 +565,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
-      "lastCheckedAt": "2026-10-20T21:22:39.315Z",
+      "lastCheckedAt": "2026-10-21T21:23:30.644Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -664,7 +664,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
-      "lastCheckedAt": "2026-10-20T21:22:44.472Z",
+      "lastCheckedAt": "2026-10-21T21:23:35.623Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -807,7 +807,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
-      "lastCheckedAt": "2026-10-20T21:22:49.335Z",
+      "lastCheckedAt": "2026-10-21T21:23:40.772Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -943,7 +943,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-10-20T21:22:54.306Z",
+      "lastCheckedAt": "2026-10-21T21:23:45.941Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1042,7 +1042,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-10-20T21:22:59.188Z",
+      "lastCheckedAt": "2026-10-21T21:23:50.952Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": false,
       "cloudBcp": true
@@ -1144,7 +1144,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
-      "lastCheckedAt": "2026-10-20T21:23:04.108Z",
+      "lastCheckedAt": "2026-10-21T21:23:55.985Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": false
@@ -1241,7 +1241,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
-      "lastCheckedAt": "2026-10-20T21:23:08.957Z",
+      "lastCheckedAt": "2026-10-21T21:24:01.111Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -1343,7 +1343,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
-      "lastCheckedAt": "2026-10-20T21:23:13.822Z",
+      "lastCheckedAt": "2026-10-21T21:24:06.136Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -1451,7 +1451,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
-      "lastCheckedAt": "2026-10-20T21:23:18.585Z",
+      "lastCheckedAt": "2026-10-21T21:24:11.200Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1534,7 +1534,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
-      "lastCheckedAt": "2026-10-20T21:23:23.437Z",
+      "lastCheckedAt": "2026-10-21T21:24:16.216Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1628,7 +1628,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-10-20T21:23:28.229Z",
+      "lastCheckedAt": "2026-10-21T21:24:21.160Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": false,
       "cloudBcp": false
@@ -1710,7 +1710,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
-      "lastCheckedAt": "2026-10-20T21:23:33.082Z",
+      "lastCheckedAt": "2026-10-21T21:24:26.141Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1826,7 +1826,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-10-20T21:23:38.022Z",
+      "lastCheckedAt": "2026-10-21T21:24:31.239Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1860,6 +1860,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -1923,7 +1925,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bb/",
-      "lastCheckedAt": "2026-10-20T21:23:43.006Z",
+      "lastCheckedAt": "2026-10-21T21:24:36.316Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -1956,6 +1958,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -1995,7 +1999,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25si3bb/",
-      "lastCheckedAt": "2026-10-20T21:23:47.840Z",
+      "lastCheckedAt": "2026-10-21T21:24:41.307Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2029,6 +2033,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2092,7 +2098,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bub/",
-      "lastCheckedAt": "2026-10-20T21:23:52.884Z",
+      "lastCheckedAt": "2026-10-21T21:24:46.437Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2125,6 +2131,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2176,7 +2184,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bb/",
-      "lastCheckedAt": "2026-10-20T21:23:57.680Z",
+      "lastCheckedAt": "2026-10-21T21:24:51.437Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2208,6 +2216,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2267,7 +2277,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25wi3bb/",
-      "lastCheckedAt": "2026-10-20T21:24:02.503Z",
+      "lastCheckedAt": "2026-10-21T21:24:56.545Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2300,6 +2310,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2351,7 +2363,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bub/",
-      "lastCheckedAt": "2026-10-20T21:24:07.308Z",
+      "lastCheckedAt": "2026-10-21T21:25:01.596Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2384,6 +2396,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2463,7 +2477,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bu/",
-      "lastCheckedAt": "2026-10-20T21:24:12.272Z",
+      "lastCheckedAt": "2026-10-21T21:25:06.960Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2496,6 +2510,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2543,7 +2559,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satb/",
-      "lastCheckedAt": "2026-10-20T21:24:17.137Z",
+      "lastCheckedAt": "2026-10-21T21:25:11.968Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2576,6 +2592,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2623,7 +2641,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25satb/",
-      "lastCheckedAt": "2026-10-20T21:24:21.935Z",
+      "lastCheckedAt": "2026-10-21T21:25:17.077Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2656,6 +2674,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2727,7 +2747,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satbu/",
-      "lastCheckedAt": "2026-10-20T21:24:26.841Z",
+      "lastCheckedAt": "2026-10-21T21:25:22.174Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2760,6 +2780,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2807,7 +2829,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watb/",
-      "lastCheckedAt": "2026-10-20T21:24:31.762Z",
+      "lastCheckedAt": "2026-10-21T21:25:27.218Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2840,6 +2862,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2887,7 +2911,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25watb/",
-      "lastCheckedAt": "2026-10-20T21:24:36.598Z",
+      "lastCheckedAt": "2026-10-21T21:25:32.254Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2920,6 +2944,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -2991,7 +3017,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watbu/",
-      "lastCheckedAt": "2026-10-20T21:24:41.503Z",
+      "lastCheckedAt": "2026-10-21T21:25:37.381Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3024,6 +3050,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -3095,7 +3123,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3b/",
-      "lastCheckedAt": "2026-10-20T21:24:46.432Z",
+      "lastCheckedAt": "2026-10-21T21:25:42.614Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3128,6 +3156,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -3175,7 +3205,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3b/",
-      "lastCheckedAt": "2026-10-20T21:24:51.268Z",
+      "lastCheckedAt": "2026-10-21T21:25:47.620Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3208,6 +3238,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -3279,7 +3311,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3bu/",
-      "lastCheckedAt": "2026-10-20T21:24:56.167Z",
+      "lastCheckedAt": "2026-10-21T21:25:52.857Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3312,6 +3344,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -3359,7 +3393,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satb/",
-      "lastCheckedAt": "2026-10-20T21:25:01.003Z",
+      "lastCheckedAt": "2026-10-21T21:25:57.901Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3392,6 +3426,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -3439,7 +3475,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satb/",
-      "lastCheckedAt": "2026-10-20T21:25:05.861Z",
+      "lastCheckedAt": "2026-10-21T21:26:03.047Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3472,6 +3508,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -3519,7 +3557,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satbu/",
-      "lastCheckedAt": "2026-10-20T21:25:10.716Z",
+      "lastCheckedAt": "2026-10-21T21:26:08.076Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3552,6 +3590,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -3599,7 +3639,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watb/",
-      "lastCheckedAt": "2026-10-20T21:25:15.559Z",
+      "lastCheckedAt": "2026-10-21T21:26:13.091Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3632,6 +3672,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -3679,7 +3721,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watb/",
-      "lastCheckedAt": "2026-10-20T21:25:20.457Z",
+      "lastCheckedAt": "2026-10-21T21:26:18.266Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3712,6 +3754,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -3759,7 +3803,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watbu/",
-      "lastCheckedAt": "2026-10-20T21:25:25.368Z",
+      "lastCheckedAt": "2026-10-21T21:26:23.324Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3823,7 +3867,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z10atb/",
-      "lastCheckedAt": "2026-10-20T21:25:30.153Z",
+      "lastCheckedAt": "2026-10-21T21:26:28.286Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2019",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3958,7 +4002,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-10-20T21:25:35.147Z",
+      "lastCheckedAt": "2026-10-21T21:26:33.485Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": false,
       "cloudBcp": true
@@ -4067,7 +4111,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-10-20T21:25:40.095Z",
+      "lastCheckedAt": "2026-10-21T21:26:38.552Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": false,
       "cloudBcp": true
@@ -4164,7 +4208,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-10-20T21:25:45.030Z",
+      "lastCheckedAt": "2026-10-21T21:26:43.573Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": false
@@ -4244,7 +4288,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-10-20T21:25:49.889Z",
+      "lastCheckedAt": "2026-10-21T21:26:48.684Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
       "cloudTelework": false,
       "cloudBcp": false
@@ -4348,7 +4392,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-10-20T21:25:54.792Z",
+      "lastCheckedAt": "2026-10-21T21:26:53.748Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -4427,7 +4471,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-10-20T21:25:59.685Z",
+      "lastCheckedAt": "2026-10-21T21:26:58.804Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
       "cloudTelework": false,
       "cloudBcp": false
@@ -4518,7 +4562,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-10-20T21:26:04.591Z",
+      "lastCheckedAt": "2026-10-21T21:27:03.864Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -4610,7 +4654,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-10-20T21:26:09.312Z",
+      "lastCheckedAt": "2026-10-21T21:27:08.914Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": false
@@ -4715,7 +4759,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-10-20T21:26:14.209Z",
+      "lastCheckedAt": "2026-10-21T21:27:14.003Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -4794,7 +4838,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-10-20T21:26:19.083Z",
+      "lastCheckedAt": "2026-10-21T21:27:19.205Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -4881,7 +4925,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-10-20T21:26:23.954Z",
+      "lastCheckedAt": "2026-10-21T21:27:24.272Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -5014,7 +5058,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-10-20T21:26:28.886Z",
+      "lastCheckedAt": "2026-10-21T21:27:29.408Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -5111,7 +5155,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-10-20T21:26:33.766Z",
+      "lastCheckedAt": "2026-10-21T21:27:34.638Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5180,7 +5224,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/bcsp-lvreut/",
-      "lastCheckedAt": "2026-10-20T21:26:38.574Z",
+      "lastCheckedAt": "2026-10-21T21:27:39.573Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
       "cloudTelework": false,
       "cloudBcp": false
@@ -5211,6 +5255,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -5290,7 +5336,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3b/",
-      "lastCheckedAt": "2026-10-20T21:26:43.526Z",
+      "lastCheckedAt": "2026-10-21T21:27:44.665Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": false
@@ -5366,7 +5412,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watab/",
-      "lastCheckedAt": "2026-10-20T21:26:48.472Z",
+      "lastCheckedAt": "2026-10-21T21:27:49.665Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": false
@@ -5396,6 +5442,8 @@
         "リモートアクセス",
         "NarSuS",
         "NarSuSクラウドバックアップ",
+        "ワンタッチセキュア",
+        "多要素認証",
         "Time Machine"
       ],
       "lanSpeedMax": "10G",
@@ -5451,7 +5499,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25si3b/",
-      "lastCheckedAt": "2026-10-20T21:26:53.363Z",
+      "lastCheckedAt": "2026-10-21T21:27:54.702Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5527,7 +5575,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3ab/",
-      "lastCheckedAt": "2026-10-20T21:26:58.219Z",
+      "lastCheckedAt": "2026-10-21T21:27:59.726Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5603,7 +5651,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satab/",
-      "lastCheckedAt": "2026-10-20T21:27:03.081Z",
+      "lastCheckedAt": "2026-10-21T21:28:04.765Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5679,7 +5727,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watab/",
-      "lastCheckedAt": "2026-10-20T21:27:07.929Z",
+      "lastCheckedAt": "2026-10-21T21:28:09.781Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5754,7 +5802,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satau/",
-      "lastCheckedAt": "2026-10-20T21:27:12.813Z",
+      "lastCheckedAt": "2026-10-21T21:28:14.782Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5830,7 +5878,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22sataub/",
-      "lastCheckedAt": "2026-10-20T21:27:17.674Z",
+      "lastCheckedAt": "2026-10-21T21:28:19.780Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5906,7 +5954,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22wataub/",
-      "lastCheckedAt": "2026-10-20T21:27:22.593Z",
+      "lastCheckedAt": "2026-10-21T21:28:24.804Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
