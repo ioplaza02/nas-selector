@@ -60,7 +60,7 @@ body {
 }
 .brand-banner::before { right: -60px; top: -110px; width: 330px; height: 330px; animation: nsFloatA 9s ease-in-out infinite; }
 .brand-banner::after { right: 260px; bottom: -140px; width: 240px; height: 240px; animation: nsFloatB 11s ease-in-out infinite; }
-.brand-banner__logo, .brand-banner__badge { position: relative; animation: nsSlide .7s var(--ease) both; }
+.brand-banner__logo, .brand-banner__badge, .brand-banner__internal, .brand-banner__contact { position: relative; animation: nsSlide .7s var(--ease) both; }
 .brand-banner__logo { height: 34px; width: auto; display: block; }
 .brand-banner__badge {
   background: rgba(255, 255, 255, 0.14);
@@ -73,6 +73,15 @@ body {
   letter-spacing: 0.04em;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   animation-delay: .12s;
+}
+.brand-banner__internal {
+  color: #fff; font-size: 16px; font-weight: 800; letter-spacing: 0.08em; white-space: nowrap;
+  animation-delay: 0s;
+}
+.brand-banner__contact {
+  margin-left: auto; color: #fff; font-size: 14px; font-weight: 700; white-space: nowrap;
+  background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 7px 18px; border-radius: 999px; animation-delay: .2s;
 }
 .brand-banner__title {
   color: #fff; font-size: 30px; font-weight: 800; letter-spacing: 0.04em;
@@ -445,6 +454,15 @@ details[open] > .filter-group__label::before { transform: rotate(90deg); }
 }
 .speed-pill:hover { border-color: var(--accent); transform: translateY(-1px); }
 .speed-pill--on { background: linear-gradient(180deg, #1a8567, #0f6e56); border-color: var(--accent); color: #fff; }
+
+/* ---------- メモリ容量の「対象商品 N件」／0件のときの案内 ---------- */
+.facet-count { font-size: 11px; color: var(--text-muted); margin-left: 4px; white-space: nowrap; }
+.facet-count--zero { color: #9a5b00; font-weight: 700; }
+.empty-note {
+  grid-column: 1 / -1; margin: 0; padding: 28px 20px; text-align: center;
+  background: #fff; border: 2px dashed var(--border-strong); border-radius: 18px;
+  color: var(--text-secondary); font-size: 14px; font-weight: 700; animation: nsFade .4s both;
+}
 
 /* ---------- 共有・PDFボタン ---------- */
 .share-area { display: flex; align-items: center; gap: 8px; margin-left: auto; }

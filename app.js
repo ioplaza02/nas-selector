@@ -3,9 +3,34 @@ const FACET_DEFS = [
   { key: "os", label: "OS", type: "single" },
   { key: "bay", label: "ドライブ数", type: "single" },
   { key: "raidSupport", label: "対応RAID", type: "array" },
+  { key: "memoryType", label: "メモリ容量", type: "array", showCount: true },
   { key: "warrantyYears", label: "保証", type: "single", format: v => v + "年保証" },
   { key: "features", label: "対応機能", type: "array" }
 ];
+
+// ---- メモリ容量（ECC / Non-ECC）----
+// 仕様表の「メモリ容量」は「8GB」「ECC 8GB」「8GB（Non-ECC）」「DDR4 non-ECC 8GB」など表記がバラバラなので、
+// 「ECC 8GB」「Non-ECC 8GB」「8GB（ECC記載なし）」のどれかに揃えて選べるようにする。
+// 該当商品が今は無い項目も、選択肢としては常に出す（選ぶと「該当 0 件」になる）。
+const MEMORY_FIXED_VALUES = ["ECC 8GB", "Non-ECC 8GB", "8GB（ECC記載なし）"];
+
+function memoryKinds(p) {
+  const raw = p.specDetails && p.specDetails.memoryCapacity;
+  if (!raw) return [];
+  const m = String(raw).match(/(\d+(?:\.\d+)?)\s*GB/i);
+  if (!m) return []; // 「バックアップ所要時間…」など、メモリ容量ではない値が入っていた場合は無視する
+  const gb = m[1] + "GB";
+  if (/non[\s\-_]?ecc/i.test(raw)) return ["Non-ECC " + gb];
+  if (/ecc/i.test(raw)) return ["ECC " + gb];
+  return [gb + "（ECC記載なし）"];
+}
+
+function memorySortKey(v) {
+  const i = MEMORY_FIXED_VALUES.indexOf(v);
+  if (i >= 0) return [0, i];
+  const m = v.match(/(\d+(?:\.\d+)?)GB/);
+  return [1, m ? Number(m[1]) : 0];
+}
 
 let allProducts = [];
 const activeFilters = {};
@@ -43,6 +68,7 @@ async function init() {
   allProducts = data.products;
   allProducts.forEach(p => {
     uiState[p.id] = { checked: false, variantIdx: 0 };
+    p.memoryType = memoryKinds(p);
   });
 
   if (data.updatedAt) {
@@ -89,6 +115,13 @@ function facetValues(key, type) {
       if (p[key] !== undefined && p[key] !== null) set.add(p[key]);
     }
   });
+  if (key === "memoryType") {
+    MEMORY_FIXED_VALUES.forEach(v => set.add(v));
+    return Array.from(set).sort((a, b) => {
+      const ka = memorySortKey(a), kb = memorySortKey(b);
+      return ka[0] - kb[0] || ka[1] - kb[1];
+    });
+  }
   return Array.from(set);
 }
 
@@ -263,6 +296,13 @@ function buildFilterPanel() {
       });
       wrapper.appendChild(cb);
       wrapper.appendChild(document.createTextNode(def.format ? def.format(v) : v));
+      if (def.showCount) {
+        const cnt = document.createElement("span");
+        cnt.className = "facet-count";
+        cnt.dataset.facetKey = def.key;
+        cnt.dataset.facetValue = String(v);
+        wrapper.appendChild(cnt);
+      }
       details.appendChild(wrapper);
     });
     panel.appendChild(details);
@@ -558,8 +598,28 @@ function render() {
     grid.appendChild(card);
   });
 
+  if (visible.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "empty-note";
+    empty.textContent = "条件に合う商品はありません。条件をゆるめるか、「絞り込みを解除する」をお試しください。";
+    grid.appendChild(empty);
+  }
+  updateFacetCounts();
   animateCards = false;
   updateTray();
+}
+
+// 「メモリ容量」の各項目に「対象商品 ◯件」を出す（生産終了品を含めるスイッチに合わせて数える）
+function updateFacetCounts() {
+  const showDiscontinued = document.getElementById("show-discontinued").checked;
+  const pool = allProducts.filter(p => showDiscontinued || p.status === "現行");
+  document.querySelectorAll(".facet-count").forEach(el => {
+    const key = el.dataset.facetKey;
+    const value = el.dataset.facetValue;
+    const n = pool.filter(p => (p[key] || []).includes(value)).length;
+    el.textContent = "（対象商品 " + n + " 件）";
+    el.classList.toggle("facet-count--zero", n === 0);
+  });
 }
 
 function updateTray() {
@@ -594,7 +654,7 @@ function openCompare() {
   // 商品ページの仕様表から取得できたものだけを載せる（specDetailsが無い旧データにも対応）。
   const detailRows = [
     ["CPU", p => (p.specDetails && p.specDetails.cpu) || null],
-    ["メモリ容量", p => (p.specDetails && p.specDetails.memoryCapacity) || null],
+    ["メモリ容量", p => (p.memoryType && p.memoryType.length > 0) ? p.memoryType.join(" / ") : null],
     ["OS詳細（エディション）", p => (p.specDetails && p.specDetails.osEdition) || null],
     ["LANポート", p => (p.specDetails && p.specDetails.lanPort) || null],
     ["USBポート", p => (p.specDetails && p.specDetails.usbPort) || null],
@@ -708,7 +768,7 @@ function saveComparePdf() {
 //   view=compare    開いたときに比較表を表示する
 // ---------------------------------------------------------------------------
 
-const FACET_PARAM = { install: "install", os: "os", bay: "bay", raidSupport: "raid", warrantyYears: "warranty", features: "feature" };
+const FACET_PARAM = { install: "install", os: "os", bay: "bay", raidSupport: "raid", warrantyYears: "warranty", memoryType: "mem", features: "feature" };
 
 function buildShareUrl(withCompareView) {
   const params = new URLSearchParams();
