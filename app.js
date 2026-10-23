@@ -2,7 +2,7 @@ const FACET_DEFS = [
   { key: "install", label: "設置方法", type: "single" },
   { key: "os", label: "OS", type: "single" },
   { key: "bay", label: "ドライブ数", type: "single" },
-  { key: "raidSupport", label: "対応RAID", type: "array" },
+  { key: "raidSupport", label: "対応RAID（冗長化）", type: "array" },
   { key: "memoryType", label: "メモリ容量", type: "array", showCount: true },
   { key: "warrantyYears", label: "保証", type: "single", format: v => v + "年保証" },
   { key: "features", label: "対応機能", type: "array" }
@@ -746,7 +746,7 @@ function openCompare() {
     ["OS", p => p.os || "-"],
     ["ドライブ数", p => p.bay || "-"],
     ["LANポート（最速）", p => lanSpeedText(p) || "-"],
-    ["対応RAID", p => (p.raidSupport && p.raidSupport.length > 0) ? p.raidSupport.join(" / ") : "-"],
+    ["対応RAID（冗長化）", p => (p.raidSupport && p.raidSupport.length > 0) ? p.raidSupport.join(" / ") : "-"],
     ["保証", p => p.warrantyYears != null ? p.warrantyYears + "年保証" : "-"],
     ["対応機能", p => {
       const list = (p.features || []).filter(f => f !== "10GbE");
