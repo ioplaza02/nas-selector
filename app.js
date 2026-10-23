@@ -43,8 +43,8 @@ function lanPortCountOf(p) {
   return nums.reduce((a, b) => a + b, 0);
 }
 
-// ---- 出荷時のRAID設定と、そのRAIDで使ったときの実効容量（比較表用）----
-// 出荷時のRAIDは仕様表の「冗長化 設定」に「RAID 5（出荷時）」のように書かれている。
+// ---- 工場出荷時の冗長化設定と、その設定で使ったときの実効容量（比較表用）----
+// 工場出荷時の冗長化設定は、仕様表の「冗長化」欄（「冗長化設定」など表記は商品で揺れる）に「RAID 5（出荷時）」のように書かれている。
 // 確認できているルール：独自OS（Linux）でRAIDeX対応の機種はRAIDeX、
 // Windows版は4ベイ以上がRAID 5、2ベイがRAID 1。どれにも当てはまらない機種は「不明」にする。
 function defaultRaidOf(p) {
@@ -75,7 +75,10 @@ function effectiveCapacityOf(p, variant) {
   if (key === "raid6" && bays >= 4) return { tb: cap * (bays - 2) / bays, calculated: true };
   if (key === "raid1" && bays === 2) return { tb: cap / 2, calculated: true };
   if (key === "raid0") return { tb: cap, calculated: true };
-  return null; // RAIDeXは公式の表の値だけを使う
+  // RAIDeXは「HDD2台を1組のペアにして冗長化」する方式（公式の説明）。同じ容量のHDDを使う出荷時の構成では、
+  // 装置容量のちょうど半分になる（公式の保存可能容量表の全データと一致することを確認済み）。
+  if (key === "raidex" && bays >= 2 && bays % 2 === 0) return { tb: cap / 2, calculated: true };
+  return null;
 }
 
 function fmtTB(n) {
@@ -278,36 +281,6 @@ function buildFilterPanel() {
     panel.appendChild(lanSection);
   }
 
-  // LANポートの数。エンドユーザーの理由（冗長化・速度アップ・ネットワーク分離など）は分からない前提なので、
-  // まず「2ポートあるもの」だけを見分けられるようにする。1つは全機種が当てはまるので初期値にする。
-  const portSection = document.createElement("details");
-  portSection.open = true;
-  const portTitle = document.createElement("summary");
-  portTitle.className = "filter-group__label";
-  portTitle.textContent = "LANポートの数";
-  portSection.appendChild(portTitle);
-  [
-    { value: 1, label: "1つ以上（すべて）" },
-    { value: 2, label: "2つ（2ポートあるもの）" }
-  ].forEach(opt => {
-    const wrapper = document.createElement("label");
-    const rb = document.createElement("input");
-    rb.type = "radio";
-    rb.name = "lan-ports";
-    rb.checked = lanPortsMin === opt.value;
-    rb.addEventListener("change", () => {
-      if (rb.checked) { lanPortsMin = opt.value; render(); }
-    });
-    wrapper.appendChild(rb);
-    wrapper.appendChild(document.createTextNode(opt.label));
-    const cnt = document.createElement("span");
-    cnt.className = "facet-count";
-    cnt.dataset.lanPorts = String(opt.value);
-    wrapper.appendChild(cnt);
-    portSection.appendChild(wrapper);
-  });
-  panel.appendChild(portSection);
-
   // クラウド連携は「テレワーク・データ共有」と「災害対策（BCP）バックアップ」で
   // 目的がまったく違うため、1つのチェックにまとめず分けて絞り込めるようにする。
   const cloudSection = document.createElement("details");
@@ -440,6 +413,37 @@ function buildFilterPanel() {
   details.appendChild(capLabel);
   details.appendChild(capInput);
   panel.appendChild(details);
+
+  // LANポートの数。エンドユーザーの理由（冗長化・速度アップ・ネットワーク分離など）は分からない前提なので、
+  // まず「2ポートあるもの」だけを見分けられるようにする。1つは全機種が当てはまるので初期値にする。
+  // お客様から聞かれることが少ないため、パネルの一番下に小さく置く。
+  const portSection = document.createElement("details");
+  portSection.open = lanPortsMin >= 2; // 聞かれることが少ない項目なので、普段は閉じておく（選択中のときだけ開く）
+  const portTitle = document.createElement("summary");
+  portTitle.className = "filter-group__label";
+  portTitle.textContent = "LANポートの数";
+  portSection.appendChild(portTitle);
+  [
+    { value: 1, label: "1つ以上（すべて）" },
+    { value: 2, label: "2つ（2ポートあるもの）" }
+  ].forEach(opt => {
+    const wrapper = document.createElement("label");
+    const rb = document.createElement("input");
+    rb.type = "radio";
+    rb.name = "lan-ports";
+    rb.checked = lanPortsMin === opt.value;
+    rb.addEventListener("change", () => {
+      if (rb.checked) { lanPortsMin = opt.value; render(); }
+    });
+    wrapper.appendChild(rb);
+    wrapper.appendChild(document.createTextNode(opt.label));
+    const cnt = document.createElement("span");
+    cnt.className = "facet-count";
+    cnt.dataset.lanPorts = String(opt.value);
+    wrapper.appendChild(cnt);
+    portSection.appendChild(wrapper);
+  });
+  panel.appendChild(portSection);
 
   const resetBtn = document.createElement("button");
   resetBtn.className = "filter-reset";
@@ -729,13 +733,13 @@ function openCompare() {
       const v = p.variants[uiState[p.id].variantIdx];
       return v.capacityTB + "TB / " + fmtPrice(v.priceIncTax) + fmtExTax(v.priceIncTax);
     }],
-    ["初期RAID設定の実効容量", p => {
+    ["工場出荷時の実効容量", p => {
       const raid = defaultRaidOf(p);
       if (!raid) return "-";
       const v = p.variants[uiState[p.id].variantIdx];
       const eff = effectiveCapacityOf(p, v);
-      if (!eff) return raid + "（出荷時）";
-      return raid + "（出荷時）：" + fmtTB(eff.tb) + (eff.calculated ? "（計算値）" : "");
+      if (!eff) return raid + "：不明";
+      return raid + "：" + fmtTB(eff.tb) + (eff.calculated ? "（計算値）" : "");
     }],
     ["オフィス規模", p => p.officeSize || "-"],
     ["設置方法", p => p.install || "-"],
@@ -805,7 +809,7 @@ function openCompare() {
 
   html += "</table>";
 
-  html += '<p class="compare-footnote">「初期RAID設定の実効容量」は、出荷時のRAID設定のまま使った場合の目安です。'
+  html += '<p class="compare-footnote">「工場出荷時の実効容量」は、工場出荷時の冗長化設定のまま使った場合の目安です。'
     + '公式の「保存可能容量」表がある機種はその値、無い機種は装置容量からの計算値（「計算値」と表示）です。実際の使用可能容量は、フォーマットなどで少し小さくなります。</p>';
   html += '<p class="compare-footnote">保守サービスもご用意しています。'
     + '<a href="https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm" target="_blank" rel="noopener noreferrer">訪問・安心・保守</a>'
