@@ -419,7 +419,7 @@ function extractEffectiveCapacityTable(rawHtml) {
 // 同じラベルが複数回出てくる項目（USBポートの世代別など）は、出現順にすべて集める。
 const SPEC_LABEL_MAP = [
   ["cpu", /^CPU$/i],
-  ["memoryCapacity", /^メモリ[ーー]?容量$/],
+  ["memoryCapacity", /^(?:搭載|本体)?メモリ[ーー]?(?:容量|搭載量|搭載容量)?$/],
   ["osEdition", /^搭載OS$/],
   ["lanPort", /^LAN\s*ポート$/],
   ["usbPort", /^USB\s*ポート$/],
@@ -554,6 +554,47 @@ function withLanCheckedFeatures(features, lanSpeedMax, checked) {
   return list;
 }
 
+// 工場出荷時の冗長化設定（RAIDモード）を、仕様表のテキストから探す。
+// 公式の書き方は商品によって揺れる：
+//   「冗長化設定：RAIDeX（出荷時）／RAID 6／RAID 5／RAID 0」（Linux版）
+//   「冗長化｜方式 ソフトウェア｜設定 RAID 5（出荷時）、RAID 0」（Windows版）
+//   「RAID設定：出荷時 RAID1」「冗長化方式 … RAID 1（工場出荷時）」など
+// そのため「冗長化」「冗長化設定」「冗長化方式」「RAID設定」「RAIDモード」のどれかの近くで、
+// 「RAID○（出荷時）」「（工場出荷時）」「出荷時：RAID○」の形を探す。
+// 見つからなければ null（画面側は、確認できているルールで補う）。
+function normalizeRaidLabel(raw) {
+  if (/raidex/i.test(raw)) return "RAIDeX";
+  const m = /RAID\s*([0-9]+)/i.exec(raw);
+  return m ? "RAID " + m[1] : null;
+}
+
+function extractDefaultRaid(text) {
+  const flat = String(text).replace(/\s+/g, " ");
+  const raidName = "(RAIDeX|RAID\\s?[0-9]+)";
+  const patterns = [
+    new RegExp(raidName + "\\s*[（(]\\s*(?:工場)?出荷時(?:設定)?\\s*[）)]", "i"),
+    new RegExp("(?:工場)?出荷時(?:設定)?\\s*[:：は]?\\s*[（(]?\\s*" + raidName, "i")
+  ];
+  const findIn = (windowText) => {
+    for (const re of patterns) {
+      const m = re.exec(windowText);
+      if (m) return normalizeRaidLabel(m[1]);
+    }
+    return null;
+  };
+  // ラベルの近くを優先（複数あれば、実際の仕様表に近い最後の結果を採用）
+  const labelRe = /冗長化(?:\s*設定|\s*方式)?|RAID\s*(?:設定|モード)/g;
+  let found = null;
+  let m;
+  while ((m = labelRe.exec(flat)) !== null) {
+    const r = findIn(flat.slice(m.index, m.index + 400));
+    if (r) found = r;
+  }
+  if (found) return found;
+  // ラベルが見つからないページでも、「RAID○（出荷時）」という形そのものを最初の1つだけ拾う
+  return findIn(flat);
+}
+
 async function fetchWarrantyAndFeatures(productUrl) {
   const specUrl = productUrl.replace(/\/?$/, "/") + "spec.htm";
 
@@ -670,12 +711,36 @@ async function fetchWarrantyAndFeatures(productUrl) {
     videoOutput: (specDetails.videoOutput && specDetails.videoOutput[0]) || null
   };
 
+  const defaultRaid = extractDefaultRaid(combined);
+
   return {
-    warrantyYears, features, raidSupport, effectiveCapacityBySku, specSummary,
+    warrantyYears, features, raidSupport, defaultRaid, effectiveCapacityBySku, specSummary,
     lanSpeedMax: lanInfo ? lanInfo.maxSpeed : null,
     lanMaxPorts: lanInfo ? lanInfo.maxPorts : null,
     lanFeatureChecked: !!(lanInfo && lanInfo.maxSpeed)
   };
+}
+
+// 容量の取り違え対策。価格表の文章に別の「○○TB」が紛れ込むと、容量が誤って読まれることがある
+// （実例：HDL4-LV16UB が 50TB と読まれた）。次の順で確かめて直し、直したら必ずログに残す。
+//   1. 公式の保存可能容量表の RAID 0（＝装置容量そのもの）と食い違っていれば、表の値を採用
+//   2. 型番に含まれる数字（HDL4-LV16UB の 16）と食い違っていれば、警告だけ出す
+function reconcileVariantCapacities(variants, slug) {
+  let changed = false;
+  for (const v of variants) {
+    const raid0 = v.effectiveCapacityTB && v.effectiveCapacityTB.raid0;
+    if (raid0 != null && raid0 !== v.capacityTB) {
+      console.warn(`  !! ${slug}/${v.sku}: 容量 ${v.capacityTB}TB が保存可能容量表(RAID0=${raid0}TB)と違うため ${raid0}TB に修正`);
+      v.capacityTB = raid0;
+      changed = true;
+      continue;
+    }
+    const skuNum = /(\d{2,3})(?:[A-Z]{0,3})$/.exec(v.sku || "");
+    if (skuNum && Number(skuNum[1]) !== v.capacityTB) {
+      console.warn(`  ?? ${slug}/${v.sku}: 型番の数字(${skuNum[1]})と容量(${v.capacityTB}TB)が違います。要確認`);
+    }
+  }
+  if (changed) variants.sort((a, b) => a.capacityTB - b.capacityTB);
 }
 
 // カタログページ全体から、全シリーズの見出しリンク（slug・シリーズ名・出現位置）を洗い出す。
@@ -906,6 +971,7 @@ async function main() {
       warrantyYears: detailWarrantyYears,
       features: detailFeatures,
       raidSupport: detailRaidSupport,
+      defaultRaid,
       effectiveCapacityBySku,
       specSummary,
       lanSpeedMax,
@@ -925,6 +991,7 @@ async function main() {
     } else {
       variants.forEach(v => { v.effectiveCapacityTB = null; });
     }
+    reconcileVariantCapacities(variants, slug);
 
     const catalogSeriesName = lookupSeriesName(catalogHtml, slug);
     const fallbackShortName = base.name.replace(/\d+$/, "");
@@ -942,6 +1009,7 @@ async function main() {
       maintenanceService: buildMaintenanceService(base.hoshu, base.hoshu_link),
       imageUrl: lookupSeriesImage(catalogHtml, slug),
       raidSupport: raidSupportList(base).length > 0 ? raidSupportList(base) : detailRaidSupport,
+      defaultRaid, // 工場出荷時の冗長化設定（取得できなければ null）
       warrantyYears,
       status: seriesStatus(variants),
       features,
@@ -986,6 +1054,7 @@ async function main() {
       warrantyYears: detailWarrantyYears,
       features: detailFeatures,
       raidSupport: detailRaidSupport,
+      defaultRaid,
       effectiveCapacityBySku,
       specSummary,
       lanSpeedMax,
@@ -1003,6 +1072,7 @@ async function main() {
     } else {
       variants.forEach(v => { v.effectiveCapacityTB = null; });
     }
+    reconcileVariantCapacities(variants, series.slug);
 
     products.push({
       id: series.slug,
@@ -1018,6 +1088,7 @@ async function main() {
       officeSizeMax: extractOfficeSizeNumber(officeLabel),
       imageUrl: lookupSeriesImage(catalogHtml, series.slug),
       raidSupport: detailRaidSupport, // 商品ページの「冗長化設定」欄から取得
+      defaultRaid, // 工場出荷時の冗長化設定（取得できなければ null）
       warrantyYears,
       maintenanceService: null, // カタログ補完分はsearch_linux/windows.js由来のhoshu情報を持たない
       status: seriesStatus(variants),
