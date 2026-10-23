@@ -10,9 +10,10 @@ const FACET_DEFS = [
 
 // ---- メモリ容量（ECC / Non-ECC）----
 // 仕様表の「メモリ容量」は「8GB」「ECC 8GB」「8GB（Non-ECC）」「DDR4 non-ECC 8GB」など表記がバラバラなので、
-// 「ECC 8GB」「Non-ECC 8GB」「8GB（ECC記載なし）」のどれかに揃えて選べるようにする。
+// 「ECC 8GB」「Non-ECC 8GB」のどちらかに揃えて選べるようにする。
+// ECCは優れた特長なので、載っている商品なら必ず公式が明記する。何も書かれていなければ Non-ECC として扱う。
 // 該当商品が今は無い項目も、選択肢としては常に出す（選ぶと「該当 0 件」になる）。
-const MEMORY_FIXED_VALUES = ["ECC 8GB", "Non-ECC 8GB", "8GB（ECC記載なし）"];
+const MEMORY_FIXED_VALUES = ["ECC 8GB", "Non-ECC 8GB"];
 
 function memoryKinds(p) {
   const raw = p.specDetails && p.specDetails.memoryCapacity;
@@ -22,7 +23,7 @@ function memoryKinds(p) {
   const gb = m[1] + "GB";
   if (/non[\s\-_]?ecc/i.test(raw)) return ["Non-ECC " + gb];
   if (/ecc/i.test(raw)) return ["ECC " + gb];
-  return [gb + "（ECC記載なし）"];
+  return ["Non-ECC " + gb];
 }
 
 function memorySortKey(v) {
@@ -30,6 +31,55 @@ function memorySortKey(v) {
   if (i >= 0) return [0, i];
   const m = v.match(/(\d+(?:\.\d+)?)GB/);
   return [1, m ? Number(m[1]) : 0];
+}
+
+// LANポートの数。仕様表の「LANポート」の「× 2」「×1」を足し合わせて数える
+// （例：「10GBASE-T… ×1／1000BASE-T… ×1」→ 2ポート）。数えられない場合は null（不明）。
+function lanPortCountOf(p) {
+  const raw = p.specDetails && p.specDetails.lanPort;
+  if (!raw) return null;
+  const nums = [...String(raw).matchAll(/[×xX]\s*(\d+)/g)].map(m => Number(m[1]));
+  if (nums.length === 0) return null;
+  return nums.reduce((a, b) => a + b, 0);
+}
+
+// ---- 出荷時のRAID設定と、そのRAIDで使ったときの実効容量（比較表用）----
+// 出荷時のRAIDは仕様表の「冗長化 設定」に「RAID 5（出荷時）」のように書かれている。
+// 確認できているルール：独自OS（Linux）でRAIDeX対応の機種はRAIDeX、
+// Windows版は4ベイ以上がRAID 5、2ベイがRAID 1。どれにも当てはまらない機種は「不明」にする。
+function defaultRaidOf(p) {
+  if (p.defaultRaid) return p.defaultRaid; // スクレイパーが取得できるようになったらそちらを優先
+  const sup = p.raidSupport || [];
+  const bays = Number((String(p.bay || "").match(/\d+/) || [0])[0]);
+  const isWin = /Windows/i.test(p.os || "");
+  if (!isWin && sup.includes("RAIDeX")) return "RAIDeX";
+  if (isWin && bays >= 4 && sup.includes("RAID 5")) return "RAID 5";
+  if (isWin && bays === 2 && sup.includes("RAID 1")) return "RAID 1";
+  return null;
+}
+
+const RAID_KEY = { "RAIDeX": "raidex", "RAID 0": "raid0", "RAID 1": "raid1", "RAID 5": "raid5", "RAID 6": "raid6" };
+
+// 実効容量（TB）。公式の「保存可能容量」表の値があればそれを使い、無ければ装置容量から計算する。
+// 戻り値：{ tb, calculated }。出せない場合は null。
+function effectiveCapacityOf(p, variant) {
+  const raid = defaultRaidOf(p);
+  if (!raid || !variant) return null;
+  const key = RAID_KEY[raid];
+  const official = variant.effectiveCapacityTB && variant.effectiveCapacityTB[key];
+  if (official != null) return { tb: official, calculated: false };
+  const bays = Number((String(p.bay || "").match(/\d+/) || [0])[0]);
+  const cap = variant.capacityTB;
+  if (!cap || !bays) return null;
+  if (key === "raid5" && bays >= 3) return { tb: cap * (bays - 1) / bays, calculated: true };
+  if (key === "raid6" && bays >= 4) return { tb: cap * (bays - 2) / bays, calculated: true };
+  if (key === "raid1" && bays === 2) return { tb: cap / 2, calculated: true };
+  if (key === "raid0") return { tb: cap, calculated: true };
+  return null; // RAIDeXは公式の表の値だけを使う
+}
+
+function fmtTB(n) {
+  return (Math.round(n * 100) / 100) + "TB";
 }
 
 let allProducts = [];
@@ -40,6 +90,7 @@ let capacityRange = null;
 let employeeMin = null;
 let cloudTeleworkOnly = false;
 let cloudBcpOnly = false;
+let lanPortsMin = 1; // LANポートの数（1＝すべて／2＝2ポートあるもの）
 let lanSpeedMin = null; // LANポートの速さ（「〜以上」で1つだけ選ぶ）
 
 // LANポートの最大速度。スクレイパーが付けた lanSpeedMax を優先し、
@@ -69,6 +120,7 @@ async function init() {
   allProducts.forEach(p => {
     uiState[p.id] = { checked: false, variantIdx: 0 };
     p.memoryType = memoryKinds(p);
+    p.lanPortCount = lanPortCountOf(p);
   });
 
   if (data.updatedAt) {
@@ -226,6 +278,36 @@ function buildFilterPanel() {
     panel.appendChild(lanSection);
   }
 
+  // LANポートの数。エンドユーザーの理由（冗長化・速度アップ・ネットワーク分離など）は分からない前提なので、
+  // まず「2ポートあるもの」だけを見分けられるようにする。1つは全機種が当てはまるので初期値にする。
+  const portSection = document.createElement("details");
+  portSection.open = true;
+  const portTitle = document.createElement("summary");
+  portTitle.className = "filter-group__label";
+  portTitle.textContent = "LANポートの数";
+  portSection.appendChild(portTitle);
+  [
+    { value: 1, label: "1つ以上（すべて）" },
+    { value: 2, label: "2つ（2ポートあるもの）" }
+  ].forEach(opt => {
+    const wrapper = document.createElement("label");
+    const rb = document.createElement("input");
+    rb.type = "radio";
+    rb.name = "lan-ports";
+    rb.checked = lanPortsMin === opt.value;
+    rb.addEventListener("change", () => {
+      if (rb.checked) { lanPortsMin = opt.value; render(); }
+    });
+    wrapper.appendChild(rb);
+    wrapper.appendChild(document.createTextNode(opt.label));
+    const cnt = document.createElement("span");
+    cnt.className = "facet-count";
+    cnt.dataset.lanPorts = String(opt.value);
+    wrapper.appendChild(cnt);
+    portSection.appendChild(wrapper);
+  });
+  panel.appendChild(portSection);
+
   // クラウド連携は「テレワーク・データ共有」と「災害対策（BCP）バックアップ」で
   // 目的がまったく違うため、1つのチェックにまとめず分けて絞り込めるようにする。
   const cloudSection = document.createElement("details");
@@ -370,6 +452,7 @@ function buildFilterPanel() {
     cloudTeleworkOnly = false;
     cloudBcpOnly = false;
     lanSpeedMin = null;
+    lanPortsMin = 1;
     buildFilterPanel();
     render();
   });
@@ -403,6 +486,7 @@ function matchesFilters(p) {
     const sp = lanSpeedOf(p);
     if (!sp || LAN_SPEED_ORDER.indexOf(sp) < LAN_SPEED_ORDER.indexOf(lanSpeedMin)) return false;
   }
+  if (lanPortsMin >= 2 && (p.lanPortCount == null || p.lanPortCount < lanPortsMin)) return false;
   if (cloudTeleworkOnly && !p.cloudTelework) return false;
   if (cloudBcpOnly && !p.cloudBcp) return false;
   return true;
@@ -504,6 +588,8 @@ function render() {
       p.install,
       p.bay,
       lanSpeedOf(p) ? "LAN " + LAN_SPEED_LABEL[lanSpeedOf(p)] : null,
+      p.lanPortCount >= 1 ? "LANポート " + p.lanPortCount + "つ" : null,
+      (p.memoryType && p.memoryType.length > 0) ? "メモリ " + p.memoryType[0] : null,
       p.warrantyYears != null ? p.warrantyYears + "年保証" : null
     ].filter(t => t !== null && t !== undefined);
     badgeValues.forEach(t => {
@@ -613,10 +699,16 @@ function render() {
 function updateFacetCounts() {
   const showDiscontinued = document.getElementById("show-discontinued").checked;
   const pool = allProducts.filter(p => showDiscontinued || p.status === "現行");
-  document.querySelectorAll(".facet-count").forEach(el => {
+  document.querySelectorAll(".facet-count[data-facet-key]").forEach(el => {
     const key = el.dataset.facetKey;
     const value = el.dataset.facetValue;
     const n = pool.filter(p => (p[key] || []).includes(value)).length;
+    el.textContent = "（対象商品 " + n + " 件）";
+    el.classList.toggle("facet-count--zero", n === 0);
+  });
+  document.querySelectorAll("[data-lan-ports]").forEach(el => {
+    const min = Number(el.dataset.lanPorts);
+    const n = pool.filter(p => min <= 1 || (p.lanPortCount != null && p.lanPortCount >= min)).length;
     el.textContent = "（対象商品 " + n + " 件）";
     el.classList.toggle("facet-count--zero", n === 0);
   });
@@ -636,6 +728,14 @@ function openCompare() {
     ["容量／価格", p => {
       const v = p.variants[uiState[p.id].variantIdx];
       return v.capacityTB + "TB / " + fmtPrice(v.priceIncTax) + fmtExTax(v.priceIncTax);
+    }],
+    ["初期RAID設定の実効容量", p => {
+      const raid = defaultRaidOf(p);
+      if (!raid) return "-";
+      const v = p.variants[uiState[p.id].variantIdx];
+      const eff = effectiveCapacityOf(p, v);
+      if (!eff) return raid + "（出荷時）";
+      return raid + "（出荷時）：" + fmtTB(eff.tb) + (eff.calculated ? "（計算値）" : "");
     }],
     ["オフィス規模", p => p.officeSize || "-"],
     ["設置方法", p => p.install || "-"],
@@ -705,6 +805,8 @@ function openCompare() {
 
   html += "</table>";
 
+  html += '<p class="compare-footnote">「初期RAID設定の実効容量」は、出荷時のRAID設定のまま使った場合の目安です。'
+    + '公式の「保存可能容量」表がある機種はその値、無い機種は装置容量からの計算値（「計算値」と表示）です。実際の使用可能容量は、フォーマットなどで少し小さくなります。</p>';
   html += '<p class="compare-footnote">保守サービスもご用意しています。'
     + '<a href="https://www.iodata.jp/support/service/iss/maintenance/nas/lineup.htm" target="_blank" rel="noopener noreferrer">訪問・安心・保守</a>'
     + '</p>';
@@ -774,6 +876,7 @@ function buildShareUrl(withCompareView) {
   const params = new URLSearchParams();
   if (employeeMin) params.set("emp", String(employeeMin));
   if (lanSpeedMin) params.set("lan", lanSpeedMin);
+  if (lanPortsMin >= 2) params.set("ports", String(lanPortsMin));
   if (cloudTeleworkOnly) params.append("cloud", "telework");
   if (cloudBcpOnly) params.append("cloud", "bcp");
   FACET_DEFS.forEach(def => {
@@ -799,6 +902,7 @@ function applyStateFromUrl() {
   if (emp > 0) employeeMin = emp;
   const lan = params.get("lan");
   if (lan && LAN_SPEED_ORDER.includes(lan)) lanSpeedMin = lan;
+  if (params.get("ports") === "2") lanPortsMin = 2;
   const cloud = params.getAll("cloud");
   cloudTeleworkOnly = cloud.includes("telework");
   cloudBcpOnly = cloud.includes("bcp");
