@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T21:23:32.128Z",
+  "updatedAt": "2026-10-23T21:13:07.022Z",
   "products": [
     {
       "id": "hdl6-hb",
@@ -21,6 +21,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -41,7 +42,7 @@
       "lanMaxPorts": 2,
       "specDetails": {
         "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": null,
+        "memoryCapacity": "8GB",
         "osEdition": "Linux（オリジナルOS）",
         "lanPort": "10GBASE-T／1000BASE-T × 2 ※10GBASE-Tまたは1000BASE-T以外のネットワークには対応しておりません",
         "usbPort": "USB-A：背面&times;4",
@@ -154,7 +155,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hb/",
-      "lastCheckedAt": "2026-10-22T21:18:25.051Z",
+      "lastCheckedAt": "2026-10-23T21:07:55.469Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -179,6 +180,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -199,7 +201,7 @@
       "lanMaxPorts": 2,
       "specDetails": {
         "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": null,
+        "memoryCapacity": "8GB",
         "osEdition": "Linux（オリジナルOS）",
         "lanPort": "10GBASE-T／1000BASE-T × 2 ※10GBASE-Tまたは1000BASE-T以外のネットワークには対応しておりません",
         "usbPort": "USB-A：背面&times;4",
@@ -273,7 +275,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hbex/",
-      "lastCheckedAt": "2026-10-22T21:18:30.008Z",
+      "lastCheckedAt": "2026-10-23T21:08:00.487Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -297,6 +299,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "status": "在庫限り",
       "features": [
@@ -317,7 +320,7 @@
       "lanMaxPorts": 2,
       "specDetails": {
         "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": "バックアップ所要時間（時間:分:秒）",
+        "memoryCapacity": "8GB",
         "osEdition": "Linux（オリジナルOS）",
         "lanPort": "10GBASE-T／1000BASE-T × 2 ※10GBASE-Tまたは1000BASE-T以外のネットワークには対応しておりません",
         "usbPort": "USB-A：背面&times;4",
@@ -422,7 +425,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hb/",
-      "lastCheckedAt": "2026-10-22T21:18:35.074Z",
+      "lastCheckedAt": "2026-10-23T21:08:05.598Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -447,6 +450,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -565,7 +569,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lx/",
-      "lastCheckedAt": "2026-10-22T21:18:40.009Z",
+      "lastCheckedAt": "2026-10-23T21:08:10.607Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -589,6 +593,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -664,7 +669,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lx/",
-      "lastCheckedAt": "2026-10-22T21:18:45.070Z",
+      "lastCheckedAt": "2026-10-23T21:08:15.539Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -689,6 +694,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -807,7 +813,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lxu/",
-      "lastCheckedAt": "2026-10-22T21:18:49.957Z",
+      "lastCheckedAt": "2026-10-23T21:08:20.537Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -832,6 +838,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -850,7 +857,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "Intel Atom Processor C3338（2.20GHz Dual Core）",
-        "memoryCapacity": null,
+        "memoryCapacity": "2GB",
         "osEdition": null,
         "lanPort": "（10GBASE-T／5GBASE-T／2.5GBASE-T／1000BASE-T／100BASE-TX）×1 （1000BASE-T／100BASE-TX／10BASE-T）×1",
         "usbPort": "Aコネクター：背面&times;2",
@@ -943,7 +950,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab-u/",
-      "lastCheckedAt": "2026-10-22T21:18:54.997Z",
+      "lastCheckedAt": "2026-10-23T21:08:25.606Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -968,6 +975,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -986,7 +994,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "Intel Atom Processor C3338（2.20GHz Dual Core）",
-        "memoryCapacity": null,
+        "memoryCapacity": "2GB",
         "osEdition": null,
         "lanPort": "（10GBASE-T／5GBASE-T／2.5GBASE-T／1000BASE-T／100BASE-TX）×1 （1000BASE-T／100BASE-TX／10BASE-T）×1",
         "usbPort": "背面&times;2",
@@ -1042,7 +1050,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-xab/",
-      "lastCheckedAt": "2026-10-22T21:18:59.950Z",
+      "lastCheckedAt": "2026-10-23T21:08:30.591Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": false,
       "cloudBcp": true
@@ -1067,6 +1075,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -1144,7 +1153,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvb/",
-      "lastCheckedAt": "2026-10-22T21:19:04.829Z",
+      "lastCheckedAt": "2026-10-23T21:08:35.570Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": false
@@ -1168,6 +1177,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -1241,7 +1251,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lvb/",
-      "lastCheckedAt": "2026-10-22T21:19:09.701Z",
+      "lastCheckedAt": "2026-10-23T21:08:40.515Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -1266,6 +1276,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -1316,6 +1327,19 @@
           }
         },
         {
+          "sku": "HDL4-LV16UB",
+          "capacityTB": 16,
+          "priceIncTax": 346500,
+          "jan": "4957180191928",
+          "status": "現行",
+          "effectiveCapacityTB": {
+            "raidex": 8,
+            "raid6": 8,
+            "raid5": 12,
+            "raid0": 16
+          }
+        },
+        {
           "sku": "HDL4-LV32UB",
           "capacityTB": 32,
           "priceIncTax": 522500,
@@ -1327,23 +1351,10 @@
             "raid5": 24,
             "raid0": 32
           }
-        },
-        {
-          "sku": "HDL4-LV16UB",
-          "capacityTB": 50,
-          "priceIncTax": 346500,
-          "jan": "4957180191928",
-          "status": "現行",
-          "effectiveCapacityTB": {
-            "raidex": 8,
-            "raid6": 8,
-            "raid5": 12,
-            "raid0": 16
-          }
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvub/",
-      "lastCheckedAt": "2026-10-22T21:19:14.572Z",
+      "lastCheckedAt": "2026-10-23T21:08:45.470Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -1367,6 +1378,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -1451,7 +1463,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lenb/",
-      "lastCheckedAt": "2026-10-22T21:19:19.702Z",
+      "lastCheckedAt": "2026-10-23T21:08:50.620Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1471,6 +1483,7 @@
       },
       "imageUrl": "https://www.iodata.jp/image/hdl1-lenb_l.jpg",
       "raidSupport": [],
+      "defaultRaid": null,
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -1534,7 +1547,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lenb/",
-      "lastCheckedAt": "2026-10-22T21:19:24.607Z",
+      "lastCheckedAt": "2026-10-23T21:08:55.608Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1558,6 +1571,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -1628,7 +1642,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-tasoho/",
-      "lastCheckedAt": "2026-10-22T21:19:29.462Z",
+      "lastCheckedAt": "2026-10-23T21:09:00.518Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": false,
       "cloudBcp": false
@@ -1648,6 +1662,7 @@
       },
       "imageUrl": "https://www.iodata.jp/image/hdl1-lasoho_l.jpg",
       "raidSupport": [],
+      "defaultRaid": null,
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -1710,7 +1725,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-lasoho/",
-      "lastCheckedAt": "2026-10-22T21:19:34.337Z",
+      "lastCheckedAt": "2026-10-23T21:09:05.490Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1734,6 +1749,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "status": "在庫限り",
       "features": [
@@ -1749,7 +1765,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "Marvell Armada382 Dual Core 1.33GHz",
-        "memoryCapacity": null,
+        "memoryCapacity": "512MB",
         "osEdition": null,
         "lanPort": "( 2.5GBASE-T / 1000BASE-T/ 100BASE-TX/ 10BASE-T )× 1",
         "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
@@ -1826,7 +1842,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-aaxwb/",
-      "lastCheckedAt": "2026-10-22T21:19:39.402Z",
+      "lastCheckedAt": "2026-10-23T21:09:10.519Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -1850,6 +1866,7 @@
         "RAID 1",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -1925,7 +1942,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bb/",
-      "lastCheckedAt": "2026-10-22T21:19:44.338Z",
+      "lastCheckedAt": "2026-10-23T21:09:15.542Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -1948,6 +1965,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -1999,7 +2017,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25si3bb/",
-      "lastCheckedAt": "2026-10-22T21:19:49.192Z",
+      "lastCheckedAt": "2026-10-23T21:09:20.569Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2023,6 +2041,7 @@
         "RAID 1",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -2098,7 +2117,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bub/",
-      "lastCheckedAt": "2026-10-22T21:19:54.118Z",
+      "lastCheckedAt": "2026-10-23T21:09:25.508Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2122,6 +2141,7 @@
         "RAID 1",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -2184,7 +2204,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bb/",
-      "lastCheckedAt": "2026-10-22T21:19:58.995Z",
+      "lastCheckedAt": "2026-10-23T21:09:30.608Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2207,6 +2227,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -2277,7 +2298,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25wi3bb/",
-      "lastCheckedAt": "2026-10-22T21:20:03.902Z",
+      "lastCheckedAt": "2026-10-23T21:09:35.627Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2301,6 +2322,7 @@
         "RAID 1",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 3,
       "status": "現行",
       "features": [
@@ -2363,7 +2385,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25wi3bub/",
-      "lastCheckedAt": "2026-10-22T21:20:08.818Z",
+      "lastCheckedAt": "2026-10-23T21:09:40.645Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2386,6 +2408,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "在庫限り",
       "features": [
@@ -2477,7 +2500,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3bu/",
-      "lastCheckedAt": "2026-10-22T21:20:14.011Z",
+      "lastCheckedAt": "2026-10-23T21:09:45.562Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2500,6 +2523,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -2559,7 +2583,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satb/",
-      "lastCheckedAt": "2026-10-22T21:20:18.908Z",
+      "lastCheckedAt": "2026-10-23T21:09:50.644Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2582,6 +2606,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -2641,7 +2666,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25satb/",
-      "lastCheckedAt": "2026-10-22T21:20:23.834Z",
+      "lastCheckedAt": "2026-10-23T21:09:55.669Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2664,6 +2689,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -2747,7 +2773,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25satbu/",
-      "lastCheckedAt": "2026-10-22T21:20:28.789Z",
+      "lastCheckedAt": "2026-10-23T21:10:00.669Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2770,6 +2796,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -2829,7 +2856,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watb/",
-      "lastCheckedAt": "2026-10-22T21:20:33.839Z",
+      "lastCheckedAt": "2026-10-23T21:10:05.651Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2852,6 +2879,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -2911,7 +2939,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25watb/",
-      "lastCheckedAt": "2026-10-22T21:20:38.842Z",
+      "lastCheckedAt": "2026-10-23T21:10:10.649Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -2934,6 +2962,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -3017,7 +3046,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25watbu/",
-      "lastCheckedAt": "2026-10-22T21:20:43.811Z",
+      "lastCheckedAt": "2026-10-23T21:10:15.702Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3040,6 +3069,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -3123,7 +3153,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3b/",
-      "lastCheckedAt": "2026-10-22T21:20:48.841Z",
+      "lastCheckedAt": "2026-10-23T21:10:20.723Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3146,6 +3176,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -3205,7 +3236,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3b/",
-      "lastCheckedAt": "2026-10-22T21:20:53.764Z",
+      "lastCheckedAt": "2026-10-23T21:10:26.028Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3228,6 +3259,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -3311,7 +3343,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22si3bu/",
-      "lastCheckedAt": "2026-10-22T21:20:58.734Z",
+      "lastCheckedAt": "2026-10-23T21:10:31.094Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3334,6 +3366,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -3393,7 +3426,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satb/",
-      "lastCheckedAt": "2026-10-22T21:21:03.624Z",
+      "lastCheckedAt": "2026-10-23T21:10:36.158Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3416,6 +3449,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -3475,7 +3509,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satb/",
-      "lastCheckedAt": "2026-10-22T21:21:08.532Z",
+      "lastCheckedAt": "2026-10-23T21:10:41.196Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3498,6 +3532,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -3557,7 +3592,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satbu/",
-      "lastCheckedAt": "2026-10-22T21:21:13.432Z",
+      "lastCheckedAt": "2026-10-23T21:10:46.164Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3580,6 +3615,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -3639,7 +3675,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watb/",
-      "lastCheckedAt": "2026-10-22T21:21:18.340Z",
+      "lastCheckedAt": "2026-10-23T21:10:51.148Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3662,6 +3698,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 5,
       "status": "在庫限り",
       "features": [
@@ -3721,7 +3758,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watb/",
-      "lastCheckedAt": "2026-10-22T21:21:23.273Z",
+      "lastCheckedAt": "2026-10-23T21:10:56.183Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3744,6 +3781,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -3803,7 +3841,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watbu/",
-      "lastCheckedAt": "2026-10-22T21:21:28.325Z",
+      "lastCheckedAt": "2026-10-23T21:11:01.335Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3826,6 +3864,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 5,
       "status": "現行",
       "features": [
@@ -3867,7 +3906,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z10atb/",
-      "lastCheckedAt": "2026-10-22T21:21:33.157Z",
+      "lastCheckedAt": "2026-10-23T21:11:06.281Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2019",
       "cloudTelework": false,
       "cloudBcp": true
@@ -3887,6 +3926,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -3907,7 +3947,7 @@
       "lanMaxPorts": 2,
       "specDetails": {
         "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": "バックアップ所要時間（時間:分:秒）",
+        "memoryCapacity": "4GB",
         "osEdition": null,
         "lanPort": "10GBASE-T／1000BASE-T × 2 ※10GBASE-Tまたは1000BASE-T以外のネットワーク機器には対応しておりません",
         "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
@@ -4002,7 +4042,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl6-hab/",
-      "lastCheckedAt": "2026-10-22T21:21:38.227Z",
+      "lastCheckedAt": "2026-10-23T21:11:11.190Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": false,
       "cloudBcp": true
@@ -4022,6 +4062,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4042,7 +4083,7 @@
       "lanMaxPorts": 2,
       "specDetails": {
         "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": "バックアップ所要時間（時間:分:秒）",
+        "memoryCapacity": "4GB",
         "osEdition": null,
         "lanPort": "10GBASE-T／1000BASE-T × 2 ※10GBASE-Tまたは1000BASE-T以外のネットワーク機器には対応しておりません",
         "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
@@ -4111,7 +4152,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-haexb/",
-      "lastCheckedAt": "2026-10-22T21:21:43.368Z",
+      "lastCheckedAt": "2026-10-23T21:11:16.259Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": false,
       "cloudBcp": true
@@ -4131,6 +4172,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4147,7 +4189,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "ARM Cortex-A55 Quad core 1.8GHz",
-        "memoryCapacity": null,
+        "memoryCapacity": "2GB",
         "osEdition": null,
         "lanPort": "（2.5GBASE-T／1000BASE-T／100BASE-TX）×1 （1000BASE-T／100BASE-TX／10BASE-T）×1",
         "usbPort": "背面&times;2",
@@ -4208,7 +4250,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lv/",
-      "lastCheckedAt": "2026-10-22T21:21:48.482Z",
+      "lastCheckedAt": "2026-10-23T21:11:21.239Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": false
@@ -4227,6 +4269,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4247,7 +4290,7 @@
       "lanMaxPorts": 2,
       "specDetails": {
         "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": null,
+        "memoryCapacity": "4GB",
         "osEdition": null,
         "lanPort": "10GBASE-T／1000BASE-T × 2 ※10GBASE-Tまたは1000BASE-T以外のネットワーク機器には対応しておりません",
         "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
@@ -4288,7 +4331,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-habtm5/",
-      "lastCheckedAt": "2026-10-22T21:21:53.367Z",
+      "lastCheckedAt": "2026-10-23T21:11:26.297Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
       "cloudTelework": false,
       "cloudBcp": false
@@ -4307,6 +4350,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4327,7 +4371,7 @@
       "lanMaxPorts": 2,
       "specDetails": {
         "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": "バックアップ所要時間（時間:分:秒）",
+        "memoryCapacity": "4GB",
         "osEdition": null,
         "lanPort": "10GBASE-T／1000BASE-T × 2 ※10GBASE-Tまたは1000BASE-T以外のネットワーク機器には対応しておりません",
         "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
@@ -4392,7 +4436,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-hab/",
-      "lastCheckedAt": "2026-10-22T21:21:58.457Z",
+      "lastCheckedAt": "2026-10-23T21:11:31.395Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -4411,6 +4455,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4430,7 +4475,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "Intel Atom Processor C3338（2.20GHz Dual Core）",
-        "memoryCapacity": null,
+        "memoryCapacity": "2GB",
         "osEdition": null,
         "lanPort": "（10GBASE-T／5GBASE-T／2.5GBASE-T／1000BASE-T／100BASE-TX）×1 （1000BASE-T／100BASE-TX／10BASE-T）×1",
         "usbPort": "背面&times;2",
@@ -4471,7 +4516,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xabtm5/",
-      "lastCheckedAt": "2026-10-22T21:22:03.338Z",
+      "lastCheckedAt": "2026-10-23T21:11:36.340Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
       "cloudTelework": false,
       "cloudBcp": false
@@ -4490,6 +4535,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4509,7 +4555,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "Intel Atom Processor C3338（2.20GHz Dual Core）",
-        "memoryCapacity": null,
+        "memoryCapacity": "2GB",
         "osEdition": null,
         "lanPort": "（10GBASE-T／5GBASE-T／2.5GBASE-T／1000BASE-T／100BASE-TX）×1 （1000BASE-T／100BASE-TX／10BASE-T）×1",
         "usbPort": "背面&times;2",
@@ -4562,7 +4608,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-xab/",
-      "lastCheckedAt": "2026-10-22T21:22:08.231Z",
+      "lastCheckedAt": "2026-10-23T21:11:41.331Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -4581,6 +4627,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4597,7 +4644,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "ARM Cortex-A55 Quad core 1.8GHz",
-        "memoryCapacity": null,
+        "memoryCapacity": "2GB",
         "osEdition": null,
         "lanPort": "（2.5GBASE-T／1000BASE-T／100BASE-TX）×1 （1000BASE-T／100BASE-TX／10BASE-T）×1",
         "usbPort": "背面&times;2",
@@ -4654,7 +4701,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-lv/",
-      "lastCheckedAt": "2026-10-22T21:22:13.119Z",
+      "lastCheckedAt": "2026-10-23T21:11:46.311Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": false
@@ -4674,6 +4721,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4690,7 +4738,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "ARM Cortex-A55 Quad core 2.0GHz",
-        "memoryCapacity": null,
+        "memoryCapacity": "1GB",
         "osEdition": "Linux（オリジナルOS）",
         "lanPort": "（2.5GBASE-T／1000BASE-T／100BASE-TX）×1",
         "usbPort": "USB-A：背面&times;1",
@@ -4759,7 +4807,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl2-len/",
-      "lastCheckedAt": "2026-10-22T21:22:18.042Z",
+      "lastCheckedAt": "2026-10-23T21:11:51.318Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -4775,6 +4823,7 @@
       "officeSizeMax": 25,
       "imageUrl": "https://www.iodata.jp/image/hdl1-len_l.jpg",
       "raidSupport": [],
+      "defaultRaid": null,
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4789,7 +4838,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "ARM Cortex-A55 Quad core 2.0GHz",
-        "memoryCapacity": null,
+        "memoryCapacity": "1GB",
         "osEdition": "Linux（オリジナルOS）",
         "lanPort": "（2.5GBASE-T／1000BASE-T／100BASE-TX）×1",
         "usbPort": "USB-A：背面&times;1",
@@ -4838,7 +4887,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl1-len/",
-      "lastCheckedAt": "2026-10-22T21:22:23.040Z",
+      "lastCheckedAt": "2026-10-23T21:11:56.167Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e1",
       "cloudTelework": true,
       "cloudBcp": true
@@ -4854,6 +4903,7 @@
       "officeSizeMax": 16,
       "imageUrl": "https://www.iodata.jp/image/hdl-aaxw_l.jpg",
       "raidSupport": [],
+      "defaultRaid": null,
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4868,7 +4918,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "Marvell Armada382 Dual Core 1.33GHz",
-        "memoryCapacity": null,
+        "memoryCapacity": "512MB",
         "osEdition": null,
         "lanPort": "( 2.5GBASE-T / 1000BASE-T/ 100BASE-TX/ 10BASE-T )× 1",
         "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
@@ -4925,7 +4975,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl-aaxw/",
-      "lastCheckedAt": "2026-10-22T21:22:28.072Z",
+      "lastCheckedAt": "2026-10-23T21:12:01.198Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-e2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -4945,6 +4995,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -4965,7 +5016,7 @@
       "lanMaxPorts": 2,
       "specDetails": {
         "cpu": "Intel Atom Processor C3538（2.10GHz Quad Core）",
-        "memoryCapacity": "バックアップ所要時間（時間:分:秒）",
+        "memoryCapacity": "4GB",
         "osEdition": null,
         "lanPort": "10GBASE-T／1000BASE-T × 2 ※10GBASE-Tまたは1000BASE-T以外のネットワーク機器には対応しておりません",
         "usbPort": "USB 3.1 Gen 1（USB 3.0）／USB 2.0",
@@ -5058,7 +5109,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-hab-u/",
-      "lastCheckedAt": "2026-10-22T21:22:33.062Z",
+      "lastCheckedAt": "2026-10-23T21:12:06.257Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h2",
       "cloudTelework": true,
       "cloudBcp": true
@@ -5078,6 +5129,7 @@
         "RAID 5",
         "RAID 6"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -5094,7 +5146,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "ARM Cortex-A55 Quad core 1.8GHz",
-        "memoryCapacity": null,
+        "memoryCapacity": "2GB",
         "osEdition": null,
         "lanPort": "（2.5GBASE-T／1000BASE-T／100BASE-TX）×1 （1000BASE-T／100BASE-TX／10BASE-T）×1",
         "usbPort": "背面&times;2",
@@ -5155,7 +5207,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/hdl4-lvu/",
-      "lastCheckedAt": "2026-10-22T21:22:38.078Z",
+      "lastCheckedAt": "2026-10-23T21:12:11.350Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#linux-h1",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5174,6 +5226,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAIDeX",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "現行",
@@ -5191,7 +5244,7 @@
       "lanMaxPorts": 1,
       "specDetails": {
         "cpu": "Intel Atom Processor C3338（2.20GHz Dual Core）",
-        "memoryCapacity": null,
+        "memoryCapacity": "2GB",
         "osEdition": null,
         "lanPort": "（10GBASE-T／5GBASE-T／2.5GBASE-T／1000BASE-T／100BASE-TX）×1 （1000BASE-T／100BASE-TX／10BASE-T）×1",
         "usbPort": "背面&times;2",
@@ -5224,7 +5277,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/general/bcsp-lvreut/",
-      "lastCheckedAt": "2026-10-22T21:22:43.002Z",
+      "lastCheckedAt": "2026-10-23T21:12:16.276Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm",
       "cloudTelework": false,
       "cloudBcp": false
@@ -5244,6 +5297,7 @@
         "RAID 1",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -5336,7 +5390,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z25si3b/",
-      "lastCheckedAt": "2026-10-22T21:22:48.037Z",
+      "lastCheckedAt": "2026-10-23T21:12:21.399Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": false
@@ -5355,6 +5409,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -5412,7 +5467,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22watab/",
-      "lastCheckedAt": "2026-10-22T21:22:52.949Z",
+      "lastCheckedAt": "2026-10-23T21:12:26.388Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": false
@@ -5431,6 +5486,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -5499,7 +5555,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z25si3b/",
-      "lastCheckedAt": "2026-10-22T21:22:57.938Z",
+      "lastCheckedAt": "2026-10-23T21:12:31.384Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2025",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5518,6 +5574,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -5575,7 +5632,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22si3ab/",
-      "lastCheckedAt": "2026-10-22T21:23:02.874Z",
+      "lastCheckedAt": "2026-10-23T21:12:36.817Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5594,6 +5651,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -5651,7 +5709,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22satab/",
-      "lastCheckedAt": "2026-10-22T21:23:07.790Z",
+      "lastCheckedAt": "2026-10-23T21:12:41.800Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5670,6 +5728,7 @@
         "RAID 0",
         "RAID 1"
       ],
+      "defaultRaid": "RAID 1",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -5727,7 +5786,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl2-z22watab/",
-      "lastCheckedAt": "2026-10-22T21:23:12.712Z",
+      "lastCheckedAt": "2026-10-23T21:12:46.978Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5746,6 +5805,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 3,
       "maintenanceService": null,
       "status": "生産終了",
@@ -5802,7 +5862,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22satau/",
-      "lastCheckedAt": "2026-10-22T21:23:17.685Z",
+      "lastCheckedAt": "2026-10-23T21:12:52.156Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5821,6 +5881,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -5878,7 +5939,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22sataub/",
-      "lastCheckedAt": "2026-10-22T21:23:22.572Z",
+      "lastCheckedAt": "2026-10-23T21:12:57.141Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
@@ -5897,6 +5958,7 @@
         "RAID 0",
         "RAID 5"
       ],
+      "defaultRaid": "RAID 5",
       "warrantyYears": 5,
       "maintenanceService": null,
       "status": "在庫限り",
@@ -5954,7 +6016,7 @@
         }
       ],
       "sourceUrl": "https://www.iodata.jp/product/nas/wss-nas/hdl4-z22wataub/",
-      "lastCheckedAt": "2026-10-22T21:23:27.478Z",
+      "lastCheckedAt": "2026-10-23T21:13:02.278Z",
       "backupHddUrl": "https://www.iodata.jp/pio/io/nas/landisk/hdd.htm#windows2022",
       "cloudTelework": false,
       "cloudBcp": true
