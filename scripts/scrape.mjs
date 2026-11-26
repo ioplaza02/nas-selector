@@ -58,7 +58,10 @@ function sleep(ms) {
 async function fetchText(url) {
   const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
   if (!res.ok) throw new Error(url + " -> " + res.status);
-  return res.text();
+  // 公式ページには、濁点を別の文字（結合文字）で書いた表記がある
+  // （実例：LHUシリーズの見出しが「シリース＋゛」で書かれ、「シリーズ」で検索しても見つからなかった）。
+  // 見た目は同じ文字でも検索に引っかからないため、取り込み時点で標準の形（NFC）にそろえる。
+  return (await res.text()).normalize("NFC");
 }
 
 // "var json = [ ... ];" 形式のJSファイルから配列部分だけ取り出してparseする。
@@ -888,7 +891,7 @@ async function loadPreviousData() {
 }
 
 async function main() {
-  console.log("NASセレクター スクレイパー（版：2026-10-06b 旧モデル補完・在庫限り判定・LAN速度対応）");
+  console.log("NASセレクター スクレイパー（版：2026-11-26 文字の形を統一（NFC）・旧モデル補完・在庫限り判定・LAN速度対応）");
   await loadPreviousData();
   const rawEntries = [];
   for (const source of LIST_URLS) {
@@ -1035,7 +1038,10 @@ async function main() {
   const CATALOG_SERIES_NAME_OVERRIDE = {
     "hdl4-lx": "LAN DISK LX",
     "hdl4-lxu": "LAN DISK LX",
-    "hdl2-lx": "LAN DISK LX"
+    "hdl2-lx": "LAN DISK LX",
+    // LHシリーズ：公式のバックアップ用HDD対応表（hdd.htm）の列見出しが「LAN DISK LH」
+    "hdl2-lh": "LAN DISK LH",
+    "hdl4-lhu": "LAN DISK LH"
   };
 
   const allCatalogSeries = extractAllCatalogSeries(catalogHtml);
