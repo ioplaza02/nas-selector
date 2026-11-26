@@ -93,7 +93,7 @@ let capacityRange = null;
 let employeeMin = null;
 let cloudTeleworkOnly = false;
 let cloudBcpOnly = false;
-let lanPortsMin = 1; // LANポートの数（1＝すべて／2＝2ポートあるもの）
+let lanPortsMin = 1; // LANポートの数（1＝すべて／2＝2ポート以上／3＝3ポート）
 let lanSpeedMin = null; // LANポートの速さ（「〜以上」で1つだけ選ぶ）
 
 // LANポートの最大速度。スクレイパーが付けた lanSpeedMax を優先し、
@@ -415,7 +415,7 @@ function buildFilterPanel() {
   panel.appendChild(details);
 
   // LANポートの数。エンドユーザーの理由（冗長化・速度アップ・ネットワーク分離など）は分からない前提なので、
-  // まず「2ポートあるもの」だけを見分けられるようにする。1つは全機種が当てはまるので初期値にする。
+  // 「2つ以上」「3つ」を見分けられるようにする（3ポートはLHシリーズ）。1つ以上は全機種が当てはまるので初期値にする。
   // お客様から聞かれることが少ないため、パネルの一番下に小さく置く。
   const portSection = document.createElement("details");
   portSection.open = lanPortsMin >= 2; // 聞かれることが少ない項目なので、普段は閉じておく（選択中のときだけ開く）
@@ -425,7 +425,8 @@ function buildFilterPanel() {
   portSection.appendChild(portTitle);
   [
     { value: 1, label: "1つ以上（すべて）" },
-    { value: 2, label: "2つ（2ポートあるもの）" }
+    { value: 2, label: "2つ以上" },
+    { value: 3, label: "3つ" }
   ].forEach(opt => {
     const wrapper = document.createElement("label");
     const rb = document.createElement("input");
@@ -906,7 +907,7 @@ function applyStateFromUrl() {
   if (emp > 0) employeeMin = emp;
   const lan = params.get("lan");
   if (lan && LAN_SPEED_ORDER.includes(lan)) lanSpeedMin = lan;
-  if (params.get("ports") === "2") lanPortsMin = 2;
+  if (params.get("ports") === "2" || params.get("ports") === "3") lanPortsMin = Number(params.get("ports"));
   const cloud = params.getAll("cloud");
   cloudTeleworkOnly = cloud.includes("telework");
   cloudBcpOnly = cloud.includes("bcp");
